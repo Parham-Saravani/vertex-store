@@ -2,7 +2,7 @@ const darkThemeBtn = document.querySelector(".dark-theme-btn");
 const lightThemeBtn = document.querySelector(".light-theme-btn");
 
 const themeHandler = () => {
-  const isDarkMode = localStorage.getItem("isDarkMode") || true;
+  const isDarkMode = JSON.parse(localStorage.getItem("isDarkMode")) ?? true;
   if (isDarkMode) {
     darkTheme();
   } else {
@@ -11,21 +11,29 @@ const themeHandler = () => {
 };
 
 const darkTheme = () => {
-  document.documentElement.classList.add("dark");
-  lightThemeBtn.classList.remove("hidden");
-  darkThemeBtn.classList.add("hidden");
-  saveThemeInLocalStorage(true);
+  addAndRemovingClasses(true, lightThemeBtn, darkThemeBtn);
 };
 const lightTheme = () => {
-  document.documentElement.classList.remove("dark");
-  darkThemeBtn.classList.remove("hidden");
-  lightThemeBtn.classList.add("hidden");
-  saveThemeInLocalStorage(false);
+  addAndRemovingClasses(false, darkThemeBtn, lightThemeBtn);
 };
+
+const addAndRemovingClasses = (isDarkMode, active, hidden) => {
+  if (isDarkMode) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+  active.classList.remove("hidden");
+  active.classList.add("flex");
+  hidden.classList.add("hidden");
+  hidden.classList.remove("flex");
+  saveThemeInLocalStorage(isDarkMode);
+};
+
 const saveThemeInLocalStorage = (status) => {
   localStorage.setItem("isDarkMode", status);
 };
 
-window.addEventListener('DOMContentLoaded', themeHandler)
+window.addEventListener("DOMContentLoaded", themeHandler);
 darkThemeBtn.addEventListener("click", darkTheme);
 lightThemeBtn.addEventListener("click", lightTheme);
