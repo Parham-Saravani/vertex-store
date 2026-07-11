@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fa" dir="rtl" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frontend</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  
+  <body class="dark:bg-dark-bg-primary bg-light-bg-primary font-vazir">
+    <div class="container mx-auto py-5">
+      <header class="w-full flex gap-10 items-center">
+        <!-- logo -->
+        <a href="http://localhost:5173" class="flex justify-center items-center w-70 h-20">
+            <img src="./src/assets/images/store-icon.png" alt="Logo" title="fasdfasdf"/>
+        </a>
+        <!-- menu and search input -->
+        <div class="flex items-center gap-6">
+          <ul class="flex gap-1 dark:text-dark-text-primary text-light-text-primary font-bold">
+            <li class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg cursor-pointer menu-active"><a href="#">صفحه اصلی</a></li>
+            <li class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg cursor-pointer"><a href="#">محصولات</a></li>
+            <li class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg cursor-pointer"><a href="#">دسته بندی</a></li>
+            <li class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg cursor-pointer"><a href="#">درباره ما</a></li>
+            <li class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg cursor-pointer"><a href="#">تماس با ما</a></li>
+          </ul>
+
+          <div class="dark:bg-dark-input-bg bg-light-input-bg shadow-light-sm rounded-xl w-80 h-13 text-xl flex justify-center items-center">
+            <button class="cursor-pointer dark:text-dark-text-primary text-light-text-primary w-[15%] h-10 rounded-xl flex justify-center items-center">
+              <i class="fa-solid fa-search"></i>
+            </button>
+            <input type="text" class="h-full rounded-l-xl w-[85%] text-[13px] dark:text-dark-text-primary text-light-text-primary dark:placeholder:text-dark-text-muted placeholder:text-[11px] outline-hidden pl-2" placeholder="جستجوی محصول...">
+          </div>
+        </div>
+        <!-- auth / profile && bascket && theme btns -->
+        <div class="flex">
+          <!-- theme buttns -->
+          <div class="flex">
+            <button class="hidden bg-light-active-bg hover:bg-light-item-hover-bg rounded-xl text-xl px-2.5 py-3 flex justify-center items-center cursor-pointer transition-colors duration-300 dark-theme-btn">
+              <i class="fa-solid fa-moon text-light-text-primary"></i>
+            </button>
+            <button class="bg-dark-active-bg hover:bg-dark-item-hover-bg rounded-xl text-xl px-2.5 py-3 flex justify-center items-center cursor-pointer transition-colors duration-300 light-theme-btn">
+              <i class="fa-solid fa-sun text-dark-text-primary"></i>
+            </button>
+          </div>
+
+        </div>
+      </header>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

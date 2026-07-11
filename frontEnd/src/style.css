@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+/* custome classes */
+.menu-active {
+  background-color: var(--color-light-active-bg);
+  box-shadow: var(--shadow-);
+}
+.menu-active::before {
+  content: "";
+  z-index: -1;
+  width: 4.5rem;
+  height: 0.3rem;
+  border-radius: 1rem;
+  background-color: var(--color-light-brand-primary);
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.dark .menu-active {
+  background-color: var(--color-dark-active-bg);
+}
+.dark .menu-active::before {
+  content: "";
+  z-index: -1;
+  width: 5rem;
+  height: 0.3rem;
+  border-radius: 1rem;
+  background-color: var(--color-dark-brand-primary);
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+/* fonts */
+@font-face {
+  font-family: "VazirMatn";
+  src: url(./assets/fonts/Vazirmatn-Thin.ttf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: "VazirMatn";
+  src: url(./assets/fonts/Vazirmatn-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "VazirMatn";
+  src: url(./assets/fonts/Vazirmatn-Medium.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "VazirMatn";
+  src: url(./assets/fonts/Vazirmatn-Bold.ttf);
+  font-weight: 800;
+}
+
+@theme {
+  /* Light Colors */
+  --color-light-bg-primary: #f8fafc;
+  --color-light-bg-secondary: #ffffff;
+
+  --color-light-card-bg: #ffffff;
+
+  --color-light-border-color: #e2e8f0;
+
+  --color-light-text-primary: #0f172a;
+  --color-light-text-secondary: #475569;
+  --color-light-text-muted: #94a3b8;
+
+  --color-light-brand-primary: #2563eb;
+  --color-light-brand-primary-hover: #1d4ed8;
+
+  --color-light-brand-accent: #7c3aed;
+  --color-light-brand-accent-hover: #6d28d9;
+
+  --color-light-success: #22c55e;
+  --color-light-warning: #f59e0b;
+  --color-light-danger: #ef4444;
+
+  --color-light-hover-bg: #eff6ff;
+
+  --color-light-active-bg: #dbeafe;
+  --color-light-item-hover-bg: #eff6ff;
+
+  --color-light-input-bg: #ffffff;
+  --color-light-input-border: #cbd5e1;
+  --color-light-input-focus: #2563eb;
+
+  --shadow-light-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+  --shadow-light-md: 0 6px 20px rgba(15, 23, 42, 0.08);
+  --shadow-light-lg: 0 12px 32px rgba(15, 23, 42, 0.12);
+
+  /* Dark colors */
+  --color-dark-bg-primary: #0f172a;
+  --color-dark-bg-secondary: #1e293b;
+
+  --color-dark-card-bg: #1e293b;
+
+  --color-dark-border-color: #334155;
+
+  --color-dark-text-primary: #f8fafc;
+  --color-dark-text-secondary: #cbd5e1;
+  --color-dark-text-muted: #94a3b8;
+
+  --color-dark-brand-primary: #3b82f6;
+  --color-dark-brand-primary-hover: #2563eb;
+
+  --color-dark-brand-accent: #8b5cf6;
+  --color-dark-brand-accent-hover: #7c3aed;
+
+  --color-dark-active-bg: #334155;
+  --color-dark-item-hover-bg: #273548;
+
+  --color-dark-success: #22c55e;
+  --color-dark-warning: #fbbf24;
+  --color-dark-danger: #f87171;
+
+  --color-dark-input-bg: #1e293b;
+  --color-dark-input-border: #475569;
+  --color-dark-input-focus: #3b82f6;
+
+  --color-dark-hover-bg: #273548;
+
+  --shadow-dark-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-dark-md: 0 6px 20px rgba(0, 0, 0, 0.3);
+  --shadow-dark-lg: 0 12px 32px rgba(0, 0, 0, 0.45);
+
+  /* font */
+  --font-vazir: "VazirMatn";
+
+  --container-xl: 4000rem;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
