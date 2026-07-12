@@ -2,6 +2,7 @@ import AuthenticationPage from "../../pages/auth.js";
 const authBtn = document.querySelector(".auth-btn");
 
 const showAuthContent = () => {
+  document.documentElement.classList.add("overflow-hidden");
   console.log("fasd");
   document.body.insertAdjacentHTML("afterbegin", AuthenticationPage());
   const authForm = document.querySelector(".auth-form");
@@ -14,6 +15,7 @@ const showAuthContent = () => {
 const hideAuthForm = () => {
   const authFormBackground = event.target.closest(".auth-form");
   if (!authFormBackground) {
+    document.documentElement.classList.remove("overflow-hidden");
     const authFormTotal = document.querySelector(".auth-background");
     authFormTotal.classList.add("animate-fadeOut");
     setTimeout(() => {

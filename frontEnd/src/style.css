@@ -286,4 +286,25 @@ html {
   --animate-fadeOut: fadeOut 800ms linear;
 }
 
+@utility container {
+  width: 100%;
+  padding: 0 0.5rem;
+  @variant md {
+    max-width: 80rem;
+    padding: 0 1rem;
+  }
+  @variant lg {
+    max-width: 50rem;
+    padding: 0 1rem;
+  }
+  @variant xl {
+    max-width: 100rem;
+    padding: 0 1rem;
+  }
+  @variant 2xl {
+    max-width: 100%;
+    padding: 0 3rem;
+  }
+}
+
 @custom-variant dark (&:where(.dark, .dark *));
