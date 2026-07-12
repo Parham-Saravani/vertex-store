@@ -1,5 +1,6 @@
 import express from "express";
-
+import userRouter from "./routes/user.route.js";
 const app = express();
 
-export default app
+app.use('/api/user', userRouter)
+export default app;

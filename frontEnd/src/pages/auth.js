@@ -1,6 +1,6 @@
 const AuthenticationPage = () => {
   return `
-    <div class="animate-fadeIn fixed z-50 top-0 bottom-0 left-0 right-0 mx-auto flex items-center justify-center backdrop-blur-sm">
+    <div class="animate-fadeIn fixed z-50 top-0 bottom-0 left-0 right-0 mx-auto flex items-center justify-center backdrop-blur-sm auth-background">
         <div class="dark:bg-dark-card-bg bg-light-card-bg h-165 max-lg:static max-xl:right-10 max-lg:w-full z-20 right-17 top-16 max-sm:px-5 max-sm:w-[90%] w-120 px-10 py-5 dark:bg-dark-surface bg-light-surface border-2 dark:border-dark-card-border border-light-card-border rounded-xl auth-form">
           
           <div class="shadow-light dark:shadow-dark flex justify-center auth-status-container  rounded-2xl">

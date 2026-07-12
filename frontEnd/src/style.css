@@ -283,7 +283,7 @@ html {
   --shadow-light: inset 0px 5px 12px var(--color-light-card-border);
   --shadow-dark: inset 0px 5px 12px var(--color-dark-card-border);
   --animate-fadeIn: fadeIn 1s linear;
-  --animate-fadeOut: fadeOut 1s linear;
+  --animate-fadeOut: fadeOut 800ms linear;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
