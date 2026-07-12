@@ -47,12 +47,12 @@
   background:
     radial-gradient(
       circle at center,
-      rgba(var(--color-brand-primary-rgb), 0.4),
+      rgba(var(--color-glow-primary), 0.4),
       transparent 80%
     ),
     radial-gradient(
       circle at center,
-      rgba(var(--color-brand-accent-rgb), 0.4),
+      rgba(var(--color-glow-accent), 0.4),
       transparent 60%
     ),
     var(--color-light-card-bg);
@@ -61,12 +61,12 @@
   background:
     radial-gradient(
       circle at center,
-      rgba(var(--color-brand-primary-rgb), 0.2),
+      rgba(var(--color-glow-primary), 0.2),
       transparent 80%
     ),
     radial-gradient(
       circle at center,
-      rgba(var(--color-brand-accent-rgb), 0.3),
+      rgba(var(--color-glow-accent), 0.3),
       transparent 60%
     ),
     var(--color-dark-card-bg);
@@ -76,12 +76,12 @@
   background:
     radial-gradient(
       20rem 20rem at 80% 30%,
-      rgba(var(--color-brand-accent-rgb), 0.2),
+      rgba(var(--color-glow-primary), 0.2),
       transparent 80%
     ),
     radial-gradient(
       30rem 30rem at -10% 30%,
-      rgba(var(--color-brand-primary-rgb), 0.3),
+      rgba(var(--color-glow-accent), 0.3),
       transparent 80%
     ),
     var(--color-light-section-bg);
@@ -91,12 +91,12 @@
   background:
     radial-gradient(
       20rem 20rem at 80% 80%,
-      rgba(var(--color-brand-accent-rgb), 0.2),
+      rgba(var(--color-glow-accent), 0.2),
       transparent 80%
     ),
     radial-gradient(
       30rem 30rem at -10% 0%,
-      rgba(var(--color-brand-primary-rgb), 0.3),
+      rgba(var(--color-glow-primary), 0.3),
       transparent 80%
     ),
     var(--color-dark-section-bg);
@@ -106,12 +106,12 @@
   background:
     radial-gradient(
       20rem 20rem at 80% 80%,
-      rgba(var(--color-brand-accent-rgb), 0.2),
+      rgba(var(--color-glow-accent), 0.2),
       transparent 80%
     ),
     radial-gradient(
       30rem 30rem at -10% 0%,
-      rgba(var(--color-brand-primary-rgb), 0.3),
+      rgba(var(--color-glow-primary), 0.3),
       transparent 80%
     ),
     var(--color-light-section-bg);
@@ -120,15 +120,20 @@
   background:
     radial-gradient(
       15rem 15rem at 95% 100%,
-      rgba(var(--color-brand-accent-rgb), 0.2),
+      rgba(var(--color-glow-accent), 0.2),
       transparent 100%
     ),
     radial-gradient(
       15rem 15rem at 5% 10%,
-      rgba(var(--color-brand-primary-rgb), 0.3),
+      rgba(var(--color-glow-primary), 0.3),
       transparent 100%
     ),
     var(--color-dark-section-bg);
+}
+
+#message {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-dark-card-border) transparent;
 }
 
 /* fonts */
@@ -153,10 +158,27 @@
   font-weight: 800;
 }
 
+/* animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @theme {
-  /* =========================
-    BRAND COLORS
-========================= */
+  /* BRAND COLORS */
 
   --color-brand-primary: #3b82f6;
   --color-brand-primary-hover: #2563eb;
@@ -164,12 +186,7 @@
   --color-brand-accent: #8b5cf6;
   --color-brand-accent-hover: #7c3aed;
 
-  --color-brand-primary-rgb: 59, 130, 246;
-  --color-brand-accent-rgb: 139, 92, 246;
-
-  /* =========================
-    LIGHT THEME
-========================= */
+  /* LIGHT THEME */
 
   --color-light-bg-primary: #f6f8fc;
   --color-light-bg-secondary: #ffffff;
@@ -203,17 +220,12 @@
   --shadow-light-md: 0 6px 20px rgba(15, 23, 42, 0.08);
   --shadow-light-lg: 0 12px 32px rgba(15, 23, 42, 0.12);
 
-  /* =========================
-    DARK THEME
-========================= */
+  /* DARK THEME */
 
   --color-dark-bg-primary: #0b1220;
   --color-dark-bg-secondary: #111827;
 
   --color-dark-section-bg: #131e31;
-
-  --color-dark-card-bg: #18243a;
-  --color-dark-card-hover: #22314d;
 
   --color-dark-card-bg: #15192b;
   --color-dark-card-hover: #1a2440;
@@ -242,22 +254,24 @@
   --shadow-dark-md: 0 6px 20px rgba(0, 0, 0, 0.3);
   --shadow-dark-lg: 0 12px 32px rgba(0, 0, 0, 0.45);
 
-  /* =========================
-    SPECIAL EFFECTS
-========================= */
+  /* SPECIAL EFFECTS */
 
-  --color-glow-primary: rgba(59, 130, 246, 0.35);
-  --color-glow-accent: rgba(139, 92, 246, 0.35);
+  --color-glow-primary: 59, 130, 246;
+  --color-glow-accent: 139, 92, 246;
 
   --color-overlay-dark: rgba(0, 0, 0, 0.45);
   --color-overlay-light: rgba(255, 255, 255, 0.45);
-  /* =========================
-      FONT
-  ========================= */
+
+  /* DIVIDERS */
+  --color-light-divider: #e2e8f0;
+  --color-dark-divider: #263244;
+
+  /* FONT */
 
   --font-vazir: "VazirMatn";
 
-  --container-3xl: 100px;
+  --animate-fadeIn: fadeIn 1s linear;
+  --animate-fadeOut: fadeOut 1s linear;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));

@@ -19,44 +19,27 @@
       <!-- Header -->
       <header class="w-full flex items-center justify-between">
         <!-- logo -->
-        <a
-          href="http://localhost:5173"
-          class="flex justify-center items-center"
-        >
-          <h1
-            class="bg-linear-90 from-brand-primary to-brand-accent text-transparent bg-clip-text font-bold text-4xl"
-          >
+        <a href="http://localhost:5173" class="flex justify-center items-center">
+          <h1 class="bg-linear-90 from-brand-primary to-brand-accent text-transparent bg-clip-text font-bold text-4xl">
             Vertex
           </h1>
         </a>
         <!-- menu and search input -->
         <div class="flex items-center gap-6">
-          <ul
-            class="flex gap-1 dark:text-dark-text-primary text-light-text-primary font-bold"
-          >
-            <li
-              class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300 menu-active"
-            >
+          <ul class="flex gap-1 dark:text-dark-text-primary text-light-text-primary font-bold">
+            <li data-page="home" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300 menu-active">
               <a href="#">صفحه اصلی</a>
             </li>
-            <li
-              class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300"
-            >
+            <li data-page="products" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
               <a href="#">محصولات</a>
             </li>
-            <li
-              class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300"
-            >
+            <li data-page="home" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
               <a href="#">دسته بندی</a>
             </li>
-            <li
-              class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300"
-            >
+            <li data-page="about" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
               <a href="#">درباره ما</a>
             </li>
-            <li
-              class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300"
-            >
+            <li data-page="contact" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
               <a href="#">تماس با ما</a>
             </li>
           </ul>
@@ -92,11 +75,7 @@
             </button>
           </div>
           <div>
-            <a
-              href="/auth.html"
-              class="text-dark-text-primary font-bold bg-linear-90 from-brand-primary to-brand-accent rounded-xl w-30 h-12 flex justify-center items-center transition-transform duration-300 hover:-translate-y-0.5"
-              >ورود | ثبت نام</a
-            >
+            <a href="/auth.html" class="text-dark-text-primary font-bold bg-linear-90 from-brand-primary to-brand-accent rounded-xl w-30 h-12 flex justify-center items-center transition-transform duration-300 hover:-translate-y-0.5">ورود | ثبت نام</a>
           </div>
         </div>
       </header>
@@ -127,7 +106,6 @@
           </div>
 
           <div class="mt-10">
-            <!-- header-->
             <div class="flex items-center justify-between">
               <div
                 class="relative before:absolute before:w-5 before:h-1 before:bg-brand-primary before:rounded-xl before:top-0 before:bottom-0 before:my-auto"
@@ -146,7 +124,7 @@
                 <i class="fa-solid fa-chevron-left text-xs"></i>
               </a>
             </div>
-            <!-- products -->
+
             <div class="flex items-center gap-4 mt-5">
               <a
                 class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer"
@@ -285,7 +263,11 @@
       </main>
 
       <!-- Footer -->
-      <footer data-aos="fade-zoom-in" data-aos-duration="1000" class="pt-6 rounded-xl dark:shadow-dark-lg border-2 dark:border-dark-card-border border-light-card-border footer-glow-effect">
+      <footer
+        data-aos="fade-zoom-in"
+        data-aos-duration="1000"
+        class="pt-6 rounded-xl dark:shadow-dark-lg border-2 dark:border-dark-card-border border-light-card-border footer-glow-effect"
+      >
         <div class="flex items-center justify-between px-8">
           <div class="flex">
             <div class="text-right h-40 pt-3">
@@ -369,29 +351,49 @@
           <div class="ml-20">
             <div class="flex flex-col gap-2">
               <h4
-                class="font-bold dark:text-dark-text-primary text-light-text-primary">
+                class="font-bold dark:text-dark-text-primary text-light-text-primary"
+              >
                 تماس با ما
               </h4>
-              <div class="flex items-center gap-3 dark:text-dark-text-primary text-light-text-primary">
+              <div
+                class="flex items-center gap-3 dark:text-dark-text-primary text-light-text-primary"
+              >
                 <i class="fa-solid fa-phone"></i>
-                <span>021-12345678</span>
+                <span
+                  class="dark:text-dark-text-secondary text-light-text-secondary"
+                  >021-12345678</span
+                >
               </div>
 
-              <div class="flex items-center gap-3 dark:text-dark-text-primary text-light-text-primary">
+              <div
+                class="flex items-center gap-3 dark:text-dark-text-primary text-light-text-primary"
+              >
                 <i class="fa-solid fa-envelope"></i>
-                <span>info@vertex.ir</span>
+                <span
+                  class="dark:text-dark-text-secondary text-light-text-secondary"
+                  >info@vertex.ir</span
+                >
               </div>
 
-              <div class="flex items-center gap-3 dark:text-dark-text-primary text-light-text-primary">
+              <div
+                class="flex items-center gap-3 dark:text-dark-text-primary text-light-text-primary"
+              >
                 <i class="fa-solid fa-location-dot"></i>
-                <span>تهران، خیابان ولیعصر</span>
+                <span
+                  class="dark:text-dark-text-secondary text-light-text-secondary"
+                  >تهران، خیابان ولیعصر</span
+                >
               </div>
             </div>
           </div>
         </div>
         <!-- Divider -->
-        <div class="mt-5 mb-3 w-full h-0.5 dark:bg-dark-card-border/30 bg-light-card-border/30"></div>
-        <div class="pb-4 pt-1 text-center dark:text-dark-text-secondary text-light-text-secondary text-[14px]">
+        <div
+          class="mt-5 mb-3 w-full h-0.5 dark:bg-dark-divider bg-light-divider"
+        ></div>
+        <div
+          class="pb-4 pt-1 text-center dark:text-dark-text-secondary text-light-text-secondary text-[14px]"
+        >
           <p>تمامی حقوقی برای Vertex Store محفوظ است</p>
         </div>
       </footer>
