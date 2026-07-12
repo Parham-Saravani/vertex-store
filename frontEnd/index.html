@@ -10,36 +10,67 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
       integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer"/>
   </head>
 
   <body class="dark:bg-dark-bg-primary bg-light-bg-primary font-vazir">
+    <!-- Loader Element -->
+      <!-- <div class="fixed flex justify-center items-center w-full h-full dark:bg-dark-bg bg-light-bg z-50 top-0 right-0 page-loader">
+        <div class="bg-black/30 w-50 py-10 flex gap-5 flex-col justify-center items-center rounded-xl">
+          <p class="text-[16px] text-dark-text font-vazir">در حال بارگذاری</p>
+          <div class="loader w-4 rounded-full animate-loader aspect-square"></div>
+        </div>
+      </div> -->
+
+ 
+    
     <div class="container mx-auto py-5">
       <!-- Header -->
       <header class="w-full flex items-center justify-between">
         <!-- logo -->
-        <a href="http://localhost:5173" class="flex justify-center items-center">
-          <h1 class="bg-linear-90 from-brand-primary to-brand-accent text-transparent bg-clip-text font-bold text-4xl">
+        <a
+          href="http://localhost:5173"
+          class="flex justify-center items-center"
+        >
+          <h1
+            class="bg-linear-90 from-brand-primary to-brand-accent text-transparent bg-clip-text font-bold text-4xl"
+          >
             Vertex
           </h1>
         </a>
         <!-- menu and search input -->
         <div class="flex items-center gap-6">
-          <ul class="flex gap-1 dark:text-dark-text-primary text-light-text-primary font-bold">
-            <li data-page="home" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300 menu-active">
+          <ul
+            class="flex gap-1 dark:text-dark-text-primary text-light-text-primary font-bold"
+          >
+            <li
+              data-page="home"
+              class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300 menu-active"
+            >
               <a href="#">صفحه اصلی</a>
             </li>
-            <li data-page="products" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
+            <li
+              data-page="products"
+              class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300"
+            >
               <a href="#">محصولات</a>
             </li>
-            <li data-page="home" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
+            <li
+              data-page="home"
+              class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300"
+            >
               <a href="#">دسته بندی</a>
             </li>
-            <li data-page="about" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
+            <li
+              data-page="about"
+              class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300"
+            >
               <a href="#">درباره ما</a>
             </li>
-            <li data-page="contact" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
+            <li
+              data-page="contact"
+              class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300"
+            >
               <a href="#">تماس با ما</a>
             </li>
           </ul>
@@ -75,12 +106,12 @@
             </button>
           </div>
           <div>
-            <a href="/auth.html" class="text-dark-text-primary font-bold bg-linear-90 from-brand-primary to-brand-accent rounded-xl w-30 h-12 flex justify-center items-center transition-transform duration-300 hover:-translate-y-0.5">ورود | ثبت نام</a>
+            <button class="text-dark-text-primary font-bold bg-linear-90 from-brand-primary to-brand-accent rounded-xl w-30 h-12 flex justify-center items-center transition-transform duration-300 hover:-translate-y-0.5 auth-btn">ورود | ثبت نام</button>
           </div>
         </div>
       </header>
 
-      <!-- Home Page Content  -->
+      <!-- Page Content  -->
       <main class="mt-10 page-content">
         <div>
           <div class="relative rounded-2xl overflow-hidden h-130">

@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 /* custome classes */
+.auth-active {
+  background-color: var(--color-brand-accent);
+  color: var(--color-dark-text-primary);
+  box-shadow: 0px 0px 10px var(--color-brand-accent);
+}
 .menu-active {
   background-color: var(--color-light-active-bg);
   box-shadow: var(--shadow-);
@@ -131,6 +136,11 @@
     var(--color-dark-section-bg);
 }
 
+/* custom scrollbars */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-dark-card-border) transparent;
+}
 #message {
   scrollbar-width: thin;
   scrollbar-color: var(--color-dark-card-border) transparent;
@@ -270,6 +280,8 @@
 
   --font-vazir: "VazirMatn";
 
+  --shadow-light: inset 0px 5px 12px var(--color-light-card-border);
+  --shadow-dark: inset 0px 5px 12px var(--color-dark-card-border);
   --animate-fadeIn: fadeIn 1s linear;
   --animate-fadeOut: fadeOut 1s linear;
 }
