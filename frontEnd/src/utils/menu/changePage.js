@@ -2,11 +2,14 @@ import HomePage from "../../pages/home";
 import ContactPage from "../../pages/contant";
 import ProductsPage from "../../pages/products";
 import AboutPage from "../../pages/about";
+import createPriceSlider from "../product/price";
+import apiRequest from "../http.js";
+import productsHandler from "../product/createProducts.js";
+import messageHandler from "../message/message.js";
 
 const pageContent = document.querySelector(".page-content");
 
-const PageContentHandler = (page) => {
-  console.log(page);
+const PageContentHandler = async (page) => {
   switch (page) {
     case "home":
       changePageContent(HomePage());
@@ -14,10 +17,14 @@ const PageContentHandler = (page) => {
 
     case "products":
       changePageContent(ProductsPage());
+      createPriceSlider();
+      const products = await apiRequest("/api/products");
+      productsHandler(products);
       break;
 
     case "contact":
       changePageContent(ContactPage());
+      messageHandler();
       break;
 
     case "about":

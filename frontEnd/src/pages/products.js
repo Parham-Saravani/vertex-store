@@ -1,6 +1,7 @@
 const ProductsPage = () => {
   return `
-       <div class="animate-fadeIn">
+       <!-- product page -->
+        <div class="animate-fadeIn mb-20">
           <!-- BreadCrumb -->
           <div class="flex items-center breadcrumb">
             <a href="#" class="dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:text-brand-accent-hover">صفحه اصلی</a>
@@ -34,207 +35,13 @@ const ProductsPage = () => {
               </div>
 
               <!-- products-->
-              <div class="my-3 flex flex-wrap gap-3 w-full">
-                  <div class="group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
-                    <img src="./src/assets/images/laptop.png" class="size-45 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
-                    <h2 class="dark:text-dark-text-primary w-40 text-[15px] text-center">هدست گیمینگ HyperX Cloud |||</h2>
-                    <p class="mt-2 [direction:ltr] flex items-center gap-1">
-                      <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">4.5</span>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">(24)</span>
-                    </p>
-                    <div class="[direction:ltr] flex items-center mt-3 dark:text-dark-text-primary text-light-text-primary text-xs">
-                      <p class="text-[17px] pr-1.5 font-bold">32,900,000</p>
-                      <p>تومان</p>
-                    </div>
-                  </div>
-                  <div class="group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
-                    <img src="./src/assets/images/camera.png" class="size-45 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
-                    <h2 class="dark:text-dark-text-primary w-40 text-[15px] text-center">هدست گیمینگ HyperX Cloud |||</h2>
-                    <p class="mt-2 [direction:ltr] flex items-center gap-1">
-                      <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">4.5</span>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">(24)</span>
-                    </p>
-                    <div class="[direction:ltr] flex items-center mt-3 dark:text-dark-text-primary text-light-text-primary text-xs">
-                      <p class="text-[17px] pr-1.5 font-bold">32,900,000</p>
-                      <p>تومان</p>
-                    </div>
-                  </div>
-                  <div class="group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
-                    <img src="./src/assets/images/monitor.png" class="size-45 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
-                    <h2 class="dark:text-dark-text-primary w-40 text-[15px] text-center">هدست گیمینگ HyperX Cloud |||</h2>
-                    <p class="mt-2 [direction:ltr] flex items-center gap-1">
-                      <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">4.5</span>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">(24)</span>
-                    </p>
-                    <div class="[direction:ltr] flex items-center mt-3 dark:text-dark-text-primary text-light-text-primary text-xs">
-                      <p class="text-[17px] pr-1.5 font-bold">32,900,000</p>
-                      <p>تومان</p>
-                    </div>
-                  </div>
-                  <div class="group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
-                    <img src="./src/assets/images/mouse.png" class="size-45 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
-                    <h2 class="dark:text-dark-text-primary w-40 text-[15px] text-center">هدست گیمینگ HyperX Cloud |||</h2>
-                    <p class="mt-2 [direction:ltr] flex items-center gap-1">
-                      <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">4.5</span>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">(24)</span>
-                    </p>
-                    <div class="[direction:ltr] flex items-center mt-3 dark:text-dark-text-primary text-light-text-primary text-xs">
-                      <p class="text-[17px] pr-1.5 font-bold">32,900,000</p>
-                      <p>تومان</p>
-                    </div>
-                  </div>
-                  <div class="group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
-                    <img src="./src/assets/images/keyboard.png" class="size-45 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
-                    <h2 class="dark:text-dark-text-primary w-40 text-[15px] text-center">هدست گیمینگ HyperX Cloud |||</h2>
-                    <p class="mt-2 [direction:ltr] flex items-center gap-1">
-                      <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">4.5</span>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">(24)</span>
-                    </p>
-                    <div class="[direction:ltr] flex items-center mt-3 dark:text-dark-text-primary text-light-text-primary text-xs">
-                      <p class="text-[17px] pr-1.5 font-bold">32,900,000</p>
-                      <p>تومان</p>
-                    </div>
-                  </div>
-                  <div class="group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
-                    <img src="./src/assets/images/console.png" class="size-45 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
-                    <h2 class="dark:text-dark-text-primary w-40 text-[15px] text-center">هدست گیمینگ HyperX Cloud |||</h2>
-                    <p class="mt-2 [direction:ltr] flex items-center gap-1">
-                      <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">4.5</span>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">(24)</span>
-                    </p>
-                    <div class="[direction:ltr] flex items-center mt-3 dark:text-dark-text-primary text-light-text-primary text-xs">
-                      <p class="text-[17px] pr-1.5 font-bold">32,900,000</p>
-                      <p>تومان</p>
-                    </div>
-                  </div>
-                  <div class="group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
-                    <img src="./src/assets/images/stuff.png" class="size-45 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
-                    <h2 class="dark:text-dark-text-primary w-40 text-[15px] text-center">هدست گیمینگ HyperX Cloud |||</h2>
-                    <p class="mt-2 [direction:ltr] flex items-center gap-1">
-                      <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">4.5</span>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">(24)</span>
-                    </p>
-                    <div class="[direction:ltr] flex items-center mt-3 dark:text-dark-text-primary text-light-text-primary text-xs">
-                      <p class="text-[17px] pr-1.5 font-bold">32,900,000</p>
-                      <p>تومان</p>
-                    </div>
-                  </div>
-                  <div class="group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
-                    <img src="./src/assets/images/stuff.png" class="size-45 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
-                    <h2 class="dark:text-dark-text-primary w-40 text-[15px] text-center">هدست گیمینگ HyperX Cloud |||</h2>
-                    <p class="mt-2 [direction:ltr] flex items-center gap-1">
-                      <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">4.5</span>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">(24)</span>
-                    </p>
-                    <div class="[direction:ltr] flex items-center mt-3 dark:text-dark-text-primary text-light-text-primary text-xs">
-                      <p class="text-[17px] pr-1.5 font-bold">32,900,000</p>
-                      <p>تومان</p>
-                    </div>
-                  </div>
-                  <div class="group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
-                    <img src="./src/assets/images/mouse.png" class="size-45 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
-                    <h2 class="dark:text-dark-text-primary w-40 text-[15px] text-center">هدست گیمینگ HyperX Cloud |||</h2>
-                    <p class="mt-2 [direction:ltr] flex items-center gap-1">
-                      <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">4.5</span>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">(24)</span>
-                    </p>
-                    <div class="[direction:ltr] flex items-center mt-3 dark:text-dark-text-primary text-light-text-primary text-xs">
-                      <p class="text-[17px] pr-1.5 font-bold">32,900,000</p>
-                      <p>تومان</p>
-                    </div>
-                  </div>
-                  <div class="group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
-                    <img src="./src/assets/images/camera.png" class="size-45 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
-                    <h2 class="dark:text-dark-text-primary w-40 text-[15px] text-center">هدست گیمینگ HyperX Cloud |||</h2>
-                    <p class="mt-2 [direction:ltr] flex items-center gap-1">
-                      <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">4.5</span>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">(24)</span>
-                    </p>
-                    <div class="[direction:ltr] flex items-center mt-3 dark:text-dark-text-primary text-light-text-primary text-xs">
-                      <p class="text-[17px] pr-1.5 font-bold">32,900,000</p>
-                      <p>تومان</p>
-                    </div>
-                  </div>
-                  <div class="group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
-                    <img src="./src/assets/images/laptop.png" class="size-45 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
-                    <h2 class="dark:text-dark-text-primary w-40 text-[15px] text-center">هدست گیمینگ HyperX Cloud |||</h2>
-                    <p class="mt-2 [direction:ltr] flex items-center gap-1">
-                      <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">4.5</span>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">(24)</span>
-                    </p>
-                    <div class="[direction:ltr] flex items-center mt-3 dark:text-dark-text-primary text-light-text-primary text-xs">
-                      <p class="text-[17px] pr-1.5 font-bold">32,900,000</p>
-                      <p>تومان</p>
-                    </div>
-                  </div>
-                  <div class="group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
-                    <img src="./src/assets/images/keyboard.png" class="size-45 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
-                    <h2 class="dark:text-dark-text-primary w-40 text-[15px] text-center">هدست گیمینگ HyperX Cloud |||</h2>
-                    <p class="mt-2 [direction:ltr] flex items-center gap-1">
-                      <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">4.5</span>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">(24)</span>
-                    </p>
-                    <div class="[direction:ltr] flex items-center mt-3 dark:text-dark-text-primary text-light-text-primary text-xs">
-                      <p class="text-[17px] pr-1.5 font-bold">32,900,000</p>
-                      <p>تومان</p>
-                    </div>
-                  </div>
-                  <div class="group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
-                    <img src="./src/assets/images/monitor.png" class="size-45 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
-                    <h2 class="dark:text-dark-text-primary w-40 text-[15px] text-center">هدست گیمینگ HyperX Cloud |||</h2>
-                    <p class="mt-2 [direction:ltr] flex items-center gap-1">
-                      <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">4.5</span>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">(24)</span>
-                    </p>
-                    <div class="[direction:ltr] flex items-center mt-3 dark:text-dark-text-primary text-light-text-primary text-xs">
-                      <p class="text-[17px] pr-1.5 font-bold">32,900,000</p>
-                      <p>تومان</p>
-                    </div>
-                  </div>
-                  <div class="group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
-                    <img src="./src/assets/images/stuff.png" class="size-45 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
-                    <h2 class="dark:text-dark-text-primary w-40 text-[15px] text-center">هدست گیمینگ HyperX Cloud |||</h2>
-                    <p class="mt-2 [direction:ltr] flex items-center gap-1">
-                      <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">4.5</span>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">(24)</span>
-                    </p>
-                    <div class="[direction:ltr] flex items-center mt-3 dark:text-dark-text-primary text-light-text-primary text-xs">
-                      <p class="text-[17px] pr-1.5 font-bold">32,900,000</p>
-                      <p>تومان</p>
-                    </div>
-                  </div>
-                  <div class="group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
-                    <img src="./src/assets/images/console.png" class="size-45 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
-                    <h2 class="dark:text-dark-text-primary w-40 text-[15px] text-center">هدست گیمینگ HyperX Cloud |||</h2>
-                    <p class="mt-2 [direction:ltr] flex items-center gap-1">
-                      <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">4.5</span>
-                      <span class="dark:text-dark-text-primary text-light-text-primary text-xs">(24)</span>
-                    </p>
-                    <div class="[direction:ltr] flex items-center mt-3 dark:text-dark-text-primary text-light-text-primary text-xs">
-                      <p class="text-[17px] pr-1.5 font-bold">32,900,000</p>
-                      <p>تومان</p>
-                    </div>
-                  </div>
+              <div class="my-3 flex flex-wrap gap-3 w-full products-container">
+                
                   
               </div>
 
               <!-- Pagination -->
-              <div class="mt-10 mb-6 [direction:ltr] w-full flex gap-2 items-center justify-center">
+              <div class="mt-10 mb-6 [direction:ltr] w-full flex gap-2 items-center justify-center pagination-container">
                 <button class="flex items-center justify-center text-xs dark:bg-dark-card-bg bg-light-card-bg  border dark:border-dark-card-border border-light-card-border dark:text-dark-text-secondary text-light-text-secondary w-14 h-14 rounded-xl transition-colors duration-300 hover:border-dark-card-hover-border cursor-pointer"><i class="fa-solid fa-chevron-left"></i></button>
                 <div class="flex gap-1 pagination-buttons">
                   <button class="flex items-center justify-center dark:text-dark-text-primary text-light-text-primary border dark:border-dark-card-border border-light-card-border w-14 h-14 rounded-xl transition-colors duration-300 hover:border-dark-card-hover-border cursor-pointer text-[17px] pagination-active">1</button>
@@ -254,9 +61,9 @@ const ProductsPage = () => {
               <div class="border dark:border-dark-card-border  border-light-card-border dark:bg-dark-section-bg bg-light-section-bg rounded-xl px-6 py-5">
                 <div class="flex gap-2 items-center">
                   <i class="fa-solid fa-layer-group text-brand-accent text-xl"></i>
-                  <p class="dark:text-dark-text-primary text-light-text-primary font-bold text-xl">دسته بندی ها</p>
+                  <h3 class="dark:text-dark-text-primary text-light-text-primary font-bold text-xl">دسته بندی ها</h3>
                 </div>
-                <ul class="mt-7 flex flex-col gap-1">
+                <ul class="mt-3 flex flex-col gap-1">
                   <li class="text-[13px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/40 hover:bg-brand-accent-hover hover:text-dark-text-primary category-active">همه محصولات</li>
                   <li class="text-[13px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/40 hover:bg-brand-accent-hover hover:text-dark-text-primary">کیبورد</li>
                   <li class="text-[13px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/40 hover:bg-brand-accent-hover hover:text-dark-text-primary">ماوس</li>
@@ -267,12 +74,82 @@ const ProductsPage = () => {
                   <li class="text-[13px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/40 hover:bg-brand-accent-hover hover:text-dark-text-primary">دوربین</li>
                 </ul>
               </div>
+
               <div class="w-full border dark:border-dark-card-border  border-light-card-border dark:bg-dark-section-bg bg-light-section-bg rounded-xl px-6 py-5">
-                
+                <!-- brands -->
+                <div>
+                  <div class="flex gap-2 items-center">
+                  <i class="fa-solid fa-globe text-brand-accent text-xl"></i>
+                  <h3 class="dark:text-dark-text-primary text-light-text-primary font-bold text-xl">برندها</h3>
+                  </div>
+                <div class="[direction:ltr] mt-3 w-full flex flex-col gap-1.5">
+                  <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2">
+                      <input id="Razer" type="checkbox" class="peer hidden">
+                      <label for="Razer" class="peer-checked:bg-brand-accent rounded-md  flex items-center justify-center w-4.5 h-4.5 border dark:border-dark-card-border border-light-card-border transition-colors duration-300">
+                          <i class="fa-solid fa-check text-[10px] dark:text-dark-card-bg text-dark-text-primary"></i>
+                      </label>
+                      <label for="Razer" class="h-4 dark:text-dark-text-primary text-light-text-primary text-[15px]">Razer</label>
+                    </div>
+                    <p class="dark:text-dark-text-primary h-4 text-light-text-primary text-[13px]">(24)</p>
+                  </div>
+
+                  <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2">
+                      <input id="Asus" type="checkbox" class="peer hidden">
+                      <label for="Asus" class="peer-checked:bg-brand-accent rounded-md  flex items-center justify-center w-4.5 h-4.5 border dark:border-dark-card-border border-light-card-border transition-colors duration-300">
+                          <i class="fa-solid fa-check text-[10px] hidden dark:text-dark-card-bg text-dark-text-primary"></i>
+                      </label>
+                      <label for="Asus" class="h-4 dark:text-dark-text-primary text-light-text-primary text-[15px]">Asus</label>
+                    </div>
+                    <p class="dark:text-dark-text-primary h-4 text-light-text-primary text-[13px]">( 31 )</p>
+                  </div>
+                  
+                  <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2">
+                      <input id="HyperX" type="checkbox" class="peer hidden">
+                      <label for="HyperX" class="peer-checked:bg-brand-accent rounded-md  flex items-center justify-center w-4.5 h-4.5 border dark:border-dark-card-border border-light-card-border transition-colors duration-300">
+                          <i class="fa-solid fa-check text-[10px] hidden dark:text-dark-card-bg text-dark-text-primary"></i>
+                      </label>
+                      <label for="HyperX" class="h-4 dark:text-dark-text-primary text-light-text-primary text-[15px]">HyperX</label>
+                    </div>
+                    <p class="dark:text-dark-text-primary h-4 text-light-text-primary text-[13px]">( 24 )</p>
+                  </div>
+                </div>
+                </div>
+                <!-- DIVIDER -->
+                <div class="my-5 w-full h-0.5 dark:bg-dark-divider bg-light-divider rounded-full"></div>
+                <!-- price -->
+                <div>
+                    <div class="flex gap-2 items-center">
+                        <i class="fa-solid fa-tag text-brand-accent text-xl"></i>
+                        <h3 class="dark:text-dark-text-primary text-light-text-primary font-bold text-xl">محدوده قیمت</h3>
+                    </div>
+                    <!-- price content -->
+                    <div class="mt-3">
+                      <div class="flex flex-col items-center">
+                        <div class="flex gap-2">
+                          <p class="dark:text-dark-text-primary text-light-text-primary">از</p>
+                          <p class="dark:text-dark-text-primary text-light-text-primary min-price">10,000,000</p>
+                          <p class="dark:text-dark-text-primary text-light-text-primary">تومان</p>
+                        </div>
+                        <div class="flex gap-2">
+                          <p class="dark:text-dark-text-primary text-light-text-primary">تا</p>
+                          <p class="dark:text-dark-text-primary text-light-text-primary max-price">150,000,000</p>
+                          <p class="dark:text-dark-text-primary text-light-text-primary">تومان</p>
+                        </div>
+                      </div>
+                      <div id="price-slider" class="mt-3"></div>
+                      <div class="flex justify-between">
+                          <p class="dark:text-dark-text-primary text-light-text-primary text-xs mt-1">گران ترین</p>
+                          <p class="dark:text-dark-text-primary text-light-text-primary text-xs mt-1">ارزان ترین</p>
+                      </div>
+                    </div>
+                </div>
               </div>
-            </div>
           </div>
         </div>
+
     `;
 };
 

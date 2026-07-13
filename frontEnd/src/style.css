@@ -164,7 +164,9 @@ html {
 
 /* nOUiSlider styles */
 #price-slider.noUi-target {
-  background-color: var(--color-light-card-bg);
+  box-shadow: none;
+  border: none;
+  background-color: var(--color-light-card-hover);
   width: 100%;
   height: 0.5rem;
   border-radius: 1rem;
@@ -173,8 +175,21 @@ html {
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
 }
-
+.dark #price-slider.noUi-target {
+  box-shadow: none;
+  border: none;
+  background-color: var(--color-dark-card-hover);
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
 #price-slider .noUi-handle {
+  left: -11px;
+  top: -4px;
   transition: transform 100ms ease-in;
   border: none;
   border-radius: 50%;
@@ -198,7 +213,6 @@ html {
   content: none;
 }
 #price-slider .noUi-connect {
-  transition: transform 100ms ease;
   border-radius: 1rem;
   display: flex;
   background-color: var(--color-brand-accent);
@@ -208,10 +222,6 @@ html {
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
-  -webkit-transition: transform 100ms ease;
-  -moz-transition: transform 100ms ease;
-  -ms-transition: transform 100ms ease;
-  -o-transition: transform 100ms ease;
 }
 
 /* fonts */
