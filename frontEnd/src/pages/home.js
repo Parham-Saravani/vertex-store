@@ -1,7 +1,7 @@
 const HomePage = () => {
   return `
        <div> 
-          <div class="relative animate-fadeIn rounded-2xl overflow-hidden max-sm:h-55 h-130">
+          <div class="relative rounded-2xl animate-fadeIn overflow-hidden max-sm:h-55 h-130">
             <img src="./src/assets/images/banner.png" class="object-cover w-full h-full" alt=""/>
             <div class="absolute max-sm:top-10 top-45 left-0 max-sm:right-15 right-30 mx-auto max-sm:w-70 w-180">
               <p class="text-dark-text-primary max-sm:text-xl text-5xl font-bold">
@@ -107,12 +107,12 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div data-aos="fade-zoom-in" data-aos-duration="1000" class="my-6 flex items-center justify-between news-background rounded-xl py-10 px-20 border-2 dark:border-dark-card-border border-light-card-border">
+          <div data-aos="fade-zoom-in" data-aos-duration="1000" class="mt-3 max-sm:mb-2 mb-6 flex max-sm:flex-col max-sm:gap-4 items-center justify-between news-background rounded-xl max-sm:py-5 py-10 px-20 border-2 dark:border-dark-card-border border-light-card-border">
             <div>
-              <h2 class="dark:text-dark-text-primary text-light-text-primary font-bold text-2xl">
+              <h2 class="dark:text-dark-text-primary text-light-text-primary font-bold max-sm:text-xl text-2xl">
                 عضویت در خبرنامه
               </h2>
-              <p class="dark:text-dark-text-secondary text-light-text-secondary">
+              <p class="max-sm:text-[13px] max-sm:mt-1 dark:text-dark-text-secondary text-light-text-secondary">
                 با عضویت در خبرنامه از جدیدترین محصولات و تخفیف ها باخبر شوید
               </p>
             </div>
@@ -123,7 +123,7 @@ const HomePage = () => {
               </button>
             </form>
           </div>
-        </div>          
+        </div> 
     `;
 };
 export default HomePage;

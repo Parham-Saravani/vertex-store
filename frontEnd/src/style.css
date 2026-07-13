@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* custome classes */
+/* custome active classes */
 .auth-active {
   background-color: var(--color-brand-accent);
   color: var(--color-dark-text-primary);
@@ -47,7 +47,21 @@
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
 }
+.pagination-active {
+  background-color: var(--color-brand-accent-hover);
+  color: var(--color-dark-text-primary);
+  border-color: var(--color-brand-accent);
+}
+.category-active{
+  color: var(--color-pur);
+  background-color: var(--color-purple-600);
+}
+.dark .category-active{
+  color: var(--color-brand-accent);
+  background-color: rgba(var(--color-glow-accent) , 0.20);
+}
 
+/* glow effects */
 .glow-effect {
   background:
     radial-gradient(
