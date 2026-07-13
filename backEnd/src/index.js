@@ -4,11 +4,9 @@ import conntectToDataBase from "./config/database.js";
 
 dotenv.config();
 
-const startServer = async () => {
+(async () => {
   await conntectToDataBase();
   app.listen(process.env.PORT, () => {
     console.log("Server is Running on port :", process.env.PORT);
   });
-};
-
-startServer()
+})();
