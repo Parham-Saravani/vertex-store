@@ -372,7 +372,7 @@ html {
     padding: 0 1rem;
   }
   @variant lg {
-    max-width: 50rem;
+    max-width: 80rem;
     padding: 0 1rem;
   }
   @variant xl {
@@ -380,7 +380,7 @@ html {
     padding: 0 1rem;
   }
   @variant 2xl {
-    max-width: 100%;
+    max-width: 120rem;
     padding: 0 3rem;
   }
 }

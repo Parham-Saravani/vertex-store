@@ -37,7 +37,7 @@
           </h1>
         </a>
         <!-- menu and search input -->
-        <div class="max-sm:hidden flex items-center gap-6">
+        <div class="max-xl:hidden flex items-center gap-6">
           <ul class="flex gap-1 dark:text-dark-text-primary text-light-text-primary font-bold">
             <li data-page="home" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300 menu-active">
               <a href="#">صفحه اصلی</a>
@@ -218,8 +218,30 @@
             </form>
           </div>
         </div> 
+              <!-- sort content -->
+              <div class="border dark:border-dark-card-border border-light-card-border px-6 py-3 dark:bg-dark-section-bg bg-light-section-bg rounded-xl flex w-full justify-between items-center">
+                <p class="dark:text-dark-text-primary text-light-text-primary">نمایش 120 محصول</p>
+                <div>
+                  <div class="flex items-center gap-2">
+                   <p class="dark:text-dark-text-primary text-light-text-primary">مرتب سازی:</p>
+                   <!-- dropDown -->
+                    <div class="relative w-40 mr-3">
+                      <button class="dark:bg-dark-card-hover bg-light-card-hover border dark:border-dark-card-border border-light-card-border dark:text-dark-text-primary text-light-text-primary px-3 py-2 rounded-xl flex items-center justify-between w-full cursor-pointer sort-btn">
+                        <p>براساس</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                      </button>
+                      <ul class="absolute hidden top-12 right-0 left-0 mx-auto z-10 rounded-xl dark:bg-dark-card-hover bg-light-card-hover w-full sort-list">
+                        <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-xl px-2 py-2 cursor-pointer sort-items">پرفروش ترین</li>
+                        <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-xl px-2 py-2 cursor-pointer sort-items">محبوب ترین</li>
+                        <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-xl px-2 py-2 cursor-pointer sort-items">جدید ترین</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-       
+    </div>
+
       </main>
 
       <!-- Footer -->

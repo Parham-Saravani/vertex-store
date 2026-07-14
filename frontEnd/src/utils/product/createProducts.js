@@ -13,16 +13,16 @@ const createProducts = (products) => {
   products.slice(firstIndex , secondIndex).forEach(product => {
     productsContainer.insertAdjacentHTML('beforeend', 
       `
-      <div class="group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
-          <img src=${product.images[0]} class="size-45 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
-          <h2 class="dark:text-dark-text-primary w-40 text-[15px] text-center">${product.title}</h2>
+      <div class="group border dark:border-dark-card-border max-2xl:w-52.5 max-xl:w-42 max-md:w-36.5 max-sm:w-42 border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
+          <img src=${product.images[0]} class="size-45 max-2xl:size-36 max-xl:size-32 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
+          <h2 class="dark:text-dark-text-primary w-40 text-[15px] max-2xl:text-[13px] max-xl:text-[12px] max-md:px-5 max-md:text-[11px] text-center">${product.title}</h2>
           <p class="mt-2 [direction:ltr] flex items-center gap-1">
-            <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
-            <span class="dark:text-dark-text-primary text-light-text-primary text-xs">${product.rating}</span>
-            <span class="dark:text-dark-text-primary text-light-text-primary text-xs">( ${product.reviewCount} )</span>
+            <i class="fa-solid fa-star text-yellow-400 text-xs max-sm:text-[10px]"></i>
+            <span class="dark:text-dark-text-primary text-light-text-primary text-xs max-sm:text-[10px]">${product.rating}</span>
+            <span class="dark:text-dark-text-primary text-light-text-primary text-xs max-sm:text-[10px]">( ${product.reviewCount} )</span>
           </p>
           <div class="[direction:ltr] flex items-center mt-3 dark:text-dark-text-primary text-light-text-primary text-xs">
-            <p class="text-[17px] pr-1.5 font-bold">${product.price.toLocaleString()}</p>
+            <p class="text-[17px] max-md:text-[13px] pr-1.5">${product.price.toLocaleString()}</p>
             <p>تومان</p>
           </div>
       </div>
