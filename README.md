@@ -93,7 +93,7 @@ git clone https://github.com/Parham-Saravani/vertex-store.git
 ### Frontend
 
 ```bash
-cd client
+cd frontend
 
 npm install
 
@@ -103,7 +103,7 @@ npm run dev
 ### Backend
 
 ```bash
-cd server
+cd backend
 
 npm install
 
