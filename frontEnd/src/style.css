@@ -265,6 +265,34 @@ html {
   }
 }
 
+
+@keyframes loader {
+  0% {
+    box-shadow:
+      20px 0 rgba(var(--color-glow-accent), 0.2),
+      -20px 0 var(--color-brand-accent);
+    background: rgba(var(--color-glow-accent), 0.2);
+  }
+  33% {
+    box-shadow:
+      20px 0 rgba(var(--color-glow-accent), 0.2),
+      -20px 0 var(--color-brand-accent);
+    background: var(--color-brand-accent);
+  }
+  66% {
+    box-shadow:
+      20px 0 var(--color-brand-accent),
+      -20px 0 rgba(var(--color-glow-accent), 0.2);
+    background: var(--color-brand-accent);
+  }
+  100% {
+    box-shadow:
+      20px 0 var(--color-brand-accent),
+      -20px 0 rgba(var(--color-glow-accent), 0.2);
+    background: rgba(var(--color-glow-accent), 0.2);
+  }
+}
+
 @theme {
   /* BRAND COLORS */
 
@@ -362,6 +390,7 @@ html {
   --shadow-dark: inset 0px 5px 12px var(--color-dark-card-border);
   --animate-fadeIn: fadeIn 1s linear;
   --animate-fadeOut: fadeOut 800ms linear;
+  --animate-loader: loader 1s infinite linear alternate;
 }
 
 @utility container {
