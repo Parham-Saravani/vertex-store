@@ -120,9 +120,6 @@ The main architecture of the application has already been implemented, including
 
 - Frontend Development
 - REST API Development
-- MongoDB Integration
-- Product Management System
-- Product Filtering & Sorting
 - Responsive Design
 - Dark Mode Support
 
