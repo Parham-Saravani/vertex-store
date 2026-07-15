@@ -45,7 +45,7 @@
             <li data-page="products" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
               <a href="#">محصولات</a>
             </li>
-            <li data-page="home" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
+            <li data-page="home" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer  before:transition-colors before:duration-300">
               <a href="#">دسته بندی</a>
             </li>
             <li data-page="about" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
@@ -105,9 +105,7 @@
                 مجموعه‌ای از بهترین تجهیزات گیمینگ، لپ‌تاپ، مانیتور و لوازم
                 جانبی حرفه‌ای.
               </p>
-              <a
-                href="#"
-                class="flex items-center justify-center max-sm:text-xs max-sm:mt-4 mt-7 max-sm:mr-5 mr-20 text-dark-text-primary bg-linear-90 from-brand-primary to-brand-accent rounded-xl max-sm:w-50 w-100 max-sm:py-2.5 py-4 font-bold cursor-pointer transition-transform duration-300 hover:-translate-y-0.5" >مشاهده محصولات</a>
+              <button href="#" class="flex items-center justify-center max-sm:text-xs max-sm:mt-4 mt-7 max-sm:mr-5 mr-20 text-dark-text-primary bg-linear-90 from-brand-primary to-brand-accent rounded-xl max-sm:w-50 w-100 max-sm:py-2.5 py-4 font-bold cursor-pointer transition-transform duration-300 hover:-translate-y-0.5 banner-show-products-btn">مشاهده محصولات</button>
             </div>
           </div>
 
@@ -218,134 +216,109 @@
             </form>
           </div>
         </div> 
-              <!-- sort content -->
-              <div class="border dark:border-dark-card-border border-light-card-border px-6 py-3 dark:bg-dark-section-bg bg-light-section-bg rounded-xl flex w-full justify-between items-center">
-                <p class="dark:text-dark-text-primary text-light-text-primary">نمایش 120 محصول</p>
-                <div>
-                  <div class="flex items-center gap-2">
-                   <p class="dark:text-dark-text-primary text-light-text-primary">مرتب سازی:</p>
-                   <!-- dropDown -->
-                    <div class="relative w-40 mr-3">
-                      <button class="dark:bg-dark-card-hover bg-light-card-hover border dark:border-dark-card-border border-light-card-border dark:text-dark-text-primary text-light-text-primary px-3 py-2 rounded-xl flex items-center justify-between w-full cursor-pointer sort-btn">
-                        <p>براساس</p>
-                        <i class="fa-solid fa-chevron-down"></i>
-                      </button>
-                      <ul class="absolute hidden top-12 right-0 left-0 mx-auto z-10 rounded-xl dark:bg-dark-card-hover bg-light-card-hover w-full sort-list">
-                        <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-xl px-2 py-2 cursor-pointer sort-items">پرفروش ترین</li>
-                        <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-xl px-2 py-2 cursor-pointer sort-items">محبوب ترین</li>
-                        <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-xl px-2 py-2 cursor-pointer sort-items">جدید ترین</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-    </div>
-
       </main>
 
-      <!-- Footer -->
-      <footer data-aos="fade-zoom-in" data-aos-duration="1000" class="pt-6 rounded-xl dark:shadow-dark-lg border-2 dark:border-dark-card-border border-light-card-border footer-glow-effect">
-        <div class="max-sm:flex-col-reverse flex max-sm:items-start items-center justify-between max-sm:px-10 px-8">
-          <div class="max-sm:w-full max-sm:justify-center flex">
-            <div class="max-sm:hidden text-right h-40 pt-3">
-              <a href="http://localhost:5173" class="text-right">
-                <h1 class="bg-linear-90 from-brand-primary to-brand-accent text-transparent bg-clip-text font-bold text-4xl">
-                  Vertex
-                </h1>
-              </a>
-              <h3 class="mt-1 font-medium dark:text-dark-text-primary text-light-text-primary">
-                فورشگاه تجهیزات تکنولوژی و گیمینگ
-              </h3>
-            </div>
-
-            <div class="flex gap-15 max-sm:mr-0 mr-30">
-              <div class="flex flex-col gap-2">
-                <h4 class="font-bold dark:text-dark-text-primary text-light-text-primary">
-                  دسترسی سریع
-                </h4>
-                <ul class="flex flex-col gap-2">
-                  <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
-                    صفحه اصلی
-                  </li>
-                  <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
-                    محصولات
-                  </li>
-                  <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
-                    دسته بندی ها
-                  </li>
-                  <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
-                    بلاگ
-                  </li>
-                  <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
-                    درباره ما
-                  </li>
-                </ul>
+        <!-- Footer -->
+        <footer data-aos="fade-zoom-in" data-aos-duration="1000" class="pt-6 rounded-xl dark:shadow-dark-lg border-2 dark:border-dark-card-border border-light-card-border footer-glow-effect">
+          <div class="max-sm:flex-col-reverse flex max-sm:items-start items-center justify-between max-sm:px-10 px-8">
+            <div class="max-sm:w-full max-sm:mt-6 max-sm:justify-center flex">
+              <div class="max-sm:hidden text-right h-40 pt-3">
+                <a href="http://localhost:5173" class="text-right">
+                  <h1 class="bg-linear-90 from-brand-primary to-brand-accent text-transparent bg-clip-text font-bold text-4xl">
+                    Vertex
+                  </h1>
+                </a>
+                <h3 class="mt-1 font-medium dark:text-dark-text-primary text-light-text-primary">
+                  فورشگاه تجهیزات تکنولوژی و گیمینگ
+                </h3>
               </div>
-
+    
+              <div class="flex gap-15 max-sm:mr-0 mr-30">
+                <div class="flex flex-col gap-2">
+                  <h4 class="font-bold dark:text-dark-text-primary text-light-text-primary">
+                    دسترسی سریع
+                  </h4>
+                  <ul class="flex flex-col gap-2">
+                    <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
+                      صفحه اصلی
+                    </li>
+                    <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
+                      محصولات
+                    </li>
+                    <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
+                      دسته بندی ها
+                    </li>
+                    <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
+                      بلاگ
+                    </li>
+                    <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
+                      درباره ما
+                    </li>
+                  </ul>
+                </div>
+    
+                <div class="flex flex-col gap-2">
+                  <h4 class="font-bold dark:text-dark-text-primary text-light-text-primary">
+                    خدمات مشتریان
+                  </h4>
+                  <ul class="flex flex-col gap-2">
+                    <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
+                      پرسش های متداول
+                    </li>
+                    <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
+                      شرایط و قوانین
+                    </li>
+                    <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
+                      حریم خصوصی
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+    
+            <div class="flex gap-10 max-sm:gap-0 max-sm:flex-col max-sm:ml-0 ml-20">
+             <div class="hidden text-right max-sm:h-20 max-sm:w-full max-sm:flex max-sm:flex-col max-sm:items-center h-40 pt-3">
+                <a href="http://localhost:5173" class="text-right">
+                  <h1 class="bg-linear-90 from-brand-primary to-brand-accent text-transparent bg-clip-text font-bold text-4xl">
+                    Vertex
+                  </h1>
+                </a>
+                <h3 class="text-xs mt-1 font-medium dark:text-dark-text-primary text-light-text-primary">
+                  فورشگاه تجهیزات تکنولوژی و گیمینگ
+                </h3>
+              </div>
+    
               <div class="flex flex-col gap-2">
                 <h4 class="font-bold dark:text-dark-text-primary text-light-text-primary">
-                  خدمات مشتریان
+                  تماس با ما
                 </h4>
-                <ul class="flex flex-col gap-2">
-                  <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
-                    پرسش های متداول
-                  </li>
-                  <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
-                    شرایط و قوانین
-                  </li>
-                  <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
-                    حریم خصوصی
-                  </li>
-                </ul>
+                <div class="flex items-center gap-3 dark:text-dark-text-primary text-light-text-primary">
+                  <i class="fa-solid fa-phone"></i>
+                  <span
+                    class="dark:text-dark-text-secondary text-light-text-secondary max-sm:text-[11px] max-sm:w-25">021-12345678</span>
+                </div>
+    
+                <div class="flex items-center gap-3 dark:text-dark-text-primary text-light-text-primary">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span
+                    class="dark:text-dark-text-secondary text-light-text-secondary max-sm:text-[11px] max-sm:w-25">info@vertex.ir</span>
+                </div>
+    
+                <div class="flex items-center gap-3 dark:text-dark-text-primary text-light-text-primary">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span class="dark:text-dark-text-secondary text-light-text-secondary max-sm:text-[11px] max-sm:w-25">تهران، خیابان ولیعصر</span>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="flex gap-10 max-sm:ml-0 ml-20">
-           <div class="hidden max-sm:block text-right h-40 pt-3">
-              <a href="http://localhost:5173" class="text-right">
-                <h1 class="bg-linear-90 from-brand-primary to-brand-accent text-transparent bg-clip-text font-bold text-4xl">
-                  Vertex
-                </h1>
-              </a>
-              <h3 class="text-xs mt-1 font-medium dark:text-dark-text-primary text-light-text-primary">
-                فورشگاه تجهیزات تکنولوژی و گیمینگ
-              </h3>
-            </div>
-
-            <div class="flex flex-col gap-2">
-              <h4 class="font-bold dark:text-dark-text-primary text-light-text-primary">
-                تماس با ما
-              </h4>
-              <div class="flex items-center gap-3 dark:text-dark-text-primary text-light-text-primary">
-                <i class="fa-solid fa-phone"></i>
-                <span
-                  class="dark:text-dark-text-secondary text-light-text-secondary">021-12345678</span>
-              </div>
-
-              <div class="flex items-center gap-3 dark:text-dark-text-primary text-light-text-primary">
-                <i class="fa-solid fa-envelope"></i>
-                <span
-                  class="dark:text-dark-text-secondary text-light-text-secondary">info@vertex.ir</span>
-              </div>
-
-              <div class="flex items-center gap-3 dark:text-dark-text-primary text-light-text-primary">
-                <i class="fa-solid fa-location-dot"></i>
-                <span class="dark:text-dark-text-secondary text-light-text-secondary">تهران، خیابان ولیعصر</span>
-              </div>
-            </div>
+    
+          <!-- Divider -->
+          <div class="mt-5 mb-3 w-full h-0.5 dark:bg-dark-divider bg-light-divider"></div>
+          <div class="pb-4 pt-1 text-center dark:text-dark-text-secondary text-light-text-secondary max-sm:text-xs text-[14px]">
+            <p>تمامی حقوقی برای Vertex Store محفوظ است</p>
           </div>
-        </div>
-
-        <!-- Divider -->
-        <div class="mt-5 mb-3 w-full h-0.5 dark:bg-dark-divider bg-light-divider"></div>
-        <div class="pb-4 pt-1 text-center dark:text-dark-text-secondary text-light-text-secondary max-sm:text-xs text-[14px]">
-          <p>تمامی حقوقی برای Vertex Store محفوظ است</p>
-        </div>
-      </footer>
+        </footer>
     </div>
-
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

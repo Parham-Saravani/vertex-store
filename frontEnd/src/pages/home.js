@@ -11,9 +11,7 @@ const HomePage = () => {
                 مجموعه‌ای از بهترین تجهیزات گیمینگ، لپ‌تاپ، مانیتور و لوازم
                 جانبی حرفه‌ای.
               </p>
-              <a
-                href="#"
-                class="flex items-center justify-center max-sm:text-xs max-sm:mt-4 mt-7 max-sm:mr-5 mr-20 text-dark-text-primary bg-linear-90 from-brand-primary to-brand-accent rounded-xl max-sm:w-50 w-100 max-sm:py-2.5 py-4 font-bold cursor-pointer transition-transform duration-300 hover:-translate-y-0.5" >مشاهده محصولات</a>
+              <button href="#" class="flex items-center justify-center max-sm:text-xs max-sm:mt-4 mt-7 max-sm:mr-5 mr-20 text-dark-text-primary bg-linear-90 from-brand-primary to-brand-accent rounded-xl max-sm:w-50 w-100 max-sm:py-2.5 py-4 font-bold cursor-pointer transition-transform duration-300 hover:-translate-y-0.5 banner-show-products-btn" >مشاهده محصولات</button>
             </div>
           </div>
 

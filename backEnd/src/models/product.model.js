@@ -3,13 +3,14 @@ import mongoose from "mongoose";
 const productSchema = new mongoose.Schema(
   {
     title: { type: String },
-    slug: { type: String , unique: true },
+    slug: { type: String, unique: true },
     price: { type: Number },
     oldPrice: { type: Number },
     discount: { type: Number, default: 0 },
     stock: { type: Number },
     brand: { type: String },
     category: { type: String },
+    category_fa: { type: String },
     rating: { type: Number, default: 0 },
     reviewCount: { type: Number, default: 0 },
     featured: { type: Boolean, default: false },

@@ -14,7 +14,7 @@ const ProductsPage = () => {
             <div class="w-[80%] max-xl:w-[75%] max-md:w-full">
               <!-- sort content -->
               <div class="border dark:border-dark-card-border border-light-card-border max-sm:px-2 px-6 py-3 dark:bg-dark-section-bg bg-light-section-bg rounded-xl flex w-full justify-between items-center">
-                <p class="dark:text-dark-text-primary text-light-text-primary max-md:text-[10px]">نمایش 120 محصول</p>
+                <p class="dark:text-dark-text-primary text-light-text-primary max-md:text-[10px] total-products-text">نمایش 120 محصول</p>
                 <div>
                   <div class="flex items-center gap-2">
                    <p class="dark:text-dark-text-primary text-light-text-primary max-md:text-[10px]">مرتب سازی:</p>
@@ -63,15 +63,8 @@ const ProductsPage = () => {
                   <i class="fa-solid fa-layer-group text-brand-accent text-xl"></i>
                   <h3 class="dark:text-dark-text-primary text-light-text-primary font-bold text-xl max-lg:text-[14px]">دسته بندی ها</h3>
                 </div>
-                <ul class="mt-3 flex flex-col gap-1">
-                  <li class="text-[13px] max-lg:text-[10px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/40 hover:bg-brand-accent-hover hover:text-dark-text-primary category-active">همه محصولات</li>
-                  <li class="text-[13px] max-lg:text-[10px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/40 hover:bg-brand-accent-hover hover:text-dark-text-primary">کیبورد</li>
-                  <li class="text-[13px] max-lg:text-[10px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/40 hover:bg-brand-accent-hover hover:text-dark-text-primary">ماوس</li>
-                  <li class="text-[13px] max-lg:text-[10px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/40 hover:bg-brand-accent-hover hover:text-dark-text-primary">لوازم جانبی</li>
-                  <li class="text-[13px] max-lg:text-[10px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/40 hover:bg-brand-accent-hover hover:text-dark-text-primary">مانیتور</li>
-                  <li class="text-[13px] max-lg:text-[10px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/40 hover:bg-brand-accent-hover hover:text-dark-text-primary">لپ تاپ</li>
-                  <li class="text-[13px] max-lg:text-[10px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/40 hover:bg-brand-accent-hover hover:text-dark-text-primary">کنسول بازی</li>
-                  <li class="text-[13px] max-lg:text-[10px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/40 hover:bg-brand-accent-hover hover:text-dark-text-primary">دوربین</li>
+                <ul class="mt-3 flex flex-col gap-1 category-container">
+
                 </ul>
               </div>
 
@@ -81,42 +74,15 @@ const ProductsPage = () => {
                   <div class="flex gap-2 items-center">
                   <i class="fa-solid fa-globe text-brand-accent text-xl"></i>
                   <h3 class="dark:text-dark-text-primary text-light-text-primary font-bold text-xl max-lg:text-[14px]">برندها</h3>
-                  </div>
-                <div class="[direction:ltr] mt-3 w-full flex flex-col gap-1.5">
-                  <div class="flex items-center gap-3">
-                    <div class="flex items-center gap-2">
-                      <input id="Razer" type="checkbox" class="peer hidden">
-                      <label for="Razer" class="peer-checked:bg-brand-accent rounded-md  flex items-center justify-center w-4.5 h-4.5 border dark:border-dark-card-border border-light-card-border transition-colors duration-300">
-                          <i class="fa-solid fa-check text-[10px] dark:text-dark-card-bg text-dark-text-primary"></i>
-                      </label>
-                      <label for="Razer" class="h-4 dark:text-dark-text-primary text-light-text-primary text-[15px]">Razer</label>
-                    </div>
-                    <p class="dark:text-dark-text-primary h-4 text-light-text-primary text-[13px]">(24)</p>
-                  </div>
-
-                  <div class="flex items-center gap-3">
-                    <div class="flex items-center gap-2">
-                      <input id="Asus" type="checkbox" class="peer hidden">
-                      <label for="Asus" class="peer-checked:bg-brand-accent rounded-md  flex items-center justify-center w-4.5 h-4.5 border dark:border-dark-card-border border-light-card-border transition-colors duration-300">
-                          <i class="fa-solid fa-check text-[10px] hidden dark:text-dark-card-bg text-dark-text-primary"></i>
-                      </label>
-                      <label for="Asus" class="h-4 dark:text-dark-text-primary text-light-text-primary text-[15px]">Asus</label>
-                    </div>
-                    <p class="dark:text-dark-text-primary h-4 text-light-text-primary text-[13px]">( 31 )</p>
-                  </div>
+                </div>
+                <div class="[direction:ltr] mt-3 w-full flex flex-col gap-1.5 brand-container">
                   
-                  <div class="flex items-center gap-3">
-                    <div class="flex items-center gap-2">
-                      <input id="HyperX" type="checkbox" class="peer hidden">
-                      <label for="HyperX" class="peer-checked:bg-brand-accent rounded-md  flex items-center justify-center w-4.5 h-4.5 border dark:border-dark-card-border border-light-card-border transition-colors duration-300">
-                          <i class="fa-solid fa-check text-[10px] hidden dark:text-dark-card-bg text-dark-text-primary"></i>
-                      </label>
-                      <label for="HyperX" class="h-4 dark:text-dark-text-primary text-light-text-primary text-[15px]">HyperX</label>
-                    </div>
-                    <p class="dark:text-dark-text-primary h-4 text-light-text-primary text-[13px]">( 24 )</p>
-                  </div>
+               
+                  
+                  
                 </div>
-                </div>
+              </div>
+
                 <!-- DIVIDER -->
                 <div class="my-5 w-full h-0.5 dark:bg-dark-divider bg-light-divider rounded-full"></div>
                 <!-- price -->

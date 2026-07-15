@@ -12,7 +12,7 @@ const sortListHandler = (event) => {
       showOrHideSortList('animate-fadeOut' , 'animate-fadeIn', 'hide', sortList);
     }
   }
-  if (!sortBtn) {
+  if (!sortBtn && document.querySelector('.breadcrumb')) {
     if (!sortList.classList.contains("hidden")) {
       showOrHideSortList('animate-fadeOut' , 'animate-fadeIn', 'hide', sortList);
     }
