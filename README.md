@@ -6,8 +6,9 @@ The project provides a responsive shopping experience with category filtering, p
 
 ---
 
-🌐 **Live Demo**
-https://vertex-store-chi.vercel.app/
+## 🌐 Live Demo
+
+🔗 https://vertex-store-chi.vercel.app/
 
 ---
 
