@@ -1,8 +1,18 @@
+import bannerImage from "../assets/images/banners/banner.png"
+import cameraImage from "../assets/images/camera.png"
+import consoleImage from "../assets/images/console.png"
+import keyboardImage from "../assets/images/keyboard.png"
+import laptopImage from "../assets/images/laptop.png"
+import monitorImage from "../assets/images/monitor.png"
+import mouseImage from "../assets/images/mouse.png"
+import stuffImage from "../assets/images/stuff.png"
+
+
 const HomePage = () => {
   return `
        <div> 
           <div class="relative rounded-2xl animate-fadeIn overflow-hidden max-sm:h-55 h-130">
-            <img src="./src/assets/images/banners/banner.png" class="object-cover w-full h-full" alt=""/>
+            <img src="${bannerImage}" class="object-cover w-full h-full" alt=""/>
             <div class="absolute max-sm:top-10 top-45 left-0 max-sm:right-15 right-30 mx-auto max-sm:w-70 w-180">
               <p class="text-dark-text-primary max-sm:text-xl text-5xl font-bold">
                 قدرت تکنولوژی را تجربه کن
@@ -30,43 +40,44 @@ const HomePage = () => {
             <!-- Desktop products -->
             <div class="max-sm:hidden flex items-center justify-center gap-4 mt-5">
               <a class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-                <img src="./src/assets/images/laptop.png" class="size-45" alt=""/>
+                <img src="${laptopImage}" class="size-45" alt=""/>
                 <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
                   لپ تاپ
                 </h2>
               </a>
               <a
                 class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-                <img src="./src/assets/images/monitor.png" class="size-45" alt=""/> <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
+                <img src="${monitorImage}" class="size-45" alt=""/> <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
                   مانیتور
                 </h2>
               </a> <a class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-                <img src="./src/assets/images/stuff.png" class="size-45" alt=""/>
+                <img src="${stuffImage}" class="size-45" alt=""/>
                 <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
                   لوازم جانبی
                 </h2>
               </a>
               <a class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-                <img src="./src/assets/images/mouse.png" class="size-45" alt=""/>
+                <img src="${mouseImage}" class="size-45" alt=""/>
                 <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
                   ماوس
                 </h2>
               </a>
               <a class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-                <img src="./src/assets/images/keyboard.png" class="size-45" alt=""
+                <img src="${keyboardImage}" class="size-45" alt=""
                 />
                 <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
                   کیبورد
                 </h2>
               </a>
-              <a class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer"> <img src="./src/assets/images/console.png" class="size-45" alt=""/>
+              <a class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer"> 
+                <img src="${consoleImage}" class="size-45" alt=""/>
                 <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
                   کنسول بازی
                 </h2>
               </a>
               <a
                 class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-                <img src="./src/assets/images/camera.png" class="size-45" alt=""/>
+                <img src="${cameraImage}" class="size-45" alt=""/>
                 <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
                   دوربین
                 </h2>
