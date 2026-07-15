@@ -42,17 +42,11 @@ const ProductsPage = () => {
 
               <!-- Pagination -->
               <div class="mt-10 mb-6 [direction:ltr] w-full flex gap-2 items-center justify-center pagination-container">
-                <button class="flex items-center justify-center text-xs dark:bg-dark-card-bg bg-light-card-bg  border dark:border-dark-card-border border-light-card-border dark:text-dark-text-secondary text-light-text-secondary w-14 h-14 rounded-xl transition-colors duration-300 hover:border-dark-card-hover-border cursor-pointer"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="flex items-center justify-center text-[15px] dark:bg-dark-card-bg bg-light-card-bg  border dark:border-dark-card-border border-light-card-border dark:text-dark-text-secondary text-light-text-secondary w-12 h-12 rounded-xl transition-colors duration-300 hover:border-dark-card-hover-border cursor-pointer previous-page"><i class="fa-solid fa-chevron-left"></i></button>
                 <div class="flex gap-1 pagination-buttons">
-                  <button class="flex items-center justify-center dark:text-dark-text-primary text-light-text-primary border dark:border-dark-card-border border-light-card-border w-14 h-14 rounded-xl transition-colors duration-300 hover:border-dark-card-hover-border cursor-pointer text-[17px] pagination-active">1</button>
-                  <button class="flex items-center justify-center dark:text-dark-text-primary text-light-text-primary border dark:border-dark-card-border border-light-card-border w-14 h-14 rounded-xl transition-colors duration-300 hover:border-dark-card-hover-border cursor-pointer text-[17px]">2</button>
-                  <button class="flex items-center justify-center dark:text-dark-text-primary text-light-text-primary border dark:border-dark-card-border border-light-card-border w-14 h-14 rounded-xl transition-colors duration-300 hover:border-dark-card-hover-border cursor-pointer text-[17px]">3</button>
-                  <button class="flex items-center justify-center dark:text-dark-text-primary text-light-text-primary border dark:border-dark-card-border border-light-card-border w-14 h-14 rounded-xl transition-colors duration-300 hover:border-dark-card-hover-border cursor-pointer text-[17px]">4</button>
-                  <button class="flex items-center justify-center dark:text-dark-text-primary text-light-text-primary border dark:border-dark-card-border border-light-card-border w-14 h-14 rounded-xl transition-colors duration-300 hover:border-dark-card-hover-border cursor-pointer text-[17px]">5</button>
-                  <button class="flex items-center justify-center dark:text-dark-text-primary text-light-text-primary border dark:border-dark-card-border border-light-card-border w-14 h-14 rounded-xl text-[17px] cursor-not-allowed" disabled>...</button>
-                  <button class="flex items-center justify-center dark:text-dark-text-primary text-light-text-primary border dark:border-dark-card-border border-light-card-border w-14 h-14 rounded-xl transition-colors duration-300 hover:border-dark-card-hover-border cursor-pointer text-[17px]">10</button>
+        
                 </div>
-                <button class="flex items-center justify-center text-xs dark:bg-dark-card-bg bg-light-card-bg  border dark:border-dark-card-border border-light-card-border dark:text-dark-text-secondary text-light-text-secondary w-14 h-14 rounded-xl transition-colors duration-300 hover:border-dark-card-hover-border cursor-pointer"><i class="fa-solid fa-chevron-right"></i></button>
+                <button class="flex items-center justify-center text-[15px] dark:bg-dark-card-bg bg-light-card-bg  border dark:border-dark-card-border border-light-card-border dark:text-dark-text-secondary text-light-text-secondary w-12 h-12 rounded-xl transition-colors duration-300 hover:border-dark-card-hover-border cursor-pointer  next-page"><i class="fa-solid fa-chevron-right"></i></button>
               </div>
 
             </div>

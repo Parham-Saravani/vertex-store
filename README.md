@@ -90,20 +90,20 @@ GET    /api/users
 git clone https://github.com/Parham-Saravani/vertex-store.git
 ```
 
-### Frontend
+### FrontEnd
 
 ```bash
-cd client
+cd frontend
 
 npm install
 
 npm run dev
 ```
 
-### Backend
+### BackEnd
 
 ```bash
-cd server
+cd backend
 
 npm install
 
@@ -120,9 +120,6 @@ The main architecture of the application has already been implemented, including
 
 - Frontend Development
 - REST API Development
-- MongoDB Integration
-- Product Management System
-- Product Filtering & Sorting
 - Responsive Design
 - Dark Mode Support
 
