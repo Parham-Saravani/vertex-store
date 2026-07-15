@@ -1,6 +1,10 @@
 # Vertex Store
 
-Modern Full Stack E-Commerce Platform built with Vanilla JavaScript, Express.js and MongoDB.
+Vertex Store is a modern Full Stack E-Commerce platform developed using Vanilla JavaScript, Express.js and MongoDB.
+
+The project provides a responsive shopping experience with category filtering, product management, dark mode support, custom REST APIs and a scalable architecture for future development.
+
+---
 
 🌐 **Live Demo**
 https://vertex-store-chi.vercel.app/
@@ -27,18 +31,6 @@ https://vertex-store-chi.vercel.app/
 
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge\&logo=mongodb\&logoColor=white)
 ![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=for-the-badge\&logo=mongoose\&logoColor=white)
-
-### Deployment
-
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge\&logo=vercel\&logoColor=white)
-
----
-
-## About The Project
-
-Vertex Store is a modern Full Stack E-Commerce platform developed using Vanilla JavaScript, Express.js and MongoDB.
-
-The project provides a responsive shopping experience with category filtering, product management, dark mode support, custom REST APIs and a scalable architecture for future development.
 
 ---
 
