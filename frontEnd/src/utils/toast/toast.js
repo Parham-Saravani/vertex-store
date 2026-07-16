@@ -1,16 +1,16 @@
-import { clearSignupInputs , hideAuthForm} from "../auth/authPage";
+import { clearSignupInputs, hideAuthForm } from "../auth/authPage";
 const toast = document.querySelector(".toast");
 const iconContainer = document.querySelector(".icon-container");
 const toastMessage = document.querySelector(".toast-message");
 const progress = document.querySelector(".progress");
 
 const authErrors = {
-  EMAIL_EXIST: "کاربری با این ایمیل قبلاً وجود دارد. لطفاً ایمیل دیگری وارد کنید.",
-  USERNAME_TAKEN: "این نام کاربری قبلاً انتخاب شده است. لطفاً نام دیگری انتخاب کنید.",
-  INVALID_PASSWORD: "رمز عبور وارد شده صحیح نیست.",
-  INVALID_EMAIL: "لطفاً یک ایمیل معتبر وارد کنید.",
-  USER_CREATED:'حساب کاربری شما با موفقیت ساخته شد',
-  UKNOWN_ERROR: 'مشکلی به وجود آمده لطفا مجددا تلاش نمایید'
+  EMAIL_EXIST:"این ایمیل قبلاً ثبت شده است. لطفاً ایمیل دیگری وارد کنید.",
+  USERNAME_TAKEN:"این نام کاربری قبلاً استفاده شده است. لطفاً نام دیگری انتخاب کنید.",
+  INVALID_PASSWORD:"رمز عبور وارد شده صحیح نیست.",
+  INVALID_EMAIL:"لطفاً یک ایمیل معتبر وارد کنید.",
+  USER_CREATED:"ثبت‌نام با موفقیت انجام شد.",
+  UNKNOWN_ERROR:"خطایی رخ داده است. لطفاً دوباره تلاش کنید.",
 };
 
 const showToast = (message) => {
@@ -27,10 +27,11 @@ const changeMessage = (message) => {
   if (message === "USER_CREATED") {
     addOrRemoveClassFromToast("success", "fail");
     toastMessage.textContent = authErrors.USER_CREATED;
+    hideAuthForm();
   } else if (message === "USERNAME_TAKEN") {
     addOrRemoveClassFromToast("fail", "success");
     toastMessage.textContent = authErrors.USERNAME_TAKEN;
-  } else if (message === "EMAIL_EXIST ") {
+  } else if (message === "EMAIL_EXIST") {
     addOrRemoveClassFromToast("fail", "success");
     toastMessage.textContent = authErrors.EMAIL_EXIST;
   } else {
@@ -49,7 +50,6 @@ const toastProgress = () => {
     if (number === 100) {
       clearInterval(progressInterval);
       hideToast();
-      hideAuthForm()
       progress.style.width = "0%";
     }
     progress.style.width = `${number}%`;

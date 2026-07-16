@@ -226,7 +226,7 @@ html {
 
 /* toast */
 .toast.hide{
-  left: -350px;
+  left: -1000px;
 }
 .toast.success .icon-container{
   @apply bg-green-600 text-white;

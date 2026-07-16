@@ -12,10 +12,10 @@ const registerNewUser = async (req, res) => {
       const isUsernameTaken = await User.find({ username });
       const hashedPassword = await bcrypt.hash(password, 10);
 
-      if (isEmailTaken.length) {
-        return res.status(400).json({ message: "EMAIL_EXIST" });
-      } else if (isUsernameTaken.length) {
-        return res.status(400).json({ message: "USERNAME_TAKEN" });
+      if (isUsernameTaken.length) {
+        return res.status(200).json({ message: "USERNAME_TAKEN" });
+      } else if (isEmailTaken.length) {
+        return res.status(200).json({ message: "EMAIL_EXIST" });
       } else {
         const newUser = await User.create({
           username,
@@ -27,7 +27,7 @@ const registerNewUser = async (req, res) => {
       }
     } catch (error) {
       console.log(error);
-      res.status(400).json({ message: "USER_NOT-CREATED" });
+      res.status(200).json({ message: "USER_NOT-CREATED" });
     }
   }
 };
