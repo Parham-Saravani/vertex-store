@@ -1,6 +1,7 @@
 import paginationHandler from "./pagination";
+
 let totalPages = null;
-const productPerPage = 15;
+const productPerPage = 30;
 let currentPage = 1;
 let totalProducts = [];
 const productsHandler = (products) => {
@@ -19,9 +20,8 @@ const changeTotalProductsText = () => {
     `نمایش ${productsCount} محصول`;
 };
 
-const calculateTotalPages = () => {
-  totalPages = Math.round(totalProducts.length / productPerPage);
-  console.log(totalPages);
+const calculateTotalPages = () => {  
+  totalPages = Math.ceil(totalProducts.length / productPerPage);
 };
 
 const createCategories = () => {

@@ -13,9 +13,9 @@ const registerNewUser = async (req, res) => {
       const hashedPassword = await bcrypt.hash(password, 10);
 
       if (isUsernameTaken.length) {
-        return res.status(200).json({ message: "USERNAME_TAKEN" });
+        res.status(200).json({ message: "USERNAME_TAKEN" });
       } else if (isEmailTaken.length) {
-        return res.status(200).json({ message: "EMAIL_EXIST" });
+        res.status(200).json({ message: "EMAIL_EXIST" });
       } else {
         const newUser = await User.create({
           username,
@@ -23,7 +23,7 @@ const registerNewUser = async (req, res) => {
           password: hashedPassword,
         });
         const jwt = await generateJWT(newUser);
-        return res.status(201).json({ message: "USER_CREATED", token: jwt });
+        res.status(201).json({ message: "USER_CREATED", token: jwt });
       }
     } catch (error) {
       console.log(error);
@@ -31,7 +31,20 @@ const registerNewUser = async (req, res) => {
     }
   }
 };
+
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
+  const user = await User.findOne({ email });
+  if (user) {
+    const isPasswordMatch = await bcrypt.compare(password, user.password)
+    if (isPasswordMatch) {
+      const token = await generateJWT(user);
+      res.status(200).json({ message: "LOGIN_SUCCESSFULLY", token });
+    } else {
+      res.status(200).json({ message: "WRONG_PASSWORD" });
+    }
+  } else {
+    res.status(200).json({ message: "EMAIL_NOT_REGISTERED" });
+  }
 };
 export { registerNewUser, loginUser };

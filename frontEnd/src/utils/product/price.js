@@ -11,7 +11,7 @@ const createPriceSlider = () => {
       min: 0,
       max: 550_000_000,
     },
-    start: [10_000_000, 150_000_000],
+    start: [70_000_000, 200_000_000],
     connect: true,
     cssPrefix: "noUi-",
   });

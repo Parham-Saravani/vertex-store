@@ -1,16 +1,18 @@
 import { clearSignupInputs, hideAuthForm } from "../auth/authPage";
+
 const toast = document.querySelector(".toast");
 const iconContainer = document.querySelector(".icon-container");
 const toastMessage = document.querySelector(".toast-message");
 const progress = document.querySelector(".progress");
 
 const authErrors = {
-  EMAIL_EXIST:"این ایمیل قبلاً ثبت شده است. لطفاً ایمیل دیگری وارد کنید.",
-  USERNAME_TAKEN:"این نام کاربری قبلاً استفاده شده است. لطفاً نام دیگری انتخاب کنید.",
-  INVALID_PASSWORD:"رمز عبور وارد شده صحیح نیست.",
-  INVALID_EMAIL:"لطفاً یک ایمیل معتبر وارد کنید.",
-  USER_CREATED:"ثبت‌نام با موفقیت انجام شد.",
-  UNKNOWN_ERROR:"خطایی رخ داده است. لطفاً دوباره تلاش کنید.",
+  EMAIL_EXIST: "این ایمیل قبلاً ثبت شده است. لطفاً ایمیل دیگری وارد کنید.",
+  USERNAME_TAKEN:
+    "این نام کاربری قبلاً استفاده شده است. لطفاً نام دیگری انتخاب کنید.",
+  INVALID_PASSWORD: "رمز عبور وارد شده صحیح نیست.",
+  INVALID_EMAIL: "لطفاً یک ایمیل معتبر وارد کنید.",
+  USER_CREATED: "ثبت‌نام با موفقیت انجام شد.",
+  UNKNOWN_ERROR: "خطایی رخ داده است. لطفاً دوباره تلاش کنید.",
 };
 
 const showToast = (message) => {
@@ -23,7 +25,6 @@ const hideToast = () => {
 };
 
 const changeMessage = (message) => {
-  console.log(message);
   if (message === "USER_CREATED") {
     addOrRemoveClassFromToast("success", "fail");
     toastMessage.textContent = authErrors.USER_CREATED;

@@ -1,6 +1,7 @@
 import { createCookie } from "../cookie";
 import { baseUrl } from "../http";
 import { showToast } from "../toast/toast.js";
+import loginChecker from "../loader/loader";
 
 const registerNewUser = async (username, email, password) => {
   const response = await fetch(`${baseUrl}/api/users/register`, {
@@ -18,6 +19,7 @@ const registerNewUser = async (username, email, password) => {
   showToast(data.message);
   if (data.message === "USER_CREATED") {
     createCookie(data.token);
+    loginChecker();
   }
 };
 export default registerNewUser;

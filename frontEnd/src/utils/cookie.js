@@ -1,8 +1,6 @@
 const createCookie = (data) => {
-  console.log(data);
   const date = new Date();
   date.setDate(date.getDate() + 7);
-
   document.cookie = `auth-token = ${data};path:/;expires=${date}`;
 };
 const isUserLogedIn = () => {

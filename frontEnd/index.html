@@ -74,19 +74,28 @@
         <div class="flex gap-4 items-center">
           <!-- theme buttns -->
           <div class="flex">
-            <button
-              class="hidden bg-light-input-bg border-2 border-light-input-border shadow-light-sm hover:bg-light-item-hover-bg rounded-xl text-xl px-2.5 py-3 justify-center items-center cursor-pointer transition-colors duration-300 dark-theme-btn"
-            >
+            <button class="hidden bg-light-input-bg border-2 border-light-input-border shadow-light-sm hover:bg-light-item-hover-bg rounded-xl text-xl px-2.5 py-3 justify-center items-center cursor-pointer transition-colors duration-300 dark-theme-btn">
               <i class="fa-solid fa-moon text-light-text-primary"></i>
             </button>
-            <button
-              class="bg-dark-input-bg hover:bg-dark-item-hover-bg border-2 border-dark-input-border shadow-dark-sm rounded-xl text-xl px-2.5 py-3 flex justify-center items-center cursor-pointer transition-colors duration-300 light-theme-btn"
-            >
+            <button class="bg-dark-input-bg hover:bg-dark-item-hover-bg border-2 border-dark-input-border shadow-dark-sm rounded-xl text-xl px-2.5 py-3 flex justify-center items-center cursor-pointer transition-colors duration-300 light-theme-btn">
               <i class="fa-solid fa-sun text-dark-text-primary"></i>
             </button>
           </div>
-          <div>
+          <div class="authentication">
             <button class="text-dark-text-primary font-bold bg-linear-90 from-brand-primary to-brand-accent rounded-xl w-30 h-12 flex justify-center items-center transition-transform duration-300 hover:-translate-y-0.5 auth-btn">ورود | ثبت نام</button>
+          </div>
+          <!-- profile && basket -->
+          <div class="profile hidden gap-2">
+            <div class="flex flex-col">
+              <button class="dark:bg-dark-input-bg border-2 flex dark:border-dark-input-border border-light-input-border shadow-light-sm dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg rounded-xl text-xl px-2.5 py-3 justify-center items-center cursor-pointer transition-colors duration-300 profile-btn">
+                  <i class="fa-solid fa-cart-shopping dark:text-dark-text-primary text-light-text-primary"></i>
+              </button>
+            </div>
+            <div class="flex flex-col">
+              <button class="dark:bg-dark-input-bg border-2 flex  dark:border-dark-input-border border-light-input-border shadow-light-sm dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg rounded-xl text-xl px-2.5 py-3 justify-center items-center cursor-pointer transition-colors duration-300 basket-btn">
+                <i class="fa-solid fa-user dark:text-dark-text-primary text-light-text-primary"></i>
+              </button>
+            </div>
           </div>
         </div>
       </header>
@@ -318,6 +327,8 @@
           </div>
         </footer>
     </div>
+
+
     <!-- toast -->
     <div class="z-50 fixed hide top-3 left-2  dark:bg-dark-section-bg bg-light-section-bg rounded-xl toast transition-normal duration-300">
       <div class="px-4 py-2 flex items-center gap-3">
