@@ -1,31 +1,36 @@
 import AuthenticationPage from "../../pages/auth.js";
+import registerNewUser from "../services/api.register.js";
 const authBtn = document.querySelector(".auth-btn");
 
 const showAuthContent = () => {
   document.documentElement.classList.add("overflow-hidden");
-  console.log("fasd");
   document.body.insertAdjacentHTML("afterbegin", AuthenticationPage());
   const authForm = document.querySelector(".auth-form");
   authForm.addEventListener("click", authenticationFormClickHandler);
 
   const authFormBackground = document.querySelector(".auth-background");
-  authFormBackground.addEventListener("click", hideAuthForm, { capture: true });
+  authFormBackground.addEventListener("click", authFormCloser, { capture: true });
 };
 
+const authFormCloser = (event) => {
+  const authFormBackground = event.target.closest(".auth-form");  
+  if(!authFormBackground){    
+    hideAuthForm()
+  }
+}
 const hideAuthForm = () => {
-  const authFormBackground = event.target.closest(".auth-form");
-  if (!authFormBackground) {
     document.documentElement.classList.remove("overflow-hidden");
     const authFormTotal = document.querySelector(".auth-background");
     authFormTotal.classList.add("animate-fadeOut");
     setTimeout(() => {
       authFormTotal.remove();
     }, 700);
-  }
 };
 //! switching between Signup / Login / Forgot password
 const authenticationFormClickHandler = (event) => {
   const formOperation = event.target.closest(".auth-current-content");
+  const signupBtn = event.target.closest(".signup-btn");
+  const loginBtn = event.target.closest(".login-btn");
   if (formOperation) {
     const currentActiveItem = event.target.closest(".auth-active");
     if (!currentActiveItem) {
@@ -37,13 +42,16 @@ const authenticationFormClickHandler = (event) => {
       changeAuthContent(clickedItem.dataset.page);
     }
   }
+  if (signupBtn) {
+    signupInputsValidator(event);
+  }
+  if (loginBtn) {
+    loginInputsValidator();
+  }
 };
 const changeAuthContent = (operation) => {
   const signupContent = document.querySelector(".signup-content");
   const loginContent = document.querySelector(".login-content");
-  console.log(signupContent);
-  console.log(loginContent);
-
   switch (operation) {
     case "login":
       loginContent.classList.remove("hidden");
@@ -56,4 +64,112 @@ const changeAuthContent = (operation) => {
   }
 };
 
+const signupInputsValidator = (event) => {
+  event.preventDefault();
+  const { username, email, password, confirmPassword } = getSignupValues();
+  const { usernameAlert, emailAlert, passwordAlert, confirmPasswordAlert } =
+    getSignupAlerts();
+  let isValid = true;
+  const isUsernameValid = usernameValidator(username, usernameAlert);
+  const isEmailValid = emailValidator(email, emailAlert);
+  const isPasswordValid = passwordValidator(password, passwordAlert);
+  const isPasswordSame = confirmPasswordValidator(
+    password,
+    confirmPassword,
+    confirmPasswordAlert,
+  );
+  isValid =
+    isUsernameValid && isEmailValid && isPasswordValid && isPasswordSame;
+  if (isValid) {
+    registerNewUser(username, email, password);
+  }
+};
+const getSignupValues = () => {
+  const usernameInput = document.querySelector(".signup-username-input");
+  const emailInput = document.querySelector(".signup-email-input");
+  const passwordInput = document.querySelector(".signup-password-input");
+  const confirmPasswordInput = document.querySelector(
+    ".signup-confirm-password-input",
+  );
+
+  const username = usernameInput.value.trim();
+  const email = emailInput.value.trim();
+  const password = passwordInput.value.trim();
+  const confirmPassword = confirmPasswordInput.value.trim();
+  return { username, email, password, confirmPassword };
+};
+const getSignupAlerts = () => {
+  const usernameAlert = document.querySelector(".signup-username-alert");
+  const emailAlert = document.querySelector(".signup-email-alert");
+  const passwordAlert = document.querySelector(".signup-password-alert");
+  const confirmPasswordAlert = document.querySelector(
+    ".signup-confirm-password-alert",
+  );
+
+  return { usernameAlert, emailAlert, passwordAlert, confirmPasswordAlert };
+};
+//! signUp inputs validator
+const usernameValidator = (username, usernameAlert) => {
+  if (!username) {
+    showAlert(usernameAlert);
+    return false;
+  } else {
+    hideAlert(usernameAlert);
+    return true;
+  }
+};
+const emailValidator = (email, emailAlert) => {
+  const emailRegex = /\w@[a-zA-Z]+\.[a-zA-z]/;
+
+  if (!emailRegex.test(email)) {
+    showAlert(emailAlert);
+    return false;
+  } else {
+    hideAlert(emailAlert);
+    return true;
+  }
+};
+const passwordValidator = (password, passwordAlert) => {
+  if (password.length < 8) {
+    showAlert(passwordAlert);
+    return false;
+  } else {
+    hideAlert(passwordAlert);
+    return true;
+  }
+};
+const confirmPasswordValidator = (
+  password,
+  confirmPassword,
+  confirmPasswordAlert,
+) => {
+  if (password !== confirmPassword) {
+    showAlert(confirmPasswordAlert);
+    return false;
+  } else {
+    hideAlert(confirmPasswordAlert);
+    return true;
+  }
+};
+
+const clearSignupInputs = () => {
+  const usernameInput = document.querySelector(".signup-username-input");
+  const emailInput = document.querySelector(".signup-email-input");
+  const passwordInput = document.querySelector(".signup-password-input");
+  const confirmPasswordInput = document.querySelector(
+    ".signup-confirm-password-input",
+  );
+  usernameInput.value = "";
+  emailInput.value = "";
+  passwordInput.value = "";
+  confirmPasswordInput.value = "";
+};
+const showAlert = (element) => {
+  element.classList.remove("hidden");
+};
+const hideAlert = (element) => {
+  element.classList.add("hidden");
+};
+const loginInputsValidator = () => {};
 authBtn.addEventListener("click", showAuthContent);
+export { clearSignupInputs , hideAuthForm};

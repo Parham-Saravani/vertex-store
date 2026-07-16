@@ -5,4 +5,4 @@ const apiRequest = async (address) => {
   return data;
 };
 
-export default apiRequest;
+export { apiRequest, baseUrl };

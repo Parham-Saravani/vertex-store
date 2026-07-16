@@ -35,7 +35,7 @@ const ProductsPage = () => {
               </div>
 
               <!-- products-->
-              <div class="my-3 flex flex-wrap gap-3 w-full products-container">
+              <div class="[direction:ltr] my-3 flex flex-wrap gap-3 w-full products-container">
                 
                   
               </div>

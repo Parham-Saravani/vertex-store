@@ -224,6 +224,34 @@ html {
   -o-border-radius: 1rem;
 }
 
+/* toast */
+.toast.hide{
+  left: -350px;
+}
+.toast.success .icon-container{
+  @apply bg-green-600 text-white;
+
+}
+.toast.success .progress-container{
+  @apply bg-green-600/20;
+}
+.toast.success .progress{
+  @apply bg-green-600;
+}
+.toast.fail .icon-container{
+  @apply bg-red-600 text-white;
+
+}
+.toast.fail .progress-container{
+  @apply bg-red-600/20;
+}
+
+.toast.fail .progress{
+  @apply bg-red-600;
+}
+
+
+
 /* fonts */
 @font-face {
   font-family: "VazirMatn";
