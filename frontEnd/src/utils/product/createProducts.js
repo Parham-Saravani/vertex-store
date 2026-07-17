@@ -72,6 +72,7 @@ const createBrands = () => {
 
 const createProducts = () => {
   const productsContainer = document.querySelector(".products-container");
+  productsContainer.addEventListener("click", openProductPageHandler);
   productsContainer.innerHTML = "";
   const firstIndex = currentPage * productPerPage - productPerPage;
   const secondIndex = firstIndex + productPerPage;
@@ -79,7 +80,7 @@ const createProducts = () => {
     productsContainer.insertAdjacentHTML(
       "beforeend",
       `
-      <div class="group border dark:border-dark-card-border max-2xl:w-52.5 max-xl:w-42 max-md:w-36.5 max-sm:w-42 border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
+      <div class="group border dark:border-dark-card-border max-2xl:w-52.5 max-xl:w-42 max-md:w-36.5 max-sm:w-42 border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border product"data-id="${product._id}">
           <img src=${product.images[0]} class="size-45 max-2xl:size-36 max-xl:size-32 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
           <h2 class="dark:text-dark-text-primary w-40 text-[15px] max-2xl:text-[13px] max-xl:text-[12px] max-md:px-5 max-md:text-[11px] text-center">${product.title}</h2>
           <p class="mt-2 [direction:ltr] flex items-center gap-1">
@@ -114,7 +115,7 @@ const paginationNavigator = (event) => {
   if (nextPage) {
     if (currentPage === totalPages) return;
     else {
-      scrollToTop()
+      scrollToTop();
       addOrRemoveActiveClass(null, "increase");
       currentPage++;
       createProducts();
@@ -123,7 +124,7 @@ const paginationNavigator = (event) => {
   if (previousPage) {
     if (currentPage === 1) return;
     else {
-      scrollToTop()
+      scrollToTop();
       addOrRemoveActiveClass(null, "decrease");
       currentPage--;
       createProducts();
@@ -160,6 +161,16 @@ const addOrRemoveActiveClass = (target = null, operation = null) => {
           .classList.add("pagination-active");
         break;
     }
+  }
+};
+
+//! show product detail
+const openProductPageHandler = (event) => {
+  const product = event.target.closest(".product");
+  if (product) {
+    const productID = product.dataset.id;
+    console.log(productID);
+    
   }
 };
 export { productsHandler, changeTotalProductsText };

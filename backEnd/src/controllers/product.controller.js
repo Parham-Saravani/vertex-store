@@ -48,5 +48,13 @@ const takeAllProducts = async (req, res) => {
   const data = await Product.find();
   res.status(200).json(data);
 };
-
-export { takeAllProducts, registerNewProduct };
+const sendProductDetail = async (req, res) => {
+  const productID = req.params.id;
+  const product = await Product.findOne({ _id: productID });
+  if (product) {
+    res.status(200).json({ product });
+  } else {
+    res.status(200).json({ message: "PRODUCT_NOT_FOUND" });
+  }
+};
+export { takeAllProducts, registerNewProduct, sendProductDetail };

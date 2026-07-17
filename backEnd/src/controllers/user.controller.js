@@ -44,4 +44,6 @@ const loginUser = async (req, res) => {
     res.status(200).json({ message: "INVALID_CREDENTIALS" });
   }
 };
-export { registerNewUser, loginUser };
+
+
+export { registerNewUser, loginUser};

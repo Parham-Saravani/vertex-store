@@ -3,6 +3,7 @@ import { baseUrl } from "../http";
 import { showToast } from "../toast/toast.js";
 import loginChecker from "../loader/loader";
 import changeProfileContent from "../header/profile.js";
+import {saveDataInLocalStorage} from "../localstorage.js";
 
 const registerNewUser = async (username, email, password) => {
   const response = await fetch(`${baseUrl}/api/users/register`, {
@@ -20,10 +21,11 @@ const registerNewUser = async (username, email, password) => {
   showToast(data.message);
   if (data.message === "USER_CREATED") {
     console.log(data);
-    
+
     createCookie(data.token);
     loginChecker();
-    changeProfileContent(data.user.imageUrl , data.user.username , data.user.email)
+    saveDataInLocalStorage("userData", { ...data.user });
+    changeProfileContent();
   }
 };
 export default registerNewUser;

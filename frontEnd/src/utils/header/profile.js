@@ -1,4 +1,5 @@
 import defaultProfileImage from "../../assets/images/profile/default-profile.jpg";
+import { getDataFromLocalStorage } from "../localstorage";
 
 const profileBtn = document.querySelector(".profile-btn");
 const profileBackground = document.querySelector(".profile-background");
@@ -34,16 +35,20 @@ const closeBasketContent = () => {
   }
 };
 
-const changeProfileContent = (imageUrl, username, email) => {
-  if (imageUrl) {
-    profileImage.setAttribute("src", `${imageUrl}`);
-  } else {
-    profileImage.setAttribute("src", `${defaultProfileImage}`);
+const changeProfileContent = () => {
+  const userData = getDataFromLocalStorage("userData");
+  if (userData) {
+    const { imageUrl, username, email } = userData;
+    if (imageUrl) {
+      profileImage.setAttribute("src", `${imageUrl}`);
+    } else {
+      profileImage.setAttribute("src", `${defaultProfileImage}`);
+    }
+    profileUsername.textContent = username;
+    profileEmail.textContent = email;
   }
-  profileUsername.textContent = username;
-  profileEmail.textContent = email;
 };
 profileBtn.addEventListener("click", showOrHideBasket);
 profileBackground.addEventListener("click", closeBasketContent);
-
+window.addEventListener("load", changeProfileContent);
 export default changeProfileContent;
