@@ -82,8 +82,8 @@ const createProducts = () => {
     productsContainer.insertAdjacentHTML(
       "beforeend",
       `
-      <div class="group border dark:border-dark-card-border max-2xl:w-52.5 max-xl:w-42 max-md:w-36.5 max-sm:w-42 border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border product"data-id="${product._id}">
-          <img src=${product.image} class="size-45 max-2xl:size-36 max-xl:size-32 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
+      <div class="group border dark:border-dark-card-border max-2xl:w-48 max-xl:w-48 max-lg:w-33 max-md:w-37 max-sm:w-58 border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border product"data-id="${product._id}">
+          <img src=${product.image} class="size-10 max-2xl:size-25 max-xl:size-32 mb-3 group-hover:scale-110 transition-transform duration-300 object-cover" alt="">
           <h2 class="dark:text-dark-text-primary w-40 text-[15px] max-2xl:text-[13px] max-xl:text-[12px] max-md:px-5 max-md:text-[11px] text-center">${product.title}</h2>
           <p class="mt-2 [direction:ltr] flex items-center gap-1">
             <i class="fa-solid fa-star text-yellow-400 text-xs max-sm:text-[10px]"></i>
@@ -185,15 +185,15 @@ const addProductPage = (data) => {
 const closeProductPage = (event) => {
   const background = event.target.closest(".product-content");
   const closeBtn = event.target.closest(".close-product-page");
-  if (background || closeBtn) {
+  if (background) {
     background.classList.add("animate-fadeOut");
     document.documentElement.classList.remove("overflow-hidden");
     setTimeout(() => {
       document.body.firstElementChild.remove();
-    },700);
+    }, 700);
   }
 };
-const changeProductPageContent = (data) => {
+const takeProductPageElements = ()=>{
   const breadCrumbCategory = document.querySelector(".product-category");
   const breadCrumbTitle = document.querySelector(".product-breadcrumb-title");
   const image = document.querySelector(".product-image");
@@ -202,17 +202,22 @@ const changeProductPageContent = (data) => {
   const rating = document.querySelector(".product-rating");
   const discountPrice = document.querySelector(".product-discount-price");
   const price = document.querySelector(".product-price");
-  const availibilityContainer = document.querySelector(
-    ".product-availability-container",
-  );
+  const availibilityContainer = document.querySelector(".product-availability-container");
   const colorsContainer = document.querySelector(".product-colors-container");
   const contentContainer = document.querySelector(".product-content-container");
-
+  return {breadCrumbCategory, breadCrumbTitle, image, discountPercent, title, rating, discountPrice, price, availibilityContainer, colorsContainer, contentContainer}
+}
+const changeProductPageContent = (data) => {
+  const {breadCrumbCategory, breadCrumbTitle, image, discountPercent, title, rating, discountPrice, price, availibilityContainer, colorsContainer, contentContainer}  = takeProductPageElements()
+  
   breadCrumbCategory.textContent = data.category_fa;
   breadCrumbTitle.textContent = data.title;
   image.setAttribute("src", `${data.image}`);
   title.textContent = data.title;
   rating.textContent = data.rating;
+  createProductDescription(contentContainer , data.description)
+  setAvalibility(data.stock , availibilityContainer)
+  changePriceOrDiscount(data.discount , data.price , data.oldPrice, discountPercent, discountPrice , price)
   data.colors.forEach((color) => {
     colorsContainer.insertAdjacentHTML(
       "beforeend",
@@ -221,8 +226,29 @@ const changeProductPageContent = (data) => {
       `,
     );
   });
-  //avalibility
-  if (data.stock) {
+};
+
+const createProductDescription = (contentContainer , description)=>{
+  contentContainer.insertAdjacentHTML('afterbegin',
+    `
+      <p class="dark:text-dark-text-primary text-light-text-primary text-[14px] text-justify">${data.description}</p>
+    `
+  )
+}
+const changePriceOrDiscount = (discount,price, oldPrice,  discountPercent, discountPrice , priceElement) => {
+  if (discount) {
+    discountPercent.textContent = `${discount}%`;
+    discountPrice.textContent = price.toLocaleString();
+    discountPrice.classList.add("text-brand-accent");
+    priceElement.textContent = oldPrice.toLocaleString();
+  } else {
+    discountPercent.classList.add("hidden");
+    priceElement.classList.add("hidden");
+    discountPrice.textContent = price.toLocaleString();
+  }
+};
+const setAvalibility = (stock , availibilityContainer)=> {
+  if (stock) {
     availibilityContainer.insertAdjacentHTML(
       "afterbegin",
       `
@@ -243,16 +269,5 @@ const changeProductPageContent = (data) => {
       `,
     );
   }
-  //discount percent
-  if (data.discount) {
-    discountPercent.textContent = `${data.discount}%`;
-    discountPrice.textContent = data.price.toLocaleString();
-    discountPercent.classList.add("text-brand-accent");
-    price.textContent = data.oldPrice.toLocaleString();
-  } else {
-    discountPercent.classList.add("hidden");
-    price.classList.add("hidden");
-    discountPrice.textContent = data.price.toLocaleString();
-  }
-};
+}
 export { productsHandler, changeTotalProductsText };

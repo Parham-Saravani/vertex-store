@@ -20,7 +20,7 @@ const ProductPage = () => {
             <div class="mt-4 flex gap-20 px-6">
               <!-- product image -->
               <div class="flex grow items-center justify-center">
-                <img src="./src/assets/images/camera.png" class="product-image" alt="">
+                <img src="./src/assets/images/camera.png" class="product-image size-75" alt="">
               </div>
 
               <div class="[direction:ltr] grow">
@@ -54,7 +54,7 @@ const ProductPage = () => {
                   </div>
                 </div>
                 <!-- add to card and add to favourites button -->
-                <div class="flex gap-2">
+                <div class="mt-17 flex gap-2">
                   <button class="[direction:rtl] flex items-center justify-center w-80 h-12 gap-2 text-dark-text-primary bg-linear-90 from-brand-primary to-brand-accent rounded-xl transition-transform duration-300 hover:-translate-y-0.5 cursor-pointer">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <p>افزدون به سبد خرید</p>
@@ -67,7 +67,7 @@ const ProductPage = () => {
 
             </div>  
             <!-- prodcut description && specifications && comments -->
-            <div class="px-2 w-full h-65 dark:bg-dark-input-bg bg-light-input-bg rounded-md">
+            <div class="mt-6 px-2 w-full h-65 dark:bg-dark-input-bg bg-light-input-bg rounded-md">
               <!-- tabs -->
               <div class="flex gap-1 text-xs py-1 dark:text-dark-text-primary text-light-text-primary justify-center items-center">
                 <button class="dark:hover:bg-dark-card-hover hover:bg-light-card-hover cursor-pointer rounded-xl px-2 py-1.5 transition-colors duration-300 active-product-page product-description">توضیحات</button>
@@ -79,15 +79,14 @@ const ProductPage = () => {
               <!-- data -->
               <div class="hide-scrollbar h-50 overflow-auto px-2 py-3 product-content-container">
 
-                <p class="hidden dark:text-dark-text-primary text-light-text-primary text-[15px] text-justify">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را میدرصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را میدرصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را میدرصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را میدرصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را میدرصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
-                
+              <!--
                 <div class="rounded-md border dark:border-dark-divider border-light-divider">
                   <div class="grid grid-cols-3 border-b dark:border-dark-divider border-light-divider px-5 py-1.5">
                     <span class="text-[13px] dark:text-dark-text-primary text-light-text-primary">برند</span>
                     <span class="text-[13px] dark:text-dark-text-primary text-light-text-primary col-span-2">Asus</span>
                   </div>
                 </div>
-
+  -->
 
               </div>
             </div>
