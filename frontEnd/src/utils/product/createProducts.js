@@ -177,7 +177,21 @@ const openProductPageHandler = async (event) => {
 };
 const addProductPage = (data) => {
   document.body.insertAdjacentHTML("afterbegin", ProductPage());
+  document.documentElement.classList.add("overflow-hidden");
+  const productPageBackground = document.querySelector(".product-content");
+  productPageBackground.addEventListener("click", closeProductPage);
   changeProductPageContent(data);
+};
+const closeProductPage = (event) => {
+  const background = event.target.closest(".product-content");
+  const closeBtn = event.target.closest(".close-product-page");
+  if (background || closeBtn) {
+    background.classList.add("animate-fadeOut");
+    document.documentElement.classList.remove("overflow-hidden");
+    setTimeout(() => {
+      document.body.firstElementChild.remove();
+    },700);
+  }
 };
 const changeProductPageContent = (data) => {
   const breadCrumbCategory = document.querySelector(".product-category");
@@ -188,50 +202,57 @@ const changeProductPageContent = (data) => {
   const rating = document.querySelector(".product-rating");
   const discountPrice = document.querySelector(".product-discount-price");
   const price = document.querySelector(".product-price");
-  const availibilityContainer = document.querySelector(".product-availability-container");
+  const availibilityContainer = document.querySelector(
+    ".product-availability-container",
+  );
   const colorsContainer = document.querySelector(".product-colors-container");
   const contentContainer = document.querySelector(".product-content-container");
 
-  breadCrumbCategory.textContent = data.category_fa
+  breadCrumbCategory.textContent = data.category_fa;
   breadCrumbTitle.textContent = data.title;
   image.setAttribute("src", `${data.image}`);
   title.textContent = data.title;
   rating.textContent = data.rating;
-      discountPrice.textContent = data.price.toLocaleString();
-  data.colors.forEach(color => {
-    colorsContainer.insertAdjacentHTML('beforeend',
+  data.colors.forEach((color) => {
+    colorsContainer.insertAdjacentHTML(
+      "beforeend",
       `
-        <span class="block rounded-full w-6 h-6 border dark:border-dark-divider border-light-divider cursor-pointer" style:"backgound-color:${color}"></span>
-      `
-    )
-  })
+        <span class="block rounded-full w-6 h-6 border dark:border-dark-divider border-light-divider cursor-pointer" style="background-color: ${color};"></span>
+      `,
+    );
+  });
   //avalibility
-  if(data.stock){
-    availibilityContainer.insertAdjacentHTML('afterbegin',
+  if (data.stock) {
+    availibilityContainer.insertAdjacentHTML(
+      "afterbegin",
       `
        <div class="[direction:rtl] flex items-center gap-1">
          <span class="block rounded-full size-2 bg-green-400"></span>
          <p class="text-green-600 text-xs">موجود در انبار</p>
        </div>
-      `
-    )
-  }else{
-    availibilityContainer.insertAdjacentHTML('afterbegin',
+      `,
+    );
+  } else {
+    availibilityContainer.insertAdjacentHTML(
+      "afterbegin",
       `
        <div class="[direction:rtl] flex items-center gap-1">
          <span class="block rounded-full size-2 bg-red-400"></span>
          <p class="text-red-600 text-xs">اتمام موجودی</p>
        </div>
-      `
-    )
+      `,
+    );
   }
   //discount percent
   if (data.discount) {
     discountPercent.textContent = `${data.discount}%`;
+    discountPrice.textContent = data.price.toLocaleString();
+    discountPercent.classList.add("text-brand-accent");
+    price.textContent = data.oldPrice.toLocaleString();
   } else {
     discountPercent.classList.add("hidden");
-    price.classList.add('hidden')
+    price.classList.add("hidden");
+    discountPrice.textContent = data.price.toLocaleString();
   }
-
 };
 export { productsHandler, changeTotalProductsText };

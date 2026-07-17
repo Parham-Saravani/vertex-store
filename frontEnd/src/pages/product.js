@@ -1,8 +1,8 @@
 const ProductPage = () => {
     return `
-    <div class="fixed animate-fadeIn flex items-center justify-center inset-0 z-30 backdrop-blur-xl">
+    <div class="fixed animate-fadeIn flex items-center justify-center inset-0 z-30 backdrop-blur-xl product-content">
           <div class="border dark:border-dark-card-border border-light-card-border w-220 h-175 py-2 px-4 relative dark:bg-dark-section-bg bg-light-section-bg rounded-xl">
-            <button class="absolute top-2 right-2 flex justify-center items-center w-6 h-6 dark:bg-dark-input-bg bg-light-input-bg transition-colors duration-300 dark:hover:bg-dark-input-border hover:bg-light-input-border rounded-full cursor-pointer">
+            <button class="absolute top-2 right-2 flex justify-center items-center w-6 h-6 dark:bg-dark-input-bg bg-light-input-bg transition-colors duration-300 dark:hover:bg-dark-input-border hover:bg-light-input-border rounded-full cursor-pointer close-product-page">
               <i class="fa-solid fa-close text-[12px] dark:text-dark-text-primary text-light-text-primary"></i>
             </button>
             <!-- BreadCrumb -->
