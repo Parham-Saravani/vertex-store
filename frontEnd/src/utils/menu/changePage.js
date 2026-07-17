@@ -2,14 +2,13 @@ import HomePage from "../../pages/home";
 import ContactPage from "../../pages/contant";
 import ProductsPage from "../../pages/products";
 import AboutPage from "../../pages/about";
-import ProductSkeletonLoader from "../../pages/product-skeleton-loader.js"
+import ProductSkeletonLoader from "../../pages/product-skeleton-loader.js";
 import createPriceSlider from "../product/price";
-import {apiRequest} from "../http.js";
+import { apiRequestHandler } from "../http.js";
 import { productsHandler } from "../product/createProducts.js";
 import messageHandler from "../message/message.js";
 import sortHandler from "../product/sort.js";
 import bannerBtnHandler from "../home/home.js";
-
 const pageContent = document.querySelector(".page-content");
 
 const PageContentHandler = async (page) => {
@@ -21,7 +20,7 @@ const PageContentHandler = async (page) => {
 
     case "products":
       changePageContent(ProductSkeletonLoader());
-      const products = await apiRequest("/api/products");
+      const products = await apiRequestHandler("/api/products");
       changePageContent(ProductsPage());
       createPriceSlider();
       productsHandler(products);

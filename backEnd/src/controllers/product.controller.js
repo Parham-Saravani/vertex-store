@@ -52,7 +52,7 @@ const sendProductDetail = async (req, res) => {
   const productID = req.params.id;
   const product = await Product.findOne({ _id: productID });
   if (product) {
-    res.status(200).json({ product });
+    res.status(200).json(product);
   } else {
     res.status(200).json({ message: "PRODUCT_NOT_FOUND" });
   }

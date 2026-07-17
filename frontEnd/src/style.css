@@ -62,7 +62,16 @@
   background-color: rgba(var(--color-glow-accent), 0.25);
   font-weight: bold;
 }
-
+.active-product-page {
+  @apply bg-brand-accent;
+}
+.active-product-color{
+  box-shadow: 0px 0px 5px var(--color-brand-accent);
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+}
 /* glow effects */
 .glow-effect {
   background:

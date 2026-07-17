@@ -1,8 +1,14 @@
 const baseUrl = "http://localhost:40875";
-const apiRequest = async (address) => {
-  const response = await fetch(`${baseUrl}${address}`);
-  const data = await response.json();
-  return data;
+const apiRequestHandler = async (address, param) => {
+  return await apiRequest(address , param)
 };
-
-export { apiRequest, baseUrl };
+const apiRequest = async (address , param = null) => {
+  try {
+      const response = await fetch(`${baseUrl}${address}${param ? param : ''}`);
+      const data = await response.json();
+      return data;
+    } catch (error) {      
+      return null;
+    }
+}
+export { apiRequestHandler, baseUrl };
