@@ -1,4 +1,8 @@
-import { clearSignupInputs, hideAuthForm } from "../auth/authPage";
+import {
+  clearSignupInputs,
+  clearLoginInputs,
+  hideAuthForm,
+} from "../auth/authPage";
 
 const toast = document.querySelector(".toast");
 const iconContainer = document.querySelector(".icon-container");
@@ -13,6 +17,8 @@ const authErrors = {
   INVALID_EMAIL: "لطفاً یک ایمیل معتبر وارد کنید.",
   USER_CREATED: "ثبت‌نام با موفقیت انجام شد.",
   UNKNOWN_ERROR: "خطایی رخ داده است. لطفاً دوباره تلاش کنید.",
+  INVALID_CREDENTIALS: "ایمیل یا رمز عبور اشتباه است.",
+  LOGIN_SUCCESS: "ورود با موفقیت انجام شد.",
 };
 
 const showToast = (message) => {
@@ -25,21 +31,40 @@ const hideToast = () => {
 };
 
 const changeMessage = (message) => {
-  if (message === "USER_CREATED") {
-    addOrRemoveClassFromToast("success", "fail");
-    toastMessage.textContent = authErrors.USER_CREATED;
-    hideAuthForm();
-  } else if (message === "USERNAME_TAKEN") {
-    addOrRemoveClassFromToast("fail", "success");
-    toastMessage.textContent = authErrors.USERNAME_TAKEN;
-  } else if (message === "EMAIL_EXIST") {
-    addOrRemoveClassFromToast("fail", "success");
-    toastMessage.textContent = authErrors.EMAIL_EXIST;
-  } else {
-    addOrRemoveClassFromToast("fail", "success");
-    toastMessage.textContent = authErrors.UKNOWN_ERROR;
+  switch (message) {
+    case "USER_CREATED":
+      toastStatus("success", "fail", authErrors.USER_CREATED, true);
+      break;
+    case "USERNAME_TAKEN":
+      toastStatus("fail", "success", authErrors.USERNAME_TAKEN);
+      break;
+    case "EMAIL_EXIST":
+      toastStatus("fail", "success", authErrors.EMAIL_EXIST);
+      break;
+    case "LOGIN_SUCCESSFULLY":
+      toastStatus("success", "fail", authErrors.LOGIN_SUCCESS, true);
+      break;
+    case "INVALID_CREDENTIALS":
+      toastStatus("fail", "success", authErrors.INVALID_CREDENTIALS);
+      clearLoginInputs()
+      break;
+    default:
+      toastStatus("fail", "success", authErrors.UNKNOWN_ERROR);
   }
 };
+const toastStatus = (
+  firstClass,
+  secondClass,
+  message,
+  closeAuthPage = false,
+) => {
+  addOrRemoveClassFromToast(firstClass, secondClass);
+  toastMessage.textContent = message;
+  if (closeAuthPage) {
+    hideAuthForm();
+  }
+};
+
 const addOrRemoveClassFromToast = (classToAdd, classToRemove) => {
   toast.classList.add(classToAdd);
   toast.classList.remove(classToRemove);

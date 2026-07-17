@@ -17,16 +17,13 @@ const registerNewUser = async (req, res) => {
       } else if (isEmailTaken.length) {
         res.status(200).json({ message: "EMAIL_EXIST" });
       } else {
-        const newUser = await User.create({
-          username,
-          email,
-          password: hashedPassword,
-        });
-        const jwt = await generateJWT(newUser);
-        res.status(201).json({ message: "USER_CREATED", token: jwt });
+        const newUser = await User.create({username,email,password: hashedPassword});
+        const token = await generateJWT(newUser);
+        res.status(201).json({ message: "USER_CREATED", token , user:{username: newUser.username, imageUrl:newUser.imageUrl , email: newUser.email}});
       }
     } catch (error) {
       console.log(error);
+      
       res.status(200).json({ message: "USER_NOT-CREATED" });
     }
   }
@@ -34,17 +31,17 @@ const registerNewUser = async (req, res) => {
 
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
-  const user = await User.findOne({ email });
-  if (user) {
-    const isPasswordMatch = await bcrypt.compare(password, user.password)
+  const newUser = await User.findOne({ email });
+  if (newUser) {
+    const isPasswordMatch = await bcrypt.compare(password, newUser.password)
     if (isPasswordMatch) {
-      const token = await generateJWT(user);
-      res.status(200).json({ message: "LOGIN_SUCCESSFULLY", token });
+      const token = await generateJWT(newUser);
+      res.status(200).json({ message: "LOGIN_SUCCESSFULLY", token , user:{username :newUser.username ,imageUrl : newUser.imageUrl , email:newUser.email }});
     } else {
-      res.status(200).json({ message: "WRONG_PASSWORD" });
+      res.status(200).json({ message: "INVALID_CREDENTIALS" });
     }
   } else {
-    res.status(200).json({ message: "EMAIL_NOT_REGISTERED" });
+    res.status(200).json({ message: "INVALID_CREDENTIALS" });
   }
 };
 export { registerNewUser, loginUser };

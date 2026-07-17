@@ -10,8 +10,8 @@ import stuffImage from "../assets/images/stuff.png"
 
 const HomePage = () => {
   return `
-       <div> 
-          <div class="relative rounded-2xl animate-fadeIn overflow-hidden max-sm:h-55 h-130">
+       <div class="animate-fadeIn"> 
+          <div class="relative rounded-2xl overflow-hidden max-sm:h-55 h-130">
             <img src="${bannerImage}" class="object-cover w-full h-full" alt=""/>
             <div class="absolute max-sm:top-10 top-45 left-0 max-sm:right-15 right-30 mx-auto max-sm:w-70 w-180">
               <p class="text-dark-text-primary max-sm:text-xl text-5xl font-bold">

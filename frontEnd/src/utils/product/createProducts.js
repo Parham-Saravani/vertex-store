@@ -20,7 +20,7 @@ const changeTotalProductsText = () => {
     `نمایش ${productsCount} محصول`;
 };
 
-const calculateTotalPages = () => {  
+const calculateTotalPages = () => {
   totalPages = Math.ceil(totalProducts.length / productPerPage);
 };
 
@@ -104,7 +104,9 @@ const paginationNavigator = (event) => {
   const nextPage = event.target.closest(".next-page");
   const paginationBtn = event.target.closest(".pagination-button");
   const previousPage = event.target.closest(".previous-page");
+
   if (paginationBtn) {
+    scrollToTop();
     addOrRemoveActiveClass(event.target);
     currentPage = +paginationBtn.dataset.pagenumber;
     createProducts();
@@ -112,6 +114,7 @@ const paginationNavigator = (event) => {
   if (nextPage) {
     if (currentPage === totalPages) return;
     else {
+      scrollToTop()
       addOrRemoveActiveClass(null, "increase");
       currentPage++;
       createProducts();
@@ -120,11 +123,16 @@ const paginationNavigator = (event) => {
   if (previousPage) {
     if (currentPage === 1) return;
     else {
+      scrollToTop()
       addOrRemoveActiveClass(null, "decrease");
       currentPage--;
       createProducts();
     }
   }
+};
+
+const scrollToTop = () => {
+  document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
 };
 
 const addOrRemoveActiveClass = (target = null, operation = null) => {

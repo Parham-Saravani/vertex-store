@@ -21,13 +21,13 @@ const AuthenticationPage = () => {
             <form class="mt-8">
               <div class="flex flex-col">
                 <div class="w-full dark:bg-dark-input-bg bg-light-input-bg border dark:border-dark-input-border border-light-input-border rounded-xl focus-within:border-dark-input-focus transition-colors duration-300">
-                   <input class="w-full text-[14px] dark:text-dark-text-primary text-light-text-primary font-vazir placeholder:text-[13px] placeholder:font-normal dark:placeholder:text-dark-text-secondary placeholder:text-light-text-secondary pr-5 py-4 rounded-xl outline-hidden login-emai type="emai placeholder="ایمیل خود را وارد کنید" required/>
+                   <input class="w-full text-[14px] dark:text-dark-text-primary text-light-text-primary font-vazir placeholder:text-[13px] placeholder:font-normal dark:placeholder:text-dark-text-secondary placeholder:text-light-text-secondary pr-5 py-4 rounded-xl outline-hidden login-email type="email" placeholder="ایمیل خود را وارد کنید" required/>
                 </div>
                 <p class="hidden mt-1 font-vazir text-red-600 font-normal text-xs login-email-alert">
                   ایمیل صحیح نمیباشد
                 </p>
                 <div class="relative mt-3 w-full dark:bg-dark-input-bg bg-light-input-bg border dark:border-dark-input-border border-light-input-border rounded-xl focus-within:border-dark-input-focus transition-colors duration-300">
-                   <input class="w-full text-[14px] dark:text-dark-text-primary text-light-text-primary font-vazir placeholder:text-[13px] placeholder:font-normal dark:placeholder:text-dark-text-secondary placeholder:text-light-text-secondary pr-5 py-4 rounded-xl outline-hidden login-passwor type="password" placeholder="رمز عبور خود را وارد کنید"/>
+                   <input class="w-full text-[14px] dark:text-dark-text-primary text-light-text-primary font-vazir placeholder:text-[13px] placeholder:font-normal dark:placeholder:text-dark-text-secondary placeholder:text-light-text-secondary pr-5 py-4 rounded-xl outline-hidden login-passwor placeholder="رمز عبور خود را وارد کنید" type="password"/>
                   <span class="cursor-pointer absolute left-4 top-3.5 dark:text-dark-text-secondary text-light-text-secondary show-password">
                     <i class="fa-solid fa-eye"></i>
                   </span>
