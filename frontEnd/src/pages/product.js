@@ -1,7 +1,7 @@
 const ProductPage = () => {
     return `
-    <div class="fixed animate-fadeIn flex items-center justify-center inset-0 z-30 backdrop-blur-xl product-content">
-          <div class="border dark:border-dark-card-border border-light-card-border w-220 h-175 py-2 px-4 relative dark:bg-dark-section-bg bg-light-section-bg rounded-xl">
+    <div class="fixed animate-fadeIn flex items-center justify-center inset-0 z-30 backdrop-blur-xl product-container">
+          <div class="border dark:border-dark-card-border border-light-card-border w-220 h-175 py-2 px-4 relative dark:bg-dark-section-bg bg-light-section-bg rounded-xl product-content">
             <button class="absolute top-2 right-2 flex justify-center items-center w-6 h-6 dark:bg-dark-input-bg bg-light-input-bg transition-colors duration-300 dark:hover:bg-dark-input-border hover:bg-light-input-border rounded-full cursor-pointer close-product-page">
               <i class="fa-solid fa-close text-[12px] dark:text-dark-text-primary text-light-text-primary"></i>
             </button>
@@ -69,10 +69,10 @@ const ProductPage = () => {
             <!-- prodcut description && specifications && comments -->
             <div class="mt-6 px-2 w-full h-65 dark:bg-dark-input-bg bg-light-input-bg rounded-md">
               <!-- tabs -->
-              <div class="flex gap-1 text-xs py-1 dark:text-dark-text-primary text-light-text-primary justify-center items-center">
-                <button class="dark:hover:bg-dark-card-hover hover:bg-light-card-hover cursor-pointer rounded-xl px-2 py-1.5 transition-colors duration-300 active-product-page product-description">توضیحات</button>
-                <button class="dark:hover:bg-dark-card-hover hover:bg-light-card-hover cursor-pointer rounded-xl px-2 py-1.5 transition-colors duration-300 product-specifications">مشخصات فنی</button>
-                <button class="dark:hover:bg-dark-card-hover hover:bg-light-card-hover cursor-pointer rounded-xl px-2 py-1.5 transition-colors duration-300 product-comments">نظرات کاربران</button>
+              <div class="flex gap-1 text-xs py-1 dark:text-dark-text-primary text-light-text-primary justify-center items-center product-tabs">
+                <button class="dark:hover:bg-dark-card-hover hover:bg-light-card-hover cursor-pointer rounded-xl px-2 py-1.5 transition-colors duration-300 product-tab active-product-page" data-content="description">توضیحات</button>
+                <button class="dark:hover:bg-dark-card-hover hover:bg-light-card-hover cursor-pointer rounded-xl px-2 py-1.5 transition-colors duration-300 product-tab" data-content="specifications">مشخصات فنی</button>
+                <button class="dark:hover:bg-dark-card-hover hover:bg-light-card-hover cursor-pointer rounded-xl px-2 py-1.5 transition-colors duration-300 product-tab" data-content="comments">نظرات کاربران</button>
               </div>
               <!-- DIVIDER -->
               <hr class="mt-1 dark:text-dark-divider text-light-divider rounded-full">
