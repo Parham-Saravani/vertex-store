@@ -1,4 +1,4 @@
-const baseUrl = "https://vertex-store.onrender.com/";
+const baseUrl = "https://vertex-store.onrender.com";
 const apiRequestHandler = async (address, param) => {
   return await apiRequest(address , param)
 };
