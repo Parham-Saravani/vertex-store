@@ -1,22 +1,26 @@
 import { apiRequestHandler } from "../http";
 import ProductPage from "../../pages/product";
+import ProductLoader  from "../../pages/product-skeleton-loader"
 
 const openProductPageHandler = async (event) => {
   const product = event.target.closest(".product");
   if (product) {
     const productID = product.dataset.id;
+    showProductPageLoader();
     const data = await apiRequestHandler("/api/products/", `${productID}`);
-    addProductPage(data);
+    shwoProductDetails(data)
   }
 };
-const addProductPage = (data) => {
-  document.body.insertAdjacentHTML("afterbegin", ProductPage());
+const showProductPageLoader = (data) => {
+  document.body.insertAdjacentHTML("afterbegin", ProductLoader());
   document.documentElement.classList.add("overflow-hidden");
+};
+const shwoProductDetails = (data) => {
+  document.querySelector('.product-content').insertAdjacentHTML("afterbegin", ProductPage())
   const productPageBackground = document.querySelector(".product-container");
   productPageBackground.addEventListener("click", closeProductPage);
-  
   changeProductPageContent(data);
-};
+}
 
 const navigateInTabs = (event)=>{ 
     const tabs = event.target.closest('.product-tab');
@@ -41,11 +45,8 @@ const closeProductPage = (event) => {
   const background = document.querySelector(".product-container");
   const closeBtn = event.target.closest(".close-product-page");
   if (closeBtn) {    
-    background.classList.add("animate-fadeOut");
     document.documentElement.classList.remove("overflow-hidden");
-    setTimeout(() => {
-      background.remove();
-    }, 700);
+    background.remove();
   }
 };
 const takeProductPageElements = ()=>{

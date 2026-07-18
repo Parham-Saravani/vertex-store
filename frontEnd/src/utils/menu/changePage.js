@@ -2,7 +2,7 @@ import HomePage from "../../pages/home";
 import ContactPage from "../../pages/contant";
 import ProductsPage from "../../pages/products";
 import AboutPage from "../../pages/about";
-import ProductSkeletonLoader from "../../pages/product-skeleton-loader.js";
+import ProductsSkeletonLoader from "../../pages/products-skeleton-loader.js";
 import createPriceSlider from "../product/price";
 import { apiRequestHandler } from "../http.js";
 import { productsHandler } from "../product/createProducts.js";
@@ -19,7 +19,7 @@ const PageContentHandler = async (page) => {
       break;
 
     case "products":
-      changePageContent(ProductSkeletonLoader());
+      changePageContent(ProductsSkeletonLoader());
       const products = await apiRequestHandler("/api/products");
       changePageContent(ProductsPage());
       createPriceSlider();
