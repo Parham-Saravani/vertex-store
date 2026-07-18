@@ -32,6 +32,9 @@ const hideToast = () => {
 
 const changeMessage = (message) => {
   switch (message) {
+    case 'ADDED_TO_BASKET':
+      toastStatus("success", "fail", 'محصول به سبد خرید شما اضافه شد');
+      break
     case "USER_CREATED":
       toastStatus("success", "fail", authErrors.USER_CREATED, true);
       break;
@@ -79,6 +82,6 @@ const toastProgress = () => {
       progress.style.width = "0%";
     }
     progress.style.width = `${number}%`;
-  }, 40);
+  }, 20);
 };
 export { showToast, hideToast, toast };

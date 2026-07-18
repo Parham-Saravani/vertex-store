@@ -6,7 +6,6 @@ const bannerBtnHandler = () => {
   showProductsBannerBtn.addEventListener("click", moveToProductsPage);
 };
 const moveToProductsPage = () => {
-  console.log("faasdf");
   PageContentHandler("products");
 };
 showProductsBannerBtn.addEventListener("click", moveToProductsPage);

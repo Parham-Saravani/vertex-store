@@ -92,20 +92,21 @@
                   <i class="fa-solid fa-cart-shopping dark:text-dark-text-primary text-light-text-primary text-[15px]"></i>
               </button>
               <div class="fixed hidden z-20 top-0 right-0 w-full h-full dark:bg-dark-glass backdrop-blur-xl  basket-background"></div>
-              <div class="hidden px-2 py-2 absolute top-13 left-0 rounded-xl z-30 w-70 dark:bg-dark-input-bg bg-light-input-bg bascket-content">
+              <div class="hidden px-2 py-2 absolute top-14 left-0 rounded-xl z-30 w-70 dark:bg-dark-input-bg bg-light-input-bg bascket-content">
                 <div class="flex justify-between items-center">
                   <h3 class="font-bold text-[13px] dark:text-dark-text-primary text-light-text-primary">سبد خرید من</h3>
                   <p class="flex items-center gap-1 text-[10px] dark:text-dark-text-primary text-light-text-primary">
-                    <span>0</span>
+                    <span class="basket-items">0</span>
                     محصول
                   </p>
                 </div>
                 <!-- DIVIDER -->
                 <hr class="my-1 dark:text-dark-divider text-light-divider rounded-full">
 
-                <div class="w-full">
-                  <p class="w-full h-15 flex justify-center items-center dark:text-dark-text-primary text-light-text-primary text-xs">سبد خالی</p>
+                <div class="flex flex-col gap-1 w-full basket-container overflow-y-auto hide-scrollbar h-80">
+
                 </div>
+                <button class="mt-4 flex items-center justify-center w-full h-5 border border-red-600 rounded-xl text-red-600 text-[10px] py-4 cursor-pointer transition-colors duration-300 hover:bg-red-800 hover:text-red-600/40">پاک سازی سبد خرید</button>
               </div>
             </div>
             <!-- profile -->
