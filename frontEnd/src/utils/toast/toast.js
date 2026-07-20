@@ -32,9 +32,12 @@ const hideToast = () => {
 
 const changeMessage = (message) => {
   switch (message) {
-    case 'ADDED_TO_BASKET':
-      toastStatus("success", "fail", 'محصول به سبد خرید شما اضافه شد');
-      break
+    case "NEED_TO_LOGIN":
+      toastStatus("fail", "success", "ابتدا وارد حساب کاربری خود شوید");
+      break;
+    case "ADDED_TO_BASKET":
+      toastStatus("success", "fail", "محصول به سبد خرید شما اضافه شد");
+      break;
     case "USER_CREATED":
       toastStatus("success", "fail", authErrors.USER_CREATED, true);
       break;
@@ -49,7 +52,7 @@ const changeMessage = (message) => {
       break;
     case "INVALID_CREDENTIALS":
       toastStatus("fail", "success", authErrors.INVALID_CREDENTIALS);
-      clearLoginInputs()
+      clearLoginInputs();
       break;
     default:
       toastStatus("fail", "success", authErrors.UNKNOWN_ERROR);

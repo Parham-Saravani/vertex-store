@@ -19,8 +19,6 @@ const userLoginOperation = async (email, password) => {
   const data = await response.json();
   showToast(data.message);
   if (data.message === "LOGIN_SUCCESSFULLY") {
-    console.log(data);
-
     createCookie(data.token);
     loginChecker();
     saveDataInLocalStorage('userData',{ ...data.user });

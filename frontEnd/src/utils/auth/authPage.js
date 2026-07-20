@@ -9,11 +9,27 @@ const showAuthContent = () => {
   document.body.insertAdjacentHTML("afterbegin", AuthenticationPage());
   const authForm = document.querySelector(".auth-form");
   authForm.addEventListener("click", authenticationFormClickHandler);
-
+  showOrHidePasswordHandler();
   const authFormBackground = document.querySelector(".auth-background");
   authFormBackground.addEventListener("click", authFormCloser, {
     capture: true,
   });
+};
+const showOrHidePasswordHandler = () => {
+  const showPasswordBtn = document.querySelectorAll(".show-password");
+  showPasswordBtn.forEach((item) =>
+    item.addEventListener("click", showOrHidePassword),
+  );
+};
+const showOrHidePassword = (event) => {
+  const input = event.currentTarget.previousElementSibling;
+  if (input.type === "password") {
+    input.type = "text";
+    event.target.className = "fa-solid fa-eye-slash";
+  } else {
+    input.type = "password";
+    event.target.className = "fa-solid fa-eye";
+  }
 };
 
 const authFormCloser = (event) => {

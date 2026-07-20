@@ -20,8 +20,6 @@ const registerNewUser = async (username, email, password) => {
   const data = await response.json();
   showToast(data.message);
   if (data.message === "USER_CREATED") {
-    console.log(data);
-
     createCookie(data.token);
     loginChecker();
     saveDataInLocalStorage("userData", { ...data.user });

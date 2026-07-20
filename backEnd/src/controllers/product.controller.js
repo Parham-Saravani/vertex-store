@@ -1,42 +1,10 @@
 import Product from "../models/product.model.js";
 import createSlug from "../utils/slugGenerator/slugGenerator.js";
 const registerNewProduct = async (req, res) => {
-  const {
-    title,
-    price,
-    stock,
-    brand,
-    category,
-    images,
-    colors,
-    description,
-    specifications,
-  } = req.body;
-  if (
-    title &&
-    typeof price === "number" &&
-    price > 0 &&
-    stock &&
-    brand &&
-    category &&
-    images.length &&
-    colors.length &&
-    description &&
-    specifications.length
-  ) {
+  const {title,price,stock,brand,category,image,colors,description,specifications} = req.body;
+  if (title &&typeof price === "number" &&price > 0 &&stock &&brand &&category &&image &&colors.length &&description &&specifications.length) {
     try {
-      await Product.create({
-        title,
-        slug: createSlug(title),
-        price,
-        stock,
-        brand,
-        category,
-        images,
-        colors,
-        description,
-        specifications,
-      });
+      await Product.create({title,slug: createSlug(title),price,stock,brand,category,image,colors,description,specifications});
       res.status(201).json({ message: "PRODUCT_CREAETD" });
     } catch (error) {
       console.log(error);

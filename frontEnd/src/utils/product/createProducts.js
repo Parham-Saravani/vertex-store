@@ -108,8 +108,8 @@ const paginationNavigator = (event) => {
   const nextPage = event.target.closest(".next-page");
   const paginationBtn = event.target.closest(".pagination-button");
   const previousPage = event.target.closest(".previous-page");
-
-  if (paginationBtn) {
+  const currentActiveBtn = event.target.closest('.pagination-button.pagination-active')
+  if (paginationBtn && !currentActiveBtn) {
     scrollToTop();
     addOrRemoveActiveClass(event.target);
     currentPage = +paginationBtn.dataset.pagenumber;
