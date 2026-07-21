@@ -1,76 +1,38 @@
 import paginationHandler from "./pagination";
 import openProductPageHandler from "./product";
-
+import {priceHandler ,brandsHandler,categoryHandler , brandsAndCategoriesHandler} from "./category.js";
+import { baseUrl } from "../http";
+let isCondeRunOnce = false;
 let totalPages = null;
 const productPerPage = 30;
 let currentPage = 1;
 let totalProducts = [];
+
 const productsHandler = (products) => {
   totalProducts = products;
   changeTotalProductsText();
   calculateTotalPages();
-  paginationHandler(totalPages);
   createProducts();
-  createCategories();
-  createBrands();
-  paginationNavigatorHandler();
+  paginationHandler(totalPages);
+  elementsHandler()
 };
+const elementsHandler = () =>{
+  if(!isCondeRunOnce){
+  isCondeRunOnce = true;
+  categoryHandler();
+  brandsHandler();
+  priceHandler()
+  brandsAndCategoriesHandler();
+  paginationNavigatorHandler();
+  }
+}
 const changeTotalProductsText = () => {
   const productsCount = totalProducts.length;
-  document.querySelector(".total-products-text").textContent =
-    `نمایش ${productsCount} محصول`;
+  document.querySelector(".total-products-text").textContent =`نمایش ${productsCount} محصول`;
 };
 
 const calculateTotalPages = () => {
   totalPages = Math.ceil(totalProducts.length / productPerPage);
-};
-
-const createCategories = () => {
-  const categories = Object.groupBy(
-    totalProducts,
-    (product) => product.category_fa,
-  );
-  console.log(categories);
-  
-  const categoryContainer = document.querySelector(".category-container");
-  /* create default category */
-  categoryContainer.insertAdjacentHTML(
-    "afterbegin",
-    `
-       <li class="text-[13px] max-lg:text-[10px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/40 hover:bg-brand-accent-hover hover:text-dark-text-primary category-active">همه محصولات</li>
-
-    `,
-  );
-  categoryContainer;
-  for (let category in categories) {
-    categoryContainer.insertAdjacentHTML(
-      "beforeend",
-      `
-       <li class="text-[13px] max-lg:text-[10px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/40 hover:bg-brand-accent-hover hover:text-dark-text-primary">${category}</li>
-
-      `,
-    );
-  }
-};
-const createBrands = () => {
-  const brands = Object.groupBy(totalProducts, (product) => product.brand);
-  const brandsContainer = document.querySelector(".brand-container");
-  for (let brand in brands) {
-    brandsContainer.insertAdjacentHTML(
-      "beforeend",
-      `
-        <div class="flex items-center gap-3">
-            <div class="flex items-center gap-2">
-                <input id="${brand}" type="checkbox" class="peer hidden">
-                <label for="${brand}" class="peer-checked:bg-brand-accent rounded-md  flex items-center justify-center w-4.5 h-4.5 border dark:border-dark-card-border border-light-card-border transition-colors duration-300">
-                    <i class="fa-solid fa-check text-[10px] hidden dark:text-dark-card-bg text-dark-text-primary"></i>
-                </label>
-                <label for="${brand}" class="h-4 dark:text-dark-text-primary text-light-text-primary text-[15px]">${brand}</label>
-            </div>
-        </div>
-      `,
-    );
-  }
 };
 
 const createProducts = () => {
@@ -168,6 +130,5 @@ const addOrRemoveActiveClass = (target = null, operation = null) => {
     }
   }
 };
-
 
 export { productsHandler, changeTotalProductsText };

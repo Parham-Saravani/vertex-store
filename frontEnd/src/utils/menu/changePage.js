@@ -9,6 +9,7 @@ import { productsHandler } from "../product/createProducts.js";
 import messageHandler from "../message/message.js";
 import sortHandler from "../product/sort.js";
 import bannerBtnHandler from "../home/home.js";
+
 const pageContent = document.querySelector(".page-content");
 
 const PageContentHandler = async (page) => {

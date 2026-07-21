@@ -12,8 +12,12 @@ const openProductPageHandler = async (event) => {
     showProductPageLoader();
     const data = await apiRequestHandler("/api/products/", `${productID}`);
     shwoProductDetails(data);
+    const productContent = document.querySelector(".product-content");
+    productContent.addEventListener("click", closeProductPage);
     const navigationTabs = document.querySelector(".product-tabs");
     navigationTabs.addEventListener("click", navigateInTabs);
+    const productColorContainer = document.querySelector(".product-colors-container");
+    productColorContainer.addEventListener("click", changeProductColor);
     addProductToBasketHandler();
   }
 };
@@ -49,10 +53,16 @@ const shwoProductDetails = (data) => {
   const productContainer = document.querySelector(".product-content");
   productContainer.innerHTML = "";
   productContainer.insertAdjacentHTML("afterbegin", ProductPage());
-  const productPageBackground = document.querySelector(".product-container");
-  productPageBackground.addEventListener("click", closeProductPage);
   changeProductPageContent(data);
 };
+
+const changeProductColor = (event) =>{
+  const colorItem = event.target.closest('.color-item')
+  if(colorItem){
+    document.querySelector('.color-item.active-product-color')?.classList.remove('active-product-color')
+    event.target.classList.add('active-product-color')
+  }
+}
 
 const navigateInTabs = (event) => {
   const tabs = event.target.closest(".product-tab");
@@ -68,7 +78,6 @@ const addAndRemoveActiveTabClass = (target) => {
   document.querySelector(".product-tab.active-product-page").classList.remove("active-product-page");
   target.classList.add("active-product-page");
 };
-//Todo
 const changeProductNavigationContent = (content) => {
   switch(content){
     case 'description':
@@ -139,7 +148,7 @@ const createColorElements = (colorsContainer, colors) => {
     colorsContainer.insertAdjacentHTML(
       "beforeend",
       `
-        <span class="block rounded-full w-6 h-6 border dark:border-dark-divider border-light-divider cursor-pointer" style="background-color: ${color};"></span>
+        <span class="block rounded-full w-6 h-6 border dark:border-dark-divider border-light-divider cursor-pointer color-item" style="background-color: ${color};"></span>
       `,
     );
   });

@@ -59,7 +59,7 @@ const HomePage = () => {
               <a class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
                 <img src="${mouseImage}" class="size-45" alt=""/>
                 <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
-                  ماوس
+                  موس
                 </h2>
               </a>
               <a class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
@@ -99,7 +99,7 @@ const HomePage = () => {
               </div>
               <div class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
                 <img src="./src/assets/images/mouse.png" class="size-12" alt="">
-                <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">ماوس</p>
+                <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">موس</p>
               </div>
               <div class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
                 <img src="./src/assets/images/keyboard.png" class="size-12" alt="">

@@ -25,4 +25,32 @@ const sendProductDetail = async (req, res) => {
     res.status(200).json({ message: "PRODUCT_NOT_FOUND" });
   }
 };
-export { takeAllProducts, registerNewProduct, sendProductDetail };
+
+const getAllCategories = async (req, res) => {
+  const data = await Product.find();
+  const categories = Object.groupBy(data , item => item.category_fa)
+  const brands = Object.groupBy(data , item => item.brand)
+  res.status(200).json({categories , brands})
+}
+const filterProducts = async (req, res)=> {
+  const {category , brand , minPrice , maxPrice} = req.body;
+  const filter = {}
+  if(category.length){
+    filter.category_fa = { $in : category};
+  }
+  if(brand.length){
+    filter.brand = {$in : brand};
+  }
+  if(minPrice || maxPrice){
+    filter.price = {}
+  }
+  if(minPrice){
+    filter.price.$gte = minPrice
+  }
+  if(maxPrice){
+    filter.price.$lte = maxPrice;
+  }  
+  const data = await Product.find(filter)
+  res.status(200).json(data)
+}
+export { takeAllProducts, registerNewProduct, sendProductDetail , getAllCategories , filterProducts};

@@ -1,5 +1,6 @@
 import defaultProfileImage from "../../assets/images/profile/default-profile.jpg";
 import { getDataFromLocalStorage } from "../localstorage";
+import { logoutHandler } from "../cookie";
 
 const profileBtn = document.querySelector(".profile-btn");
 const profileBackground = document.querySelector(".profile-background");
@@ -7,6 +8,7 @@ const basketContent = document.querySelector(".profile-menu");
 const profileImage = document.querySelector(".profile-image");
 const profileUsername = document.querySelector(".profile-username");
 const profileEmail = document.querySelector(".profile-email");
+const logOutBtn = document.querySelector(".logout-btn");
 
 let isProfileMenuOpen = false;
 
@@ -25,7 +27,7 @@ const showOrHideBasket = () => {
     basketContent.classList.add("hidden");
   }
 };
-const closeBasketContent = () => {
+const closeProfileContent = () => {
   if (isProfileMenuOpen) {
     isProfileMenuOpen = false;
     document.documentElement.classList.remove("overflow-hidden");
@@ -48,7 +50,11 @@ const changeProfileContent = () => {
     profileEmail.textContent = email;
   }
 };
+const logoutFromAccount = () => {
+  logoutHandler();
+};
 profileBtn.addEventListener("click", showOrHideBasket);
-profileBackground.addEventListener("click", closeBasketContent);
+profileBackground.addEventListener("click", closeProfileContent);
 window.addEventListener("load", changeProfileContent);
-export default changeProfileContent;
+logOutBtn.addEventListener("click", logoutFromAccount);
+export { changeProfileContent, closeProfileContent };
