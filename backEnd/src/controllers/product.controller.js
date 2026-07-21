@@ -35,6 +35,8 @@ const getAllCategories = async (req, res) => {
 const filterProducts = async (req, res)=> {
   const {category , brand , minPrice , maxPrice} = req.body;
   const filter = {}
+  console.log(brand);
+  
   if(category.length){
     filter.category_fa = { $in : category};
   }

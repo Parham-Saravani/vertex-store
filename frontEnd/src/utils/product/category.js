@@ -24,6 +24,7 @@ const brandsHandler = () => {
 };
 const addBrandsToFilter = (event) => {
   const branItems = document.querySelectorAll(".brand-item");
+  filter.brand = [];
   branItems.forEach((item) => {
     if (item.checked) {
       if(!filter.brand.includes(item.id)){
@@ -31,6 +32,8 @@ const addBrandsToFilter = (event) => {
       }
     }
   });
+  console.log(filter);
+  
   getProductsHandler()
 };
 
