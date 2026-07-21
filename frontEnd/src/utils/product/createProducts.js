@@ -30,6 +30,8 @@ const createCategories = () => {
     totalProducts,
     (product) => product.category_fa,
   );
+  console.log(categories);
+  
   const categoryContainer = document.querySelector(".category-container");
   /* create default category */
   categoryContainer.insertAdjacentHTML(

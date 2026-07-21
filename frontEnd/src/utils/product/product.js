@@ -65,13 +65,32 @@ const navigateInTabs = (event) => {
   }
 };
 const addAndRemoveActiveTabClass = (target) => {
-  document
-    .querySelector(".product-tab.active-product-page")
-    .classList.remove("active-product-page");
+  document.querySelector(".product-tab.active-product-page").classList.remove("active-product-page");
   target.classList.add("active-product-page");
 };
 //Todo
-const changeProductNavigationContent = (content) => {};
+const changeProductNavigationContent = (content) => {
+  switch(content){
+    case 'description':
+      addOrHideTabsContent('.product-description', '.product-specifications' , '.product-comments')
+      break;
+    case 'specifications':
+      addOrHideTabsContent('.product-specifications', '.product-description' , '.product-comments')
+      break;
+    case 'comments':
+      addOrHideTabsContent('.product-comments', '.product-specifications' , '.product-description')
+      document.querySelector('.product-specifications').classList.add('hidden')
+      document.querySelector('.product-description').classList.add('hidden')
+      document.querySelector('.product-comments').classList.remove('hidden')
+      break;
+    
+  }
+};
+const addOrHideTabsContent = (showElement , firstHideElement , secondHideElement)=> {
+    document.querySelector(showElement).classList.remove('hidden')
+    document.querySelector(firstHideElement).classList.add('hidden')
+    document.querySelector(secondHideElement).classList.add('hidden')
+}
 
 const closeProductPage = (event) => {
   const background = document.querySelector(".product-container");
@@ -91,41 +110,16 @@ const takeProductPageElements = () => {
   const rating = document.querySelector(".product-rating");
   const discountPrice = document.querySelector(".product-discount-price");
   const price = document.querySelector(".product-price");
-  const availibilityContainer = document.querySelector(
-    ".product-availability-container",
-  );
+  const availibilityContainer = document.querySelector(".product-availability-container");
+  const descriptionContainer = document.querySelector('.product-description')
+  const specificationsContainer = document.querySelector('.product-specifications')
+  const commentsContainer = document.querySelector('.product-comments')
   const colorsContainer = document.querySelector(".product-colors-container");
   const contentContainer = document.querySelector(".product-content-container");
-  return {
-    addToCardBtn,
-    breadCrumbCategory,
-    breadCrumbTitle,
-    image,
-    discountPercent,
-    title,
-    rating,
-    discountPrice,
-    price,
-    availibilityContainer,
-    colorsContainer,
-    contentContainer,
-  };
+  return {addToCardBtn,breadCrumbCategory,breadCrumbTitle,image,discountPercent,title,rating,discountPrice,price,availibilityContainer,colorsContainer,contentContainer,descriptionContainer, specificationsContainer , commentsContainer};
 };
 const changeProductPageContent = (data) => {
-  const {
-    addToCardBtn,
-    breadCrumbCategory,
-    breadCrumbTitle,
-    image,
-    discountPercent,
-    title,
-    rating,
-    discountPrice,
-    price,
-    availibilityContainer,
-    colorsContainer,
-    contentContainer,
-  } = takeProductPageElements();
+  const {descriptionContainer , specificationsContainer , commentsContainer , addToCardBtn, breadCrumbCategory, breadCrumbTitle, image, discountPercent, title, rating, discountPrice, price, availibilityContainer, colorsContainer, contentContainer} = takeProductPageElements();
 
   breadCrumbCategory.textContent = data.category_fa;
   breadCrumbTitle.textContent = data.title;
@@ -134,16 +128,10 @@ const changeProductPageContent = (data) => {
   rating.textContent = data.rating;
   addToCardBtn.setAttribute("data-id", `${data._id}`);
   createColorElements(colorsContainer, data.colors);
-  createProductDescription(contentContainer, data.description);
+  createProductDescription(descriptionContainer, data.description);
+  createProductSpecifications(data.specifications,specificationsContainer)
   setAvalibility(data.stock, availibilityContainer);
-  changePriceOrDiscount(
-    data.discount,
-    data.price,
-    data.oldPrice,
-    discountPercent,
-    discountPrice,
-    price,
-  );
+  changePriceOrDiscount(data.discount,data.price,data.oldPrice,discountPercent,discountPrice,price);
 };
 
 const createColorElements = (colorsContainer, colors) => {
@@ -164,6 +152,20 @@ const createProductDescription = (contentContainer, description) => {
     `,
   );
 };
+const createProductSpecifications = (data , container)=>{  
+  data.forEach(item => {
+    container.insertAdjacentHTML('beforeend',
+    `
+    <div class="rounded-md border dark:border-dark-divider border-light-divider">
+      <div class="grid grid-cols-3 px-5 py-1.5">
+        <span class="text-[13px] dark:text-dark-text-primary text-light-text-primary">${item.title}</span>
+        <span class="text-[13px] dark:text-dark-text-primary text-light-text-primary col-span-2">${item.value}</span>
+      </div>
+    </div>
+    `
+  )
+  })
+}
 const changePriceOrDiscount = (
   discount,
   price,

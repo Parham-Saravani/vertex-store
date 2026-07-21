@@ -76,16 +76,15 @@ const ProductPage = () => {
               <hr class="mt-1 dark:text-dark-divider text-light-divider rounded-full">
               <!-- data -->
               <div class="hide-scrollbar h-50 overflow-auto px-2 py-3 product-content-container">
+                <div class="product-description">
 
-              <!--
-                <div class="rounded-md border dark:border-dark-divider border-light-divider">
-                  <div class="grid grid-cols-3 border-b dark:border-dark-divider border-light-divider px-5 py-1.5">
-                    <span class="text-[13px] dark:text-dark-text-primary text-light-text-primary">برند</span>
-                    <span class="text-[13px] dark:text-dark-text-primary text-light-text-primary col-span-2">Asus</span>
-                  </div>
                 </div>
-  -->
+                <div class="hidden product-specifications">
 
+                </div>
+                <div class="hidden product-comments">
+
+                </div>
               </div>
             </div>
     `
