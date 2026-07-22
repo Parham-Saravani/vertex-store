@@ -32,6 +32,12 @@ const hideToast = () => {
 
 const changeMessage = (message) => {
   switch (message) {
+    case "MESSAGE_DELIVERED":
+      toastStatus("success", "fail", "پیام شما با موفقیت ثبت شد");
+      break;
+    case "MESSAGE_NOT_DELIVERED":
+      toastStatus("fail", "success", "پیام شما ثبت نشد ، لطفا مجدد تلاش نمایید");
+      break;
     case "NEED_TO_LOGIN":
       toastStatus("fail", "success", "ابتدا وارد حساب کاربری خود شوید");
       break;
