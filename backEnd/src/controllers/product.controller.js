@@ -34,9 +34,7 @@ const getAllCategories = async (req, res) => {
 }
 const filterProducts = async (req, res)=> {
   const {category , brand , minPrice , maxPrice} = req.body;
-  const filter = {}
-  console.log(brand);
-  
+  const filter = {}  
   if(category.length){
     filter.category_fa = { $in : category};
   }
@@ -52,7 +50,32 @@ const filterProducts = async (req, res)=> {
   if(maxPrice){
     filter.price.$lte = maxPrice;
   }  
+  console.log(filter);
+  
   const data = await Product.find(filter)
   res.status(200).json(data)
 }
-export { takeAllProducts, registerNewProduct, sendProductDetail , getAllCategories , filterProducts};
+
+const getSortedItems = async (req, res) => {
+    const {sort} = req.body;    
+    let data = null;
+    switch(sort){
+      case 'favourite':
+        data = await await Product.find().sort({rating: -1})        
+        res.status(200).json(data)
+        break;
+      case 'cheap':
+        data = await await Product.find().sort({price: 1})        
+        res.status(200).json(data)
+        break;
+      case 'expensive':
+        data = await await Product.find().sort({price: -1})        
+        res.status(200).json(data)
+        break;
+      case 'newest':
+        data = await await Product.find().sort({createdAt: -1})
+        res.status(200).json(data)
+        break;
+    }
+  }
+export { takeAllProducts, registerNewProduct, sendProductDetail , getAllCategories , filterProducts , getSortedItems};

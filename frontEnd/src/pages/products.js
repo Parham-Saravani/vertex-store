@@ -21,13 +21,14 @@ const ProductsPage = () => {
                    <!-- dropDown -->
                     <div class="relative w-40 mr-3">
                       <button class="dark:bg-dark-card-hover bg-light-card-hover border dark:border-dark-card-border border-light-card-border dark:text-dark-text-primary text-light-text-primary px-3 py-2 rounded-xl flex items-center justify-between w-full cursor-pointer sort-btn">
-                        <p class="max-md:text-[10px]">پیشفرض</p>
+                        <p class="text-xs max-md:text-[10px] sort-btn-text">پیشفرض</p>
                         <i class="fa-solid fa-chevron-down max-md:text-[10px]"></i>
                       </button>
                       <ul class="absolute hidden top-12 right-0 left-0 mx-auto z-10 rounded-xl dark:bg-dark-card-hover bg-light-card-hover w-full sort-list">
-                        <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-xl px-2 py-2 cursor-pointer sort-items">پرفروش ترین</li>
-                        <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-xl px-2 py-2 cursor-pointer sort-items">محبوب ترین</li>
-                        <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-xl px-2 py-2 cursor-pointer sort-items">جدید ترین</li>
+                        <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-xl px-2 py-2 cursor-pointer sort-items" data-sort="cheap">ارزان ترین</li>
+                        <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-xl px-2 py-2 cursor-pointer sort-items" data-sort="expensive">گران ترین</li>
+                        <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-xl px-2 py-2 cursor-pointer sort-items" data-sort="favourite">محبوب ترین</li>
+                        <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-xl px-2 py-2 cursor-pointer sort-items" data-sort="newest">جدید ترین</li>
                       </ul>
                     </div>
                   </div>

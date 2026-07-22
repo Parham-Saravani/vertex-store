@@ -10,6 +10,7 @@ const isPaginationNeed = (totalPages) => {
 };
 const createPaginationButtons = (totalPages) => {
   const paginationContainer = document.querySelector(".pagination-buttons");
+  paginationContainer.innerHTML = '';
   for (let i = 1; i <= totalPages; i++) {
     paginationContainer.insertAdjacentHTML(
       "beforeend",
