@@ -1,5 +1,6 @@
 import { baseUrl } from "../http";
 import { productsHandler } from "./createProducts";
+import { createSkeletonLoaderForProducts } from "./filter";
 
 const sortHandler = () => {
   document.body.addEventListener("click", sortListHandler);
@@ -33,6 +34,7 @@ const sortItemsHandler = (event) => {
   }
 }
 const takeSortedProductsAndCreateProducts = async (sort)=>{
+  createSkeletonLoaderForProducts()
   const data = await takeSortedProducts(sort)
   productsHandler(data)  
 }
