@@ -1,0 +1,48 @@
+const TicketPage = () => {
+  return;
+  `
+    <!-- ticket page -->
+       <div class="w-full pt-7 px-5">    
+            <div class="flex justify-between items-center">
+                <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary">تیکت ها</h2>
+                <div class="flex items-center gap-3">
+                    <p class="dark:text-dark-text-primary text-light-text-primary">دسته بندی:</p>
+                    <div class="relative w-50 flex items-end">
+                        <button class="px-3 py-2.5 w-full flex justify-between items-center dark:bg-dark-section-bg bg-light-section-bg border dark:border-dark-card-border border-light-card-border rounded-xl cursor-pointer transition-colors duration-300 dark:hover:bg-dark-card-hover hover:bg-light-card-hover">
+                            <p class="text-xs dark:text-dark-text-primary text-light-text-primary">همه</p>
+                            <i class="fa-solid fa-chevron-down text-xs dark:text-dark-text-primary text-light-text-primary"></i>
+                        </button>
+                        <div class="hidden absolute top-12 w-full dark:bg-dark-section-bg bg-light-section-bg rounded-xl order-list">
+                            <ul class="w-full flex flex-col gap-1">
+                                <li class="dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 rounded-xl dark:hover:bg-dark-card-hover hover:bg-light-card-hover text-xs py-2.5 px-2 cursor-pointer">پاسخ داده شده</li>
+                                <li class="dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 rounded-xl dark:hover:bg-dark-card-hover hover:bg-light-card-hover text-xs py-2.5 px-2 cursor-pointer">در حال انتظار</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-1 mt-10 tickets-container">
+                <div class="w-full flex justify-between items-center rounded-xl px-3 py-4 dark:bg-dark-section-bg bg-light-section-bg border dark:border-dark-card-border border-light-card-border cursor-pointer transition-colors duration-300 dark:hover:bg-dark-card-hover hover:bg-light-card-hover">
+                    <div class="flex items-center gap-7">
+                        <p class="flex text-xs gap-2 items-center dark:text-dark-text-primary text-light-text-primary">
+                            <span>موضوع:</span>
+                            <span>کار نکردن صفحه پرداخت</span>
+                        </p>
+                        <p class="flex text-xs gap-2 items-center dark:text-dark-text-primary text-light-text-primary">
+                            <span>تاریخ:</span>
+                            <span>14 تیر 1403</span>
+                        </p>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <span class="text-xs bg-green-700/40 text-green-600 px-2 py-1 rounded-lg">ارسال شده</span>
+                        <button class="flex items-center justify-center rounded-lg px-0.5 py-1 cursor-pointer hover:scale-105 transition-transform duration-300">
+                            <i class="fa-solid fa-chevron-left text-[11px] dark:text-dark-text-primary text-light-text-primary"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+       </div>
+    `;
+};
+export default TicketPage;

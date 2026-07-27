@@ -1,0 +1,173 @@
+const MainProfilePage = () => {
+  return;
+  `
+    <!-- profile page content -->
+        <div class="w-full hidden">
+            <header class="relative w-full overflow-hidden border dark:border-dark-card-border border-light-card-border rounded-xl">
+                <img src="./src/assets/images/banners/profile-banner.png" class="h-65 w-full object-cover" alt="">
+                <div class="[direction:ltr] absolute flex items-center z-10 top-0 bottom-0 my-auto px-10 py-10 left-0">
+                    <div class="relative rounded-full flex items-center justify-center bg-linear-90 from-brand-accent to-brand-primary text-7xl text-dark-text-primary font-bold size-33">
+                        <p class="text-center">P</p>
+                        <div class="absolute bottom-0 right-3">
+                            <label for="profile-image" class="flex items-center justify-center w-10 rounded-full h-10 bg-brand-primary cursor-pointer transition-colors duration-300 hover:bg-brand-accent-hover">
+                                <i class="fa-solid fa-camera text-dark-text-primary text-xl"></i>
+                            </label>
+                            <input id="profile-image" type="file" class="hidden">
+                        </div>
+                    </div>
+                    <div class="ml-10 h-full pt-10">
+                        <p class="text-dark-text-primary text-2xl">Asuke</p>
+                    </div>
+                </div>
+                <button class="absolute flex items-center gap-1 py-2.5 px-5 text-xs bottom-4 right-4 bg-brand-primary rounded-xl cursor-pointer transition-transform duration-300 hover:-translate-y-0.5 text-dark-text-primary">
+                    <i class="fa-solid fa-edit"></i>
+                    ویرایش پروفایل
+                </button>
+            </header>
+            <main class="mt-3">
+                <!-- products , favourites , tickets cards -->
+                <div class="flex gap-4 items-center justify-center">
+                    <div class="relative flex flex-col items-center dark:bg-dark-section-bg bg-light-section-bg rounded-xl border dark:border-dark-input-border border-light-input-border w-50 h-40 py-5">
+                        <i class="fa-solid fa-bag-shopping absolute right-2 top-4 text-5xl text-brand-accent"></i>
+                        <div class="mt-15">
+                            <p class="dark:text-dark-text-primary text-light-text-primary font-bold">سفارش های من</p>
+                        <p class="dark:text-dark-text-secondary text-light-text-secondary text-xs">
+                            <span>2</span>
+                            <span>سفارش</span>
+                        </p>
+                        </div>
+                    </div>
+                    <div class="relative flex flex-col items-center dark:bg-dark-section-bg bg-light-section-bg rounded-xl border dark:border-dark-input-border border-light-input-border w-50 h-40 py-5">
+                        <i class="fa-regular fa-heart absolute right-2 top-4 text-5xl text-red-600"></i>
+                        <div class="mt-15">
+                            <p class="dark:text-dark-text-primary text-light-text-primary font-bold">علاقه مندی ها</p>
+                        <p class="dark:text-dark-text-secondary text-light-text-secondary text-xs">
+                            <span>4</span>
+                            <span>محصول</span>
+                        </p>
+                        </div>
+                    </div>
+                    <div class="relative flex flex-col items-center dark:bg-dark-section-bg bg-light-section-bg rounded-xl border dark:border-dark-input-border border-light-input-border w-50 h-40 py-5">
+                        <i class="fa-solid fa-headset absolute right-2 top-4 text-5xl text-blue-500"></i>
+                        <div class="mt-15">
+                            <p class="dark:text-dark-text-primary text-light-text-primary font-bold">تیکت های من</p>
+                        <p class="dark:text-dark-text-secondary text-light-text-secondary text-xs">
+                            <span>6</span>
+                            <span>تیکت</span>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- products and user detail cards -->
+                <div class="w-full gap-3 flex mt-3">
+                    <!-- user detail -->
+                    <div class="w-1/2 dark:bg-dark-section-bg bg-light-section-bg border dark:border-dark-card-border border-light-card-border rounded-xl">
+                        <h2 class="py-2.5 dark:text-dark-text-primary text-light-text-primary px-4 font-bold">اطلاعات حساب</h2>
+                        <hr class="w-full dark:text-dark-divider bg-text-divider">
+                        <ul class="py-2 px-4">
+                            <li class="flex items-center gap-5 py-2">
+                                <i class="fa-regular fa-user text-xl dark:text-dark-text-primary text-light-text-primary"></i>
+                                <div>
+                                    <h3 class="text-[13px] dark:text-dark-text-primary text-light-text-primary font-normal">نام کاربری</h3>
+                                    <p class="text-[13px] dark:text-dark-text-secondary text-light-text-secondary">Asuke</p>
+                                </div>
+                            </li>
+                            <hr class="dark:text-dark-divider text-light-divider">
+                            <li class="flex items-center gap-5 py-2">
+                                <i class="fa-regular fa-envelope text-xl dark:text-dark-text-primary text-light-text-primary"></i>
+                                <div>
+                                    <h3 class="text-[13px] dark:text-dark-text-primary text-light-text-primary font-normal">ایمیل</h3>
+                                    <p class="text-[13px] dark:text-dark-text-secondary text-light-text-secondary">parhamsaravani83@gmail.com</p>
+                                </div>
+                            </li>
+                            <hr class="dark:text-dark-divider text-light-divider">
+                            <li class="flex items-center gap-5 py-2">
+                                <i class="fa-regular fa-calendar text-xl dark:text-dark-text-primary text-light-text-primary"></i>
+                                <div>
+                                    <h3 class="text-[13px] dark:text-dark-text-primary text-light-text-primary font-normal">تاریخ عضویت</h3>
+                                    <p class="text-[13px] dark:text-dark-text-secondary text-light-text-secondary">تیر 1403</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- user orders -->
+                    <div class="w-1/2 dark:bg-dark-section-bg bg-light-section-bg border dark:border-dark-card-border border-light-card-border rounded-xl">
+                        <h2 class="py-2.5 dark:text-dark-text-primary text-light-text-primary px-4 font-bold">آخرین سفارش ها</h2>
+                        <hr class="w-full dark:text-dark-divider bg-text-divider">
+                        <ul class="py-2 px-4">
+                            <li class="flex py-3 items-center justify-between">
+                                <div class="flex gap-4 items-center">
+                                    <img src="./public/images/Alienwarem16R2.png" class="size-14" alt="">
+                                    <div>
+                                        <p class="text-xs dark:text-dark-text-primary text-light-text-primary">
+                                            <span>سفارش</span>
+                                            <span class="">44423#</span>
+                                        </p>
+                                        <p class="text-xs dark:text-dark-text-secondary text-light-text-secondary">2 محصول</p>
+                                        <p class="text-xs dark:text-dark-text-primary text-light-text-primary">
+                                            <span>4,453,000</span>
+                                            <span>تومان</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 items-center">
+                                    <p class="text-xs dark:text-dark-text-secondary text-light-text-secondary">16 تیر 1403</p>
+                                    <span class="cursor-pointer">
+                                        <i class="fa-solid fa-chevron-left text-xs dark:text-dark-text-primary text-light-text-primary"></i>
+                                    </span>
+                                </div>
+                            </li>
+                            <hr class="dark:text-dark-divider text-light-divider">
+                            <li class="flex py-3 items-center justify-between">
+                                <div class="flex gap-4 items-center">
+                                    <img src="./public/images/Alienwarem16R2.png" class="size-14" alt="">
+                                    <div>
+                                        <p class="text-xs dark:text-dark-text-primary text-light-text-primary">
+                                            <span>سفارش</span>
+                                            <span class="">44423#</span>
+                                        </p>
+                                        <p class="text-xs dark:text-dark-text-secondary text-light-text-secondary">2 محصول</p>
+                                        <p class="text-xs dark:text-dark-text-primary text-light-text-primary">
+                                            <span>4,453,000</span>
+                                            <span>تومان</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 items-center">
+                                    <p class="text-xs dark:text-dark-text-secondary text-light-text-secondary">16 تیر 1403</p>
+                                    <span class="cursor-pointer">
+                                        <i class="fa-solid fa-chevron-left text-xs dark:text-dark-text-primary text-light-text-primary"></i>
+                                    </span>
+                                </div>
+                            </li>
+                            <hr class="dark:text-dark-divider text-light-divider">
+                            <li class="flex py-3 items-center justify-between">
+                                <div class="flex gap-4 items-center">
+                                    <img src="./public/images/Alienwarem16R2.png" class="size-14" alt="">
+                                    <div>
+                                        <p class="text-xs dark:text-dark-text-primary text-light-text-primary">
+                                            <span>سفارش</span>
+                                            <span class="">44423#</span>
+                                        </p>
+                                        <p class="text-xs dark:text-dark-text-secondary text-light-text-secondary">2 محصول</p>
+                                        <p class="text-xs dark:text-dark-text-primary text-light-text-primary">
+                                            <span>4,453,000</span>
+                                            <span>تومان</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 items-center">
+                                    <p class="text-xs dark:text-dark-text-secondary text-light-text-secondary">16 تیر 1403</p>
+                                    <span class="cursor-pointer">
+                                        <i class="fa-solid fa-chevron-left text-xs dark:text-dark-text-primary text-light-text-primary"></i>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </div>
+    `;
+};
+export default MainProfilePage;

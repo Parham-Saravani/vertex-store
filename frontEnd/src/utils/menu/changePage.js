@@ -24,7 +24,7 @@ const PageContentHandler = async (page) => {
       const products = await apiRequestHandler("/api/products");
       changePageContent(ProductsPage());
       createPriceSlider();
-      productsHandler(products);
+      productsHandler(products , true);
       sortHandler();
       break;
 

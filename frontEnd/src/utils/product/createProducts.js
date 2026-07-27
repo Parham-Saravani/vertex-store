@@ -4,23 +4,24 @@ import {priceHandler,brandsHandler,categoryHandler,brandsAndCategoriesHandler} f
 import { baseUrl } from "../http.js";
 import emptyState from '../../assets/images/logo/not-found.svg';
 
-let isCondeRunOnce = false;
+let isCodeRunOnce = false;
 let totalPages = null;
 const productPerPage = 30;
 let currentPage = 1;
 let totalProducts = [];
 
-const productsHandler = (products) => {
+const productsHandler = (products , resetisCodeRunOnce = false) => {
   totalProducts = products;
   changeTotalProductsText();
   calculateTotalPages();
+  if(resetisCodeRunOnce) resetCodeRunOnceHandler();
   createProducts();
   paginationHandler(totalPages);
   elementsHandler();
 };
 const elementsHandler = () => {
-  if (!isCondeRunOnce) {
-    isCondeRunOnce = true;
+  if (!isCodeRunOnce) {
+    isCodeRunOnce = true;
     categoryHandler();
     brandsHandler();
     priceHandler();
@@ -28,6 +29,9 @@ const elementsHandler = () => {
     paginationNavigatorHandler();
   }
 };
+const resetCodeRunOnceHandler = () => {
+  isCodeRunOnce = false;
+}
 const changeTotalProductsText = () => {
   const productsCount = totalProducts.length;
   document.querySelector(".total-products-text").textContent =
