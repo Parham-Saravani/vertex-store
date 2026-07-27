@@ -9,7 +9,7 @@ const FavouritePage = () => {
                     <span>محصول</span>
                 </p>
             </div>
-            <div class="mt-10 grid grid-cols-5">
+            <!--<div class="mt-10 grid grid-cols-5">
                 <div class="group relative border dark:border-dark-card-border max-2xl:w-48 max-xl:w-48 max-lg:w-33 max-md:w-37 max-sm:w-56 border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border product" data-id="6a5f0bec0a6d8543c81e32b1">
                     <button class="flex items-center justify-center absolute top-2 right-3 dark:text-dark-text-primary text-light-text-primary cursor-pointer transform-colors duration-300 hover:bg-brand-primary rounded-full w-6 h-6">
                         <i class="fa-solid fa-trash text-xs"></i>
@@ -25,7 +25,7 @@ const FavouritePage = () => {
                         <p class="text-[17px] max-md:text-[13px] pr-1.5">8,990,000</p>
                         <p>تومان</p>
                     </div>
-                </div>
+                </div>-->
                 
                 
             </div>

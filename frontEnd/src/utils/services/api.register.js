@@ -2,8 +2,8 @@ import { createCookie } from "../cookie";
 import { baseUrl } from "../http";
 import { showToast } from "../toast/toast.js";
 import loginChecker from "../loader/loader";
-import {changeProfileContent} from "../header/profile.js";
-import {saveDataInLocalStorage} from "../localstorage.js";
+import { changeProfileContent } from "../header/headerProfile.js";
+import { saveDataInLocalStorage } from "../localstorage.js";
 
 const registerNewUser = async (username, email, password) => {
   const response = await fetch(`${baseUrl}/api/users/register`, {

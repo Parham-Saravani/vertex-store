@@ -31,7 +31,7 @@ const MainProfilePage = () => {
                         <div class="mt-15">
                             <p class="dark:text-dark-text-primary text-light-text-primary font-bold">سفارش های من</p>
                         <p class="dark:text-dark-text-secondary text-light-text-secondary text-xs">
-                            <span>2</span>
+                            <span>0</span>
                             <span>سفارش</span>
                         </p>
                         </div>
@@ -41,7 +41,7 @@ const MainProfilePage = () => {
                         <div class="mt-15">
                             <p class="dark:text-dark-text-primary text-light-text-primary font-bold">علاقه مندی ها</p>
                         <p class="dark:text-dark-text-secondary text-light-text-secondary text-xs">
-                            <span>4</span>
+                            <span>0</span>
                             <span>محصول</span>
                         </p>
                         </div>
@@ -51,7 +51,7 @@ const MainProfilePage = () => {
                         <div class="mt-15">
                             <p class="dark:text-dark-text-primary text-light-text-primary font-bold">تیکت های من</p>
                         <p class="dark:text-dark-text-secondary text-light-text-secondary text-xs">
-                            <span>6</span>
+                            <span>0</span>
                             <span>تیکت</span>
                         </p>
                         </div>

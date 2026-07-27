@@ -42,7 +42,6 @@ const registerNewProduct = async (req, res) => {
       });
       res.status(201).json({ message: "PRODUCT_CREAETD" });
     } catch (error) {
-      console.log(error);
       res.status(400).json("PRODUCT_NOT_CREATED");
     }
   }
@@ -70,25 +69,30 @@ const getAllCategories = async (req, res) => {
 const filterProducts = async (req, res) => {
   const { category, brand, minPrice, maxPrice } = req.body;
   const filter = {};
-  if (category.length) {
-    filter.category_fa = { $in: category };
+  if (!category && !brand && !minPrice && !maxPrice) {    
+    const data = await Product.find()    
+    res.status(200).json(data)
+  } else {
+    if (category.length) {
+      filter.category_fa = { $in: category };
+    }
+    if (brand.length) {
+      filter.brand = { $in: brand };
+    }
+    if (minPrice || maxPrice) {
+      filter.price = {};
+    }
+    if (minPrice) {
+      filter.price.$gte = minPrice;
+    }
+    if (maxPrice) {
+      filter.price.$lte = maxPrice;
+    }
+    const data = await Product.find(filter);
+    res.status(200).json(data);
   }
-  if (brand.length) {
-    filter.brand = { $in: brand };
-  }
-  if (minPrice || maxPrice) {
-    filter.price = {};
-  }
-  if (minPrice) {
-    filter.price.$gte = minPrice;
-  }
-  if (maxPrice) {
-    filter.price.$lte = maxPrice;
-  }
-  console.log(filter);
 
-  const data = await Product.find(filter);
-  res.status(200).json(data);
+
 };
 
 const getSortedItems = async (req, res) => {
@@ -121,38 +125,30 @@ const searchHandler = async (req, res) => {
       {
         title: {
           $regex: text,
-          $options:'i'
+          $options: "i",
         },
       },
       {
         category: {
           $regex: text,
-          $options:'i'
+          $options: "i",
         },
       },
       {
-        category_fa:{
+        category_fa: {
           $regex: text,
-          $options: 'i'
-        }
+          $options: "i",
+        },
       },
       {
-        brand:{
+        brand: {
           $regex: text,
-          $options:'i'
-        }
-      }
+          $options: "i",
+        },
+      },
     ],
   });
-  res.status(200).json(data)
+  res.status(200).json(data);
 };
 
-export {
-  takeAllProducts,
-  registerNewProduct,
-  sendProductDetail,
-  getAllCategories,
-  filterProducts,
-  getSortedItems,
-  searchHandler,
-};
+export { takeAllProducts, registerNewProduct, sendProductDetail, getAllCategories, filterProducts, getSortedItems, searchHandler}

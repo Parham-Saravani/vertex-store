@@ -51,7 +51,7 @@ const changeProfileContent = () => {
   }
 };
 const logoutFromAccount = () => {
-  logoutHandler();
+  logoutHandler(true);
 };
 profileBtn.addEventListener("click", showOrHideBasket);
 profileBackground.addEventListener("click", closeProfileContent);

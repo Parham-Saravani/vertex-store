@@ -24,7 +24,7 @@ const OrderPage = () => {
                 </div>
             </div>
             <div class="flex flex-col gap-1 mt-10">
-                <div class="w-full flex justify-between items-center rounded-xl px-3 py-4 dark:bg-dark-section-bg bg-light-section-bg border dark:border-dark-card-border border-light-card-border cursor-pointer transition-colors duration-300 dark:hover:bg-dark-card-hover hover:bg-light-card-hover">
+                <!--<div class="w-full flex justify-between items-center rounded-xl px-3 py-4 dark:bg-dark-section-bg bg-light-section-bg border dark:border-dark-card-border border-light-card-border cursor-pointer transition-colors duration-300 dark:hover:bg-dark-card-hover hover:bg-light-card-hover">
                     <div class="flex items-center gap-7">
                         <p class="flex gap-1 text-xs items-center dark:text-dark-text-primary text-light-text-primary">
                             <span>کد سفارش:</span>
@@ -41,7 +41,7 @@ const OrderPage = () => {
                             <i class="fa-solid fa-chevron-left text-[11px] dark:text-dark-text-primary text-light-text-primary"></i>
                         </button>
                     </div>
-                </div>
+                </div>->
 
             </div>
         </div>

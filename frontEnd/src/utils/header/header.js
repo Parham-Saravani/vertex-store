@@ -1,3 +1,3 @@
 import "./basket.js"
-import "./profile.js"
+import "./headerProfile.js"
 import searchHandler from "./search.js"
