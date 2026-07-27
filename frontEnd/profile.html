@@ -17,7 +17,7 @@
       <!-- menu -->
       <div class="max-md:hidden max-lg:w-[25%] relative w-[20%] py-3 h-full dark:bg-dark-section-bg bg-light-section-bg rounded-xl border dark:border-dark-card-border border-light-card-border">
         <header>
-          <a href="http://localhost:5173" class="flex justify-center items-center">
+          <a href="/" class="flex justify-center items-center">
             <h1 class="bg-linear-90 from-brand-primary to-brand-accent text-transparent bg-clip-text font-bold text-4xl">
               Vertex
             </h1>
@@ -25,19 +25,19 @@
         </header>
         <main class="px-2 mt-10">
             <ul class="flex flex-col gap-1">
-                <li class="dark:text-dark-text-primary text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-dark-text-primary hover:bg-brand-accent font-bold rounded-xl profile-menu-active">
+                <li class="dark:text-dark-text-primary text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-dark-text-primary hover:bg-brand-accent font-bold rounded-xl user-menu-items profile-menu-active" data-page="main">
                     <i class="fa-solid fa-user"></i>    
                     پروفایل من
                 </li>
-                <li class="dark:text-dark-text-primary text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-dark-text-primary hover:bg-brand-accent font-bold rounded-xl">
+                <li class="dark:text-dark-text-primary text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-dark-text-primary hover:bg-brand-accent font-bold rounded-xl user-menu-items" data-page="orders">
                     <i class="fa-solid fa-bag-shopping"></i>
                     سفارش های من
                 </li>
-                <li class="dark:text-dark-text-primary text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-dark-text-primary hover:bg-brand-accent font-bold rounded-xl">
+                <li class="dark:text-dark-text-primary text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-dark-text-primary hover:bg-brand-accent font-bold rounded-xl user-menu-items" data-page="favourites">
                     <i class="fa-solid fa-heart"></i>
                     علاقه مندی ها
                 </li>
-                <li class="dark:text-dark-text-primary text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-dark-text-primary hover:bg-brand-accent font-bold rounded-xl">
+                <li class="dark:text-dark-text-primary text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-dark-text-primary hover:bg-brand-accent font-bold rounded-xl user-menu-items" data-page="tickets">
                     <i class="fa-solid fa-headset"></i>
                     تیکت های من
                 </li>
@@ -55,9 +55,8 @@
         </footer>        
       </div>
       <main class="max-md:w-full max-lg:w-[75%] w-[80%] profile-content">
-
         <!-- profile page content -->
-        <div class="w-full hidden">
+        <div class="w-full ">
             <header class="relative w-full overflow-hidden border dark:border-dark-card-border border-light-card-border rounded-xl">
                 <img src="./src/assets/images/banners/profile-banner.png" class="h-65 w-full object-cover" alt="">
                 <div class="[direction:ltr] absolute flex items-center z-10 top-0 bottom-0 my-auto px-10 py-10 left-0">
@@ -118,7 +117,7 @@
                     <!-- user detail -->
                     <div class="w-1/2 dark:bg-dark-section-bg bg-light-section-bg border dark:border-dark-card-border border-light-card-border rounded-xl">
                         <h2 class="py-2.5 dark:text-dark-text-primary text-light-text-primary px-4 font-bold">اطلاعات حساب</h2>
-                        <hr class="w-full dark:text-dark-divider bg-text-divider">
+                        <hr class="w-full dark:text-dark-divider text-light-divider bg-text-divider">
                         <ul class="py-2 px-4">
                             <li class="flex items-center gap-5 py-2">
                                 <i class="fa-regular fa-user text-xl dark:text-dark-text-primary text-light-text-primary"></i>
@@ -148,7 +147,7 @@
                     <!-- user orders -->
                     <div class="w-1/2 dark:bg-dark-section-bg bg-light-section-bg border dark:border-dark-card-border border-light-card-border rounded-xl">
                         <h2 class="py-2.5 dark:text-dark-text-primary text-light-text-primary px-4 font-bold">آخرین سفارش ها</h2>
-                        <hr class="w-full dark:text-dark-divider bg-text-divider">
+                        <hr class="w-full dark:text-dark-divider text-light-divider bg-text-divider">
                         <ul class="py-2 px-4">
                             <li class="flex py-3 items-center justify-between">
                                 <div class="flex gap-4 items-center">
@@ -223,14 +222,8 @@
                 </div>
             </main>
         </div>
-
-        
-
-
-       
-
       </main>
     </div>
-    <script type="module" src="./src/profile.js"></script>
-  </body>
+    <script type="module" src="./src/utils/profile/userDashboard/userProfileHandler.js"></script>
+</body>
 </html>

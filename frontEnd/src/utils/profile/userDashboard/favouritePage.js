@@ -1,6 +1,5 @@
 const FavouritePage = () => {
-  return;
-  `
+  return`
     <!-- favourites page -->
         <div class="pt-7 px-5 w-full">
              <div class="flex justify-between items-center">

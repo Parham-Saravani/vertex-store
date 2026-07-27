@@ -1,6 +1,5 @@
 const OrderPage = () => {
-  return;
-  `
+  return`
      <!-- orders -->
     <div class="pt-7 px-5 w-full">
             <div class="flex justify-between items-center">

@@ -1,8 +1,7 @@
 const MainProfilePage = () => {
-  return;
-  `
+  return`
     <!-- profile page content -->
-        <div class="w-full hidden">
+        <div class="w-full">
             <header class="relative w-full overflow-hidden border dark:border-dark-card-border border-light-card-border rounded-xl">
                 <img src="./src/assets/images/banners/profile-banner.png" class="h-65 w-full object-cover" alt="">
                 <div class="[direction:ltr] absolute flex items-center z-10 top-0 bottom-0 my-auto px-10 py-10 left-0">

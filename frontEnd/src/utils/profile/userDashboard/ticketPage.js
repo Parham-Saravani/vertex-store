@@ -1,6 +1,5 @@
 const TicketPage = () => {
-  return;
-  `
+  return`
     <!-- ticket page -->
        <div class="w-full pt-7 px-5">    
             <div class="flex justify-between items-center">

@@ -6,13 +6,20 @@ const searchHandler = (event) => {
   setTimeout(async () => {
     const text = searchInput.value.trim();
     if (text) {
+      clearContainer()
       createLoader();
       const data = await takeProducts(text);
       showSearchContainer()
       createSearchItems(data);
+    }else{
+      createSearchItems()
     }
+   
   }, 200);
 };
+const clearContainer = () => {
+  searchItemsContainer.innerHTML = '';
+}
 const createLoader = () => {
   searchItemsContainer.insertAdjacentHTML(
     "beforeend",
@@ -25,7 +32,7 @@ const createLoader = () => {
     `,
   );
 };
-const createSearchItems = (data) => {
+const createSearchItems = (data = []) => {
   searchItemsContainer.innerHTML = "";
   if (data.length) {
     data.forEach((item) => {

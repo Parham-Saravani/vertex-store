@@ -7,7 +7,7 @@ const createCategories = (data) => {
   categoryContainer.insertAdjacentHTML(
     "afterbegin",
     `
-       <li class="text-[13px] max-lg:text-[10px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/40 hover:bg-brand-accent-hover hover:text-dark-text-primary category-item category-active" data-category="">همه محصولات</li>
+       <li class="text-[13px] max-lg:text-[10px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/40 hover:bg-brand-accent-hover hover:text-dark-text-primary category-item category-active" data-category="all-products">همه محصولات</li>
 
     `,
   );

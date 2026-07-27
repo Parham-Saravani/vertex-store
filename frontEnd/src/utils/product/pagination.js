@@ -2,10 +2,12 @@ const paginationHandler = (totalPages) => {
   isPaginationNeed(totalPages);
   createPaginationButtons(totalPages);
 };
-const isPaginationNeed = (totalPages) => {
+const isPaginationNeed = (totalPages) => {  
   const paginationContainer = document.querySelector(".pagination-container");
   if (totalPages <= 1) {
     paginationContainer.classList.add("hidden");
+  }else{
+    paginationContainer.classList.remove('hidden')
   }
 };
 const createPaginationButtons = (totalPages) => {

@@ -121,21 +121,25 @@ const searchHandler = async (req, res) => {
       {
         title: {
           $regex: text,
+          $options:'i'
         },
       },
       {
         category: {
           $regex: text,
+          $options:'i'
         },
       },
       {
-        category_fa: {
+        category_fa:{
           $regex: text,
-        },
+          $options: 'i'
+        }
       },
       {
         brand:{
           $regex: text,
+          $options:'i'
         }
       }
     ],

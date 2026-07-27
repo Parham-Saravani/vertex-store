@@ -155,4 +155,4 @@ const addOrRemoveActiveClass = (target = null, operation = null) => {
   }
 };
 
-export { productsHandler, changeTotalProductsText };
+export { productsHandler, changeTotalProductsText , scrollToTop};

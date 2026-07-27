@@ -1,4 +1,4 @@
-import { productsHandler } from "./createProducts.js";
+import { productsHandler , scrollToTop} from "./createProducts.js";
 import { apiRequestHandler } from "../http.js";
 import {createBrands,createCategories,getCategoriesAndBrands , createSkeletonLoaderForSidebarContent} from "./sidebar-content.js";
 import { baseUrl } from "../http.js";
@@ -22,16 +22,20 @@ const brandsHandler = () => {
   brandsContainer.addEventListener("click", addBrandsToFilter);
 };
 const addBrandsToFilter = (event) => {
-  const branItems = document.querySelectorAll(".brand-item");
-  filter.brand = [];
-  branItems.forEach((item) => {
-    if (item.checked) {
-      if (!filter.brand.includes(item.id)) {
-        filter.brand.push(item.id);
+  const item = event.target.classList.contains('brand-item')
+  if(item){
+    const branItems = document.querySelectorAll(".brand-item");
+    filter.brand = [];
+    branItems.forEach((item) => {
+      if (item.checked) {
+        if (!filter.brand.includes(item.id)) {
+          filter.brand.push(item.id);
+        }
       }
-    }
-  });
-  getProductsHandler();
+    });
+    scrollToTop()
+    getProductsHandler();
+  }
 };
 const clearFilters = () =>{
   filter.category = [];
@@ -45,19 +49,21 @@ const categoryHandler = () => {
 };
 const addActiveClass = async (event) => {
   const categoryItem = event.target.closest(".category-item");
-  const allProducts = event.target.closest("[data-category='']");
+  const allProducts = event.target.closest(".category-item[data-category='']");
   if (allProducts) {
     if (event.target.classList.contains("category-active")) return;
     document.querySelectorAll(".category-item").forEach((item) => item.classList.remove("category-active"));
     clearFilters()
     event.target.classList.add("category-active");
     createSkeletonLoaderForProducts()
-    const products = await apiRequestHandler("/api/products");
-    productsHandler(products);
+    const products = await getProductsHandler();
+    console.log(products);
+    
+    // productsHandler(products);
     return;
   }
   if (categoryItem) {
-    const allProductsItem = document.querySelector('[data-category=""]').classList.contains("category-active");
+    const allProductsItem = document.querySelector('[data-category="all-products"]').classList.contains("category-active");
     if (allProductsItem) {
       document.querySelector(".category-item.category-active").classList.remove("category-active");
     }
@@ -113,9 +119,9 @@ const createSkeletonLoaderForProducts = () => {
   const totalProductsNumber = document.querySelector('.total-products-text')
   const paginationContainer = document.querySelector('.pagination-container')
   const productsContainer = document.querySelector('.products-container')
-  paginationContainer.innerHTML = '';
   totalProductsNumber.innerHTML = ''; 
   productsContainer.innerHTML = '';
+  
   totalProductsNumber.insertAdjacentHTML('beforeend',
     `
       <div class="animate-pulse rounded-xl dark:bg-gray-800 bg-black/40 w-30 h-7"></div>
