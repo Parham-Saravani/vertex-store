@@ -12,6 +12,7 @@ let filter = {
 const priceHandler = () => {
   const priceSlider = document.querySelector("#price-slider");
   priceSlider.noUiSlider.on("change", (value, handle) => {
+    document.querySelector('.pagination-container').classList.add('hidden')
     filter.minPrice = Number(Math.floor(value[0]));
     filter.maxPrice = Number(Math.floor(value[1]));
     getProductsHandler();
@@ -24,6 +25,7 @@ const brandsHandler = () => {
 const addBrandsToFilter = (event) => {
   const item = event.target.classList.contains("brand-item");
   if (item) {
+    hidePagination()
     const branItems = document.querySelectorAll(".brand-item");
     filter.brand = [];
     filter.category = [];
@@ -55,9 +57,8 @@ const addActiveClass = async (event) => {
   );
   if (allProducts) {
     if (event.target.classList.contains("category-active")) return;
-    document
-      .querySelectorAll(".category-item")
-      .forEach((item) => item.classList.remove("category-active"));
+    hidePagination()
+    document.querySelectorAll(".category-item").forEach((item) => item.classList.remove("category-active"));
     clearFilters();
     event.target.classList.add("category-active");
     createSkeletonLoaderForProducts();
@@ -65,6 +66,7 @@ const addActiveClass = async (event) => {
     return;
   }
   if (categoryItem) {
+    hidePagination()
     const allProductsItem = document
       .querySelector('[data-category="all-products"]')
       .classList.contains("category-active");
@@ -151,10 +153,8 @@ const createSkeletonLoaderForProducts = () => {
     );
   }
 };
-export {
-  priceHandler,
-  brandsHandler,
-  categoryHandler,
-  brandsAndCategoriesHandler,
-  createSkeletonLoaderForProducts,
-};
+
+const hidePagination = ()=> {
+  document.querySelector('.pagination-container').classList.add('hidden')
+}
+export { priceHandler, brandsHandler, categoryHandler, brandsAndCategoriesHandler, createSkeletonLoaderForProducts};

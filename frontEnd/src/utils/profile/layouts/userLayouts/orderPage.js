@@ -1,7 +1,7 @@
-const OrderPage = () => {
+const UserOrderPage = () => {
   return`
      <!-- orders -->
-    <div class="pt-7 px-5 w-full">
+    <div class="px-5 w-full">
             <div class="flex justify-between items-center">
                 <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary">سفارش ها</h2>
                 <div class="flex items-center gap-3">
@@ -47,4 +47,4 @@ const OrderPage = () => {
         </div>
     `;
 };
-export default OrderPage;
+export default UserOrderPage;

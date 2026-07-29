@@ -5,4 +5,4 @@ import "./utils/auth/authPage.js";
 import "./utils/loader/loader.js";
 import "./utils/home/home.js";
 import "./utils/header/header.js"
-import "./aos/aos.js"
+import "./utils/aos/aos.js"

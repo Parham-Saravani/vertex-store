@@ -27,6 +27,7 @@ const sortItemsHandler = (event) => {
   const sortBtn = document.querySelector(".sort-btn-text");
   const item = event.target.closest('.sort-items')
   if(item){
+    document.querySelector('.pagination-container').classList.add('hidden')
     document.querySelector('.sort-items.category-active')?.classList.remove('category-active')
     item.classList.add('category-active');
     sortBtn.textContent = event.target.textContent.trim()

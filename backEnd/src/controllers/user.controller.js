@@ -1,6 +1,7 @@
 import User from "../models/user.model.js";
 import bcrypt from "bcrypt";
 import generateJWT from "../utils/jwt/jwt.js";
+import jwt from "jsonwebtoken";
 
 const emailRegex = /\w@[a-zA-Z]+\.[a-zA-z]/;
 
@@ -17,13 +18,27 @@ const registerNewUser = async (req, res) => {
       } else if (isEmailTaken.length) {
         res.status(200).json({ message: "EMAIL_EXIST" });
       } else {
-        const newUser = await User.create({username,email,password: hashedPassword});
+        const newUser = await User.create({
+          username,
+          email,
+          password: hashedPassword,
+        });
         const token = await generateJWT(newUser);
-        res.status(201).json({ message: "USER_CREATED", token , user:{username: newUser.username, imageUrl:newUser.imageUrl , email: newUser.email}});
+        res
+          .status(201)
+          .json({
+            message: "USER_CREATED",
+            token,
+            user: {
+              username: newUser.username,
+              imageUrl: newUser.imageUrl,
+              email: newUser.email,
+            },
+          });
       }
     } catch (error) {
       console.log(error);
-      
+
       res.status(200).json({ message: "USER_NOT-CREATED" });
     }
   }
@@ -33,10 +48,20 @@ const loginUser = async (req, res) => {
   const { email, password } = req.body;
   const newUser = await User.findOne({ email });
   if (newUser) {
-    const isPasswordMatch = await bcrypt.compare(password, newUser.password)
+    const isPasswordMatch = await bcrypt.compare(password, newUser.password);
     if (isPasswordMatch) {
       const token = await generateJWT(newUser);
-      res.status(200).json({ message: "LOGIN_SUCCESSFULLY", token , user:{username :newUser.username ,imageUrl : newUser.imageUrl , email:newUser.email }});
+      res
+        .status(200)
+        .json({
+          message: "LOGIN_SUCCESSFULLY",
+          token,
+          user: {
+            username: newUser.username,
+            imageUrl: newUser.imageUrl,
+            email: newUser.email,
+          },
+        });
     } else {
       res.status(200).json({ message: "INVALID_CREDENTIALS" });
     }
@@ -45,5 +70,10 @@ const loginUser = async (req, res) => {
   }
 };
 
-
-export { registerNewUser, loginUser};
+const takeUserData = async (req, res) => {
+  const token = req.params.id;
+  const data = jwt.verify(token, process.env.JWT_SECRET);
+  console.log(data);
+  
+};
+export { registerNewUser, loginUser, takeUserData };

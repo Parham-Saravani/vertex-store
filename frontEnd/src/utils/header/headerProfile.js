@@ -51,10 +51,12 @@ const changeProfileContent = () => {
   }
 };
 const logoutFromAccount = () => {
-  logoutHandler(true);
+  logoutHandler();
+  loginChecker();
+  closeProfileContent();
 };
-profileBtn.addEventListener("click", showOrHideBasket);
-profileBackground.addEventListener("click", closeProfileContent);
+profileBtn?.addEventListener("click", showOrHideBasket);
+profileBackground?.addEventListener("click", closeProfileContent);
 window.addEventListener("load", changeProfileContent);
-logOutBtn.addEventListener("click", logoutFromAccount);
+logOutBtn?.addEventListener("click", logoutFromAccount);
 export { changeProfileContent, closeProfileContent };

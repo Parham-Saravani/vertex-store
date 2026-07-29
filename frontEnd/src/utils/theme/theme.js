@@ -23,10 +23,10 @@ const addAndRemovingClasses = (isDarkMode, active, hidden) => {
   } else {
     document.documentElement.classList.remove("dark");
   }
-  active?.classList.remove("hidden");
-  active?.classList.add("flex");
-  hidden?.classList.add("hidden");
-  hidden?.classList.remove("flex");
+  active.classList.remove("hidden");
+  active.classList.add("flex");
+  hidden.classList.add("hidden");
+  hidden.classList.remove("flex");
   saveThemeInLocalStorage(isDarkMode);
 };
 

@@ -2,12 +2,19 @@
 
 /* Profile page class */
 .profile-menu-active {
-  box-shadow: 0 0 13px rgba(var(--color-glow-accent));
+  box-shadow: 0 0 10px rgba(var(--color-glow-accent));
   background-color: var(--color-brand-accent);
   color: var(--color-dark-text-primary)
 }
 .dark .profile-menu-active {
-  box-shadow: 0 0 13px rgba(var(--color-glow-accent));
+  box-shadow: 0 0 10px rgba(var(--color-glow-accent));
+  background-color: var(--color-brand-accent);
+}
+.profile-submenu-active {
+  background-color: var(--color-brand-accent);
+  color: var(--color-dark-text-primary)
+}
+.dark .profile-submenu-active {
   background-color: var(--color-brand-accent);
 }
 .order-active{

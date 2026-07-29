@@ -1,7 +1,7 @@
-const FavouritePage = () => {
+const UserFavouritePage = () => {
   return`
     <!-- favourites page -->
-        <div class="pt-7 px-5 w-full">
+        <div class="px-5 w-full">
              <div class="flex justify-between items-center">
                 <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary">علاقه مندی ها</h2>
                 <p class="text-xs dark:text-dark-text-primary text-light-text-primary">
@@ -32,4 +32,4 @@ const FavouritePage = () => {
         </div>
     `;
 };
-export default FavouritePage;
+export default UserFavouritePage;
