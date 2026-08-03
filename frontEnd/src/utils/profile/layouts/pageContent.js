@@ -1,42 +1,50 @@
+//! user components
 import UserProfilePage from "./userLayouts/mainPage.js";
 import UserTicketPage from "./userLayouts/ticketPage.js";
 import UserOrderPage from "./userLayouts/orderPage.js";
-import UserFavouritePage from "./userLayouts/favouritePage.js"
-  
+import UserFavouritePage from "./userLayouts/favouritePage.js";
+//! admin components
+import AdminProfilePage from "./adminLayouts/mainPage.js";
+import AdminProductsPage from "./adminLayouts/productPage.js";
+import AdminCategoryPage from "./adminLayouts/categoryPage.js";
+import AdminBrandPage from "./adminLayouts/brandPage.js";
+
+import createCharts from "./adminLayouts/chart.js";
 const changePageContent = (page) => {
   switch (page) {
     case "adminDashboard":
-        changePage()
+      changePage(AdminProfilePage());
+      createCharts();
       break;
     case "products":
-        changePage()
+      changePage(AdminProductsPage());
       break;
-    case "sort":
-        changePage()
+    case "category":
+      changePage(AdminCategoryPage());
       break;
     case "brands":
-        changePage()
+      changePage(AdminBrandPage());
       break;
     case "orders":
-        changePage()
+      changePage();
       break;
     case "discount":
-        changePage()
+      changePage();
       break;
     case "comments":
-        changePage()
+      changePage();
       break;
     case "users":
-        changePage()
+      changePage();
       break;
     case "roles":
-        changePage()
+      changePage();
       break;
     case "tickets":
-        changePage()
+      changePage();
       break;
     case "setting":
-        changePage()
+      changePage();
       break;
     case "userDashboard":
       changePage(UserProfilePage());

@@ -7,9 +7,7 @@ const sidebarItemsHandler = (event) => {
     if (collapseOpener.nextElementSibling.hasAttribute("style")) {
       collapseOpener.lastElementChild.classList.remove("rotate-180");
       closeAllCollapseItems();
-      const neccaryHeight = collapseOpener.nextElementSibling.firstElementChild.scrollHeight;
-      collapseOpener.nextElementSibling.classList.remove("h-0");
-      collapseOpener.nextElementSibling.style.height = `${neccaryHeight + 8}px`;
+     
     } else {
       closeAllCollapseItems();
       collapseOpener.lastElementChild.classList.add("rotate-180");

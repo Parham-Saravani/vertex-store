@@ -33,7 +33,7 @@ const AdminSidebarContent = () => {
                                 <i class="fa-solid fa-box-open"></i>
                                 محصولات
                             </li>
-                            <li class="w-full text-[13px] dark:text-dark-text-secondary text-light-text-secotext-dark-text-secondary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-primary hover:text-light-text-primary font-bold rounded-xl user-menu-items dark:hover:bg-dark-card-hover hover:bg-light-card-hover submenu-item"  data-page="sort">
+                            <li class="w-full text-[13px] dark:text-dark-text-secondary text-light-text-secotext-dark-text-secondary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-primary hover:text-light-text-primary font-bold rounded-xl user-menu-items dark:hover:bg-dark-card-hover hover:bg-light-card-hover submenu-item"  data-page="category">
                                 <i class="fa-solid fa-layer-group"></i>
                                 دسته بندی ها
                             </li>

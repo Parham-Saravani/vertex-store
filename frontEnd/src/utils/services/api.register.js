@@ -24,6 +24,9 @@ const registerNewUser = async (username, email, password) => {
     loginChecker();
     saveDataInLocalStorage("userData", { ...data.user });
     changeProfileContent();
+    return true;
+  } else {
+    return false;
   }
 };
 export default registerNewUser;

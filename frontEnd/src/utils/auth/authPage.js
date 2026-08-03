@@ -84,7 +84,7 @@ const changeAuthContent = (operation) => {
   }
 };
 
-const signupInputsValidator = (event) => {
+const signupInputsValidator = async (event) => {
   event.preventDefault();
   const { username, email, password, confirmPassword } = getSignupValues();
   const { usernameAlert, emailAlert, passwordAlert, confirmPasswordAlert } =
@@ -101,7 +101,11 @@ const signupInputsValidator = (event) => {
   isValid =
     isUsernameValid && isEmailValid && isPasswordValid && isPasswordSame;
   if (isValid) {
-    registerNewUser(username, email, password);
+    addLoaderToSubmitButton(".signup-btn");
+    const signupStatus = await registerNewUser(username, email, password);
+    if(!signupStatus){
+      resetBtn('.signup-btn')
+    }
   }
 };
 const getSignupValues = () => {
@@ -129,7 +133,7 @@ const getSignupAlerts = () => {
   return { usernameAlert, emailAlert, passwordAlert, confirmPasswordAlert };
 };
 
-const loginInputsValidator = (event) => {
+const loginInputsValidator = async (event) => {
   event.preventDefault();
   const { email, password } = getLoginValues();
   const { emailAlert, passwordAlert } = getLoginAlerts();
@@ -138,7 +142,11 @@ const loginInputsValidator = (event) => {
   const isPasswordValid = passwordValidator(password, passwordAlert);
   isValid = isEmailValid && isPasswordValid;
   if (isValid) {
-    userLoginOperation(email, password);
+    addLoaderToSubmitButton(".login-btn");
+    const loginStatus = await userLoginOperation(email, password);
+    if (!loginStatus) {
+        resetBtn('.login-btn')      
+    }
   }
 };
 const getLoginValues = () => {
@@ -228,5 +236,18 @@ const confirmPasswordValidator = (
   }
 };
 
+//! reset current operation btn
+const resetBtn = (button) => {
+  const btn =  document.querySelector(button)
+  button === '.login-btn' ? btn.textContent = 'ورود' : btn.textContent = 'ثبت نام'
+  btn.removeAttribute('disabled')
+}
+
+//! add loading state to current operation btn
+const addLoaderToSubmitButton = (button) => {
+  const btn = document.querySelector(button);
+  btn.disabled = true;
+  btn.innerHTML = `<div class="flex justify-center items-cente"><div class="loader w-4 rounded-full animate-loader aspect-square"></div></div>`;
+};
 authBtn.addEventListener("click", showAuthContent);
 export { clearSignupInputs, clearLoginInputs, hideAuthForm };

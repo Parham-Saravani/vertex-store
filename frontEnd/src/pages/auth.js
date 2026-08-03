@@ -1,7 +1,7 @@
 const AuthenticationPage = () => {
   return `
     <div class="animate-fadeIn fixed z-50 top-0 bottom-0 left-0 right-0 mx-auto flex items-center justify-center backdrop-blur-sm auth-background">
-        <div class="dark:bg-dark-card-bg bg-light-card-bg h-165 max-lg:static max-xl:right-10 max-lg:w-full z-20 right-17 top-16 max-sm:px-5 max-sm:w-[90%] w-120 px-10 py-5 dark:bg-dark-surface bg-light-surface border-2 dark:border-dark-card-border border-light-card-border rounded-xl auth-form">
+        <div class="dark:bg-dark-card-bg bg-light-card-bg h-170 max-lg:static max-xl:right-10 max-lg:w-full z-20 right-17 top-16 max-sm:px-5 max-sm:w-[90%] w-120 px-10 py-5 dark:bg-dark-surface bg-light-surface border-2 dark:border-dark-card-border border-light-card-border rounded-xl auth-form">
           
           <div class="shadow-light dark:shadow-dark flex justify-center auth-status-container  rounded-2xl">
             <span class="text-center font-vazir dark:text-dark-text-primary text-light-text-primary py-3 rounded-2xl w-50 cursor-pointer transition-normal duration-300 auth-current-content auth-active" data-page="login" >ورود</span>
@@ -37,7 +37,7 @@ const AuthenticationPage = () => {
                 </p>
               </div>
               <span class="border-hidden font-vazir text-[14px] text-brand-accent cursor-pointer transition-color duration-300 hover:text-brand-accent-hover forget-password-btn" >رمز عبور خود را فراموش کردید؟</span>
-              <button class="mt-5 border-hidden w-full h-15 text-[16px] font-vazir text-dark-text-primary font-bold bg-linear-90 from-brand-primary to-brand-accent transition-transform duration-300 rounded-xl cursor-pointer login-btn disabled:bg-violet-400 disabled:cursor-default">
+              <button class="mt-5 border-hidden w-full h-15 text-[16px] font-vazir text-dark-text-primary font-bold bg-linear-90 from-brand-primary to-brand-accent transition-transform duration-300 rounded-xl cursor-pointer login-btn disabled:cursor-default disabled:from-brand-accent/30 disabled:to-brand-accent/30">
                 ورود
               </button>
             </form>
@@ -91,7 +91,7 @@ const AuthenticationPage = () => {
                   رمز عبور تطابق ندارد
                 </p>
               </div>
-              <button class="mt-5 w-full h-15 text-[16px] font-vazir text-dark-text-primary font-bold bg-linear-90 from-brand-primary to-brand-accent  transition-transform duration-300 rounded-xl cursor-pointer signup-btn disabled:bg-violet-400 disabled:cursor-default">
+              <button class="mt-5 w-full h-15 text-[16px] font-vazir text-dark-text-primary font-bold bg-linear-90 from-brand-primary to-brand-accent  transition-transform duration-300 rounded-xl cursor-pointer signup-btn disabled:from-brand-accent/30 disabled:to-brand-accent/30 disabled:cursor-default">
                 ثبت نام
               </button>
             </form>
