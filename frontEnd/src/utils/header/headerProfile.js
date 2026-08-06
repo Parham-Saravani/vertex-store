@@ -5,9 +5,9 @@ import { logoutHandler } from "../cookie";
 const profileBtn = document.querySelector(".profile-btn");
 const profileBackground = document.querySelector(".profile-background");
 const basketContent = document.querySelector(".profile-menu");
-const profileImage = document.querySelector(".profile-image");
-const profileUsername = document.querySelector(".profile-username");
-const profileEmail = document.querySelector(".profile-email");
+const profileImage = document.querySelectorAll(".profile-image");
+const profileUsername = document.querySelectorAll(".profile-username");
+const profileEmail = document.querySelectorAll(".profile-email");
 const logOutBtn = document.querySelector(".logout-btn");
 
 let isProfileMenuOpen = false;
@@ -42,12 +42,14 @@ const changeProfileContent = () => {
   if (userData) {
     const { imageUrl, username, email } = userData;
     if (imageUrl) {
-      profileImage.setAttribute("src", `${imageUrl}`);
+      profileImage.forEach((item) => item.setAttribute("src", `${imageUrl}`));
     } else {
-      profileImage.setAttribute("src", `${defaultProfileImage}`);
+      profileImage.forEach((item) =>
+        item.setAttribute("src", `${defaultProfileImage}`),
+      );
     }
-    profileUsername.textContent = username;
-    profileEmail.textContent = email;
+    profileUsername.forEach((item) => (item.textContent = username));
+    profileEmail.forEach((item) => (item.textContent = email));
   }
 };
 const logoutFromAccount = () => {

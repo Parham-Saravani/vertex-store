@@ -13,8 +13,7 @@
 
 <body class="dark:bg-dark-bg-primary bg-light-bg-primary font-vazir">
   <!-- Loader Element -->
-  <div
-    class="fixed flex justify-center items-center w-full h-full dark:bg-dark-bg-primary bg-light-bg-primary z-50 top-0 right-0 page-loader">
+  <div class="fixed flex justify-center items-center w-full h-full dark:bg-dark-bg-primary bg-light-bg-primary z-50 top-0 right-0 page-loader">
     <div
       class="dark:bg-dark-card-bg bg-light-card-bg border dark:border-transparent border-light-card-border w-50 py-10 flex gap-5 flex-col justify-center items-center rounded-xl">
       <p class="text-[16px] dark:text-dark-text-primary text-light-text-primary font-vazir">در حال بارگذاری</p>
@@ -31,7 +30,7 @@
       <div
         class="hidden max-md:flex z-40 w-8 h-8 rounded-full justify-center items-center cursor-pointer mobile-menu-btn">
         <span
-          class="inline-block mobile-menu-btn-line bg-brand-accent w-6 rounded-full h-1 relative before:absolute before:w-6 before:h-1 before:rounded-full before:top-1.5 before:bg-brand-accent  after:absolute after:w-6 after:h-1 after:rounded-full after:bottom-1.5 after:bg-brand-accent transition-colors duration-300 after:transition-transform after:duration-300 before:transition-transform before:duration-300"></span>
+          class="inline-block mobile-menu-btn-line dark:bg-dark-text-primary bg-light-text-primary w-6 rounded-full h-1 relative before:absolute before:w-6 before:h-1 before:rounded-full before:top-1.5 dark:before:bg-dark-text-primary  before:bg-light-text-primary  after:absolute after:w-6 after:h-1 after:rounded-full after:bottom-1.5 dark:after:bg-dark-text-primary  after:bg-light-text-primary transition-colors duration-300 after:transition-transform after:duration-300 before:transition-transform before:duration-300"></span>
       </div>
 
       <!-- logo -->
@@ -43,43 +42,62 @@
       </a>
 
       <!-- menu and search input -->
-      <div class="max-md:fixed max-md:flex-col max-md:py-4  max-md:items-start max-md:top-0 dark:max-md:bg-dark-section-bg max-md:bg-light-section-bg max-md:-left-60 max-md:bottom-0 max-md:w-60 max-md:z-80 flex items-center gap-6 mobile-menu transition-left duration-300">
-        <div class="hidden w-full max-md:px-4 max-md:flex items-center gap-3">
-          <div class="hidden">
-            <div>
-              <img src="./src/assets/images/profile/default-profile.jpg" class="size-10 rounded-full profile-image"
-                alt="">
+      <div
+        class="max-md:fixed max-md:flex-col max-md:py-4 max-md:items-start max-md:top-0 dark:max-md:bg-dark-section-bg max-md:bg-light-section-bg max-md:-right-60 max-md:bottom-0 max-md:w-60 max-md:z-3000 flex items-center gap-6 mobile-menu transition-left duration-300">
+        <div class="relative h-full w-full gap-3">
+          <div class="hidden max-md:px-4 max-md:flex">
+            <div class="hidden">
+              <di>
+                <img src="./src/assets/images/profile/default-profile.jpg" class="size-10 rounded-full profile-image"
+                  alt="">
+              </di>
+              <div>
+                <p class="dark:text-dark-text-primary text-light-text-primary text-[11px] profile-username"></p>
+                <p class="dark:text-dark-text-primary text-light-text-primary text-[11px] profile-email"></p>
+              </div>
             </div>
-            <div>
-              <p class="dark:text-dark-text-primary text-light-text-primary text-[11px] profile-username"></p>
-              <p class="dark:text-dark-text-primary text-light-text-primary text-[11px] profile-email"></p>
-            </div>
+            <button
+              class="bg-linear-90 from-brand-primary to-brand-accent  w-full h-full text-dark-text-primary rounded-xl py-3">ثبت
+              نام | ورود</button>
           </div>
-          <button class="bg-linear-90 from-brand-primary to-brand-accent  w-full h-full text-dark-text-primary rounded-xl py-3">ثبت نام | ورود</button>
+
+          <ul
+            class="max-md:mt-6 max-md:w-full max-md:px-4 flex max-md:flex-col gap-1 dark:text-dark-text-primary text-light-text-primary font-bold">
+            <li data-page="home"
+              class="max-md:w-full max-md:justify-start max-md:pr-5 flex justify-center items-center relative w-25 max-lg:w-18 max-lg:text-xs h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300 menu-active">
+              <a href="#">صفحه اصلی</a>
+            </li>
+            <li data-page="products"
+              class="max-md:w-full max-md:justify-start max-md:pr-5 flex justify-center items-center relative w-25 max-lg:w-18 max-lg:text-xs h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
+              <a href="#">محصولات</a>
+            </li>
+            <li data-page="home"
+              class="max-md:w-full max-md:justify-start max-md:pr-5 flex justify-center items-center relative w-25 max-lg:w-18 max-lg:text-xs h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer  before:transition-colors before:duration-300">
+              <a href="#">دسته بندی</a>
+            </li>
+            <li data-page="about"
+              class="max-md:w-full max-md:justify-start max-md:pr-5 flex justify-center items-center relative w-25 max-lg:w-18 max-lg:text-xs h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
+              <a href="#">درباره ما</a>
+            </li>
+            <li data-page="contact"
+              class="max-md:w-full max-md:justify-start max-md:pr-5 flex justify-center items-center relative w-25 max-lg:w-18 max-lg:text-xs h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
+              <a href="#">تماس با ما</a>
+            </li>
+          </ul>
+
+          <div class="hidden max-md:flex absolute w-full px-4 items-center justify-between bottom-0">
+            <p class="text-[12px] dark:text-dark-text-primary text-light-text-primary">
+              <i class="fa-solid fa-moon text-[15px]"></i>
+              حالت تاریک
+            </p>
+            <label for="theme-toggle" class="cursor-pointer w-10 h-5.5 rounded-full theme-toggle-wrapper">
+              <input id="theme-toggle" type="checkbox" class="hidden">
+              <div
+                class="theme-toggle-bg w-full h-full rounded-full transition-colors duration-300 dark:bg-dark-active-bg bg-light-active-bg relative before:absolute before:w-4 before:h-4 before:top-0 before:bottom-0 before:my-auto before:left-1 dark:before:bg-dark-text-primary before:bg-light-text-primary before:rounded-full before:transition-left before:duration-300">
+              </div>
+            </label>
+          </div>
         </div>
-        
-        <ul class="max-md:w-full max-md:px-4 flex max-md:flex-col gap-1 dark:text-dark-text-primary text-light-text-primary font-bold">
-          <li data-page="home"
-            class="max-md:w-full max-md:justify-start max-md:pr-5 flex justify-center items-center relative w-25 max-lg:w-18 max-lg:text-xs h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300 menu-active">
-            <a href="#">صفحه اصلی</a>
-          </li>
-          <li data-page="products"
-            class="max-md:w-full max-md:justify-start max-md:pr-5 flex justify-center items-center relative w-25 max-lg:w-18 max-lg:text-xs h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
-            <a href="#">محصولات</a>
-          </li>
-          <li data-page="home"
-            class="max-md:w-full max-md:justify-start max-md:pr-5 flex justify-center items-center relative w-25 max-lg:w-18 max-lg:text-xs h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer  before:transition-colors before:duration-300">
-            <a href="#">دسته بندی</a>
-          </li>
-          <li data-page="about"
-            class="max-md:w-full max-md:justify-start max-md:pr-5 flex justify-center items-center relative w-25 max-lg:w-18 max-lg:text-xs h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
-            <a href="#">درباره ما</a>
-          </li>
-          <li data-page="contact"
-            class="max-md:w-full max-md:justify-start max-md:pr-5 flex justify-center items-center relative w-25 max-lg:w-18 max-lg:text-xs h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
-            <a href="#">تماس با ما</a>
-          </li>
-        </ul>
 
         <div class="relative max-md:hidden">
           <div
@@ -116,8 +134,10 @@
         <div class="profile hidden gap-2">
           <!-- basket -->
           <div class="relative flex flex-col">
-            <button class="max-md:border-hidden z-90 max-md:bg-transparent! dark:bg-dark-input-bg border-2 flex  dark:border-dark-input-border border-light-input-border shadow-light-sm dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg rounded-xl text-xl px-2.5 py-3 justify-center items-center cursor-pointer transition-colors duration-300 basket-btn">
-              <i class="fa-solid fa-cart-shopping max-md:text-brand-accent! max-md:text-xl dark:text-dark-text-primary text-light-text-primary text-[15px]"></i>
+            <button
+              class="max-md:border-hidden z-90 max-md:bg-transparent! dark:bg-dark-input-bg border-2 flex  dark:border-dark-input-border border-light-input-border shadow-light-sm dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg rounded-xl text-xl px-2.5 py-3 justify-center items-center cursor-pointer transition-colors duration-300 basket-btn">
+              <i
+                class="fa-solid fa-cart-shopping max-md:text-xl dark:text-dark-text-primary text-light-text-primary text-[15px]"></i>
             </button>
             <div class="fixed hidden z-80 inset-0 dark:bg-dark-glass backdrop-blur-xl  basket-background"></div>
             <div
@@ -191,6 +211,8 @@
         </div>
       </div>
     </header>
+    <!-- mobile menu overlay -->
+    <div class="opacity-0 inset-0 bg-black/30 -z-1 mobile-menu-overlay  transition-normal duration-300"></div>
 
     <!-- Page Content  -->
     <main class="mt-10 page-content">
@@ -470,7 +492,8 @@
 
 
   <!-- toast -->
-  <div class="z-9999 fixed hide top-3 left-2  dark:bg-dark-section-bg bg-light-section-bg rounded-xl toast transition-normal duration-300">
+  <div
+    class="z-9999 fixed hide top-3 left-2  dark:bg-dark-section-bg bg-light-section-bg rounded-xl toast transition-normal duration-300">
     <div class="px-4 py-2 flex items-center gap-3">
       <span class="icon-container rounded-full w-7.5 h-7.5 flex items-center justify-center">
         <i class="fa-solid fa-check text-xs"></i>

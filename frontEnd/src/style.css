@@ -93,23 +93,17 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.theme-toggle-active .theme-toggle-bg {
+  background-color: var(--color-brand-primary);
+}
+.theme-toggle-active .theme-toggle-bg::before {
+  left: 50%;
+}
 
-.mobile-menu-open .mobile-menu-btn-line {
-  background-color: transparent;
-}
-.mobile-menu-open .mobile-menu-btn-line::after {
-  transform: translateY(7px) rotate(45deg);
-  -webkit-transform: translateY(7px) rotate(45deg);
-  -moz-transform: translateY(7px) rotate(45deg);
-  -ms-transform: translateY(7px) rotate(45deg);
-  -o-transform: translateY(7px) rotate(45deg);
-}
-.mobile-menu-open .mobile-menu-btn-line::before {
-  transform: translateY(-5px) rotate(-45deg);
-  -webkit-transform: translateY(-5px) rotate(-45deg);
-  -moz-transform: translateY(-5px) rotate(-45deg);
-  -ms-transform: translateY(-5px) rotate(-45deg);
-  -o-transform: translateY(-5px) rotate(-45deg);
+.overlay-show{
+  position: fixed;
+  opacity: 1;
+  z-index: 200;
 }
 /* glow effects */
 .glow-effect {

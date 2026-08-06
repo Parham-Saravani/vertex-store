@@ -37,3 +37,4 @@ const saveThemeInLocalStorage = (status) => {
 window.addEventListener("DOMContentLoaded", themeHandler);
 darkThemeBtn?.addEventListener("click", darkTheme);
 lightThemeBtn?.addEventListener("click", lightTheme);
+export { darkTheme, lightTheme, saveThemeInLocalStorage };

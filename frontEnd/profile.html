@@ -12,6 +12,15 @@
 </head>
 
 <body class="dark:bg-dark-bg-primary h-dvh font-vazir bg-light-bg-primary">
+    <!-- Loader Element -->
+    <div
+        class="fixed flex justify-center items-center w-full h-full dark:bg-dark-bg-primary bg-light-bg-primary z-50 top-0 right-0 page-loader">
+        <div
+            class="dark:bg-dark-card-bg bg-light-card-bg border dark:border-transparent border-light-card-border w-50 py-10 flex gap-5 flex-col justify-center items-center rounded-xl">
+            <p class="text-[16px] dark:text-dark-text-primary text-light-text-primary font-vazir">در حال بارگذاری</p>
+            <div class="loader w-4 rounded-full animate-loader aspect-square"></div>
+        </div>
+    </div>
     <!-- modal -->
     <div class="fixed hidden justify-center items-center inset-0 backdrop-blur-xl z-100 modal">
         <div
@@ -207,7 +216,8 @@
         <!-- content -->
         <main class="max-md:mr-0 flex-1 mr-64">
             <!-- header -->
-            <header class="max-sm:hidden [direction:ltr] sticky top-0 z-30 h-16 px-6 flex items-center justify-between dark:bg-dark-section-bg bg-light-section-bg border-b dark:border-dark-card-border border-light-card-border profile-header">
+            <header
+                class="max-sm:hidden [direction:ltr] sticky top-0 z-30 h-16 px-6 flex items-center justify-between dark:bg-dark-section-bg bg-light-section-bg border-b dark:border-dark-card-border border-light-card-border profile-header">
                 <div class="flex gap-10">
                     <div class="[direction:ltr] flex items-center gap-5">
                         <div class="flex items-center gap-3">
@@ -245,39 +255,50 @@
                     <!-- stats cards -->
                     <div class="grid grid-cols-2 xl:grid-cols-4 gap-4">
 
-                        <div class="w-full rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-5">
+                        <div
+                            class="w-full rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-5">
                             <p class="text-sm dark:text-dark-text-secondary">
                                 <i class="fa-solid fa-box-open"></i>
                                 کل محصولات
                             </p>
-                            <h2 class="max-sm:text-sm dark:text-dark-text-primary text-light-text-primary text-3xl font-bold mt-2">120
+                            <h2
+                                class="max-sm:text-sm dark:text-dark-text-primary text-light-text-primary text-3xl font-bold mt-2">
+                                120
                             </h2>
                         </div>
 
-                        <div class="rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-5">
+                        <div
+                            class="rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-5">
                             <p class="text-sm dark:text-dark-text-secondary">
                                 <i class="fa-solid fa-bag-shopping"></i>
                                 کل سفارش ها
                             </p>
-                            <h2 class="max-sm:text-sm dark:text-dark-text-primary text-light-text-primary text-3xl font-bold mt-2">84
+                            <h2
+                                class="max-sm:text-sm dark:text-dark-text-primary text-light-text-primary text-3xl font-bold mt-2">
+                                84
                             </h2>
                         </div>
 
-                        <div class="rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-5">
+                        <div
+                            class="rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-5">
                             <p class="text-sm dark:text-dark-text-secondary">
                                 <i class="fa-solid fa-users"></i>
                                 کاربران
                             </p>
-                            <h2 class="max-sm:text-sm dark:text-dark-text-primary text-light-text-primary text-3xl font-bold mt-2">41
+                            <h2
+                                class="max-sm:text-sm dark:text-dark-text-primary text-light-text-primary text-3xl font-bold mt-2">
+                                41
                             </h2>
                         </div>
 
-                        <div class="rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-5">
+                        <div
+                            class="rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-5">
                             <p class="text-sm dark:text-dark-text-secondary">
                                 <i class="fa-solid fa-sack-dollar"></i>
                                 درآمد کل
                             </p>
-                            <h2 class="max-sm:text-sm dark:text-dark-text-primary text-light-text-primary text-3xl font-bold mt-2">
+                            <h2
+                                class="max-sm:text-sm dark:text-dark-text-primary text-light-text-primary text-3xl font-bold mt-2">
                                 <span>12,000,465</span>
                                 <span>تومان</span>
                             </h2>
@@ -313,7 +334,8 @@
                     </div>
 
                     <!-- table -->
-                    <div class="max-xl:mt-107 rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-5">
+                    <div
+                        class="max-xl:mt-107 rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-5">
 
                         <div class="flex justify-between items-center mb-4">
                             <h3 class="dark:text-dark-text-secondary text-light-text-secondary font-bold">
