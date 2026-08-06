@@ -4,7 +4,7 @@ const ProductPage = () => {
               <i class="fa-solid fa-close text-[12px] dark:text-dark-text-primary text-light-text-primary"></i>
             </button>
             <!-- BreadCrumb -->
-            <div class="animate-fadeIn mt-10 text-[13px] gap-2 items-center flex dark:text-dark-text-secondary text-light-text-secondary">
+            <div class="animate-fadeIn max-sm:text-xs mt-10 text-[13px] gap-2 items-center flex dark:text-dark-text-secondary text-light-text-secondary">
               <p>خانه</p>
               <span>></span>
               <p>محصولات</p>
@@ -15,24 +15,24 @@ const ProductPage = () => {
             </div>
 
             <!-- product detail -->
-            <div class="mt-4 flex gap-20 px-6">
+            <div class="mt-4 flex gap-20 max-sm:gap-10 px-6">
               <!-- product image -->
-              <div class="animate-fadeIn flex grow items-center justify-center">
-                <img src="./src/assets/images/camera.png" class="product-image size-75" alt="">
+              <div class="animate-fadeIn flex max-sm:size-30 items-center justify-center">
+                <img src="./src/assets/images/camera.png" class="product-image size-75  max-sm:size-30" alt="product-image">
               </div>
 
-              <div class="animate-fadeIn [direction:ltr] grow">
+              <div class="animate-fadeIn [direction:ltr] ">
                 <!-- discount -->
                 <span class="bg-brand-accent w-8 h-4 px-1.5 py-0.5 text-[9px] text-dark-text-primary rounded-md discount product-discount-percent"></span>
                 <!-- title -->
-                <h2 class="mt-3 font-bold text-2xl dark:text-dark-text-primary text-light-text-primary product-title"></h2>
+                <h2 class="mt-3 font-bold text-2xl w-fit max-w-50 max-sm:text-xl dark:text-dark-text-primary text-light-text-primary product-title"></h2>
                 <!-- rating -->
-                <p class="mt-1 flex items-center gap-1 text-xs">
+                <p class="mt-1 w-10 flex items-center gap-1 text-xs">
                   <i class="fa-solid fa-star text-yellow-400"></i>
                   <span class="dark:text-dark-text-primary text-light-text-primary product-rating">4.8</span>
                 </p>
                 <!-- price -->
-                <div class="mt-4 flex gap-2 items-center">
+                <div class="mt-4 w-55 flex gap-2 items-center">
                   <div class="dark:text-dark-text-primary text-light-text-primary flex items-center gap-1">
                     <p>تومان</p>
                     <p class="product-discount-price">14,900,000</p>
@@ -40,11 +40,11 @@ const ProductPage = () => {
                   <p class="dark:text-dark-text-secondary text-light-text-secondary line-through text-xs product-price">16,500,000</p>
                 </div>
                 <!-- product availibility -->
-                <div class="mt-2 flex product-availability-container">
+                <div class="mt-2 w-30 flex product-availability-container">
 
                 </div>
                 <!-- product colors -->
-                <div class="[direction:rtl] my-4 w-60 flex gap-2 items-start">
+                <div class="[direction:rtl] my-4 w-60 max-sm:w-40 flex gap-2 items-start">
                   <p class="text-xs dark:text-dark-text-primary text-light-text-primary">رنگ:</p>
                   <div class="flex gap-1 w-full justify-end product-colors-container">
                   

@@ -1,397 +1,488 @@
 <!doctype html>
 <html lang="fa" dir="rtl" class="overflow-hidden">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./src/assets/images/logo/favicon.png" />
-    <title>Vertex | فروشگاه تجهیزات دیجیتال و گیمینگ</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"/>
-  </head>
 
-  <body class="dark:bg-dark-bg-primary bg-light-bg-primary font-vazir">
-    <!-- Loader Element -->
-    <div class="fixed flex justify-center items-center w-full h-full dark:bg-dark-bg-primary bg-light-bg-primary z-50 top-0 right-0 page-loader">
-        <div class="dark:bg-dark-card-bg bg-light-card-bg border dark:border-transparent border-light-card-border w-50 py-10 flex gap-5 flex-col justify-center items-center rounded-xl">
-          <p class="text-[16px] dark:text-dark-text-primary text-light-text-primary font-vazir">در حال بارگذاری</p>
-          <div class="loader w-4 rounded-full animate-loader aspect-square"></div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./src/assets/images/logo/favicon.png" />
+  <title>Vertex | فروشگاه تجهیزات دیجیتال و گیمینگ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="dark:bg-dark-bg-primary bg-light-bg-primary font-vazir">
+  <!-- Loader Element -->
+  <div
+    class="fixed flex justify-center items-center w-full h-full dark:bg-dark-bg-primary bg-light-bg-primary z-50 top-0 right-0 page-loader">
+    <div
+      class="dark:bg-dark-card-bg bg-light-card-bg border dark:border-transparent border-light-card-border w-50 py-10 flex gap-5 flex-col justify-center items-center rounded-xl">
+      <p class="text-[16px] dark:text-dark-text-primary text-light-text-primary font-vazir">در حال بارگذاری</p>
+      <div class="loader w-4 rounded-full animate-loader aspect-square"></div>
     </div>
-      
-    
-    <div class="container mx-auto py-5">
-      <!-- Header -->
-      <header class="w-full flex items-center justify-between">
-        <!-- logo -->
-        <a href="http://localhost:5173" class="flex justify-center items-center"
-        >
-          <h1
-            class="bg-linear-90 from-brand-primary to-brand-accent text-transparent bg-clip-text font-bold text-4xl"
-          >
-            Vertex
-          </h1>
-        </a>
-        <!-- menu and search input -->
-        <div class="max-xl:hidden flex items-center gap-6">
-          <ul class="flex gap-1 dark:text-dark-text-primary text-light-text-primary font-bold">
-            <li data-page="home" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300 menu-active">
-              <a href="#">صفحه اصلی</a>
-            </li>
-            <li data-page="products" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
-              <a href="#">محصولات</a>
-            </li>
-            <li data-page="home" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer  before:transition-colors before:duration-300">
-              <a href="#">دسته بندی</a>
-            </li>
-            <li data-page="about" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
-              <a href="#">درباره ما</a>
-            </li>
-            <li data-page="contact" class="flex justify-center items-center relative w-25 h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
-              <a href="#">تماس با ما</a>
-            </li>
-          </ul>
+  </div>
 
-          <div class="relative">
-            <div class="dark:bg-dark-input-bg bg-light-input-bg border-2 dark:border-dark-input-border border-light-input-border dark:shadow-dark-sm shadow-light-sm rounded-xl w-80 h-13 text-xl flex justify-center items-center">
-              <input type="text" class="h-full px-2 rounded-xl w-full text-[13px] dark:text-dark-text-primary text-light-text-primary dark:placeholder:text-dark-text-muted placeholder:text-[13px] placeholder:font-bold outline-hidden pl-2 search-input" placeholder="جستجوی محصول..."/>
-            </div>
-            <div class="hidden absolute top-14 rounded-xl dark:bg-dark-input-bg bg-light-input-bg w-full z-10 flex-col gap-1.5 h-auto hide-scrollbar overflow-y-scroll max-h-80 search-items px-1 py-1">
-              
-            </div>
-          </div>
-        </div>
-        <!-- auth / profile && bascket && theme btns -->
-        <div class="flex gap-4 items-center">
-          <!-- theme buttns -->
-          <div class="flex">
-            <button class="hidden bg-light-input-bg border-2 border-light-input-border shadow-light-sm hover:bg-light-item-hover-bg rounded-xl text-xl px-2.5 py-3 justify-center items-center cursor-pointer transition-colors duration-300 dark-theme-btn">
-              <i class="fa-solid fa-moon text-light-text-primary text-[15px]"></i>
-            </button>
-            <button class="bg-dark-input-bg hover:bg-dark-item-hover-bg border-2 border-dark-input-border shadow-dark-sm rounded-xl text-xl px-2.5 py-3 flex justify-center items-center cursor-pointer transition-colors duration-300 light-theme-btn">
-              <i class="fa-solid fa-sun text-dark-text-primary text-[15px]"></i>
-            </button>
-          </div>
-          <div class="authentication">
-            <button class="text-dark-text-primary font-bold bg-linear-90 from-brand-primary to-brand-accent rounded-xl w-30 h-12 flex justify-center items-center transition-transform duration-300 hover:-translate-y-0.5 auth-btn">ورود | ثبت نام</button>
-          </div>
-          <!-- profile && basket -->
-          <div class="profile hidden gap-2">
-            <!-- basket -->
-            <div class="relative flex flex-col">
-              <button class="dark:bg-dark-input-bg border-2 flex dark:border-dark-input-border border-light-input-border shadow-light-sm dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg rounded-xl text-xl px-2.5 py-3 justify-center items-center cursor-pointer transition-colors duration-300 basket-btn">
-                  <i class="fa-solid fa-cart-shopping dark:text-dark-text-primary text-light-text-primary text-[15px]"></i>
-              </button>
-              <div class="fixed hidden z-20 inset-0 dark:bg-dark-glass backdrop-blur-xl  basket-background"></div>
-              <div class="hidden px-2 py-2 absolute top-14 left-0 rounded-xl z-30 w-70 dark:bg-dark-input-bg bg-light-input-bg bascket-content">
-                <div class="flex justify-between items-center">
-                  <h3 class="font-bold text-[13px] dark:text-dark-text-primary text-light-text-primary">سبد خرید من</h3>
-                  <p class="flex items-center gap-1 text-[10px] dark:text-dark-text-primary text-light-text-primary">
-                    <span class="basket-items">0</span>
-                    محصول
-                  </p>
-                </div>
-                <!-- DIVIDER -->
-                <hr class="my-1 dark:text-dark-divider text-light-divider rounded-full">
 
-                <div class="flex flex-col gap-1 w-full basket-container overflow-y-auto hide-scrollbar max-h-80">
 
-                </div>
-                <div class="mt-3 justify-between flex items-center">
-                  <div class="h-full dark:text-dark-text-primary text-light-text-primary text-xs flex items-center">
-                    <p>مجموع:</p>
-                    <div class="mr-1 flex">
-                      <p class="basket-price">120,000,000</p>
-                      <p class="mr-1">تومان</p>
-                    </div>
-                  </div>
-                  <button class="flex items-center justify-center px-4 py-2 border border-red-600 rounded-xl text-red-600 text-[9px] cursor-pointer transition-colors duration-300 hover:text-red-600/60 clear-basket">پاک سازی</button>
-                </div>
-              </div>
-            </div>
-            <!-- profile -->
-            <div class="relative flex flex-col">
-              <button class="dark:bg-dark-input-bg border-2 flex  dark:border-dark-input-border border-light-input-border shadow-light-sm dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg rounded-xl text-xl px-2.5 py-3 justify-center items-center cursor-pointer transition-colors duration-300 profile-btn">
-                <i class="fa-solid fa-user dark:text-dark-text-primary text-light-text-primary text-[15px]"></i>
-              </button>
-              <div class="fixed hidden z-20 top-0 right-0 w-full h-full dark:bg-dark-glass backdrop-blur-xl profile-background"></div>
-              <div class="hidden px-2 py-2 absolute top-13 left-0 rounded-xl z-30 w-70 dark:bg-dark-input-bg bg-light-input-bg profile-menu">
-                  <div class="flex items-center gap-3">
-                    <div>
-                      <img src="./src/assets/images/profile/default-profile.jpg" class="size-10 rounded-full profile-image" alt="">
-                    </div>
-                    <div>
-                      <p class="dark:text-dark-text-primary text-light-text-primary text-xs profile-username"></p>
-                      <p class="dark:text-dark-text-primary text-light-text-primary text-xs profile-email"></p>
-                    </div>
-                  </div>
-                  <!-- DIVIDER -->
-                  <hr class="mt-3 mb-1 dark:text-dark-divider text-light-divider rounded-full">
+  <div class="container mx-auto py-5">
+    <!-- Header -->
+    <header class="relative w-full max-lg:gap-2 flex items-center justify-between">
+      <!-- mobile menu btn -->
+      <div
+        class="hidden max-md:flex z-40 w-8 h-8 rounded-full justify-center items-center cursor-pointer mobile-menu-btn">
+        <span
+          class="inline-block mobile-menu-btn-line bg-brand-accent w-6 rounded-full h-1 relative before:absolute before:w-6 before:h-1 before:rounded-full before:top-1.5 before:bg-brand-accent  after:absolute after:w-6 after:h-1 after:rounded-full after:bottom-1.5 after:bg-brand-accent transition-colors duration-300 after:transition-transform after:duration-300 before:transition-transform before:duration-300"></span>
+      </div>
 
-                  <ul class="flex flex-col gap-1">
-                    <a href="/profile.html" class="w-full flex items-center gap-1.5 dark:text-dark-text-primary text-light-text-primary rounded-xl py-2.5 px-2 text-[13px] cursor-pointer dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg transition-colors duration-300">
-                        <i class="fa-regular fa-home text-[17px]"></i>
-                        پیشخوان
-                    </a>
-                    <a class="w-full flex items-center gap-1.5 dark:text-dark-text-primary text-light-text-primary rounded-xl py-2.5 px-2 text-[13px] cursor-pointer dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg transition-colors duration-300">
-                        <i class="fa-regular fa-comment-dots text-[17px]"></i>
-                        تیکت های من
-                    </a>
-                  </ul>
-                  <!-- DIVIDER -->
-                  <hr class="my-1 dark:text-dark-divider text-light-divider rounded-full">
-                  <button class="w-full bg-red-700/20 text-red-600 rounded-xl py-2.5 px-2 text-[13px] text-right cursor-pointer transition-colors duration-300 hover:bg-red-700 hover:text-dark-text-primary logout-btn">خروج از حساب کاربری</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+      <!-- logo -->
+      <a href="http://localhost:5173" class="flex justify-center items-center max-xl:hidden max-md:flex">
+        <h1
+          class="z-40 bg-linear-90 from-brand-primary to-brand-accent text-transparent bg-clip-text font-bold text-4xl">
+          Vertex
+        </h1>
+      </a>
 
-      <!-- Page Content  -->
-      <main class="mt-10 page-content"> 
-        <div class=""> 
-          <div class="relative rounded-2xl overflow-hidden max-sm:h-55 h-130">
-            <img src="./src/assets/images/banners/banner.png" class="object-cover w-full h-full" alt="header-banner"/>
-            <div class="absolute max-sm:top-10 top-45 left-0 max-sm:right-15 right-30 mx-auto max-sm:w-70 w-180">
-              <p class="text-dark-text-primary max-sm:text-xl text-5xl font-bold">
-                قدرت تکنولوژی را تجربه کن
-              </p>
-              <p class="max-sm:mt-1.5 mt-5 text-dark-text-primary max-sm:text-xs text-2xl">
-                مجموعه‌ای از بهترین تجهیزات گیمینگ، لپ‌تاپ، مانیتور و لوازم
-                جانبی حرفه‌ای.
-              </p>
-              <button href="#" class="flex items-center justify-center max-sm:text-xs max-sm:mt-4 mt-7 max-sm:mr-5 mr-20 text-dark-text-primary bg-linear-90 from-brand-primary to-brand-accent rounded-xl max-sm:w-50 w-100 max-sm:py-2.5 py-4 font-bold cursor-pointer transition-transform duration-300 hover:-translate-y-0.5 banner-show-products-btn">مشاهده محصولات</button>
-            </div>
-          </div>
-
-          <div class="mt-4">
-            <div class="flex items-center justify-between">
-              <div class="relative before:absolute max-sm:before:w-3.5 before:w-5 before:h-1 before:bg-brand-primary before:rounded-xl before:top-0 before:bottom-0 before:my-auto">
-                <h1 class="max-sm:pr-5 pr-7 font-bold dark:text-dark-text-primary text-light-text-primary max-sm:text-[14px] text-xl">
-                  دسته بندی محصولات
-                </h1>
-              </div>
-              <a href="#" class="max-sm:text-xs flex items-center gap-1.5 text-brand-primary hover:text-brand-primary-hover transition-colors duration-300">
-                مشاهده همه
-                <i class="fa-solid fa-chevron-left text-xs"></i>
-              </a>
-            </div>
-            <!-- Desktop products -->
-            <div class="max-sm:hidden flex items-center justify-center gap-4 mt-5">
-              <a class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-                <img src="./src/assets/images/laptop.png" class="size-45" alt=""/>
-                <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
-                  لپ تاپ
-                </h2>
-              </a>
-              <a
-                class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-                <img src="./src/assets/images/monitor.png" class="size-45" alt=""/> <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
-                  مانیتور
-                </h2>
-              </a> <a class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-                <img src="./src/assets/images/stuff.png" class="size-45" alt=""/>
-                <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
-                  لوازم جانبی
-                </h2>
-              </a>
-              <a class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-                <img src="./src/assets/images/mouse.png" class="size-45" alt=""/>
-                <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
-                  موس
-                </h2>
-              </a>
-              <a class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-                <img src="./src/assets/images/keyboard.png" class="size-45" alt=""
-                />
-                <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
-                  کیبورد
-                </h2>
-              </a>
-              <a class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer"> <img src="./src/assets/images/console.png" class="size-45" alt=""/>
-                <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
-                  کنسول بازی
-                </h2>
-              </a>
-              <a
-                class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-                <img src="./src/assets/images/camera.png" class="size-45" alt=""/>
-                <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
-                  دوربین
-                </h2>
-              </a>
-            </div>
-            <!-- mobile products -->
-            <div class="hidden max-sm:flex justify-center mt-5 gap-2 flex-wrap">
-              <div class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
-                <img src="./src/assets/images/laptop.png" class="size-12" alt="">
-                <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">لپ تاپ</p>
-              </div>
-              <div class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
-                <img src="./src/assets/images/monitor.png" class="size-12" alt="">
-                <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">مانیتور</p>
-              </div>
-              <div class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
-                <img src="./src/assets/images/stuff.png" class="size-12" alt="">
-                <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">لوازم جانبی</p>
-              </div>
-              <div class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
-                <img src="./src/assets/images/mouse.png" class="size-12" alt="">
-                <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">موس</p>
-              </div>
-              <div class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
-                <img src="./src/assets/images/keyboard.png" class="size-12" alt="">
-                <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">کیبورد</p>
-              </div>
-              <div class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
-                <img src="./src/assets/images/console.png" class="size-12" alt="">
-                <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">کنسول بازی</p>
-              </div>
-              <div class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
-                <img src="./src/assets/images/camera.png" class="size-12" alt="">
-                <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">دوربین</p>
-              </div>
-            </div>
-          </div>
-
-          <div data-aos="fade-zoom-in" data-aos-duration="1000" class="mt-3 max-sm:mb-2 mb-6 flex max-sm:flex-col max-sm:gap-4 items-center justify-between news-background rounded-xl max-sm:py-5 py-10 px-20 border-2 dark:border-dark-card-border border-light-card-border">
+      <!-- menu and search input -->
+      <div class="max-md:fixed max-md:flex-col max-md:py-4  max-md:items-start max-md:top-0 dark:max-md:bg-dark-section-bg max-md:bg-light-section-bg max-md:-left-60 max-md:bottom-0 max-md:w-60 max-md:z-80 flex items-center gap-6 mobile-menu transition-left duration-300">
+        <div class="hidden w-full max-md:px-4 max-md:flex items-center gap-3">
+          <div class="hidden">
             <div>
-              <h2 class="dark:text-dark-text-primary text-light-text-primary font-bold max-sm:text-xl text-2xl">
-                عضویت در خبرنامه
+              <img src="./src/assets/images/profile/default-profile.jpg" class="size-10 rounded-full profile-image"
+                alt="">
+            </div>
+            <div>
+              <p class="dark:text-dark-text-primary text-light-text-primary text-[11px] profile-username"></p>
+              <p class="dark:text-dark-text-primary text-light-text-primary text-[11px] profile-email"></p>
+            </div>
+          </div>
+          <button class="bg-linear-90 from-brand-primary to-brand-accent  w-full h-full text-dark-text-primary rounded-xl py-3">ثبت نام | ورود</button>
+        </div>
+        
+        <ul class="max-md:w-full max-md:px-4 flex max-md:flex-col gap-1 dark:text-dark-text-primary text-light-text-primary font-bold">
+          <li data-page="home"
+            class="max-md:w-full max-md:justify-start max-md:pr-5 flex justify-center items-center relative w-25 max-lg:w-18 max-lg:text-xs h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300 menu-active">
+            <a href="#">صفحه اصلی</a>
+          </li>
+          <li data-page="products"
+            class="max-md:w-full max-md:justify-start max-md:pr-5 flex justify-center items-center relative w-25 max-lg:w-18 max-lg:text-xs h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
+            <a href="#">محصولات</a>
+          </li>
+          <li data-page="home"
+            class="max-md:w-full max-md:justify-start max-md:pr-5 flex justify-center items-center relative w-25 max-lg:w-18 max-lg:text-xs h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer  before:transition-colors before:duration-300">
+            <a href="#">دسته بندی</a>
+          </li>
+          <li data-page="about"
+            class="max-md:w-full max-md:justify-start max-md:pr-5 flex justify-center items-center relative w-25 max-lg:w-18 max-lg:text-xs h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
+            <a href="#">درباره ما</a>
+          </li>
+          <li data-page="contact"
+            class="max-md:w-full max-md:justify-start max-md:pr-5 flex justify-center items-center relative w-25 max-lg:w-18 max-lg:text-xs h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
+            <a href="#">تماس با ما</a>
+          </li>
+        </ul>
+
+        <div class="relative max-md:hidden">
+          <div
+            class="dark:bg-dark-input-bg bg-light-input-bg border-2 dark:border-dark-input-border border-light-input-border dark:shadow-dark-sm shadow-light-sm rounded-xl w-80 max-xl:w-65 max-lg:w-47 h-13 text-xl flex justify-center items-center">
+            <input type="text"
+              class="h-full px-2 rounded-xl w-full text-[13px] dark:text-dark-text-primary text-light-text-primary dark:placeholder:text-dark-text-muted placeholder:text-[13px] placeholder:font-bold outline-hidden pl-2 search-input max-lg:placeholder:text-[10px] max-lg:text-[10px]"
+              placeholder="جستجوی محصول..." />
+          </div>
+          <div
+            class="hidden absolute top-14 rounded-xl dark:bg-dark-input-bg bg-light-input-bg w-full z-10 flex-col gap-1.5 h-auto hide-scrollbar overflow-y-scroll max-h-80 search-items px-1 py-1">
+
+          </div>
+        </div>
+      </div>
+      <!-- auth / profile && bascket && theme btns -->
+      <div class="flex gap-4 max-lg:gap-2 items-center">
+        <!-- theme buttns -->
+        <div class="flex max-md:hidden">
+          <button
+            class="hidden bg-light-input-bg border-2 border-light-input-border shadow-light-sm hover:bg-light-item-hover-bg rounded-xl text-xl px-2.5 py-3 justify-center items-center cursor-pointer transition-colors duration-300 dark-theme-btn">
+            <i class="fa-solid fa-moon text-light-text-primary text-[15px]"></i>
+          </button>
+          <button
+            class="bg-dark-input-bg hover:bg-dark-item-hover-bg border-2 border-dark-input-border shadow-dark-sm rounded-xl text-xl px-2.5 py-3 flex justify-center items-center cursor-pointer transition-colors duration-300 light-theme-btn">
+            <i class="fa-solid fa-sun text-dark-text-primary text-[15px]"></i>
+          </button>
+        </div>
+        <div class="authentication">
+          <button
+            class="text-dark-text-primary font-bold bg-linear-90 from-brand-primary to-brand-accent rounded-xl w-30 h-12 flex justify-center items-center transition-transform duration-300 hover:-translate-y-0.5 auth-btn">ورود
+            | ثبت نام</button>
+        </div>
+        <!-- profile && basket -->
+        <div class="profile hidden gap-2">
+          <!-- basket -->
+          <div class="relative flex flex-col">
+            <button class="max-md:border-hidden z-90 max-md:bg-transparent! dark:bg-dark-input-bg border-2 flex  dark:border-dark-input-border border-light-input-border shadow-light-sm dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg rounded-xl text-xl px-2.5 py-3 justify-center items-center cursor-pointer transition-colors duration-300 basket-btn">
+              <i class="fa-solid fa-cart-shopping max-md:text-brand-accent! max-md:text-xl dark:text-dark-text-primary text-light-text-primary text-[15px]"></i>
+            </button>
+            <div class="fixed hidden z-80 inset-0 dark:bg-dark-glass backdrop-blur-xl  basket-background"></div>
+            <div
+              class="hidden px-2 py-2 absolute top-14 left-0 rounded-xl z-90 w-70 dark:bg-dark-input-bg bg-light-input-bg bascket-content">
+              <div class="flex justify-between items-center">
+                <h3 class="font-bold text-[13px] dark:text-dark-text-primary text-light-text-primary">سبد خرید من</h3>
+                <p class="flex items-center gap-1 text-[10px] dark:text-dark-text-primary text-light-text-primary">
+                  <span class="basket-items">0</span>
+                  محصول
+                </p>
+              </div>
+              <!-- DIVIDER -->
+              <hr class="my-1 dark:text-dark-divider text-light-divider rounded-full">
+
+              <div class="flex flex-col gap-1 w-full basket-container overflow-y-auto hide-scrollbar max-h-80">
+
+              </div>
+              <div class="mt-3 justify-between flex items-center">
+                <div class="h-full dark:text-dark-text-primary text-light-text-primary text-xs flex items-center">
+                  <p>مجموع:</p>
+                  <div class="mr-1 flex">
+                    <p class="basket-price">120,000,000</p>
+                    <p class="mr-1">تومان</p>
+                  </div>
+                </div>
+                <button
+                  class="flex items-center justify-center px-4 py-2 border border-red-600 rounded-xl text-red-600 text-[9px] cursor-pointer transition-colors duration-300 hover:text-red-600/60 clear-basket">پاک
+                  سازی</button>
+              </div>
+            </div>
+          </div>
+          <!-- profile -->
+          <div class="relative flex flex-col max-md:hidden ">
+            <button
+              class="dark:bg-dark-input-bg border-2 flex  dark:border-dark-input-border border-light-input-border shadow-light-sm dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg rounded-xl text-xl px-2.5 py-3 justify-center items-center cursor-pointer transition-colors duration-300 profile-btn">
+              <i class="fa-solid fa-user dark:text-dark-text-primary text-light-text-primary text-[15px]"></i>
+            </button>
+            <div
+              class="fixed hidden z-20 top-0 right-0 w-full h-full dark:bg-dark-glass backdrop-blur-xl profile-background">
+            </div>
+            <div
+              class="hidden px-2 py-2 absolute top-13 left-0 rounded-xl z-30 w-70 dark:bg-dark-input-bg bg-light-input-bg profile-menu">
+              <div class="flex items-center gap-3">
+                <div>
+                  <img src="./src/assets/images/profile/default-profile.jpg" class="size-10 rounded-full profile-image"
+                    alt="">
+                </div>
+                <div>
+                  <p class="dark:text-dark-text-primary text-light-text-primary text-xs profile-username"></p>
+                  <p class="dark:text-dark-text-primary text-light-text-primary text-xs profile-email"></p>
+                </div>
+              </div>
+              <!-- DIVIDER -->
+              <hr class="mt-3 mb-1 dark:text-dark-divider text-light-divider rounded-full">
+
+              <ul class="flex flex-col gap-1">
+                <a href="/profile.html"
+                  class="w-full flex items-center gap-1.5 dark:text-dark-text-primary text-light-text-primary rounded-xl py-2.5 px-2 text-[13px] cursor-pointer dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg transition-colors duration-300">
+                  <i class="fa-regular fa-home text-[17px]"></i>
+                  پیشخوان
+                </a>
+                <a
+                  class="w-full flex items-center gap-1.5 dark:text-dark-text-primary text-light-text-primary rounded-xl py-2.5 px-2 text-[13px] cursor-pointer dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg transition-colors duration-300">
+                  <i class="fa-regular fa-comment-dots text-[17px]"></i>
+                  تیکت های من
+                </a>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Content  -->
+    <main class="mt-10 page-content">
+      <div>
+        <div class="relative rounded-2xl overflow-hidden max-lg:h-100 max-md:h-80 max-sm:h-55 h-130">
+          <img src="./src/assets/images/banners/banner.png" class="object-cover w-full h-full" alt="header-banner" />
+          <div
+            class="absolute max-lg:top-32 max-md:top-25 max-sm:top-13 top-45 left-0 max-sm:right-15 right-30 mx-auto max-sm:w-70 w-180">
+            <p class="text-dark-text-primary max-lg:text-4xl max-md:text-3xl max-sm:text-xl text-5xl font-bold">
+              قدرت تکنولوژی را تجربه کن
+            </p>
+            <p
+              class="max-sm:mt-1.5 mt-5 text-dark-text-primary max-lg:text-[18px] max-md:text-[13px] max-sm:text-xs text-2xl">
+              مجموعه‌ای از بهترین تجهیزات گیمینگ، لپ‌تاپ، مانیتور و لوازم
+              جانبی حرفه‌ای.
+            </p>
+            <button href="#"
+              class="flex items-center justify-center max-md:text-xs max-md:mt-4 mt-7 max-md:mr-15 max-sm:mr-5 mr-20 text-dark-text-primary bg-linear-90 from-brand-primary to-brand-accent rounded-xl max-sm:w-50 max-md:w-70 w-100 max-sm:py-2.5 py-4 font-bold cursor-pointer transition-transform duration-300 hover:-translate-y-0.5 banner-show-products-btn">مشاهده
+              محصولات</button>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <div class="flex items-center justify-between">
+            <div
+              class="relative before:absolute max-sm:before:w-3.5 before:w-5 before:h-1 before:bg-brand-primary before:rounded-xl before:top-0 before:bottom-0 before:my-auto">
+              <h1
+                class="max-sm:pr-5 pr-7 font-bold dark:text-dark-text-primary text-light-text-primary max-sm:text-[14px] text-xl">
+                دسته بندی محصولات
+              </h1>
+            </div>
+            <a href="#"
+              class="max-sm:text-xs flex items-center gap-1.5 text-brand-primary hover:text-brand-primary-hover transition-colors duration-300">
+              مشاهده همه
+              <i class="fa-solid fa-chevron-left text-xs"></i>
+            </a>
+          </div>
+          <!-- Desktop products -->
+          <div class="max-sm:hidden grid grid-cols-7 max-lg:grid-cols-7 justify-items-center gap-2 mt-5">
+            <a
+              class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
+              <img src="./src/assets/images/laptop.png" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
+              <h2
+                class="font-bold dark:text-dark-text-primary text-light-text-primary  max-lg:text-sm max-md:text-xs text-xl">
+                لپ تاپ
               </h2>
-              <p class="max-sm:text-[13px] max-sm:mt-1 dark:text-dark-text-secondary text-light-text-secondary">
-                با عضویت در خبرنامه از جدیدترین محصولات و تخفیف ها باخبر شوید
-              </p>
-            </div>
-            <form class="pl-3 rounded-xl dark:bg-dark-input-bg border-2 dark:border-dark-input-border border-light-input-border focus-within:border-dark-input-focus transition-colors duration-300 w-90 h-15 flex items-center justify-between">
-              <input type="email" class="pr-3 h-full w-[75%] dark:placeholder:text-dark-text-secondary text-[12px] outline-hidden dark:text-dark-text-primary" placeholder="ایمیل خود را وارد کنید..."/>
-              <button class="bg-linear-90 from-brand-primary to-brand-accent text-dark-text-primary rounded-xl px-3 py-2 cursor-pointer transition-transform duration-300 hover:-translate-y-0.5">
-                عضویت
-              </button>
-            </form>
+            </a>
+            <a
+              class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
+              <img src="./src/assets/images/monitor.png" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
+              <h2
+                class="font-bold dark:text-dark-text-primary text-light-text-primary max-lg:text-sm max-md:text-xs text-xl">
+                مانیتور
+              </h2>
+            </a> <a
+              class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
+              <img src="./src/assets/images/stuff.png" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
+              <h2
+                class="font-bold dark:text-dark-text-primary text-light-text-primary max-lg:text-sm max-md:text-xs text-xl">
+                لوازم جانبی
+              </h2>
+            </a>
+            <a
+              class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
+              <img src="./src/assets/images/mouse.png" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
+              <h2
+                class="font-bold dark:text-dark-text-primary text-light-text-primary max-lg:text-sm max-md:text-xs text-xl">
+                موس
+              </h2>
+            </a>
+            <a
+              class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
+              <img src="./src/assets/images/keyboard.png" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
+              <h2
+                class="font-bold dark:text-dark-text-primary text-light-text-primary max-lg:text-sm max-md:text-xs text-xl">
+                کیبورد
+              </h2>
+            </a>
+            <a
+              class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
+              <img src="./src/assets/images/console.png" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
+              <h2
+                class="font-bold dark:text-dark-text-primary text-light-text-primary max-lg:text-sm max-md:text-xs text-xl">
+                کنسول بازی
+              </h2>
+            </a>
+            <a
+              class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
+              <img src="./src/assets/images/camera.png" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
+              <h2
+                class="font-bold dark:text-dark-text-primary text-light-text-primary max-lg:text-sm max-md:text-xs text-xl">
+                دوربین
+              </h2>
+            </a>
           </div>
-        </div>     
-      </main>
-
-
-        <!-- Footer -->
-        <footer data-aos="fade-zoom-in" data-aos-duration="1000" class="pt-6 rounded-xl dark:shadow-dark-lg border-2 dark:border-dark-card-border border-light-card-border footer-glow-effect">
-          <div class="max-sm:flex-col-reverse flex max-sm:items-start items-center justify-between max-sm:px-10 px-8">
-            <div class="max-sm:w-full max-sm:mt-6 max-sm:justify-center flex">
-              <div class="max-sm:hidden text-right h-40 pt-3">
-                <a href="http://localhost:5173" class="text-right">
-                  <h1 class="bg-linear-90 from-brand-primary to-brand-accent text-transparent bg-clip-text font-bold text-4xl">
-                    Vertex
-                  </h1>
-                </a>
-                <h3 class="mt-1 font-medium dark:text-dark-text-primary text-light-text-primary">
-                  فورشگاه تجهیزات تکنولوژی و گیمینگ
-                </h3>
-              </div>
-    
-              <div class="flex gap-15 max-sm:mr-0 mr-30">
-                <div class="flex flex-col gap-2">
-                  <h4 class="font-bold dark:text-dark-text-primary text-light-text-primary">
-                    دسترسی سریع
-                  </h4>
-                  <ul class="flex flex-col gap-2">
-                    <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
-                      صفحه اصلی
-                    </li>
-                    <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
-                      محصولات
-                    </li>
-                    <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
-                      دسته بندی ها
-                    </li>
-                    <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
-                      بلاگ
-                    </li>
-                    <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
-                      درباره ما
-                    </li>
-                  </ul>
-                </div>
-    
-                <div class="flex flex-col gap-2">
-                  <h4 class="font-bold dark:text-dark-text-primary text-light-text-primary">
-                    خدمات مشتریان
-                  </h4>
-                  <ul class="flex flex-col gap-2">
-                    <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
-                      پرسش های متداول
-                    </li>
-                    <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
-                      شرایط و قوانین
-                    </li>
-                    <li class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
-                      حریم خصوصی
-                    </li>
-                  </ul>
-                </div>
-              </div>
+          <!-- mobile products -->
+          <div class="hidden max-sm:flex justify-center mt-5 gap-2 flex-wrap">
+            <div
+              class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
+              <img src="./src/assets/images/laptop.png" class="size-12" alt="">
+              <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">لپ تاپ</p>
             </div>
-    
-            <div class="flex gap-10 max-sm:gap-0 max-sm:flex-col max-sm:ml-0 ml-20">
-             <div class="hidden text-right max-sm:h-20 max-sm:w-full max-sm:flex max-sm:flex-col max-sm:items-center h-40 pt-3">
-                <a href="http://localhost:5173" class="text-right">
-                  <h1 class="bg-linear-90 from-brand-primary to-brand-accent text-transparent bg-clip-text font-bold text-4xl">
-                    Vertex
-                  </h1>
-                </a>
-                <h3 class="text-xs mt-1 font-medium dark:text-dark-text-primary text-light-text-primary">
-                  فورشگاه تجهیزات تکنولوژی و گیمینگ
-                </h3>
-              </div>
-    
-              <div class="flex flex-col gap-2">
-                <h4 class="font-bold dark:text-dark-text-primary text-light-text-primary">
-                  تماس با ما
-                </h4>
-                <div class="flex items-center gap-3 dark:text-dark-text-primary text-light-text-primary">
-                  <i class="fa-solid fa-phone"></i>
-                  <span
-                    class="dark:text-dark-text-secondary text-light-text-secondary max-sm:text-[11px] max-sm:w-25">021-12345678</span>
-                </div>
-    
-                <div class="flex items-center gap-3 dark:text-dark-text-primary text-light-text-primary">
-                  <i class="fa-solid fa-envelope"></i>
-                  <span
-                    class="dark:text-dark-text-secondary text-light-text-secondary max-sm:text-[11px] max-sm:w-25">info@vertex.ir</span>
-                </div>
-    
-                <div class="flex items-center gap-3 dark:text-dark-text-primary text-light-text-primary">
-                  <i class="fa-solid fa-location-dot"></i>
-                  <span class="dark:text-dark-text-secondary text-light-text-secondary max-sm:text-[11px] max-sm:w-25">تهران، خیابان ولیعصر</span>
-                </div>
-              </div>
+            <div
+              class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
+              <img src="./src/assets/images/monitor.png" class="size-12" alt="">
+              <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">مانیتور</p>
+            </div>
+            <div
+              class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
+              <img src="./src/assets/images/stuff.png" class="size-12" alt="">
+              <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">لوازم جانبی</p>
+            </div>
+            <div
+              class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
+              <img src="./src/assets/images/mouse.png" class="size-12" alt="">
+              <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">موس</p>
+            </div>
+            <div
+              class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
+              <img src="./src/assets/images/keyboard.png" class="size-12" alt="">
+              <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">کیبورد</p>
+            </div>
+            <div
+              class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
+              <img src="./src/assets/images/console.png" class="size-12" alt="">
+              <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">کنسول بازی</p>
+            </div>
+            <div
+              class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
+              <img src="./src/assets/images/camera.png" class="size-12" alt="">
+              <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">دوربین</p>
             </div>
           </div>
-    
-          <!-- Divider -->
-          <div class="mt-5 mb-3 w-full h-0.5 dark:bg-dark-divider bg-light-divider"></div>
-          <div class="pb-4 pt-1 text-center dark:text-dark-text-secondary text-light-text-secondary max-sm:text-xs text-[14px]">
-            <p>تمامی حقوقی برای Vertex Store محفوظ است</p>
+        </div>
+
+        <div data-aos="fade-zoom-in" data-aos-duration="1000"
+          class="mt-3 max-sm:mb-2 mb-6 flex max-sm:flex-col max-sm:gap-4 items-center justify-between news-background rounded-xl max-sm:py-5 py-10 px-20 border-2 dark:border-dark-card-border border-light-card-border">
+          <div>
+            <h2 class="dark:text-dark-text-primary text-light-text-primary font-bold max-sm:text-xl text-2xl">
+              عضویت در خبرنامه
+            </h2>
+            <p class="max-sm:text-[13px] max-sm:mt-1 dark:text-dark-text-secondary text-light-text-secondary">
+              با عضویت در خبرنامه از جدیدترین محصولات و تخفیف ها باخبر شوید
+            </p>
           </div>
-        </footer>
-    </div>
-
-
-    <!-- toast -->
-    <div class="z-50 fixed hide top-3 left-2  dark:bg-dark-section-bg bg-light-section-bg rounded-xl toast transition-normal duration-300">
-      <div class="px-4 py-2 flex items-center gap-3">
-        <span class="icon-container rounded-full w-7.5 h-7.5 flex items-center justify-center">
-          <i class="fa-solid fa-check text-xs"></i>
-        </span>
-        <p class="dark:text-dark-text-primary text-light-text-primary text-[13px] toast-message">ثبت نام با موفقیت انجام شد</p>
+          <form
+            class="pl-3 rounded-xl dark:bg-dark-input-bg border-2 dark:border-dark-input-border border-light-input-border focus-within:border-dark-input-focus transition-colors duration-300 w-90 h-15 flex items-center justify-between">
+            <input type="email"
+              class="pr-3 h-full w-[75%] dark:placeholder:text-dark-text-secondary text-[12px] outline-hidden dark:text-dark-text-primary"
+              placeholder="ایمیل خود را وارد کنید..." />
+            <button
+              class="bg-linear-90 from-brand-primary to-brand-accent text-dark-text-primary rounded-xl px-3 py-2 cursor-pointer transition-transform duration-300 hover:-translate-y-0.5">
+              عضویت
+            </button>
+          </form>
+        </div>
       </div>
-      <div class="[direction:ltr] mt-1 w-full h-1.5 progress-container rounded-bl-xl rounded-br-xl">
-        <div class="w-0 h-full rounded-bl-xl progress"></div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer data-aos="fade-zoom-in" data-aos-duration="1000"
+      class="pt-6 rounded-xl dark:shadow-dark-lg border-2 dark:border-dark-card-border border-light-card-border footer-glow-effect">
+      <div class="max-sm:flex-col-reverse flex max-sm:items-start items-center justify-between max-sm:px-10 px-8">
+        <div class="max-sm:w-full max-sm:mt-6 max-sm:justify-center flex">
+          <div class="max-sm:hidden text-right h-40 pt-3">
+            <a href="http://localhost:5173" class="text-right">
+              <h1
+                class="bg-linear-90 from-brand-primary to-brand-accent text-transparent bg-clip-text font-bold text-4xl">
+                Vertex
+              </h1>
+            </a>
+            <h3 class="mt-1 font-medium dark:text-dark-text-primary text-light-text-primary">
+              فورشگاه تجهیزات تکنولوژی و گیمینگ
+            </h3>
+          </div>
+
+          <div class="flex gap-15 max-sm:mr-0 mr-30">
+            <div class="flex flex-col gap-2">
+              <h4 class="font-bold dark:text-dark-text-primary text-light-text-primary">
+                دسترسی سریع
+              </h4>
+              <ul class="flex flex-col gap-2">
+                <li
+                  class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
+                  صفحه اصلی
+                </li>
+                <li
+                  class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
+                  محصولات
+                </li>
+                <li
+                  class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
+                  دسته بندی ها
+                </li>
+                <li
+                  class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
+                  بلاگ
+                </li>
+                <li
+                  class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
+                  درباره ما
+                </li>
+              </ul>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <h4 class="font-bold dark:text-dark-text-primary text-light-text-primary">
+                خدمات مشتریان
+              </h4>
+              <ul class="flex flex-col gap-2">
+                <li
+                  class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
+                  پرسش های متداول
+                </li>
+                <li
+                  class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
+                  شرایط و قوانین
+                </li>
+                <li
+                  class="font-normal dark:text-dark-text-primary text-light-text-primary text-[15px] cursor-pointer transition-colors duration-300 hover:text-brand-primary">
+                  حریم خصوصی
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-10 max-sm:gap-0 max-sm:flex-col max-sm:ml-0 ml-20">
+          <div
+            class="hidden text-right max-sm:h-20 max-sm:w-full max-sm:flex max-sm:flex-col max-sm:items-center h-40 pt-3">
+            <a href="http://localhost:5173" class="text-right">
+              <h1
+                class="bg-linear-90 from-brand-primary to-brand-accent text-transparent bg-clip-text font-bold text-4xl">
+                Vertex
+              </h1>
+            </a>
+            <h3 class="text-xs mt-1 font-medium dark:text-dark-text-primary text-light-text-primary">
+              فورشگاه تجهیزات تکنولوژی و گیمینگ
+            </h3>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <h4 class="font-bold dark:text-dark-text-primary text-light-text-primary">
+              تماس با ما
+            </h4>
+            <div class="flex items-center gap-3 dark:text-dark-text-primary text-light-text-primary">
+              <i class="fa-solid fa-phone"></i>
+              <span
+                class="dark:text-dark-text-secondary text-light-text-secondary max-sm:text-[11px] max-sm:w-25">021-12345678</span>
+            </div>
+
+            <div class="flex items-center gap-3 dark:text-dark-text-primary text-light-text-primary">
+              <i class="fa-solid fa-envelope"></i>
+              <span
+                class="dark:text-dark-text-secondary text-light-text-secondary max-sm:text-[11px] max-sm:w-25">info@vertex.ir</span>
+            </div>
+
+            <div class="flex items-center gap-3 dark:text-dark-text-primary text-light-text-primary">
+              <i class="fa-solid fa-location-dot"></i>
+              <span
+                class="dark:text-dark-text-secondary text-light-text-secondary max-sm:text-[11px] max-sm:w-25">تهران،
+                خیابان ولیعصر</span>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Divider -->
+      <div class="mt-5 mb-3 w-full h-0.5 dark:bg-dark-divider bg-light-divider"></div>
+      <div
+        class="pb-4 pt-1 text-center dark:text-dark-text-secondary text-light-text-secondary max-sm:text-xs text-[14px]">
+        <p>تمامی حقوقی برای Vertex Store محفوظ است</p>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- toast -->
+  <div class="z-9999 fixed hide top-3 left-2  dark:bg-dark-section-bg bg-light-section-bg rounded-xl toast transition-normal duration-300">
+    <div class="px-4 py-2 flex items-center gap-3">
+      <span class="icon-container rounded-full w-7.5 h-7.5 flex items-center justify-center">
+        <i class="fa-solid fa-check text-xs"></i>
+      </span>
+      <p class="dark:text-dark-text-primary text-light-text-primary text-[13px] toast-message">ثبت نام با موفقیت انجام
+        شد</p>
     </div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+    <div class="[direction:ltr] mt-1 w-full h-1.5 progress-container rounded-bl-xl rounded-br-xl">
+      <div class="w-0 h-full rounded-bl-xl progress"></div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>

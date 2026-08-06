@@ -10,18 +10,18 @@ import stuffImage from "../assets/images/stuff.png"
 
 const HomePage = () => {
   return `
-       <div class="animate-fadeIn"> 
-          <div class="relative rounded-2xl overflow-hidden max-sm:h-55 h-130">
-            <img src="${bannerImage}" class="object-cover w-full h-full" alt=""/>
-            <div class="absolute max-sm:top-10 top-45 left-0 max-sm:right-15 right-30 mx-auto max-sm:w-70 w-180">
-              <p class="text-dark-text-primary max-sm:text-xl text-5xl font-bold">
+  <div> 
+          <div class="relative rounded-2xl overflow-hidden max-lg:h-100 max-md:h-80 max-sm:h-55 h-130">
+            <img src="./src/assets/images/banners/banner.png" class="object-cover w-full h-full" alt="header-banner"/>
+            <div class="absolute max-lg:top-32 max-md:top-25 max-sm:top-13 top-45 left-0 max-sm:right-15 right-30 mx-auto max-sm:w-70 w-180">
+              <p class="text-dark-text-primary max-lg:text-4xl max-md:text-3xl max-sm:text-xl text-5xl font-bold">
                 قدرت تکنولوژی را تجربه کن
               </p>
-              <p class="max-sm:mt-1.5 mt-5 text-dark-text-primary max-sm:text-xs text-2xl">
+              <p class="max-sm:mt-1.5 mt-5 text-dark-text-primary max-lg:text-[18px] max-md:text-[13px] max-sm:text-xs text-2xl">
                 مجموعه‌ای از بهترین تجهیزات گیمینگ، لپ‌تاپ، مانیتور و لوازم
                 جانبی حرفه‌ای.
               </p>
-              <button href="#" class="flex items-center justify-center max-sm:text-xs max-sm:mt-4 mt-7 max-sm:mr-5 mr-20 text-dark-text-primary bg-linear-90 from-brand-primary to-brand-accent rounded-xl max-sm:w-50 w-100 max-sm:py-2.5 py-4 font-bold cursor-pointer transition-transform duration-300 hover:-translate-y-0.5 banner-show-products-btn" >مشاهده محصولات</button>
+              <button href="#" class="flex items-center justify-center max-md:text-xs max-md:mt-4 mt-7 max-md:mr-15 max-sm:mr-5 mr-20 text-dark-text-primary bg-linear-90 from-brand-primary to-brand-accent rounded-xl max-sm:w-50 max-md:w-70 w-100 max-sm:py-2.5 py-4 font-bold cursor-pointer transition-transform duration-300 hover:-translate-y-0.5 banner-show-products-btn">مشاهده محصولات</button>
             </div>
           </div>
 
@@ -38,47 +38,47 @@ const HomePage = () => {
               </a>
             </div>
             <!-- Desktop products -->
-            <div class="max-sm:hidden flex items-center justify-center gap-4 mt-5">
-              <a class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-                <img src="${laptopImage}" class="size-45" alt=""/>
-                <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
+            <div class="max-sm:hidden grid grid-cols-7 max-lg:grid-cols-7 justify-items-center gap-2 mt-5">
+              <a class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
+                <img src="./src/assets/images/laptop.png" class="size-42 max-xl:size-30 max-lg:size-15" alt=""/>
+                <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary  max-lg:text-sm max-md:text-xs text-xl">
                   لپ تاپ
                 </h2>
               </a>
-              <a
-                class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-                <img src="${monitorImage}" class="size-45" alt=""/> <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
+              <a class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
+                <img src="./src/assets/images/monitor.png" class="size-42 max-xl:size-30 max-lg:size-15" alt=""/> 
+                <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary max-lg:text-sm max-md:text-xs text-xl">
                   مانیتور
-                </h2>
-              </a> <a class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-                <img src="${stuffImage}" class="size-45" alt=""/>
-                <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
+               </h2>
+              </a> <a class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
+                <img src="./src/assets/images/stuff.png" class="size-42 max-xl:size-30 max-lg:size-15" alt=""/>
+                <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary max-lg:text-sm max-md:text-xs text-xl">
                   لوازم جانبی
                 </h2>
               </a>
-              <a class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-                <img src="${mouseImage}" class="size-45" alt=""/>
-                <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
+              <a class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
+                <img src="./src/assets/images/mouse.png" class="size-42 max-xl:size-30 max-lg:size-15" alt=""/>
+                <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary max-lg:text-sm max-md:text-xs text-xl">
                   موس
                 </h2>
               </a>
-              <a class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-                <img src="${keyboardImage}" class="size-45" alt=""
+              <a class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
+                <img src="./src/assets/images/keyboard.png" class="size-42 max-xl:size-30 max-lg:size-15" alt=""
                 />
-                <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
+               <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary max-lg:text-sm max-md:text-xs text-xl">
                   کیبورد
                 </h2>
               </a>
-              <a class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer"> 
-                <img src="${consoleImage}" class="size-45" alt=""/>
-                <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
+              <a class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
+                <img src="./src/assets/images/console.png" class="size-42 max-xl:size-30 max-lg:size-15" alt=""/>
+                <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary max-lg:text-sm max-md:text-xs text-xl">
                   کنسول بازی
                 </h2>
               </a>
               <a
-                class="w-52 py-8 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-                <img src="${cameraImage}" class="size-45" alt=""/>
-                <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary text-2c text-xl">
+                class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
+                <img src="./src/assets/images/camera.png" class="size-42 max-xl:size-30 max-lg:size-15" alt=""/>
+                <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary max-lg:text-sm max-md:text-xs text-xl">
                   دوربین
                 </h2>
               </a>
@@ -132,7 +132,7 @@ const HomePage = () => {
               </button>
             </form>
           </div>
-        </div> 
-    `;
+        </div>  
+  `
 };
 export default HomePage;

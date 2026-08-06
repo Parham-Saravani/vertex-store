@@ -4,7 +4,7 @@
 .profile-menu-active {
   box-shadow: 0 0 10px rgba(var(--color-glow-accent));
   background-color: var(--color-brand-accent);
-  color: var(--color-dark-text-primary)
+  color: var(--color-dark-text-primary);
 }
 .dark .profile-menu-active {
   box-shadow: 0 0 10px rgba(var(--color-glow-accent));
@@ -12,12 +12,12 @@
 }
 .profile-submenu-active {
   background-color: var(--color-brand-accent);
-  color: var(--color-dark-text-primary)
+  color: var(--color-dark-text-primary);
 }
 .dark .profile-submenu-active {
   background-color: var(--color-brand-accent);
 }
-.order-active{
+.order-active {
   background-color: var(--color-brand-accent);
   color: var(--color-dark-text-primary);
 }
@@ -34,7 +34,7 @@
 .menu-active::before {
   content: "";
   z-index: -1;
-  width: 4.5rem;
+  width: 3.5rem;
   height: 0.3rem;
   border-radius: 1rem;
   background-color: var(--color-brand-primary);
@@ -54,7 +54,7 @@
 .dark .menu-active::before {
   content: "";
   z-index: -1;
-  width: 5rem;
+  width: 3.5rem;
   height: 0.3rem;
   border-radius: 1rem;
   background-color: var(--color-brand-primary);
@@ -92,6 +92,24 @@
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.mobile-menu-open .mobile-menu-btn-line {
+  background-color: transparent;
+}
+.mobile-menu-open .mobile-menu-btn-line::after {
+  transform: translateY(7px) rotate(45deg);
+  -webkit-transform: translateY(7px) rotate(45deg);
+  -moz-transform: translateY(7px) rotate(45deg);
+  -ms-transform: translateY(7px) rotate(45deg);
+  -o-transform: translateY(7px) rotate(45deg);
+}
+.mobile-menu-open .mobile-menu-btn-line::before {
+  transform: translateY(-5px) rotate(-45deg);
+  -webkit-transform: translateY(-5px) rotate(-45deg);
+  -moz-transform: translateY(-5px) rotate(-45deg);
+  -ms-transform: translateY(-5px) rotate(-45deg);
+  -o-transform: translateY(-5px) rotate(-45deg);
 }
 /* glow effects */
 .glow-effect {
@@ -464,6 +482,19 @@ html {
   @variant 2xl {
     max-width: 120rem;
     padding: 0 3rem;
+  }
+}
+@media (width >= 48rem) {
+  .menu-active::before {
+    width: 5rem;
+  }
+}
+@media (max-width : 768px) {
+  .menu-active::before {
+    width: 0;
+  }
+  .dark .menu-active::before {
+    width: 0;
   }
 }
 

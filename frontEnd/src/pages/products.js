@@ -36,7 +36,7 @@ const ProductsPage = () => {
               </div>
 
               <!-- products-->
-              <div class="[direction:ltr] my-3 grid grid-cols-5 max-xl:grid-cols-4 max-sm:grid-cols-2 w-full products-container">
+              <div class="[direction:ltr] my-3 grid grid-cols-5 max-xl:grid-cols-4 max-sm:grid-cols-2 w-full products-container justify-items-center">
                 
                   
               </div>
