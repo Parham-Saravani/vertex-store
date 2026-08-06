@@ -101,10 +101,10 @@
 }
 
 .overlay-show{
-  position: fixed;
   opacity: 1;
   z-index: 200;
 }
+
 /* glow effects */
 .glow-effect {
   background:
@@ -293,22 +293,22 @@ html {
 /* fonts */
 @font-face {
   font-family: "VazirMatn";
-  src: url(./assets/fonts/Vazirmatn-Thin.ttf);
+  src: url(./assets/fonts/Vazirmatn-Thin.ttf) format("truetype");
   font-weight: 200;
 }
 @font-face {
   font-family: "VazirMatn";
-  src: url(./assets/fonts/Vazirmatn-Regular.ttf);
+  src: url(./assets/fonts/Vazirmatn-Regular.ttf) format("truetype");
   font-weight: 400;
 }
 @font-face {
   font-family: "VazirMatn";
-  src: url(./assets/fonts/Vazirmatn-Medium.ttf);
+  src: url(./assets/fonts/Vazirmatn-Medium.ttf) format("truetype");
   font-weight: 600;
 }
 @font-face {
   font-family: "VazirMatn";
-  src: url(./assets/fonts/Vazirmatn-Bold.ttf);
+  src: url(./assets/fonts/Vazirmatn-Bold.ttf) format("truetype");
   font-weight: 800;
 }
 
@@ -359,6 +359,9 @@ html {
 }
 
 @theme {
+  /* SVG Colors */
+  --color-svg-dark :#98a2b3;
+  --color-svg-light :#344054;
   /* BRAND COLORS */
 
   --color-brand-primary: #3b82f6;

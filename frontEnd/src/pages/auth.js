@@ -1,6 +1,6 @@
 const AuthenticationPage = () => {
   return `
-    <div class="animate-fadeIn fixed z-50 top-0 bottom-0 left-0 right-0 mx-auto flex items-center justify-center backdrop-blur-sm auth-background">
+    <div class="animate-fadeIn fixed z-1000 top-0 bottom-0 left-0 right-0 mx-auto flex items-center justify-center backdrop-blur-sm auth-background">
         <div class="dark:bg-dark-card-bg bg-light-card-bg h-170 max-lg:static max-xl:right-10 max-lg:w-full z-20 right-17 top-16 max-sm:px-5 max-sm:w-[90%] w-120 px-10 py-5 dark:bg-dark-surface bg-light-surface border-2 dark:border-dark-card-border border-light-card-border rounded-xl auth-form">
           
           <div class="shadow-light dark:shadow-dark flex justify-center auth-status-container  rounded-2xl">
@@ -27,7 +27,7 @@ const AuthenticationPage = () => {
                   ایمیل صحیح نمیباشد
                 </p>
                 <div class="relative mt-3 w-full dark:bg-dark-input-bg bg-light-input-bg border dark:border-dark-input-border border-light-input-border rounded-xl focus-within:border-dark-input-focus transition-colors duration-300">
-                   <input class="w-full text-[14px] dark:text-dark-text-primary text-light-text-primary font-vazir placeholder:text-[13px] placeholder:font-normal dark:placeholder:text-dark-text-secondary placeholder:text-light-text-secondary pr-5 py-4 rounded-xl outline-hidden login-passwor placeholder="رمز عبور خود را وارد کنید" type="password"/>
+                   <input class="w-full text-[14px] dark:text-dark-text-primary text-light-text-primary font-vazir placeholder:text-[13px] placeholder:font-normal dark:placeholder:text-dark-text-secondary placeholder:text-light-text-secondary pr-5 py-4 rounded-xl outline-hidden login-passwor"placeholder="رمز عبور خود را وارد کنید" type="password"/>
                   <span class="cursor-pointer absolute left-4 top-3.5 dark:text-dark-text-secondary text-light-text-secondary show-password">
                     <i class="fa-solid fa-eye"></i>
                   </span>

@@ -1,6 +1,6 @@
 const ProductLoader = () => {
   return `
-    <div class="fixed flex items-center justify-center inset-0 z-30 max-sm:px-6 backdrop-blur-xl product-container">
+    <div class="fixed flex items-center justify-center inset-0 z-3000 max-sm:px-6 backdrop-blur-xl product-container">
           <div class="border dark:border-dark-card-border border-light-card-border w-220 max-sm:w-full h-175 max-sm:h-150 py-2 px-4 relative dark:bg-dark-section-bg bg-light-section-bg rounded-xl product-content">
             <button class="absolute top-2 right-2 flex justify-center items-center w-6 h-6 dark:bg-dark-input-bg bg-light-input-bg transition-colors duration-300 dark:hover:bg-dark-input-border hover:bg-light-input-border rounded-full cursor-pointer close-product-page">
               <i class="fa-solid fa-close text-[12px] dark:text-dark-text-primary text-light-text-primary"></i>

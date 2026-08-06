@@ -1,17 +1,18 @@
 const AdminProfilePage = () => {
   return `
     <div class="animate-fadeIn space-y-5">
-
                     <!-- stats cards -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+                    <div class="grid grid-cols-2 xl:grid-cols-4 gap-4">
 
                         <div
-                            class="rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-5">
+                            class="w-full rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-5">
                             <p class="text-sm dark:text-dark-text-secondary">
                                 <i class="fa-solid fa-box-open"></i>
                                 کل محصولات
                             </p>
-                            <h2 class="dark:text-dark-text-primary text-light-text-primary text-3xl font-bold mt-2">120
+                            <h2
+                                class="max-sm:text-sm dark:text-dark-text-primary text-light-text-primary text-3xl font-bold mt-2">
+                                120
                             </h2>
                         </div>
 
@@ -21,7 +22,9 @@ const AdminProfilePage = () => {
                                 <i class="fa-solid fa-bag-shopping"></i>
                                 کل سفارش ها
                             </p>
-                            <h2 class="dark:text-dark-text-primary text-light-text-primary text-3xl font-bold mt-2">84
+                            <h2
+                                class="max-sm:text-sm dark:text-dark-text-primary text-light-text-primary text-3xl font-bold mt-2">
+                                84
                             </h2>
                         </div>
 
@@ -31,7 +34,9 @@ const AdminProfilePage = () => {
                                 <i class="fa-solid fa-users"></i>
                                 کاربران
                             </p>
-                            <h2 class="dark:text-dark-text-primary text-light-text-primary text-3xl font-bold mt-2">41
+                            <h2
+                                class="max-sm:text-sm dark:text-dark-text-primary text-light-text-primary text-3xl font-bold mt-2">
+                                41
                             </h2>
                         </div>
 
@@ -41,7 +46,8 @@ const AdminProfilePage = () => {
                                 <i class="fa-solid fa-sack-dollar"></i>
                                 درآمد کل
                             </p>
-                            <h2 class="dark:text-dark-text-primary text-light-text-primary text-3xl font-bold mt-2">
+                            <h2
+                                class="max-sm:text-sm dark:text-dark-text-primary text-light-text-primary text-3xl font-bold mt-2">
                                 <span>12,000,465</span>
                                 <span>تومان</span>
                             </h2>
@@ -77,8 +83,7 @@ const AdminProfilePage = () => {
                     </div>
 
                     <!-- table -->
-                    <div
-                        class="rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-5">
+                    <div class="max-xl:mt-107 rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-5">
 
                         <div class="flex justify-between items-center mb-4">
                             <h3 class="dark:text-dark-text-secondary text-light-text-secondary font-bold">
@@ -122,33 +127,6 @@ const AdminProfilePage = () => {
                         </table>
 
                     </div>
-
-                    <!-- bottom widgets -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-
-                        <div
-                            class="rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-5">
-                            <h3 class="dark:text-dark-text-secondary text-light-text-secondary font-bold mb-4">
-                                محصولات کم موجود
-                            </h3>
-                        </div>
-
-                        <div
-                            class="rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-5">
-                            <h3 class="dark:text-dark-text-secondary text-light-text-secondary font-bold mb-4">
-                                تیکت‌های باز
-                            </h3>
-                        </div>
-
-                        <div
-                            class="rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-5">
-                            <h3 class="dark:text-dark-text-secondary text-light-text-secondary font-bold mb-4">
-                                کاربران جدید
-                            </h3>
-                        </div>
-
-                    </div>
-
                 </div>
     `;
 };

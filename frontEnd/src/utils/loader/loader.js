@@ -1,6 +1,7 @@
 import { isUserLogedIn } from "../cookie";
-const authenticationBtn = document.querySelector(".authentication");
+const authenticationBtn = document.querySelectorAll(".authentication");
 const profile = document.querySelector(".profile");
+const mobileMenuUserData = document.querySelectorAll(".mobile-menu-user-data");
 
 const loaderHandler = () => {
   const loader = document.querySelector(".page-loader");
@@ -9,10 +10,12 @@ const loaderHandler = () => {
   document.documentElement.classList.remove("overflow-hidden");
   loginChecker();
 };
-const loginChecker = () => {  
+const loginChecker = () => {
   const logedInStatus = isUserLogedIn();
   if (logedInStatus) {
-    authenticationBtn.classList.add("hidden");
+    authenticationBtn.forEach((item) => item.classList.add("hidden"));
+    mobileMenuUserData.forEach((item) => item.classList.remove("hidden"));
+    mobileMenuUserData.forEach((item) => item.classList.add("flex"));
     profile.classList.remove("hidden");
     profile.classList.add("flex");
   } else {

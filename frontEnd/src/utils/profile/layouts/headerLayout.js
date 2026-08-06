@@ -51,4 +51,5 @@ const changeHeaderContent = (content) => {
   headerContainer.innerHTML = "";
   headerContainer.insertAdjacentHTML("afterbegin", content);
 };
+
 export default changeHeaderContentHandler;

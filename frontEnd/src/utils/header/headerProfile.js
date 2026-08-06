@@ -9,6 +9,7 @@ const profileImage = document.querySelectorAll(".profile-image");
 const profileUsername = document.querySelectorAll(".profile-username");
 const profileEmail = document.querySelectorAll(".profile-email");
 const logOutBtn = document.querySelector(".logout-btn");
+const mobileMenuUserData = document.querySelectorAll(".mobile-menu-user-data");
 
 let isProfileMenuOpen = false;
 

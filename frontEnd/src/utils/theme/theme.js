@@ -1,5 +1,9 @@
 const darkThemeBtn = document.querySelector(".dark-theme-btn");
 const lightThemeBtn = document.querySelector(".light-theme-btn");
+const mobileThemeToggleWrapper = document.querySelector(
+  ".theme-toggle-wrapper",
+);
+const mobileThemeToggle = document.querySelector("#theme-toggle");
 
 const themeHandler = () => {
   const isDarkMode = JSON.parse(localStorage.getItem("isDarkMode")) ?? true;
@@ -12,9 +16,17 @@ const themeHandler = () => {
 
 const darkTheme = () => {
   addAndRemovingClasses(true, lightThemeBtn, darkThemeBtn);
+  if (mobileThemeToggle) {
+    mobileThemeToggle.checked = true;
+    mobileThemeToggleWrapper.classList.add("theme-toggle-active");
+  }
 };
 const lightTheme = () => {
   addAndRemovingClasses(false, darkThemeBtn, lightThemeBtn);
+  if (mobileThemeToggle) {
+    mobileThemeToggle.checked = false;
+    mobileThemeToggleWrapper.classList.remove("theme-toggle-active");
+  }
 };
 
 const addAndRemovingClasses = (isDarkMode, active, hidden) => {

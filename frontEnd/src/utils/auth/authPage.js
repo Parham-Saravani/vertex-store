@@ -2,9 +2,10 @@ import AuthenticationPage from "../../pages/auth.js";
 import registerNewUser from "../services/api.register.js";
 import userLoginOperation from "../services/api.login.js";
 
-const authBtn = document.querySelector(".auth-btn");
+const authBtn = document.querySelectorAll(".auth-btn");
 
 const showAuthContent = () => {
+  hideMobileMenu()
   document.documentElement.classList.add("overflow-hidden");
   document.body.insertAdjacentHTML("afterbegin", AuthenticationPage());
   const authForm = document.querySelector(".auth-form");
@@ -15,6 +16,14 @@ const showAuthContent = () => {
     capture: true,
   });
 };
+const hideMobileMenu = () => {
+  const mobileMenu = document.querySelector('.mobile-menu')
+  const isMenuVisible = mobileMenu.classList.contains('right-0!')
+  if(isMenuVisible){
+    document.querySelector('.mobile-menu-overlay').classList.remove('overlay-show')
+    mobileMenu.classList.remove('right-0!')
+  }
+}
 const showOrHidePasswordHandler = () => {
   const showPasswordBtn = document.querySelectorAll(".show-password");
   showPasswordBtn.forEach((item) =>
@@ -249,5 +258,5 @@ const addLoaderToSubmitButton = (button) => {
   btn.disabled = true;
   btn.innerHTML = `<div class="flex justify-center items-cente"><div class="loader w-4 rounded-full animate-loader aspect-square"></div></div>`;
 };
-authBtn.addEventListener("click", showAuthContent);
+authBtn.forEach(item => item.addEventListener("click", showAuthContent));
 export { clearSignupInputs, clearLoginInputs, hideAuthForm };
