@@ -1,7 +1,7 @@
 const UserTicketPage = () => {
   return`
     <!-- ticket page -->
-       <div class="w-full px-5">    
+       <div class="animate-fadeIn w-full px-5">    
             <div class="flex justify-between items-center">
                 <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary">تیکت ها</h2>
                 <div class="flex items-center gap-3">

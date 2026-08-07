@@ -19,7 +19,7 @@ const loginChecker = () => {
     profile.classList.remove("hidden");
     profile.classList.add("flex");
   } else {
-    authenticationBtn.classList.remove("hidden");
+    authenticationBtn.forEach(item => item.classList.remove("hidden"));
     profile.classList.add("hidden");
   }
 };

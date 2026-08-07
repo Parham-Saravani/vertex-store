@@ -3,40 +3,31 @@ const profileUserDataBtn = document.querySelector(".profile-user-data-btn");
 const userData = document.querySelector(".profile-mobile-user-data");
 const profileMenu = document.querySelector(".profile-mobile-menu");
 const profileMenuOverlay = document.querySelector(".profile-mobile-menu-overlay");
-const mobileMenuThemeBtn = document.querySelector('.profile-mobile-menu-theme-toggle')
+const mobileMenuThemeBtn = document.querySelector(".profile-mobile-menu-theme-toggle");
 
 const showMobileMenu = () => {
   if (profileMobileMenuBtn.classList.contains("dark:bg-dark-card-hover")) {
-    profileMobileMenuBtn.classList.remove("dark:bg-dark-card-hover");
-    profileMobileMenuBtn.classList.remove("bg-light-card-hover");
+    addOrRemoveActiveElementStyle(profileMobileMenuBtn, false);
     profileMenu.classList.remove("right-0!");
-    document.documentElement.classList.remove("overflow-hidden");
-    profileMenuOverlay.classList.add("opacity-0");
-    profileMenuOverlay.classList.remove("z-100");
-    profileMenuOverlay.classList.remove("fixed");
+    disableOrEnablePageScrollbar(false);
+    showOrHideMenuOverlay(false);
   } else {
-    profileMobileMenuBtn.classList.add("dark:bg-dark-card-hover");
-    profileMobileMenuBtn.classList.add("bg-light-card-hover");
+    addOrRemoveActiveElementStyle(profileMobileMenuBtn, true);
     profileMenu.classList.add("right-0!");
-    document.documentElement.classList.add("overflow-hidden");
-    profileMenuOverlay.classList.remove("opacity-0");
-    profileMenuOverlay.classList.add("z-100");
-    profileMenuOverlay.classList.add("fixed");
+    disableOrEnablePageScrollbar(true);
+    showOrHideMenuOverlay(true);
     if (userData.classList.contains("h-20")) {
-      profileUserDataBtn.classList.remove("dark:bg-dark-card-hover");
-      profileUserDataBtn.classList.remove("bg-light-card-hover");
+      addOrRemoveActiveElementStyle(profileUserDataBtn, false);
       userData.classList.remove("h-20");
     }
   }
 };
 const showUserData = () => {
   if (profileUserDataBtn.classList.contains("dark:bg-dark-card-hover")) {
-    profileUserDataBtn.classList.remove("dark:bg-dark-card-hover");
-    profileUserDataBtn.classList.remove("bg-light-card-hover");
+    addOrRemoveActiveElementStyle(profileUserDataBtn, false);
     userData.classList.remove("h-20");
   } else {
-    profileUserDataBtn.classList.add("dark:bg-dark-card-hover");
-    profileUserDataBtn.classList.add("bg-light-card-hover");
+    addOrRemoveActiveElementStyle(profileUserDataBtn, true);
     userData.classList.add("h-20");
   }
 };
@@ -46,17 +37,45 @@ const hideMobileMenu = () => {
   profileMobileMenuBtn.classList.remove("bg-light-card-hover");
   profileMenuOverlay.classList.add("opacity-0");
   profileMenuOverlay.classList.remove("z-100");
-  profileMenuOverlay.classList.remove("fixed");
-  document.documentElement.classList.remove("overflow-hidden");
+  profileMenuOverlay.classList.remove("max-md:fixed");
+  disableOrEnablePageScrollbar(false);
 };
 const changeTheme = () => {
- if(document.documentElement.classList.contains('dark')){
-    document.documentElement.classList.remove('dark')
-}else{
-     document.documentElement.classList.add('dark')
- }
-}
+  if (document.documentElement.classList.contains("dark")) {
+    document.documentElement.classList.remove("dark");
+  } else {
+    document.documentElement.classList.add("dark");
+  }
+};
+
+const addOrRemoveActiveElementStyle = (element, status) => {
+  if (status) {
+    element.classList.add("dark:bg-dark-card-hover");
+    element.classList.add("bg-light-card-hover");
+  } else {
+    element.classList.remove("dark:bg-dark-card-hover");
+    element.classList.remove("bg-light-card-hover");
+  }
+};
+const disableOrEnablePageScrollbar = (status) => {
+  if (status) {
+    document.documentElement.classList.add("overflow-hidden");
+  } else {
+    document.documentElement.classList.remove("overflow-hidden");
+  }
+};
+const showOrHideMenuOverlay = (status) => {
+  if (status) {
+    profileMenuOverlay.classList.remove("opacity-0");
+    profileMenuOverlay.classList.add("z-100");
+    profileMenuOverlay.classList.add("max-lg:fixed");
+  } else {
+    profileMenuOverlay.classList.add("opacity-0");
+    profileMenuOverlay.classList.remove("z-100");
+    profileMenuOverlay.classList.remove("max-lg:fixed");
+  }
+};
 profileMobileMenuBtn.addEventListener("click", showMobileMenu);
 profileUserDataBtn.addEventListener("click", showUserData);
 profileMenuOverlay.addEventListener("click", hideMobileMenu);
-mobileMenuThemeBtn.addEventListener('click', changeTheme)
+mobileMenuThemeBtn.addEventListener("click", changeTheme);

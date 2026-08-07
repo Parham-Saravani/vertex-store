@@ -53,7 +53,7 @@ const changePageContent = (page) => {
       changePage(UserOrderPage());
       break;
     case "userFavourites":
-      changePage(FavouritePage());
+      changePage(UserFavouritePage());
       break;
     case "userTickets":
       changePage(UserTicketPage());
@@ -64,4 +64,4 @@ const changePage = (content) => {
   profilePageContainer.innerHTML = "";
   profilePageContainer.insertAdjacentHTML("afterbegin", content);
 };
-export default changePageContent;
+export { changePageContent, changePage };

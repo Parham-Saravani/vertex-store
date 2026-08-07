@@ -2,7 +2,7 @@ const AdminSidebarContent = () => {
   return `
      <!-- overview -->
                 <div>
-                    <button class="flex items-center justify-between w-full dark:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-dark-text-primary hover:bg-light-card-hover rounded-xl profile-menu-active menu-item">
+                    <button class="flex items-center justify-between w-full dark:text-dark-text-primary  dark:hover:bg-dark-card-hover dark:hover:text-dark-text-primary text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-light-text-primary hover:bg-light-card-hover rounded-xl profile-menu-active menu-item">
                         <div>
                             <i class="fa-solid fa-gauge-high"></i>
                             نمای کلی
@@ -20,7 +20,7 @@ const AdminSidebarContent = () => {
                 </div>
                 <!-- store -->
                 <div>
-                    <button class="flex items-center justify-between w-full dark:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-dark-text-primary hover:bg-light-card-hover rounded-xl menu-item">
+                    <button class="flex items-center justify-between w-full dark:text-dark-text-primary dark:hover:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-light-text-primary hover:bg-light-card-hover rounded-xl menu-item">
                         <div>
                             <i class="fa-solid fa-store"></i>
                             فروشگاه
@@ -46,7 +46,7 @@ const AdminSidebarContent = () => {
                 </div>
                 <!-- sale -->
                 <div>
-                    <button class="flex items-center justify-between w-full dark:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-dark-text-primary hover:bg-light-card-hover rounded-xl menu-item">
+                    <button class="flex items-center justify-between w-full dark:hover:text-dark-text-primary dark:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-light-text-primary hover:bg-light-card-hover rounded-xl menu-item">
                         <div>
                             <i class="fa-solid fa-sack-dollar"></i>
                             فروش
@@ -76,7 +76,7 @@ const AdminSidebarContent = () => {
                 </div>
                 <!-- users -->
                 <div>
-                    <button class="flex items-center justify-between w-full dark:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-dark-text-primary hover:bg-light-card-hover rounded-xl menu-item">
+                    <button class="flex items-center justify-between w-full dark:hover:text-dark-text-primary dark:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300  hover:text-light-text-primary hover:bg-light-card-hover rounded-xl menu-item">
                         <div>
                             <i class="fa-solid fa-users"></i>
                             کاربران
@@ -98,7 +98,7 @@ const AdminSidebarContent = () => {
                 </div>
                 <!-- support -->
                 <div>
-                    <button class="flex items-center justify-between w-full dark:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-dark-text-primary hover:bg-light-card-hover rounded-xl menu-item">
+                    <button class="flex items-center justify-between w-full dark:hover:text-dark-text-primary dark:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-light-text-primary hover:bg-light-card-hover rounded-xl menu-item">
                         <div>
                             <i class="fa-solid fa-headset"></i>
                             پشتیبانی
@@ -116,7 +116,7 @@ const AdminSidebarContent = () => {
                 </div>
                 <!-- system -->
                 <div>
-                    <button class="flex items-center justify-between w-full dark:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-dark-text-primary hover:bg-light-card-hover rounded-xl menu-item">
+                    <button class="flex items-center justify-between w-full dark:hover:text-dark-text-primary dark:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-light-text-primary hover:bg-light-card-hover rounded-xl menu-item">
                         <div>
                             <i class="fa-solid fa-server"></i>
                             سیستم
@@ -161,7 +161,6 @@ const UserSidebarContent = () => {
     `;
 };
 const changeSidebarContentHandler = (role) => {
-  const menuContainer = document.querySelector(".menu-content");
   if (role === "admin") {
     changeSidebarContent(AdminSidebarContent());
   } else {
@@ -169,6 +168,7 @@ const changeSidebarContentHandler = (role) => {
   }
 };
 const changeSidebarContent = (content) => {
+  const menuContainer = document.querySelector(".menu-content");
   menuContainer.innerHTML = "";
   menuContainer.insertAdjacentHTML("afterbegin", content);
 };

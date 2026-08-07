@@ -24,17 +24,15 @@ const registerNewUser = async (req, res) => {
           password: hashedPassword,
         });
         const token = await generateJWT(newUser);
-        res
-          .status(201)
-          .json({
-            message: "USER_CREATED",
-            token,
-            user: {
-              username: newUser.username,
-              imageUrl: newUser.imageUrl,
-              email: newUser.email,
-            },
-          });
+        res.status(201).json({
+          message: "USER_CREATED",
+          token,
+          user: {
+            username: newUser.username,
+            imageUrl: newUser.imageUrl,
+            email: newUser.email,
+          },
+        });
       }
     } catch (error) {
       console.log(error);
@@ -51,17 +49,15 @@ const loginUser = async (req, res) => {
     const isPasswordMatch = await bcrypt.compare(password, newUser.password);
     if (isPasswordMatch) {
       const token = await generateJWT(newUser);
-      res
-        .status(200)
-        .json({
-          message: "LOGIN_SUCCESSFULLY",
-          token,
-          user: {
-            username: newUser.username,
-            imageUrl: newUser.imageUrl,
-            email: newUser.email,
-          },
-        });
+      res.status(200).json({
+        message: "LOGIN_SUCCESSFULLY",
+        token,
+        user: {
+          username: newUser.username,
+          imageUrl: newUser.imageUrl,
+          email: newUser.email,
+        },
+      });
     } else {
       res.status(200).json({ message: "INVALID_CREDENTIALS" });
     }
@@ -71,9 +67,17 @@ const loginUser = async (req, res) => {
 };
 
 const takeUserData = async (req, res) => {
-  const token = req.params.id;
+  const token = req.params.token;
   const data = jwt.verify(token, process.env.JWT_SECRET);
-  console.log(data);
-  
+  const { id: userID } = data;
+  const user = await User.findOne({ _id: userID });
+  const { role, username, email, imageUrl, createdAt } = user;
+  res.status(200).json({
+    role,
+    username,
+    email,
+    imageUrl,
+    createdAt,
+  });
 };
 export { registerNewUser, loginUser, takeUserData };

@@ -1,7 +1,7 @@
 const UserOrderPage = () => {
   return`
      <!-- orders -->
-    <div class="px-5 w-full">
+    <div class="animate-fadeIn px-5 w-full">
             <div class="flex justify-between items-center">
                 <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary">سفارش ها</h2>
                 <div class="flex items-center gap-3">

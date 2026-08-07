@@ -30,6 +30,7 @@ const lightTheme = () => {
 };
 
 const addAndRemovingClasses = (isDarkMode, active, hidden) => {
+  if (!active || !hidden) return;
   if (isDarkMode) {
     document.documentElement.classList.add("dark");
   } else {

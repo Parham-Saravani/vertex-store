@@ -1,9 +1,8 @@
 const UserProfilePage = () => {
-  return`
+  return `
     <!-- profile page content -->
-        <main class="mt-3">
                     <!-- products , favourites , tickets cards -->
-                    <div class="grid grid-cols-3 gap-4">
+                    <div class="animate-fadeIn grid grid-cols-3 gap-4">
                         <div class="relative dark:bg-dark-section-bg bg-light-section-bg rounded-xl border dark:border-dark-input-border border-light-input-border p-5 h-40">
                             <i class="fa-solid fa-bag-shopping absolute right-2 top-4 text-5xl text-brand-accent"></i>
                             <div class="mt-15">
@@ -53,8 +52,7 @@ const UserProfilePage = () => {
                                         <h3
                                             class="text-[13px] dark:text-dark-text-primary text-light-text-primary font-normal">
                                             نام کاربری</h3>
-                                        <p class="text-[13px] dark:text-dark-text-secondary text-light-text-secondary">
-                                            Asuke</p>
+                                        <p class="text-[13px] dark:text-dark-text-secondary text-light-text-secondary user-username"></p>
                                     </div>
                                 </li>
                                 <hr class="dark:text-dark-divider text-light-divider">
@@ -65,8 +63,7 @@ const UserProfilePage = () => {
                                         <h3
                                             class="text-[13px] dark:text-dark-text-primary text-light-text-primary font-normal">
                                             ایمیل</h3>
-                                        <p class="text-[13px] dark:text-dark-text-secondary text-light-text-secondary">
-                                            parhamsaravani83@gmail.com</p>
+                                        <p class="text-[13px] dark:text-dark-text-secondary text-light-text-secondary user-email"></p>
                                     </div>
                                 </li>
                                 <hr class="dark:text-dark-divider text-light-divider">
@@ -77,8 +74,7 @@ const UserProfilePage = () => {
                                         <h3
                                             class="text-[13px] dark:text-dark-text-primary text-light-text-primary font-normal">
                                             تاریخ عضویت</h3>
-                                        <p class="text-[13px] dark:text-dark-text-secondary text-light-text-secondary">
-                                            تیر 1403</p>
+                                        <p class="[direction:ltr] text-[13px] dark:text-dark-text-secondary text-light-text-secondary user-join-date"></p>
                                     </div>
                                 </li>
                             </ul>
@@ -170,7 +166,6 @@ const UserProfilePage = () => {
                             </ul>
                         </div>
                     </div>
-                </main>
     `;
 };
 export default UserProfilePage;

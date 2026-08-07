@@ -1,7 +1,7 @@
 const UserFavouritePage = () => {
   return`
     <!-- favourites page -->
-        <div class="px-5 w-full">
+        <div class="animate-fadeIn px-5 w-full">
              <div class="flex justify-between items-center">
                 <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary">علاقه مندی ها</h2>
                 <p class="text-xs dark:text-dark-text-primary text-light-text-primary">
