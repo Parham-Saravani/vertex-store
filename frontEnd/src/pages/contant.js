@@ -1,7 +1,7 @@
 const ContactPage = () => {
   return `
-        <div class="animate-fadeIn flex gap-3 mb-7">
-          <div class="px-4 py-5 w-[75%] dark:bg-dark-section-bg bg-light-section-bg border-2 dark:border-dark-card-border border-light-card-border rounded-xl">
+        <div class="animate-fadeIn grid grid-cols-12 gap-3 mb-7">
+          <div class="px-4 py-5 col-span-12 md:col-span-8 lg:col-span-9 dark:bg-dark-section-bg bg-light-section-bg border-2 dark:border-dark-card-border border-light-card-border rounded-xl">
             <h3 class="dark:text-dark-text-primary text-light-text-primary font-bold">ارسال پیام</h3>
             <!-- Divider -->
              <div class="my-3 w-full h-0.5 dark:bg-dark-divider bg-light-divider rounded-xl"></div>
@@ -31,7 +31,7 @@ const ContactPage = () => {
              </form>
           </div>
 
-          <div class="relative px-4 py-5 w-[25%] dark:bg-dark-section-bg bg-light-section-bg border-2 dark:border-dark-card-border border-light-card-border rounded-xl">
+          <div class="relative px-4 py-5 col-span-12 md:col-span-4 lg:col-span-3 dark:bg-dark-section-bg bg-light-section-bg border-2 dark:border-dark-card-border border-light-card-border rounded-xl">
              <h3 class="dark:text-dark-text-primary text-light-text-primary font-bold">اطلاعات تماس</h3>
               <!-- Divider -->
              <div class="my-3 w-full h-0.5 dark:bg-dark-divider bg-light-divider rounded-xl"></div>
@@ -77,7 +77,7 @@ const ContactPage = () => {
              </div>
              <p class="absolute bottom-7 text-xs text-center right-0 left-0 mx-auto dark:text-dark-text-secondary text-light-text-secondary">پس از بررسی با شما تماس گرفته خواهد شد</p>
           </div>
-        </div>
+      </div>
     `;
 };
 

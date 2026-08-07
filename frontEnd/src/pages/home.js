@@ -1,18 +1,18 @@
-import bannerImage from "../../public/homeImages/banner/banner.png"
-import cameraImage from "../../public/homeImages/camera.png"
-import consoleImage from "../../public/homeImages/console.png"
-import keyboardImage from "../../public/homeImages/keyboard.png"
-import laptopImage from "../../public/homeImages/laptop.png"
-import monitorImage from "../../public/homeImages/monitor.png"
-import mouseImage from "../../public/homeImages/mouse.png"
-import stuffImage from "../../public/homeImages/stuff.png"
+import bannerImage from "/public/homeImages/banner/banner.png"
+import cameraImage from "/public/homeImages/camera.png"
+import consoleImage from "/public/homeImages/console.png"
+import keyboardImage from "/public/homeImages/keyboard.png"
+import laptopImage from "/public/homeImages/laptop.png"
+import monitorImage from "/public/homeImages/monitor.png"
+import mouseImage from "/public/homeImages/mouse.png"
+import stuffImage from "/public/homeImages/stuff.png"
 
 
 const HomePage = () => {
   return `
    <div>
         <div class="relative rounded-2xl overflow-hidden max-lg:h-100 max-md:h-80 max-sm:h-55 h-130">
-          <img src="./src/assets/images/banners/banner.png" class="object-cover w-full h-full" alt="header-banner" />
+          <img src="${bannerImage}" class="object-cover w-full h-full" alt="header-banner" />
           <div
             class="absolute max-lg:top-32 max-md:top-25 max-sm:top-13 top-45 left-0 max-sm:right-15 right-30 mx-auto max-sm:w-70 w-180">
             <p class="text-dark-text-primary max-lg:text-4xl max-md:text-3xl max-sm:text-xl text-5xl font-bold">
@@ -48,7 +48,7 @@ const HomePage = () => {
           <div class="max-sm:hidden grid grid-cols-7 max-lg:grid-cols-7 justify-items-center gap-2 mt-5">
             <a
               class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-              <img src="./src/assets/images/laptop.png" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
+              <img src="${laptopImage}" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
               <h2
                 class="font-bold dark:text-dark-text-primary text-light-text-primary  max-lg:text-sm max-md:text-xs text-xl">
                 لپ تاپ
@@ -56,14 +56,14 @@ const HomePage = () => {
             </a>
             <a
               class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-              <img src="./src/assets/images/monitor.png" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
+              <img src="${monitorImage}" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
               <h2
                 class="font-bold dark:text-dark-text-primary text-light-text-primary max-lg:text-sm max-md:text-xs text-xl">
                 مانیتور
               </h2>
             </a> <a
               class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-              <img src="./src/assets/images/stuff.png" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
+              <img src="${stuffImage}" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
               <h2
                 class="font-bold dark:text-dark-text-primary text-light-text-primary max-lg:text-sm max-md:text-xs text-xl">
                 لوازم جانبی
@@ -71,7 +71,7 @@ const HomePage = () => {
             </a>
             <a
               class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-              <img src="./src/assets/images/mouse.png" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
+              <img src="${mouseImage}" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
               <h2
                 class="font-bold dark:text-dark-text-primary text-light-text-primary max-lg:text-sm max-md:text-xs text-xl">
                 موس
@@ -79,7 +79,7 @@ const HomePage = () => {
             </a>
             <a
               class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-              <img src="./src/assets/images/keyboard.png" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
+              <img src="${keyboardImage}" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
               <h2
                 class="font-bold dark:text-dark-text-primary text-light-text-primary max-lg:text-sm max-md:text-xs text-xl">
                 کیبورد
@@ -87,7 +87,7 @@ const HomePage = () => {
             </a>
             <a
               class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-              <img src="./src/assets/images/console.png" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
+              <img src="${consoleImage}" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
               <h2
                 class="font-bold dark:text-dark-text-primary text-light-text-primary max-lg:text-sm max-md:text-xs text-xl">
                 کنسول بازی
@@ -95,7 +95,7 @@ const HomePage = () => {
             </a>
             <a
               class="max-lg:w-26 max-md:w-21 max-xl:w-35 w-45 py-5 border-2 dark:border-dark-card-border border-light-card-border flex flex-col gap-2 items-center glow-effect rounded-xl transition-colors duration-300 dark:hover:border-dark-card-hover-border hover:border-light-card-hover-border cursor-pointer">
-              <img src="./src/assets/images/camera.png" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
+              <img src="${cameraImage}" class="size-42 max-xl:size-30 max-lg:size-15" alt="" />
               <h2
                 class="font-bold dark:text-dark-text-primary text-light-text-primary max-lg:text-sm max-md:text-xs text-xl">
                 دوربین
@@ -106,37 +106,37 @@ const HomePage = () => {
           <div class="hidden max-sm:flex justify-center mt-5 gap-2 flex-wrap">
             <div
               class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
-              <img src="./src/assets/images/laptop.png" class="size-12" alt="">
+              <img src="${laptopImage}" class="size-12" alt="">
               <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">لپ تاپ</p>
             </div>
             <div
               class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
-              <img src="./src/assets/images/monitor.png" class="size-12" alt="">
+              <img src="${monitorImage}" class="size-12" alt="">
               <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">مانیتور</p>
             </div>
             <div
               class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
-              <img src="./src/assets/images/stuff.png" class="size-12" alt="">
+              <img src="${stuffImage}" class="size-12" alt="">
               <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">لوازم جانبی</p>
             </div>
             <div
               class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
-              <img src="./src/assets/images/mouse.png" class="size-12" alt="">
+              <img src="${mouseImage}" class="size-12" alt="">
               <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">موس</p>
             </div>
             <div
               class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
-              <img src="./src/assets/images/keyboard.png" class="size-12" alt="">
+              <img src="${keyboardImage}" class="size-12" alt="">
               <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">کیبورد</p>
             </div>
             <div
               class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
-              <img src="./src/assets/images/console.png" class="size-12" alt="">
+              <img src="${consoleImage}" class="size-12" alt="">
               <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">کنسول بازی</p>
             </div>
             <div
               class="rounded-full w-22 h-22 glow-effect flex flex-col items-center justify-center border-2 dark:border-dark-card-border border-light-card-border hover:border-dark-card-hover-border transition-colors duration-300 cursor-pointer">
-              <img src="./src/assets/images/camera.png" class="size-12" alt="">
+              <img src="${cameraImage}" class="size-12" alt="">
               <p class="dark:text-dark-text-primary text-light-text-primary text-xs font-bold">دوربین</p>
             </div>
           </div>
@@ -164,6 +164,7 @@ const HomePage = () => {
           </form>
         </div>
       </div>
+
   `
 };
 export default HomePage;
