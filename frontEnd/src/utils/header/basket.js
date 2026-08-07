@@ -4,51 +4,58 @@ import {
   saveDataInLocalStorage,
 } from "../localstorage";
 
-const basketBtn = document.querySelector(".basket-btn");
-const clearBasketBtn = document.querySelector(".clear-basket");
-const basketBackground = document.querySelector(".basket-background");
-const basketContent = document.querySelector(".bascket-content");
-const basketTotalProducts = document.querySelector(".basket-items");
-const basketContainer = document.querySelector(".basket-container");
-const bascketPrice = document.querySelector(".basket-price");
+const basketBtn = document.querySelectorAll(".basket-btn");
+const clearBasketBtn = document.querySelectorAll(".clear-basket");
+const basketBackground = document.querySelectorAll(".basket-background");
+const basketContent = document.querySelectorAll(".bascket-content");
+const basketTotalProducts = document.querySelectorAll(".basket-items");
+const basketContainer = document.querySelectorAll(".basket-container");
+const bascketPrice = document.querySelectorAll(".basket-price");
 
 let isBasketOpen = false;
 
-const showOrHideBasket = () => {
-  if (!isBasketOpen) {
-    createBasketElements();
-    calculatePrice();
-    isBasketOpen = true;
-    document.documentElement.classList.add("overflow-hidden");
-    basketBtn.classList.add("z-30");
-    basketBackground.classList.remove("hidden");
-    basketContent.classList.remove("hidden");
-  } else {
-    isBasketOpen = false;
-    document.documentElement.classList.remove("overflow-hidden");
-    basketBtn.classList.remove("z-30");
-    basketBackground.classList.add("hidden");
-    basketContent.classList.add("hidden");
+const showOrHideBasket = (event) => {
+  const { target } = event;
+  const btn = event.target.closest(".basket-btn");
+  if (btn) {
+    if (!isBasketOpen) {
+      createBasketElements();
+      calculatePrice();
+      isBasketOpen = true;
+      document.documentElement.classList.add("overflow-hidden");
+      target.classList.add("z-30");
+      basketBackground.forEach(item=> item.classList.remove("hidden"));
+      basketContent.forEach(item => item.classList.remove("hidden"));
+    } else {
+      isBasketOpen = false;
+      document.documentElement.classList.remove("overflow-hidden");
+      basketBtn.classList.remove("z-30");
+      basketBackground.classList.add("hidden");
+      basketContent.classList.add("hidden");
+    }
   }
 };
 const closeBasketContent = () => {
   if (isBasketOpen) {
     isBasketOpen = false;
     document.documentElement.classList.remove("overflow-hidden");
-    basketBtn.classList.remove("z-30");
-    basketBackground.classList.add("hidden");
-    basketContent.classList.add("hidden");
+    basketBtn.forEach(item => item.classList.remove("z-30"));
+    basketBackground.forEach(item => item.classList.add("hidden"));
+    basketContent.forEach(item => item.classList.add("hidden"));
   }
 };
 const createBasketElements = () => {
-  basketContainer.innerHTML = "";
+  basketContainer.forEach((item) => (item.innerHTML = ""));
   const basketItems = basketItemsFromLocalStorage();
   if (basketItems !== null && basketItems.length) {
-    basketTotalProducts.textContent = basketItems.length;
+    basketTotalProducts.forEach(
+      (item) => (item.textContent = basketItems.length),
+    );
     basketItems.forEach((item) => {
-      basketContainer.insertAdjacentHTML(
-        "beforeend",
-        `
+      basketContainer.forEach((item) =>
+        item.insertAdjacentHTML(
+          "beforeend",
+          `
         <div class="px-2 py-2 flex gap-4 w-full rounded-xl dark:bg-dark-section-bg bg-light-section-bg">
           <img src="${item.image}" class="size-13">
           <div class="flex flex-col w-full">
@@ -68,15 +75,18 @@ const createBasketElements = () => {
           </div>
         </div>
         `,
+        ),
       );
     });
   } else {
     basketTotalProducts.textContent = "0";
-    basketContainer.insertAdjacentHTML(
-      "afterbegin",
-      `
+    basketContainer.forEach((item) =>
+      item.insertAdjacentHTML(
+        "afterbegin",
+        `
         <p class="w-full h-15 flex justify-center items-center dark:text-dark-text-primary text-light-text-primary text-xs">سبد خالی</p>
       `,
+      ),
     );
   }
 };
@@ -119,12 +129,12 @@ const increaseOrDecreaseOrDeleteProductFromBasket = (event) => {
 const calculatePrice = () => {
   const data = getDataFromLocalStorage("basket");
   if (data !== null && data.length) {
-    const totalPrice = data.reduce((price , current) => {
-      return price + current.price * current.count
-    }, 0)    
-    bascketPrice.textContent = totalPrice.toLocaleString();
+    const totalPrice = data.reduce((price, current) => {
+      return price + current.price * current.count;
+    }, 0);
+    bascketPrice.forEach(item => item.textContent = totalPrice.toLocaleString());
   } else {
-    bascketPrice.textContent = "0";
+    bascketPrice.forEach(item => item.textContent = "0");
   }
 };
 const clearBasket = () => {
@@ -133,11 +143,12 @@ const clearBasket = () => {
   createBasketElements();
 };
 
-basketContainer.addEventListener(
-  "click",
-  increaseOrDecreaseOrDeleteProductFromBasket,
+basketContainer.forEach((item) =>
+  item.addEventListener("click", increaseOrDecreaseOrDeleteProductFromBasket),
 );
-clearBasketBtn.addEventListener("click", clearBasket);
-basketBtn.addEventListener("click", showOrHideBasket);
-basketBackground.addEventListener("click", closeBasketContent);
+clearBasketBtn.forEach((item) => item.addEventListener("click", clearBasket));
+basketBtn.forEach((item) => item.addEventListener("click", showOrHideBasket));
+basketBackground.forEach((item) =>
+  item.addEventListener("click", closeBasketContent),
+);
 export default calculatePrice;
