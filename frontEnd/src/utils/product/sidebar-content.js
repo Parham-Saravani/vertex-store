@@ -7,7 +7,7 @@ const createCategories = (data) => {
   categoryContainer.insertAdjacentHTML(
     "afterbegin",
     `
-       <li class="text-[13px] max-lg:text-[10px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/40 hover:bg-brand-accent-hover hover:text-dark-text-primary category-item category-active" data-category="all-products">همه محصولات</li>
+       <li class="text-[13px] max-lg:text-[10px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/10 hover:bg-brand-accent-hover hover:text-dark-text-primary category-item category-active" data-category="all-products">همه محصولات</li>
 
     `,
   );
@@ -15,7 +15,7 @@ const createCategories = (data) => {
     categoryContainer.insertAdjacentHTML(
       "beforeend",
       `
-       <li class="text-[13px] max-lg:text-[10px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/40 hover:bg-brand-accent-hover hover:text-dark-text-primary category-item" data-category="${category}">${category}</li>
+       <li class="text-[13px] max-lg:text-[10px] cursor-pointer dark:text-dark-text-secondary text-light-text-secondary rounded-xl px-2 py-2 transition-colors duration-300 dark:hover:bg-brand-accent-hover/10 hover:bg-brand-accent-hover hover:text-dark-text-primary category-item" data-category="${category}">${category}</li>
 
       `,
     );
@@ -48,12 +48,12 @@ const createSkeletonLoaderForSidebarContent= () => {
   for(let i = 0 ; i < 5 ; i++){
     categoriesContainer.insertAdjacentHTML('beforeend', 
       `
-      <li class="w-full h-4 animate-pulse dark:bg-gray-800 bg-black/40 rounded-xl"></li>
+      <li class="w-full h-4 animate-pulse bg-gray-300 dark:bg-gray-700 rounded-xl"></li>
       `
     )
     brandContainer.insertAdjacentHTML('beforeend', 
       `
-      <li class="w-full h-4 animate-pulse dark:bg-gray-800 bg-black/40 rounded-xl list-none"></li>
+      <li class="w-full h-4 animate-pulse bg-gray-300 dark:bg-gray-700 rounded-xl list-none"></li>
       `
     )
   }

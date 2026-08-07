@@ -10,7 +10,7 @@ const AdminSidebarContent = () => {
                         <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="h-0 overflow-hidden transition-height duration-300 collapse-item">
-                        <ul class="flex flex-col items-end space-y-1 mt-2 pr-6">
+                        <ul class="flex flex-col gap-1  items-end space-y-1 mt-2 pr-6 pl-2">
                             <li class="w-full text-[13px] dark:text-dark-text-secondary text-light-text-setext-dark-text-secondary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-primary hover:text-light-text-primary font-bold rounded-xl user-menu-items dark:hover:bg-dark-card-hover hover:bg-light-card-hover submenu-item" data-page="adminDashboard">
                                 <i class="fa-solid fa-user"></i>
                                 داشبورد
@@ -28,7 +28,7 @@ const AdminSidebarContent = () => {
                         <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="h-0 overflow-hidden transition-height duration-300 collapse-item">
-                        <ul class="flex flex-col items-end space-y-1 mt-2 pr-6">
+                        <ul class="flex flex-col gap-1  items-end space-y-1 mt-2 pr-6 pl-2">
                             <li class="w-full text-[13px] dark:text-dark-text-secondary text-light-text-secotext-dark-text-secondary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-primary hover:text-light-text-primary font-bold rounded-xl user-menu-items dark:hover:bg-dark-card-hover hover:bg-light-card-hover submenu-item"  data-page="products">
                                 <i class="fa-solid fa-box-open"></i>
                                 محصولات
@@ -54,7 +54,7 @@ const AdminSidebarContent = () => {
                         <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="h-0 overflow-hidden transition-height duration-300 collapse-item">
-                        <ul class="flex flex-col items-end space-y-1 mt-2 pr-6">
+                        <ul class="flex flex-col gap-1  items-end space-y-1 mt-2 pr-6 pl-2">
 
                             <li class="w-full text-[13px] dark:text-dark-text-secondary text-light-text-secotext-dark-text-secondary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-primary hover:text-light-text-primary font-bold rounded-xl user-menu-items dark:hover:bg-dark-card-hover hover:bg-light-card-hover submenu-item"  data-page="orders">
                                 <i class="fa-solid fa-bag-shopping"></i>
@@ -84,14 +84,10 @@ const AdminSidebarContent = () => {
                         <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="h-0 overflow-hidden transition-height duration-300 collapse-item">
-                        <ul class="flex flex-col items-end space-y-1 mt-2 pr-6">
+                        <ul class="flex flex-col gap-1  items-end space-y-1 mt-2 pr-6 pl-2">
                             <li class="w-full text-[13px] dark:text-dark-text-secondary text-light-text-secotext-dark-text-secondary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-primary hover:text-light-text-primary font-bold rounded-xl user-menu-items dark:hover:bg-dark-card-hover hover:bg-light-card-hover submenu-item"  data-page="users">
                                 <i class="fa-solid fa-users"></i>
                                 کاربران
-                            </li>
-                            <li class="w-full text-[13px] dark:text-dark-text-secondary text-light-text-secotext-dark-text-secondary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-primary hover:text-light-text-primary font-bold rounded-xl user-menu-items dark:hover:bg-dark-card-hover hover:bg-light-card-hover submenu-item"  data-page="roles">
-                                <i class="fa-solid fa-user-shield"></i>
-                                نقش ها
                             </li>
                         </ul>
                     </div>
@@ -106,7 +102,7 @@ const AdminSidebarContent = () => {
                         <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="h-0 overflow-hidden transition-height duration-300 collapse-item">
-                        <ul class="flex flex-col items-end space-y-1 mt-2 pr-6">
+                        <ul class="flex flex-col gap-1 items-end space-y-1 mt-2 pr-6 pl-2">
                             <li class="w-full text-[13px] dark:text-dark-text-secondary text-light-text-secotext-dark-text-secondary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-primary hover:text-light-text-primary font-bold rounded-xl user-menu-items dark:hover:bg-dark-card-hover hover:bg-light-card-hover submenu-item"  data-page="tickets">
                                 <i class="fa-solid fa-headset"></i>
                                 تیکت ها
@@ -124,7 +120,7 @@ const AdminSidebarContent = () => {
                         <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="h-0 overflow-hidden transition-height duration-300 collapse-item">
-                        <ul class="flex flex-col items-end space-y-1 mt-2 pr-6">
+                        <ul class="flex flex-col gap-1 items-end mt-2 pr-6 pl-2">
                             <li class="w-full text-[13px] dark:text-dark-text-secondary text-light-text-secondary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-primary hover:text-light-text-primary font-bold rounded-xl user-menu-items dark:hover:bg-dark-card-hover hover:bg-light-card-hover submenu-item" data-page="setting">
                                 <i class="fa-solid fa-gear"></i>
                                 تنظیمات

@@ -20,8 +20,6 @@
     </div>
   </div>
 
-
-
   <div class="container mx-auto py-5">
     <!-- Header -->
     <header class="relative w-full max-lg:gap-2 flex items-center justify-between">
@@ -41,7 +39,7 @@
       </a>
       <!-- mobile basket -->
       <div class="hidden relative max-md:flex flex-col">
-        <button class="max-md:border-hidden z-90 max-md:bg-transparent! dark:bg-dark-input-bg border-2 flex  dark:border-dark-input-border border-light-input-border shadow-light-sm dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg rounded-xl text-xl px-2.5 py-3 justify-center items-center cursor-pointer transition-colors duration-300 basket-btn">
+        <button class="max-md:border-hidden z-90 max-md:bg-transparent! dark:bg-dark-input-bg border-2 flex  dark:border-dark-input-border border-light-input-border dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg rounded-xl text-xl px-2.5 py-3 justify-center items-center cursor-pointer transition-colors duration-300 basket-btn">
           <i
             class="fa-solid fa-cart-shopping max-md:text-xl dark:text-dark-text-primary text-light-text-primary text-[15px]"></i>
         </button>
@@ -76,7 +74,7 @@
         </div>
       </div>
       <!-- menu and search input -->
-      <div class="max-md:fixed max-md:flex-col max-md:py-4 max-md:items-start max-md:top-0 dark:max-md:bg-dark-section-bg max-md:bg-light-section-bg max-md:-right-200 max-md:bottom-0 max-md:w-60 max-md:z-3000 flex items-center gap-6 mobile-menu transition-left duration-300">
+      <div class="max-md:fixed max-md:flex-col max-md:py-4 max-md:items-start max-md:top-0 dark:max-md:bg-dark-section-bg max-md:bg-light-section-bg max-md:-right-400 max-md:bottom-0 max-md:w-60 max-md:z-3000 flex items-center gap-6 mobile-menu transition-left duration-300">
         <div class="relative h-full w-full gap-3">
           <div class="hidden max-md:px-4 max-md:flex">
             <div class="hidden items-center w-full justify-between mobile-menu-user-data mobile-move-to-profile cursor-pointer">
@@ -91,13 +89,11 @@
               </div>
               <i class="fa-solid fa-chevron-left dark:text-dark-text-primary text-light-text-primary text-[11px] "></i>
             </div>
-            <button
-              class="bg-linear-90 from-brand-primary to-brand-accent transition-transform duration-300 hover:-translate-y-0.5 w-full h-full text-dark-text-primary rounded-xl py-3 cursor-pointer auth-btn authentication">ورود
+            <button class="bg-linear-90 from-brand-primary to-brand-accent transition-transform duration-300 hover:-translate-y-0.5 w-full h-full text-dark-text-primary rounded-xl py-3 cursor-pointer auth-btn authentication">ورود
               | ثبت نام</button>
           </div>
 
-          <ul
-            class="max-md:mt-6 max-md:w-full max-md:px-4 flex max-md:flex-col gap-1 dark:text-dark-text-primary text-light-text-primary font-bold">
+          <ul class="max-md:mt-6 max-md:w-full max-md:px-4 flex max-md:flex-col gap-1 dark:text-dark-text-primary text-light-text-primary font-bold">
             <li data-page="home"
               class="max-md:w-full max-md:justify-start max-md:pr-5 flex justify-center items-center relative w-25 max-lg:w-18 max-lg:text-xs h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300 menu-active">
               <a href="#">صفحه اصلی</a>
@@ -109,10 +105,6 @@
             <li data-page="home"
               class="max-md:w-full max-md:justify-start max-md:pr-5 flex justify-center items-center relative w-25 max-lg:w-18 max-lg:text-xs h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer  before:transition-colors before:duration-300">
               <a href="#">دسته بندی</a>
-            </li>
-            <li data-page="about"
-              class="max-md:w-full max-md:justify-start max-md:pr-5 flex justify-center items-center relative w-25 max-lg:w-18 max-lg:text-xs h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
-              <a href="#">درباره ما</a>
             </li>
             <li data-page="contact"
               class="max-md:w-full max-md:justify-start max-md:pr-5 flex justify-center items-center relative w-25 max-lg:w-18 max-lg:text-xs h-10 rounded-xl transition-colors duration-300 dark:hover:bg-dark-item-hover-bg hover:bg-light-item-hover-bg cursor-pointer menu-items before:transition-colors before:duration-300">
@@ -516,7 +508,6 @@
       </div>
     </footer>
   </div>
-
 
   <!-- toast -->
   <div class="z-9999 fixed hide top-3 left-2  dark:bg-dark-section-bg bg-light-section-bg rounded-xl toast transition-normal duration-300">

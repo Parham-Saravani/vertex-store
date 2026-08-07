@@ -1,0 +1,185 @@
+const AdminOrdersPage = () => {
+  return `
+  <div class="animate-fadeIn space-y-6">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between">
+
+      <div>
+        <h1 class="text-2xl font-bold dark:text-dark-text-primary text-light-text-primary">
+          سفارش‌ها
+        </h1>
+
+        <p class="text-sm dark:text-dark-text-secondary text-light-text-secondary">
+          مدیریت و پیگیری سفارش‌های کاربران
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+      <div class="rounded-xl p-5 border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-sm max-md:text-xs dark:text-dark-text-secondary text-light-text-secondary">
+              کل سفارش‌ها
+            </p>
+
+            <h3 class="text-3xl max-sm:text-2xl font-bold mt-2 dark:text-dark-text-primary text-light-text-primary">
+              324
+            </h3>
+          </div>
+
+          <div class="size-14 max-sm:size-10 rounded-xl bg-brand-accent/10 flex items-center justify-center">
+            <i class="fa-solid fa-cart-shopping text-2xl text-brand-accent"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-xl p-5 border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-sm max-md:text-xs dark:text-dark-text-secondary text-light-text-secondary">
+              در انتظار پرداخت
+            </p>
+
+            <h3 class="text-3xl max-sm:text-2xl font-bold mt-2 text-yellow-500">
+              18
+            </h3>
+          </div>
+
+          <div class="size-14 max-sm:size-10 rounded-xl bg-yellow-500/10 flex items-center justify-center">
+            <i class="fa-solid fa-clock text-2xl text-yellow-500"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-xl p-5 border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-sm max-md:text-xs dark:text-dark-text-secondary text-light-text-secondary">
+              ارسال شده
+            </p>
+
+            <h3 class="text-3xl max-sm:text-2xl font-bold mt-2 text-blue-500">
+              97
+            </h3>
+          </div>
+
+          <div class="size-14 max-sm:size-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
+            <i class="fa-solid fa-truck-fast text-2xl text-blue-500"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-xl p-5 border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-sm max-md:text-xs dark:text-dark-text-secondary text-light-text-secondary">
+              تکمیل شده
+            </p>
+
+            <h3 class="text-3xl max-sm:text-2xl font-bold mt-2 text-green-500">
+              209
+            </h3>
+          </div>
+
+          <div class="size-14 max-sm:size-10 rounded-xl bg-green-500/10 flex items-center justify-center">
+            <i class="fa-solid fa-circle-check text-2xl text-green-500"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Filters -->
+    <div class="rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-4">
+
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-3">
+
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="جستجوی سفارش..."
+            class="w-full h-12 rounded-xl border dark:border-dark-input-border border-light-input-border px-12 text-sm dark:text-dark-text-primary text-light-text-primary bg-transparent outline-none"
+          />
+          <i class="fa-solid fa-magnifying-glass absolute right-4 top-1/2 -translate-y-1/2 dark:text-dark-text-secondary text-light-text-secondary"></i>
+        </div>
+
+        <select class="h-12 rounded-xl border dark:border-dark-input-border border-light-input-border px-3 text-sm dark:text-dark-text-primary text-light-text-primary bg-transparent">
+          <option>همه وضعیت‌ها</option>
+          <option>در انتظار پرداخت</option>
+          <option>در حال پردازش</option>
+          <option>ارسال شده</option>
+          <option>تکمیل شده</option>
+          <option>لغو شده</option>
+        </select>
+
+
+        <select class="h-12 rounded-xl border dark:border-dark-input-border border-light-input-border px-3 text-sm dark:text-dark-text-primary text-light-text-primary bg-transparent">
+          <option>جدیدترین</option>
+          <option>قدیمی‌ترین</option>
+        </select>
+
+      </div>
+
+    </div>
+
+    <!-- Orders Table -->
+    <div class="overflow-hidden rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg">
+
+      <div class="overflow-x-auto">
+
+        <table class="w-full text-sm">
+
+          <thead>
+            <tr class="border-b dark:border-dark-card-border border-light-card-border dark:text-dark-text-primary text-light-text-primary">
+
+              <th class="text-right p-4 max-sm:text-xs">شناسه</th>
+              <th class="text-right p-4 max-md:hidden">کاربر</th>
+              <th class="text-right p-4 max-sm:hidden">مبلغ</th>
+              <th class="text-right p-4 max-sm:text-xs">وضعیت</th>
+              <th class="text-right p-4 max-sm:text-xs">تاریخ</th>
+              <th class="text-right p-4 max-sm:text-xs">عملیات</th>
+
+            </tr>
+          </thead>
+
+          <tbody class="dark:text-dark-text-secondary text-light-text-secondary">
+
+            <tr class="border-b dark:border-dark-card-border border-light-card-border">
+
+              <td class="p-4 max-md:text-xs">#ORD-5124</td>
+              <td class="p-4 max-md:text-xs max-md:hidden">Parham</td>
+              <td class="p-4 max-sm:hidden">12,500,000 تومان</td>
+
+              <td class="p-4 max-md:text-xs">
+                <span class="px-3 py-1 rounded-full text-xs bg-yellow-500/10 text-yellow-500">
+                  در حال پردازش
+                </span>
+              </td>
+
+              <td class="p-4 max-md:text-xs">1405/05/08</td>
+
+              <td class="p-4 max-md:text-xs">
+                <button class="px-3 py-2 rounded-xl text-brand-accent hover:bg-brand-accent hover:text-white transition-colors duration-300 cursor-pointer">
+                  مشاهده
+                </button>
+              </td>
+
+            </tr>
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>
+  `;
+};
+
+export default AdminOrdersPage;

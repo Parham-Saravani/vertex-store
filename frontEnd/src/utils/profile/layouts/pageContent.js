@@ -8,8 +8,18 @@ import AdminProfilePage from "./adminLayouts/mainPage.js";
 import AdminProductsPage from "./adminLayouts/productPage.js";
 import AdminCategoryPage from "./adminLayouts/categoryPage.js";
 import AdminBrandPage from "./adminLayouts/brandPage.js";
+import AdminOrdersPage from "./adminLayouts/ordersPage.js";
+import AdminDiscountPage from "./adminLayouts/discountPage.js";
+import AdminCommentsPage from "./adminLayouts/commentsPage.js";
+import AdminUsersPage from "./adminLayouts/userPage.js";
+import AdminTicketsPage from "./adminLayouts/ticketPage.js";
+import AdminSettingsPage from "./adminLayouts/settingPage.js";
 
 import createCharts from "./adminLayouts/chart.js";
+
+//! utilities
+import takeAndCreateProducts from "../utils/admin/adminProducts.js";
+
 const changePageContent = (page) => {
   switch (page) {
     case "adminDashboard":
@@ -18,6 +28,7 @@ const changePageContent = (page) => {
       break;
     case "products":
       changePage(AdminProductsPage());
+      takeAndCreateProducts();
       break;
     case "category":
       changePage(AdminCategoryPage());
@@ -26,25 +37,22 @@ const changePageContent = (page) => {
       changePage(AdminBrandPage());
       break;
     case "orders":
-      changePage();
+      changePage(AdminOrdersPage());
       break;
     case "discount":
-      changePage();
+      changePage(AdminDiscountPage());
       break;
     case "comments":
-      changePage();
+      changePage(AdminCommentsPage());
       break;
     case "users":
-      changePage();
-      break;
-    case "roles":
-      changePage();
+      changePage(AdminUsersPage());
       break;
     case "tickets":
-      changePage();
+      changePage(AdminTicketsPage());
       break;
     case "setting":
-      changePage();
+      changePage(AdminSettingsPage());
       break;
     case "userDashboard":
       changePage(UserProfilePage());
