@@ -7,15 +7,21 @@ const ContactPage = () => {
              <div class="my-3 w-full h-0.5 dark:bg-dark-divider bg-light-divider rounded-xl"></div>
 
              <form>
-              <div class="flex gap-2">
-                <div class="flex flex-col grow">
-                  <label for="fullName" class="dark:text-dark-text-primary text-light-text-primary font-bold">نام و نام خانوادگی :</label>
-                  <input id="fullName" type="text" placeholder="نام و نام خانوادگی خود را وارد کنید" class="mt-2 px-3 py-4 grow dark:bg-dark-input-bg bg-light-input-bg rounded-xl border dark:border-dark-input-border border-light-input-border outline-hidden dark:placeholder:text-dark-text-secondary placeholder:text-[13px] dark:text-dark-text-primary text-light-text-primary text-[14px] fullname-input">
+              <div class="grid grid-cols-12 gap-2">
+                <div class="col-span-12 md:col-span-6">
+                  <div class="flex flex-col gap-2">
+                    <label for="fullName" class="dark:text-dark-text-primary text-light-text-primary font-bold">نام و نام خانوادگی :</label>
+                    <input id="fullName" type="text" placeholder="نام و نام خانوادگی خود را وارد کنید" class="mt-2 px-3 py-4 grow dark:bg-dark-input-bg bg-light-input-bg rounded-xl border dark:border-dark-input-border border-light-input-border outline-hidden dark:placeholder:text-dark-text-secondary placeholder:text-[13px] dark:text-dark-text-primary text-light-text-primary text-[14px] fullname-input">
+                  </div>
                 </div>
-                <div class="flex flex-col grow">
-                   <label for="email" class="dark:text-dark-text-primary text-light-text-primary font-bold">ایمیل :</label>
-                    <input id="email" type="email" placeholder="ایمیل خود را وارد کنید" class="mt-2 px-3 py-4 grow dark:bg-dark-input-bg bg-light-input-bg rounded-xl border dark:border-dark-input-border border-light-input-border outline-hidden dark:placeholder:text-dark-text-secondary placeholder:text-[13px] dark:text-dark-text-primary text-light-text-primary text-[14px] email-input">
+
+                <div class="col-span-12 md:col-span-6">
+                  <div class="flex flex-col gap-2">
+                      <label for="email" class="dark:text-dark-text-primary text-light-text-primary font-bold">ایمیل :</label>
+                      <input id="email" type="email" placeholder="ایمیل خود را وارد کنید" class="mt-2 px-3 py-4 grow dark:bg-dark-input-bg bg-light-input-bg rounded-xl border dark:border-dark-input-border border-light-input-border outline-hidden dark:placeholder:text-dark-text-secondary placeholder:text-[13px] dark:text-dark-text-primary text-light-text-primary text-[14px] email-input">
+                  </div>
                 </div>
+                
               </div>
               <div class="mt-3">
                 <label for="test" class="dark:text-dark-text-primary text-light-text-primary font-bold">موضوع :</label>

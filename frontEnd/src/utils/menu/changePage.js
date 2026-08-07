@@ -1,9 +1,9 @@
-import HomePage from "../../pages/home";
-import ContactPage from "../../pages/contant";
-import ProductsPage from "../../pages/products";
-import AboutPage from "../../pages/about";
+import HomePage from "../../pages/home.js";
+import ContactPage from "../../pages/contact.js";
+import ProductsPage from "../../pages/products.js";
+import AboutPage from "../../pages/about.js";
 import ProductsSkeletonLoader from "../../pages/products-skeleton-loader.js";
-import createPriceSlider from "../product/price";
+import createPriceSlider from "../product/price.js";
 import { apiRequestHandler } from "../http.js";
 import { productsHandler } from "../product/createProducts.js";
 import messageHandler from "../message/message.js";
