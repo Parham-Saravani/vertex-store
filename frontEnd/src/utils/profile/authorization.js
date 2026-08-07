@@ -17,11 +17,11 @@ const takeUserData = async () => {
       sidebarHandler();
       changePageContent(role === "admin" ? "adminDashboard" : "userDashboard");
       changeUserData(username, role, email, createdAt, imageUrl);
-    }else{
-      throw new Error('dsfadfsf')
+    } else {
+      throw new Error("dsfadfsf");
     }
   } catch (err) {
-        
+    addErrorMessage();
     hideLoader();
   }
 };
@@ -29,5 +29,8 @@ const hideLoader = () => {
   const loader = document.querySelector(".page-loader");
   loader.classList.add("hidden");
   loader.classList.remove("flex");
+};
+const addErrorMessage = () => {
+  document.body.innerHTML = "";
 };
 window.addEventListener("load", takeUserData);

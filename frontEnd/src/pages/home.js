@@ -1,11 +1,11 @@
-import bannerImage from "../assets/images/banners/banner.png"
-import cameraImage from "../assets/images/camera.png"
-import consoleImage from "../assets/images/console.png"
-import keyboardImage from "../assets/images/keyboard.png"
-import laptopImage from "../assets/images/laptop.png"
-import monitorImage from "../assets/images/monitor.png"
-import mouseImage from "../assets/images/mouse.png"
-import stuffImage from "../assets/images/stuff.png"
+import bannerImage from "../../public/homeImages/banner/banner.png"
+import cameraImage from "../../public/homeImages/camera.png"
+import consoleImage from "../../public/homeImages/console.png"
+import keyboardImage from "../../public/homeImages/keyboard.png"
+import laptopImage from "../../public/homeImages/laptop.png"
+import monitorImage from "../../public/homeImages/monitor.png"
+import mouseImage from "../../public/homeImages/mouse.png"
+import stuffImage from "../../public/homeImages/stuff.png"
 
 
 const HomePage = () => {
