@@ -18,7 +18,7 @@ const ProductPage = () => {
             <div class="mt-4 flex gap-20 max-sm:gap-10 px-6">
               <!-- product image -->
               <div class="animate-fadeIn flex max-sm:size-30 items-center justify-center">
-                <img src="./src/assets/images/camera.png" class="product-image size-75  max-sm:size-30" alt="product-image">
+                <img src="" class="product-image size-75  max-sm:size-30 object-contain" alt="product-image">
               </div>
 
               <div class="animate-fadeIn [direction:ltr] ">

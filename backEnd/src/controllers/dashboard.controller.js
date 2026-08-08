@@ -57,4 +57,4 @@ const takeAllOrders = async (req, res) => {
   const completeOrders = await Order.countDocuments({ status: "complete" });
   res.json({ stats: {totalOrders , deleteOrders , pendingOrders , completeOrders}, orders: allOrders });
 };
-export { takeAndSendData, takeAllUsers, takeAllMessages };
+export { takeAndSendData, takeAllUsers, takeAllMessages , takeAllOrders};

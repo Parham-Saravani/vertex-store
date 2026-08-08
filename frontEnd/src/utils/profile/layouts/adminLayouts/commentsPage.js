@@ -24,9 +24,7 @@ const AdminCommentsPage = () => {
                     کل نظرات
                 </p>
 
-                <h3 class="text-3xl dark:text-dark-text-primary text-light-text-primary font-bold mt-2">
-                    540
-                </h3>
+                <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md active-products"></div>
             </div>
 
             <div class="size-14 rounded-xl bg-brand-accent/10 flex items-center justify-center">
@@ -44,9 +42,7 @@ const AdminCommentsPage = () => {
                     در انتظار تایید
                 </p>
 
-                <h3 class="text-3xl font-bold mt-2 text-yellow-500">
-                    18
-                </h3>
+                <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md active-products"></div>
             </div>
 
             <div class="size-14 rounded-xl bg-yellow-500/10 flex items-center justify-center">
@@ -64,9 +60,7 @@ const AdminCommentsPage = () => {
                     تایید شده
                 </p>
 
-                <h3 class="text-3xl font-bold mt-2 text-green-500">
-                    490
-                </h3>
+                <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md active-products"></div>
             </div>
 
             <div class="size-14 rounded-xl bg-green-500/10 flex items-center justify-center">
@@ -84,9 +78,7 @@ const AdminCommentsPage = () => {
                     رد شده
                 </p>
 
-                <h3 class="text-3xl font-bold mt-2 text-red-500">
-                    32
-                </h3>
+                <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md active-products"></div>
             </div>
 
             <div class="size-14 rounded-xl bg-red-500/10 flex items-center justify-center">

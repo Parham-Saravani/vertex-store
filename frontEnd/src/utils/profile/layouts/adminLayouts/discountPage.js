@@ -32,9 +32,7 @@ const AdminDiscountPage = () => {
           کل کدها
         </p>
 
-        <h3 class="text-3xl font-bold mt-2 dark:text-dark-text-primary text-light-text-primary">
-          24
-        </h3>
+        <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md active-products"></div>
       </div>
 
       <div class="size-14 rounded-xl bg-brand-accent/10 flex items-center justify-center">
@@ -52,9 +50,7 @@ const AdminDiscountPage = () => {
           فعال
         </p>
 
-        <h3 class="text-3xl font-bold mt-2 text-green-500">
-          12
-        </h3>
+        <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md active-products"></div>
       </div>
 
       <div class="size-14 rounded-xl bg-green-500/10 flex items-center justify-center">
@@ -72,9 +68,7 @@ const AdminDiscountPage = () => {
           منقضی شده
         </p>
 
-        <h3 class="text-3xl font-bold mt-2 text-red-500">
-          5
-        </h3>
+        <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md active-products"></div>
       </div>
 
       <div class="size-14 rounded-xl bg-red-500/10 flex items-center justify-center">
@@ -92,9 +86,7 @@ const AdminDiscountPage = () => {
           استفاده شده
         </p>
 
-        <h3 class="text-3xl font-bold mt-2 text-yellow-500">
-          7
-        </h3>
+        <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md active-products"></div>
       </div>
 
       <div class="size-14 rounded-xl bg-yellow-500/10 flex items-center justify-center">

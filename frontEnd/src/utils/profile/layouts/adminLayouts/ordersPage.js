@@ -27,9 +27,7 @@ const AdminOrdersPage = () => {
               کل سفارش‌ها
             </p>
 
-            <h3 class="text-3xl max-sm:text-2xl font-bold mt-2 dark:text-dark-text-primary text-light-text-primary">
-              324
-            </h3>
+            <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md all-orders"></div>
           </div>
 
           <div class="size-14 max-sm:size-10 rounded-xl bg-brand-accent/10 flex items-center justify-center">
@@ -45,9 +43,7 @@ const AdminOrdersPage = () => {
             حذف شده
             </p>
 
-            <h3 class="text-3xl max-sm:text-2xl font-bold mt-2 text-red-500">
-              18
-            </h3>
+            <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md deleted-orders"></div>
           </div>
 
           <div class="size-14 max-sm:size-10 rounded-xl bg-red-500/10 flex items-center justify-center">
@@ -63,9 +59,7 @@ const AdminOrdersPage = () => {
             در انتظار پرداخت
             </p>
 
-            <h3 class="text-3xl max-sm:text-2xl font-bold mt-2 text-yellow-500">
-              97
-            </h3>
+            <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md pending-orders"></div>
           </div>
 
           <div class="size-14 max-sm:size-10 rounded-xl bg-yellow-500/10 flex items-center justify-center">
@@ -81,9 +75,7 @@ const AdminOrdersPage = () => {
               تکمیل شده
             </p>
 
-            <h3 class="text-3xl max-sm:text-2xl font-bold mt-2 text-green-500">
-              209
-            </h3>
+            <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md complete-orders"></div>
           </div>
 
           <div class="size-14 max-sm:size-10 rounded-xl bg-green-500/10 flex items-center justify-center">
@@ -99,13 +91,8 @@ const AdminOrdersPage = () => {
 
       <div class="grid grid-cols-1 lg:grid-cols-4 gap-3">
 
-        <div class="relative">
-          <input
-            type="text"
-            placeholder="جستجوی سفارش..."
-            class="w-full h-12 rounded-xl border dark:border-dark-input-border border-light-input-border px-12 text-sm dark:text-dark-text-primary text-light-text-primary bg-transparent outline-none"
-          />
-          <i class="fa-solid fa-magnifying-glass absolute right-4 top-1/2 -translate-y-1/2 dark:text-dark-text-secondary text-light-text-secondary"></i>
+        <div class="">
+          <input type="text" placeholder="جستجوی سفارش..." class="transition-colors duration-300 focus:border-dark-input-focus w-full h-12 rounded-xl border dark:border-dark-input-border border-light-input-border pr-3 text-sm dark:text-dark-text-secondary text-light-text-secondary bg-transparent outline-none"/>
         </div>
 
         <select class="h-12 rounded-xl border dark:border-dark-input-border border-light-input-border px-3 text-sm dark:text-dark-text-primary text-light-text-primary bg-transparent">
@@ -147,7 +134,7 @@ const AdminOrdersPage = () => {
             </tr>
           </thead>
 
-          <tbody class="dark:text-dark-text-secondary text-light-text-secondary">
+          <tbody class="dark:text-dark-text-secondary text-light-text-secondary orders-table-body">
 
             <tr class="border-b dark:border-dark-card-border border-light-card-border">
 

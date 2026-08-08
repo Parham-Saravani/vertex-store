@@ -16,7 +16,7 @@ import AdminSettingsPage from "./adminLayouts/settingPage.js";
 //! utilities
 import changeMainPageData from "../utils/admin/adminMainPage.js";
 import takeAndCreateProducts from "../utils/admin/adminProducts.js";
-
+import allOrdersHandler from "../utils/admin/adminOrderPage.js";
 import allUsersHandler from "../utils/admin/adminUserPage.js";
 
 const changePageContent = (page) => {
@@ -31,6 +31,7 @@ const changePageContent = (page) => {
       break;
     case "orders":
       changePage(AdminOrdersPage());
+      allOrdersHandler()
       break;
     case "discount":
       changePage(AdminDiscountPage());

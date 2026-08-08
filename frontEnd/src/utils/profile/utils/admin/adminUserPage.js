@@ -1,9 +1,14 @@
 import { apiRequestHandler } from "../../../http.js";
+import  changeStats from '../../utils/changeStats.js'
+
 const allUsersHandler = async () => {
   const data = await apiRequestHandler("/api/dashboard/admin/users");
   const { stats: { totalUsers, deletedUsers , admins , usersCreatedThisWeek} } = data;
   createUsers(data.users);
-  changeStats(totalUsers , deletedUsers , admins , usersCreatedThisWeek);
+  changeStats(".total-users", `<h3 class="text-3xl font-bold mt-2 dark:text-dark-text-primary text-light-text-primary">${totalUsers}</h3>`)
+  changeStats(".total-deleted-users" , `<h3 class="text-3xl font-bold mt-2 text-red-500">${deletedUsers}</h3>`)
+  changeStats(".total-admins" , `<h3 class="text-3xl font-bold mt-2 text-purple-500">${admins}</h3>`)
+  changeStats(".total-new-users" , `<h3 class="text-3xl font-bold mt-2 text-green-500">${usersCreatedThisWeek}</h3>`)
 };
 const createUsers = (data) => {
   const usersContainer = document.querySelector(".users-table-body");
@@ -60,34 +65,6 @@ const createUsers = (data) => {
   });
 };
 
-const changeStats = (totalUsers , deletedUsers , admins, usersCreatedThisWeek) => {
-  changeTotalUsersTitle(totalUsers);
-  changeDeletedUsersTitle(deletedUsers);
-  changeAdminsTitle(admins);
-  changeTotalIncomeTitle(usersCreatedThisWeek);
-};
-const changeTotalUsersTitle = (users) => {
-  const totalUsers = document.querySelector(".total-users");
-  resetClasses(totalUsers);
-  totalUsers.innerHTML = `<h3 class="text-3xl font-bold mt-2 dark:text-dark-text-primary text-light-text-primary">${users}</h3>`;
-};
-const changeDeletedUsersTitle = (deletedUsers) => {
-  const totalDeletedUsers = document.querySelector(".total-deleted-users");
-  resetClasses(totalDeletedUsers);
-  totalDeletedUsers.innerHTML = `<h3 class="text-3xl font-bold mt-2 text-red-500">${deletedUsers}</h3>`;
-};
-const changeAdminsTitle = (admins) => {
-  const totalAdmins = document.querySelector(".total-admins");
-  resetClasses(totalAdmins);
-  totalAdmins.innerHTML = `<h3 class="text-3xl font-bold mt-2 text-purple-500">${admins}</h3>`;
-};
-const changeTotalIncomeTitle = (usersCreatedThisWeek) => {
-  const totalIncome = document.querySelector(".total-new-users");
-  resetClasses(totalIncome);
-  totalIncome.innerHTML = `<h3 class="text-3xl font-bold mt-2 text-green-500">${usersCreatedThisWeek}</h3>`;
-};
 
-const resetClasses = (element) => {
-  element.className = "";
-};
+
 export default allUsersHandler;

@@ -11,25 +11,25 @@ const ContactPage = () => {
                 <div class="col-span-12 md:col-span-6">
                   <div class="flex flex-col gap-2">
                     <label for="fullName" class="dark:text-dark-text-primary text-light-text-primary font-bold">نام و نام خانوادگی :</label>
-                    <input id="fullName" type="text" placeholder="نام و نام خانوادگی خود را وارد کنید" class="mt-2 px-3 py-4 grow dark:bg-dark-input-bg bg-light-input-bg rounded-xl border dark:border-dark-input-border border-light-input-border outline-hidden dark:placeholder:text-dark-text-secondary placeholder:text-[13px] dark:text-dark-text-primary text-light-text-primary text-[14px] fullname-input">
+                    <input id="fullName" type="text" placeholder="نام و نام خانوادگی خود را وارد کنید" class="transition-colors duration-300 focus:border-dark-input-focus mt-2 px-3 py-4 grow dark:bg-dark-input-bg bg-light-input-bg rounded-xl border dark:border-dark-input-border border-light-input-border outline-hidden dark:placeholder:text-dark-text-secondary placeholder:text-[13px] dark:text-dark-text-primary text-light-text-primary text-[14px] fullname-input">
                   </div>
                 </div>
 
                 <div class="col-span-12 md:col-span-6">
                   <div class="flex flex-col gap-2">
                       <label for="email" class="dark:text-dark-text-primary text-light-text-primary font-bold">ایمیل :</label>
-                      <input id="email" type="email" placeholder="ایمیل خود را وارد کنید" class="mt-2 px-3 py-4 grow dark:bg-dark-input-bg bg-light-input-bg rounded-xl border dark:border-dark-input-border border-light-input-border outline-hidden dark:placeholder:text-dark-text-secondary placeholder:text-[13px] dark:text-dark-text-primary text-light-text-primary text-[14px] email-input">
+                      <input id="email" type="email" placeholder="ایمیل خود را وارد کنید" class="transition-colors duration-300 focus:border-dark-input-focus mt-2 px-3 py-4 grow dark:bg-dark-input-bg bg-light-input-bg rounded-xl border dark:border-dark-input-border border-light-input-border outline-hidden dark:placeholder:text-dark-text-secondary placeholder:text-[13px] dark:text-dark-text-primary text-light-text-primary text-[14px] email-input">
                   </div>
                 </div>
                 
               </div>
               <div class="mt-3">
                 <label for="test" class="dark:text-dark-text-primary text-light-text-primary font-bold">موضوع :</label>
-                <input id="test" type="text" placeholder="موضوع پیام" class="mt-2 px-3 py-4 w-full dark:bg-dark-input-bg bg-light-input-bg rounded-xl border dark:border-dark-input-border border-light-input-border outline-hidden dark:placeholder:text-dark-text-secondary placeholder:text-[13px] dark:text-dark-text-primary text-light-text-primary text-[14px] title-input">
+                <input id="test" type="text" placeholder="موضوع پیام" class="transition-colors duration-300 focus:border-dark-input-focus mt-2 px-3 py-4 w-full dark:bg-dark-input-bg bg-light-input-bg rounded-xl border dark:border-dark-input-border border-light-input-border outline-hidden dark:placeholder:text-dark-text-secondary placeholder:text-[13px] dark:text-dark-text-primary text-light-text-primary text-[14px] title-input">
               </div>
               <div class="mt-3">
                 <label for="message" class="dark:text-dark-text-primary text-light-text-primary font-bold">پیام شما :</label>
-                <textarea id="message" placeholder="پیام خود را بنویسید" class="mt-2 px-3 py-4 resize-none w-full h-50 grow dark:bg-dark-input-bg bg-light-input-bg rounded-xl border dark:border-dark-input-border border-light-input-border outline-hidden dark:placeholder:text-dark-text-secondary placeholder:text-[13px] dark:text-dark-text-primary text-light-text-primary text-[14px] message-input"></textarea>
+                <textarea id="message" placeholder="پیام خود را بنویسید" class="transition-colors duration-300 focus:border-dark-input-focus mt-2 px-3 py-4 resize-none w-full h-50 grow dark:bg-dark-input-bg bg-light-input-bg rounded-xl border dark:border-dark-input-border border-light-input-border outline-hidden dark:placeholder:text-dark-text-secondary placeholder:text-[13px] dark:text-dark-text-primary text-light-text-primary text-[14px] message-input"></textarea>
               </div>
               <div class="w-full flex items-center justify-center mt-3">
                 <button class="rounded-xl bg-linear-90 from-brand-primary to-brand-accent w-120 py-3 font-bold text-dark-text-primary cursor-pointer transition-transform duration-300 hover:-translate-y-0.5 submit-btn">ارسال پیام</button>

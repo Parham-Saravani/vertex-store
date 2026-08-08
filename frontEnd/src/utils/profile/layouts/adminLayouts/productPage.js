@@ -116,7 +116,7 @@ const AdminProductsPage = () => {
                         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
 
                             <input type="text" placeholder="جستجو محصول..."
-                                class="h-12 text-xs rounded-xl border dark:text-dark-text-secondary text-light-text-secondary dark:border-dark-input-border border-light-input-border px-4 outline-none">
+                                class="transition-colors duration-300 focus:border-dark-input-focus w-full h-12 rounded-xl border dark:border-dark-input-border border-light-input-border pr-3 text-sm dark:text-dark-text-secondary text-light-text-secondary bg-transparent outline-none">
 
                             <select
                                 class="h-12 text-xs dark:text-dark-text-secondary text-light-text-secondary rounded-xl border dark:border-dark-input-border border-light-input-border px-4 outline-none">
