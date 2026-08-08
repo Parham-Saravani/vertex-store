@@ -190,13 +190,115 @@ const AdminProductsPage = () => {
                                         </td>
 
                                     </tr>                                
+                                    <tr class="border-b dark:border-dark-card-border border-light-card-border animate-pulse">
+
+                                            <td class="px-4 py-4">
+                                            <div class="size-14 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4">
+                                            <div class="h-4 w-32 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4 max-sm:hidden">
+                                            <div class="h-4 w-20 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4 max-md:hidden max-sm:hidden">
+                                            <div class="h-4 w-16 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4 max-sm:hidden">
+                                            <div class="h-4 w-24 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4 max-md:hidden max-sm:hidden">
+                                            <div class="h-4 w-10 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                        <td class="px-4 py-4">
+                                        <div class="flex justify-center gap-2">
+                                            <div class="size-10 rounded-xl bg-gray-300 dark:bg-gray-700"></div>
+                                            <div class="size-10 rounded-xl bg-gray-300 dark:bg-gray-700"></div>
+                                        </div>
+                                        </td>
+
+                                    </tr>                                
+                                    <tr class="border-b dark:border-dark-card-border border-light-card-border animate-pulse">
+
+                                            <td class="px-4 py-4">
+                                            <div class="size-14 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4">
+                                            <div class="h-4 w-32 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4 max-sm:hidden">
+                                            <div class="h-4 w-20 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4 max-md:hidden max-sm:hidden">
+                                            <div class="h-4 w-16 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4 max-sm:hidden">
+                                            <div class="h-4 w-24 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4 max-md:hidden max-sm:hidden">
+                                            <div class="h-4 w-10 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                        <td class="px-4 py-4">
+                                        <div class="flex justify-center gap-2">
+                                            <div class="size-10 rounded-xl bg-gray-300 dark:bg-gray-700"></div>
+                                            <div class="size-10 rounded-xl bg-gray-300 dark:bg-gray-700"></div>
+                                        </div>
+                                        </td>
+
+                                    </tr>                                
+                                    <tr class="border-b dark:border-dark-card-border border-light-card-border animate-pulse">
+
+                                            <td class="px-4 py-4">
+                                            <div class="size-14 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4">
+                                            <div class="h-4 w-32 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4 max-sm:hidden">
+                                            <div class="h-4 w-20 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4 max-md:hidden max-sm:hidden">
+                                            <div class="h-4 w-16 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4 max-sm:hidden">
+                                            <div class="h-4 w-24 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4 max-md:hidden max-sm:hidden">
+                                            <div class="h-4 w-10 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                        <td class="px-4 py-4">
+                                        <div class="flex justify-center gap-2">
+                                            <div class="size-10 rounded-xl bg-gray-300 dark:bg-gray-700"></div>
+                                            <div class="size-10 rounded-xl bg-gray-300 dark:bg-gray-700"></div>
+                                        </div>
+                                        </td>
+
+                                    </tr>                                
                                 </table>
 
                         </div>
 
                     </div>
 
-                    <div class="mt-10 mb-6 [direction:ltr] w-full flex gap-2 items-center justify-center pagination-container">
+                    <div class="hidden mt-10 mb-6 [direction:ltr] w-full flex gap-2 items-center justify-center pagination-container">
                         <button class="flex items-center justify-center text-[15px] dark:bg-dark-card-bg bg-light-card-bg  border dark:border-dark-card-border border-light-card-border dark:text-dark-text-secondary text-light-text-secondary w-12 h-12 rounded-xl transition-colors duration-300 hover:border-dark-card-hover-border cursor-pointer previous-page"><i class="fa-solid fa-chevron-left"></i></button>
                         <div class="flex gap-1 [direction:rtl] pagination-buttons">
 

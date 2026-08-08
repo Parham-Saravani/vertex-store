@@ -6,8 +6,6 @@ import UserFavouritePage from "./userLayouts/favouritePage.js";
 //! admin components
 import AdminProfilePage from "./adminLayouts/mainPage.js";
 import AdminProductsPage from "./adminLayouts/productPage.js";
-import AdminCategoryPage from "./adminLayouts/categoryPage.js";
-import AdminBrandPage from "./adminLayouts/brandPage.js";
 import AdminOrdersPage from "./adminLayouts/ordersPage.js";
 import AdminDiscountPage from "./adminLayouts/discountPage.js";
 import AdminCommentsPage from "./adminLayouts/commentsPage.js";
@@ -15,26 +13,21 @@ import AdminUsersPage from "./adminLayouts/userPage.js";
 import AdminTicketsPage from "./adminLayouts/ticketPage.js";
 import AdminSettingsPage from "./adminLayouts/settingPage.js";
 
-import createCharts from "./adminLayouts/chart.js";
-
 //! utilities
+import changeMainPageData from "../utils/admin/adminMainPage.js";
 import takeAndCreateProducts from "../utils/admin/adminProducts.js";
+
+import allUsersHandler from "../utils/admin/adminUserPage.js";
 
 const changePageContent = (page) => {
   switch (page) {
     case "adminDashboard":
       changePage(AdminProfilePage());
-      createCharts();
+      changeMainPageData();
       break;
     case "products":
       changePage(AdminProductsPage());
       takeAndCreateProducts();
-      break;
-    case "category":
-      changePage(AdminCategoryPage());
-      break;
-    case "brands":
-      changePage(AdminBrandPage());
       break;
     case "orders":
       changePage(AdminOrdersPage());
@@ -47,6 +40,7 @@ const changePageContent = (page) => {
       break;
     case "users":
       changePage(AdminUsersPage());
+      allUsersHandler()
       break;
     case "tickets":
       changePage(AdminTicketsPage());

@@ -7,7 +7,7 @@ const messageSchema = new mongoose.Schema(
     email: { type: String },
     title: { type: String },
     message: { type: String },
-    status: { type: String, default: "pending" },
+    status: { type: String,enum:['close', 'pending', 'open'], default: "pending" },
   },
   { timestamps: true },
 );

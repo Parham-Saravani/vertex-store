@@ -42,16 +42,16 @@ const AdminOrdersPage = () => {
         <div class="flex items-center justify-between">
           <div>
             <p class="text-sm max-md:text-xs dark:text-dark-text-secondary text-light-text-secondary">
-              در انتظار پرداخت
+            حذف شده
             </p>
 
-            <h3 class="text-3xl max-sm:text-2xl font-bold mt-2 text-yellow-500">
+            <h3 class="text-3xl max-sm:text-2xl font-bold mt-2 text-red-500">
               18
             </h3>
           </div>
 
-          <div class="size-14 max-sm:size-10 rounded-xl bg-yellow-500/10 flex items-center justify-center">
-            <i class="fa-solid fa-clock text-2xl text-yellow-500"></i>
+          <div class="size-14 max-sm:size-10 rounded-xl bg-red-500/10 flex items-center justify-center">
+            <i class="fa-solid fa-trash text-2xl text-red-500"></i>
           </div>
         </div>
       </div>
@@ -60,16 +60,16 @@ const AdminOrdersPage = () => {
         <div class="flex items-center justify-between">
           <div>
             <p class="text-sm max-md:text-xs dark:text-dark-text-secondary text-light-text-secondary">
-              ارسال شده
+            در انتظار پرداخت
             </p>
 
-            <h3 class="text-3xl max-sm:text-2xl font-bold mt-2 text-blue-500">
+            <h3 class="text-3xl max-sm:text-2xl font-bold mt-2 text-yellow-500">
               97
             </h3>
           </div>
 
-          <div class="size-14 max-sm:size-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
-            <i class="fa-solid fa-truck-fast text-2xl text-blue-500"></i>
+          <div class="size-14 max-sm:size-10 rounded-xl bg-yellow-500/10 flex items-center justify-center">
+            <i class="fa-solid fa-clock text-2xl text-yellow-500"></i>
           </div>
         </div>
       </div>

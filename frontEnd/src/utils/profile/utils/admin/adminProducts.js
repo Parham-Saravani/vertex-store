@@ -28,7 +28,7 @@ const createProductItems = () => {
     productsContainer.insertAdjacentHTML(
       "beforeend",
       `
-            <tr class="dark:text-dark-text-secondary text-light-text-secondary text-xs border-b dark:border-dark-card-border border-light-card-border">
+            <tr class="animate-fadeIn dark:text-dark-text-secondary text-light-text-secondary text-xs border-b dark:border-dark-card-border border-light-card-border">
 
                                         <td class="px-4 py-4">
                                             <img src="${product.image}" class="size-14 object-contain"
@@ -93,7 +93,7 @@ const changeActiveProductsTitleState = () => {
   const activeProductsTitle = document.querySelector(".active-products");
   resetClasses(activeProductsTitle);
   const activeProducts = filterProducts((item) => item.stock !== 0);
-  activeProductsTitle.innerHTML = `<h3 class="text-3xl font-bold mt-2 dark:text-dark-text-primary text-light-text-primary">${activeProducts.length}</h3>`;
+  activeProductsTitle.innerHTML = `<h3 class="text-3xl font-bold mt-2 text-green-500">${activeProducts.length}</h3>`;
 };
 const changeUnAvailableProductsTitleState = () => {
   const notAvailableProductsTitle = document.querySelector(
@@ -101,12 +101,12 @@ const changeUnAvailableProductsTitleState = () => {
   );
   resetClasses(notAvailableProductsTitle);
   const notAvailableProducts = filterProducts((item) => item.stock === 0);
-  notAvailableProductsTitle.innerHTML = `<h3 class="text-3xl font-bold mt-2 dark:text-dark-text-primary text-light-text-primary">${notAvailableProducts.length}</h3>`;
+  notAvailableProductsTitle.innerHTML = `<h3 class="text-3xl font-bold mt-2 text-red-500">${notAvailableProducts.length}</h3>`;
 };
 const changeProductsCategoryTitleState = () => {
   const ProductsCategoryTitle = document.querySelector(".products-category");
   resetClasses(ProductsCategoryTitle);
-  ProductsCategoryTitle.innerHTML = `<h3 class="text-3xl font-bold mt-2 dark:text-dark-text-primary text-light-text-primary">${takeCategories().length}</h3>`;
+  ProductsCategoryTitle.innerHTML = `<h3 class="text-3xl font-bold mt-2 text-blue-500">${takeCategories().length}</h3>`;
 };
 
 const filterProducts = (condition) => {
@@ -128,6 +128,7 @@ const resetClasses = (element) => {
 
 //! pagination
 const createPaginationButttons = () => {
+  document.querySelector(".pagination-container").classList.remove('hidden');
   const paginationContainer = document.querySelector(".pagination-buttons");
   for (let i = 1; i <= totalPages; i++) {
     paginationContainer.insertAdjacentHTML(
@@ -138,10 +139,10 @@ const createPaginationButttons = () => {
 };
 const paginationHandler = () => {
   const paginationContainer = document.querySelector(".pagination-container");
-  paginationContainer.addEventListener('click', moveToNextOrPreviousPage)
+  paginationContainer.addEventListener("click", moveToNextOrPreviousPage);
 };
 const moveToNextOrPreviousPage = (event) => {
-const nextPage = event.target.closest(".next-page");
+  const nextPage = event.target.closest(".next-page");
   const paginationBtn = event.target.closest(".pagination-button");
   const previousPage = event.target.closest(".previous-page");
   const currentActiveBtn = event.target.closest(
@@ -156,8 +157,8 @@ const nextPage = event.target.closest(".next-page");
   if (nextPage) {
     if (currentPage === totalPages) return;
     else {
-        console.log('nextPage');
-        
+      console.log("nextPage");
+
       scrollToTop();
       addOrRemoveActiveClass(null, "increase");
       currentPage++;
@@ -167,15 +168,15 @@ const nextPage = event.target.closest(".next-page");
   if (previousPage) {
     if (currentPage === 1) return;
     else {
-        console.log('previousPage');
-        
+      console.log("previousPage");
+
       scrollToTop();
       addOrRemoveActiveClass(null, "decrease");
       currentPage--;
       createProductItems();
     }
   }
-}
+};
 const scrollToTop = () => {
   document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
 };

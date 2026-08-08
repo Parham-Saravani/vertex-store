@@ -66,16 +66,14 @@ const loginUser = async (req, res) => {
 
 const takeUserData = async (req, res) => {
   const token = req.params.token;
-  console.log(token);
   const data = jwt.verify(token, process.env.JWT_SECRET);
   const { id: userID } = data;
-  try{
-      const user = await User.findOne({ _id: userID });
-      console.log(user);
-      const { role, username, email, imageUrl, createdAt } = user;
-      res.status(200).json({ role, username, email, imageUrl, createdAt});
-  }catch(err){
-    console.log(err);
-  }
+  try {
+    const user = await User.findOne({ _id: userID });
+    const { role, username, email, imageUrl, createdAt } = user;
+    res.status(200).json({ role, username, email, imageUrl, createdAt });
+  } catch (err) {}
 };
-export { registerNewUser, loginUser, takeUserData };
+
+
+export { registerNewUser, loginUser, takeUserData};
