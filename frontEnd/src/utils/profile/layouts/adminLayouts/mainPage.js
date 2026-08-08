@@ -14,7 +14,7 @@ const AdminProfilePage = () => {
                 <p class="text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     کل محصولات
                 </p>
-                <div class="w-28 h-8 mt-3 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md all-products"></div>
+                <div class="w-30 h-8 mt-3 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md all-products"></div>
             </div>
             <div class="size-14 rounded-xl bg-brand-accent/10 flex items-center justify-center">
                 <i class="fa-solid fa-box-open text-2xl text-brand-accent"></i>
@@ -30,7 +30,7 @@ const AdminProfilePage = () => {
                 <p class="text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     کل سفارش‌ها
                 </p>
-                <div class="w-28 h-8 mt-3 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md all-orders"></div>
+                <div class="w-30 h-8 mt-3 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md all-orders"></div>
             </div>
             <div class="size-14 rounded-xl bg-blue-500/10 flex items-center justify-center">
                 <i class="fa-solid fa-bag-shopping text-2xl text-blue-500"></i>
@@ -48,7 +48,7 @@ const AdminProfilePage = () => {
                 <p class="text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     کاربران
                 </p>
-                <div class="w-28 h-8 mt-3 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md all-users"></div>
+                <div class="w-30 h-8 mt-3 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md all-users"></div>
             </div>
             <div class="size-14 rounded-xl bg-purple-500/10 flex items-center justify-center">
                 <i class="fa-solid fa-users text-2xl text-purple-500"></i>
@@ -65,7 +65,7 @@ const AdminProfilePage = () => {
                 <p class="text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     درآمد کل
                 </p>
-                <div class="w-28 h-8 mt-3 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-income"></div>
+                <div class="w-30 h-8 mt-3 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-income"></div>
             </div>
             <div class="size-14 rounded-xl bg-green-500/10 flex items-center justify-center">
                 <i class="fa-solid fa-sack-dollar text-2xl text-green-500"></i>

@@ -1,19 +1,17 @@
 import { apiRequestHandler } from "../../../http.js";
 import  changeStats from '../../utils/changeStats.js'
-
+import findCreatedTime from "../setCreatedTime.js";
 const allUsersHandler = async () => {
   const data = await apiRequestHandler("/api/dashboard/admin/users");
   const { stats: { totalUsers, deletedUsers , admins , usersCreatedThisWeek} } = data;
   createUsers(data.users);
-  changeStats(".total-users", `<h3 class="text-3xl font-bold mt-2 dark:text-dark-text-primary text-light-text-primary">${totalUsers}</h3>`)
-  changeStats(".total-deleted-users" , `<h3 class="text-3xl font-bold mt-2 text-red-500">${deletedUsers}</h3>`)
-  changeStats(".total-admins" , `<h3 class="text-3xl font-bold mt-2 text-purple-500">${admins}</h3>`)
-  changeStats(".total-new-users" , `<h3 class="text-3xl font-bold mt-2 text-green-500">${usersCreatedThisWeek}</h3>`)
+  changePageStats(totalUsers , deletedUsers , admins , usersCreatedThisWeek)
 };
 const createUsers = (data) => {
   const usersContainer = document.querySelector(".users-table-body");
   usersContainer.innerHTML = "";
-  data.forEach((user) => {
+  if(data.length){
+    data.forEach((user) => {
     usersContainer.insertAdjacentHTML(
       "beforeend",
       `
@@ -41,9 +39,7 @@ const createUsers = (data) => {
 
           </td>
 
-          <td class="p-4 max-xl:text-sm max-sm:hidden">
-            1405/05/01
-          </td>
+          <td class="p-4 max-xl:text-sm max-sm:hidden">${findCreatedTime(user.createdAt)}</td>
 
           <td class="p-4">
 
@@ -63,8 +59,25 @@ const createUsers = (data) => {
             `,
     );
   });
+  }else {
+    const container = document.querySelector("table").parentElement.parentElement;
+    document.querySelector("table").parentElement.remove();
+    container.insertAdjacentHTML('afterbegin',
+        `
+        <div class="w-full flex justify-center items-center py-10 dark:text-dark-text-primary text-light-text-primary">
+            هیچ کاربری ثبت نشده است
+        </div>
+        `
+    )
+  }
 };
 
+const changePageStats = (totalUsers, deletedUsers , admins , usersCreatedThisWeek) => {
+  changeStats(".total-users", `<h3 class="text-3xl font-bold mt-2 dark:text-dark-text-primary text-light-text-primary">${totalUsers}</h3>`)
+  changeStats(".total-deleted-users" , `<h3 class="text-3xl font-bold mt-2 text-red-500">${deletedUsers}</h3>`)
+  changeStats(".total-admins" , `<h3 class="text-3xl font-bold mt-2 text-purple-500">${admins}</h3>`)
+  changeStats(".total-new-users" , `<h3 class="text-3xl font-bold mt-2 text-green-500">${usersCreatedThisWeek}</h3>`)
+}
 
 
 export default allUsersHandler;

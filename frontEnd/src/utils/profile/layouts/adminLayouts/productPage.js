@@ -29,11 +29,11 @@ const AdminProductsPage = () => {
         <div class="flex items-center justify-between">
 
             <div>
-                <p class="text-sm dark:text-dark-text-secondary text-light-text-secondary">
+                <p class="max-md:text-xs text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     کل محصولات
                 </p>
 
-                <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-products"></div>
+                <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-products"></div>
             </div>
 
             <div class="size-14 rounded-xl bg-brand-accent/10 flex items-center justify-center">
@@ -50,11 +50,11 @@ const AdminProductsPage = () => {
         <div class="flex items-center justify-between">
 
             <div>
-                <p class="text-sm dark:text-dark-text-secondary text-light-text-secondary">
+                <p class="max-md:text-xs text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     محصولات فعال
                 </p>
 
-                <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md active-products"></div>
+                <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md active-products"></div>
             </div>
 
             <div class="size-14 rounded-xl bg-green-500/10 flex items-center justify-center">
@@ -71,11 +71,11 @@ const AdminProductsPage = () => {
         <div class="flex items-center justify-between">
 
             <div>
-                <p class="text-sm dark:text-dark-text-secondary text-light-text-secondary">
+                <p class="max-md:text-xs text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     ناموجود
                 </p>
 
-                <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md not-available-products"></div>
+                <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md not-available-products"></div>
             </div>
 
             <div class="size-14 rounded-xl bg-red-500/10 flex items-center justify-center">
@@ -92,11 +92,11 @@ const AdminProductsPage = () => {
         <div class="flex items-center justify-between">
 
             <div>
-                <p class="text-sm dark:text-dark-text-secondary text-light-text-secondary">
+                <p class="max-md:text-xs text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     دسته‌بندی‌ها
                 </p>
 
-                <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md products-category"></div>
+                <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md products-category"></div>
             </div>
 
             <div class="size-14 rounded-xl bg-blue-500/10 flex items-center justify-center">
@@ -156,6 +156,40 @@ const AdminProductsPage = () => {
                                 </thead>
 
                                 <tbody class="admin-products-table-body">
+                                    <tr class="border-b dark:border-dark-card-border border-light-card-border animate-pulse">
+
+                                            <td class="px-4 py-4">
+                                            <div class="size-14 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4">
+                                            <div class="h-4 w-32 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4 max-sm:hidden">
+                                            <div class="h-4 w-20 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4 max-md:hidden max-sm:hidden">
+                                            <div class="h-4 w-16 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4 max-sm:hidden">
+                                            <div class="h-4 w-24 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                            <td class="px-4 py-4 max-md:hidden max-sm:hidden">
+                                            <div class="h-4 w-10 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                            </td>
+
+                                        <td class="px-4 py-4">
+                                        <div class="flex justify-center gap-2">
+                                            <div class="size-10 rounded-xl bg-gray-300 dark:bg-gray-700"></div>
+                                            <div class="size-10 rounded-xl bg-gray-300 dark:bg-gray-700"></div>
+                                        </div>
+                                        </td>
+
+                                    </tr>                                
                                     <tr class="border-b dark:border-dark-card-border border-light-card-border animate-pulse">
 
                                             <td class="px-4 py-4">

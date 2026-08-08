@@ -7,8 +7,6 @@ import UserFavouritePage from "./userLayouts/favouritePage.js";
 import AdminProfilePage from "./adminLayouts/mainPage.js";
 import AdminProductsPage from "./adminLayouts/productPage.js";
 import AdminOrdersPage from "./adminLayouts/ordersPage.js";
-import AdminDiscountPage from "./adminLayouts/discountPage.js";
-import AdminCommentsPage from "./adminLayouts/commentsPage.js";
 import AdminUsersPage from "./adminLayouts/userPage.js";
 import AdminTicketsPage from "./adminLayouts/ticketPage.js";
 import AdminSettingsPage from "./adminLayouts/settingPage.js";
@@ -19,6 +17,7 @@ import takeAndCreateProducts from "../utils/admin/adminProducts.js";
 import allOrdersHandler from "../utils/admin/adminOrderPage.js";
 import allUsersHandler from "../utils/admin/adminUserPage.js";
 
+import allTicketsHandler from "../utils/admin/adminTitcketPage.js";
 const changePageContent = (page) => {
   switch (page) {
     case "adminDashboard":
@@ -33,18 +32,13 @@ const changePageContent = (page) => {
       changePage(AdminOrdersPage());
       allOrdersHandler()
       break;
-    case "discount":
-      changePage(AdminDiscountPage());
-      break;
-    case "comments":
-      changePage(AdminCommentsPage());
-      break;
     case "users":
       changePage(AdminUsersPage());
       allUsersHandler()
       break;
     case "tickets":
       changePage(AdminTicketsPage());
+      allTicketsHandler()
       break;
     case "setting":
       changePage(AdminSettingsPage());

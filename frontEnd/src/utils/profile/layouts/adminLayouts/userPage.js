@@ -24,11 +24,11 @@ const AdminUsersPage = () => {
         <div class="flex items-center justify-between">
 
             <div>
-                <p class="text-sm dark:text-dark-text-secondary text-light-text-secondary">
+                <p class="max-md:text-xs text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     کل کاربران
                 </p>
 
-                <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-users"></div>
+                <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-users"></div>
             </div>
 
             <div class="size-14 rounded-xl bg-brand-accent/10 flex items-center justify-center">
@@ -42,11 +42,11 @@ const AdminUsersPage = () => {
         <div class="flex items-center justify-between">
 
             <div>
-                <p class="text-sm dark:text-dark-text-secondary text-light-text-secondary">
+                <p class="max-md:text-xs text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     کاربران حذف شده
                 </p>
 
-               <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-deleted-users"></div>
+               <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-deleted-users"></div>
             </div>
 
             <div class="size-14 rounded-xl bg-red-500/10 flex items-center justify-center">
@@ -60,11 +60,11 @@ const AdminUsersPage = () => {
         <div class="flex items-center justify-between">
 
             <div>
-                <p class="text-sm dark:text-dark-text-secondary text-light-text-secondary">
+                <p class="max-md:text-xs text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     ادمین‌ها
                 </p>
 
-                <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-admins"></div>
+                <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-admins"></div>
             </div>
 
             <div class="size-14 rounded-xl bg-brand-accent/10 flex items-center justify-center">
@@ -78,11 +78,11 @@ const AdminUsersPage = () => {
         <div class="flex items-center justify-between">
 
             <div>
-                <p class="text-sm dark:text-dark-text-secondary text-light-text-secondary">
+                <p class="max-md:text-xs text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     کاربران جدید
                 </p>
 
-                <div class="w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-new-users"></div>
+                <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-new-users"></div>
             </div>
 
             <div class="size-14 rounded-xl bg-blue-500/10 flex items-center justify-center">

@@ -9,8 +9,6 @@ const sidebarItemsHandler = (event) => {
   const submenuItems = event.target.closest(".submenu-item");
   const userMenuItems = event.target.closest(".user-menu-items");
   if (adminMenuItems) {
-    console.log("adminMainMenuItem");
-
     if (adminMenuItems.nextElementSibling.hasAttribute("style")) {
       adminMenuItems.lastElementChild.classList.remove("rotate-180");
       closeAllCollapseItems();

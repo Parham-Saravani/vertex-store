@@ -31,11 +31,11 @@ const setUserRole = (role) => {
 };
 
 const changeUserAccountDetail = (createdTime, username, email) => {
-  changeCreatedTime(createdTime);
+  findCreatedTime(createdTime);
   changeUserUsername(username);
   changeUserEmail(email);
 };
-const changeCreatedTime = (time) => {
+const findCreatedTime = (time) => {
   const userJoinTime = document.querySelector(".user-join-date");
   const date = new Date(time);
   const calendar = date.toLocaleDateString("fa-IR", {

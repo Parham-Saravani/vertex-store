@@ -1,6 +1,6 @@
 import { apiRequestHandler } from "../../../http.js";
 import changeStats from "../../utils/changeStats.js";
-
+import findCreatedTime from "../setCreatedTime.js";
 const allOrdersHandler = async () => {
   const data = await apiRequestHandler("/api/dashboard/admin/orders");
   console.log(data);
@@ -9,22 +9,7 @@ const allOrdersHandler = async () => {
     stats: { completeOrders, deleteOrders, pendingOrders, totalOrders },
   } = data;
   createUsers(data.orders);
-  changeStats(
-    ".all-orders",
-    `<h3 class="text-3xl font-bold mt-2 dark:text-dark-text-primary text-light-text-primary">${totalOrders}</h3>`,
-  );
-  changeStats(
-    ".deleted-orders",
-    `<h3 class="text-3xl font-bold mt-2 text-red-500">${deleteOrders}</h3>`,
-  );
-  changeStats(
-    ".pending-orders",
-    `<h3 class="text-3xl font-bold mt-2 text-yellow-500">${pendingOrders}</h3>`,
-  );
-  changeStats(
-    ".complete-orders",
-    `<h3 class="text-3xl font-bold mt-2 text-green-500">${completeOrders}</h3>`,
-  );
+  changePageStats(completeOrders, deleteOrders, pendingOrders, totalOrders)
 };
 const createUsers = (data) => {
   const ordersContainer = document.querySelector(".orders-table-body");
@@ -46,7 +31,7 @@ const createUsers = (data) => {
                 </span>
               </td>
 
-              <td class="p-4 max-md:text-xs">1405/05/08</td>
+              <td class="p-4 max-md:text-xs">${findCreatedTime(order.createdAt)}</td>
 
               <td class="p-4 max-md:text-xs">
                 <button class="px-3 py-2 rounded-xl text-brand-accent hover:bg-brand-accent hover:text-white transition-colors duration-300 cursor-pointer">
@@ -58,7 +43,7 @@ const createUsers = (data) => {
             `,
       );
     });
-  } else {
+  }else {
     const container = document.querySelector("table").parentElement.parentElement;
     document.querySelector("table").parentElement.remove();
     container.insertAdjacentHTML('afterbegin',
@@ -70,5 +55,10 @@ const createUsers = (data) => {
     )
   }
 };
-
+const changePageStats = (completeOrders, deleteOrders, pendingOrders, totalOrders) => {
+  changeStats(".all-orders",`<h3 class="text-3xl font-bold mt-2 dark:text-dark-text-primary text-light-text-primary">${totalOrders}</h3>`,);
+  changeStats(".deleted-orders",`<h3 class="text-3xl font-bold mt-2 text-red-500">${deleteOrders}</h3>`,);
+  changeStats(".pending-orders",`<h3 class="text-3xl font-bold mt-2 text-yellow-500">${pendingOrders}</h3>`,);
+  changeStats(".complete-orders",`<h3 class="text-3xl font-bold mt-2 text-green-500">${completeOrders}</h3>`,);
+}
 export default allOrdersHandler;
