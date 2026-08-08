@@ -25,6 +25,7 @@ const sidebarItemsHandler = (event) => {
     return;
   }
   if (submenuItems) {
+    if (submenuItems.classList.contains("profile-submenu-active")) return;
     submenuItemsHandler(submenuItems);
     return;
   }

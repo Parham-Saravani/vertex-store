@@ -12,7 +12,7 @@ const createUsers = (data) => {
     usersContainer.insertAdjacentHTML(
       "beforeend",
       `
-    <tr class="border-b dark:border-dark-card-border border-light-card-border">
+    <tr class="border-b animate-fadeIn dark:border-dark-card-border border-light-card-border">
 
           <td class="p-4 max-xl:text-sm">1</td>
 
@@ -43,11 +43,11 @@ const createUsers = (data) => {
           <td class="p-4">
 
             <div class="flex items-center gap-2">
-              <button class="flex justify-center items-center max-sm:text-xs cursor-pointer size-10 rounded-xl text-brand-primary hover:bg-brand-primary hover:text-white transition-colors">
+              <button class="flex justify-center items-center max-sm:text-xs cursor-pointer size-10 rounded-xl text-brand-primary hover:bg-brand-primary hover:text-white transition-colors" data-id="${user._id}">
                 <i class="fa-solid fa-pen"></i>
               </button>
 
-              <button class="flex justify-center items-center max-sm:text-xs cursor-pointer size-10 rounded-xl text-red-500 hover:bg-red-500 hover:text-white transition-colors">
+              <button class="flex justify-center items-center max-sm:text-xs cursor-pointer size-10 rounded-xl text-red-500 hover:bg-red-500 hover:text-white transition-colors" data-id="${user._id}">
                 <i class="fa-solid fa-trash"></i>
               </button>
             </div>
