@@ -1,7 +1,7 @@
+import { takeUserToken } from "../../../cookie.js";
 import { apiRequestHandler } from "../../../http.js";
-import changeStats from "../../utils/changeStats.js";
 import findCreatedTime from "../setCreatedTime.js";
-import sortHandler from "../pageSort.js";
+
 const status = {
   pending:{
     element:`<span class="px-3 py-1 rounded-full text-xs bg-yellow-500/10 text-yellow-500 max-md:px-1 max-md:text-[8px]">
@@ -19,24 +19,21 @@ const status = {
             </span>`
   }
 }
-const allTicketsHandler = async () => {
-  const data = await apiRequestHandler("/api/dashboard/admin/messages");
-  const {
-    stats: { totalMessages, closedMessages, pendingMessages, openMessages },
-  } = data;
-  createTickets(data.messages);
-  changePageStats(totalMessages, closedMessages, pendingMessages, openMessages)
-  sortHandler()
+
+const userTicketHandler = async () => {
+  const token = takeUserToken();
+  const data = await apiRequestHandler(`/api/messages/${token}`);
+  createUserTickets(data);
 };
-const createTickets = (data) => {
+const createUserTickets = (data) => {
   const ticketsContainer = document.querySelector(".tickets-table-body");
   ticketsContainer.innerHTML = "";
   if (data.length) {
     data.forEach((ticket) => {
       ticketsContainer.insertAdjacentHTML(
-        "beforeend",
+        "afterbegin",
         `
-             <tr class="border-b dark:border-dark-card-border border-light-card-border">
+        <tr class="border-b dark:border-dark-card-border border-light-card-border">
 
                 <td class="p-4 max-md:text-xs max-sm:hidden">${ticket._id}</td>
                 <td class="p-4 max-md:text-xs max-md:w-35 max-md:line-clamp-1 max-sm:w-25 max-md:truncate">${ticket.title}</td>
@@ -55,26 +52,16 @@ const createTickets = (data) => {
                   </button>
                 </td>
 
-              </tr>
-            `,
+              </tr>`,
       );
     });
-  }else {
-    const container = document.querySelector("table").parentElement.parentElement;
-    document.querySelector("table").parentElement.remove();
-    container.insertAdjacentHTML('afterbegin',
-        `
-        <div class="w-full flex justify-center items-center py-10 dark:text-dark-text-primary text-light-text-primary">
-            هیچ تیکتی ثبت نشده است
-        </div>
-        `
-    )
+  } else {
+    const tableWrapper = document.querySelector(".ticket-page-table-wrapper");
+    tableWrapper.innerHTML = "";
+    tableWrapper.insertAdjacentHTML(
+      "afterbegin",
+      `<div class="w-full text-center dark:text-dark-text-secondary text-light-text-secondary p-5 text-sm">هیج تیکتی برای شما ثبت نشده است</div>`,
+    );
   }
 };
-const changePageStats = (totalMessages, closedMessages, pendingMessages, openMessages) => {
-  changeStats(".all-tickets",`<h3 class="text-3xl font-bold mt-2 dark:text-dark-text-primary text-light-text-primary">${totalMessages}</h3>`,);
-  changeStats(".open-tickets",`<h3 class="text-3xl font-bold mt-2 text-red-500">${openMessages}</h3>`,);
-  changeStats(".pending-tickets",`<h3 class="text-3xl font-bold mt-2 text-yellow-500">${pendingMessages}</h3>`,);
-  changeStats(".close-tickets",`<h3 class="text-3xl font-bold mt-2 text-green-500">${closedMessages}</h3>`,);
-}
-export default allTicketsHandler;
+export default userTicketHandler;

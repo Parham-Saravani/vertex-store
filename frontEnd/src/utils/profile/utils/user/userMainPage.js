@@ -2,7 +2,7 @@ import { getDataFromLocalStorage } from "../../../localstorage";
 import changeStats from "../changeStats";
 import { apiRequestHandler } from "../../../http.js";
 import { takeUserToken } from "../../../cookie.js";
-
+import findCreatedTime from "../setCreatedTime.js";
 const userMainPageData = async () => {
   changeUserAccountDetail();
   const data = await takeUserOrders();
@@ -24,17 +24,7 @@ const changeUserAccountDetail = () => {
     `<p class="text-[13px] dark:text-dark-text-secondary text-light-text-secondary">${email}</p>`,
   );
 };
-const findCreatedTime = (time) => {
-  const userJoinTime = document.querySelector(".user-join-date");
-  const date = new Date(time);
-  const calendar = date.toLocaleDateString("fa-IR", {
-    weekday: "long",
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  });
-  return calendar;
-};
+
 
 const takeUserOrders = async (className) => {
   const token = takeUserToken();
@@ -51,25 +41,19 @@ const creteUserProducts = (data) => {
         `
         <li class="user-order-item flex border-b dark:border-dark-divider border-light-divider py-3 items-center justify-between">
           <div class="flex gap-4 items-center">
-              <img src="./public/images/Alienwarem16R2.png" class="size-14" alt="">
+              <img src=${item.products[0].image} class="size-14 object-contain" alt="">
               <div>
+                  <p class="text-xs dark:text-dark-text-secondary text-light-text-secondary">${item.products.length} محصول</p>
                   <p class="text-xs dark:text-dark-text-primary text-light-text-primary">
-                      <span>سفارش</span>
-                      <span class="">44423#</span>
-                  </p>
-                  <p class="text-xs dark:text-dark-text-secondary text-light-text-secondary">2
-                       محصول</p>
-                  <p class="text-xs dark:text-dark-text-primary text-light-text-primary">
-                      <span>4,453,000</span>
+                      <span>${item.totalPrice.toLocaleString('fa-IR')}</span>
                       <span>تومان</span>
                   </p>
               </div>
           </div>
           <div class="flex gap-3 items-center">
-              <p class="text-xs dark:text-dark-text-secondary text-light-text-secondary">16
-                   تیر 1403</p>
+              <p class="text-xs dark:text-dark-text-secondary text-light-text-secondary">${findCreatedTime(item.createdAt)}</p>
               <span class="cursor-pointer">
-                  <i class="fa-solid fa-chevron-left text-xs dark:text-dark-text-primary text-light-text-primary"></i>
+                  <i class="fa-solid fa-chevron-left text-xs dark:text-dark-text-primary text-light-text-primary" data-id="${item._id}"></i>
               </span>
           </div>
         </li>

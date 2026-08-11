@@ -8,11 +8,11 @@ const allOrdersHandler = async () => {
   const {
     stats: { completeOrders, deleteOrders, pendingOrders, totalOrders },
   } = data;
-  createUsers(data.orders);
+  createOrders(data.orders);
   changePageStats(completeOrders, deleteOrders, pendingOrders, totalOrders)
   sortHandler()
 };
-const createUsers = (data) => {
+const createOrders = (data) => {
   const ordersContainer = document.querySelector(".orders-table-body");
   ordersContainer.innerHTML = "";
   if (data.length) {

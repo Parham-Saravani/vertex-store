@@ -1,7 +1,7 @@
 const UserOrderPage = () => {
   return`
      <!-- orders -->
-    <div class="animate-fadeIn px-5 w-full">
+    <div class="animate-fadeIn w-full">
             <div class="flex justify-between items-center">
                 <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary">سفارش ها</h2>
                 <div class="flex items-center gap-3">
@@ -28,8 +28,8 @@ const UserOrderPage = () => {
                         <thead class="dark:text-dark-text-primary text-light-text-primary border-b dark:border-dark-card-border border-light-card-border">
                             <tr>
                                 <th class="py-4 px-4 text-right max-lg:text-xs max-sm:text-xs">شناسه</th>
-                                <th class="py-4 px-4 text-right max-lg:text-xs max-sm:text-xs">محصولات</th>
-                                <th class="py-4 px-4 text-right max-lg:text-xs max-sm:text-xs">مجموع</th>
+                                <th class="py-4 px-4 text-right max-lg:text-xs max-sm:text-xs max-sm:hidden">محصولات</th>
+                                <th class="py-4 px-4 text-right max-lg:text-xs max-sm:text-xs max-sm:hidden">مجموع</th>
                                 <th class="py-4 px-4 text-right max-lg:text-xs max-sm:text-xs">وضیعت</th>
                                 <th class="py-4 px-4 text-right max-lg:text-xs max-sm:text-xs">تاریخ</th>
                                 <th class="py-4 px-4 text-right max-lg:text-xs max-sm:text-xs">عملیات</th>

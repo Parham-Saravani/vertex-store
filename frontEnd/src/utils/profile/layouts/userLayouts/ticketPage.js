@@ -1,7 +1,7 @@
 const UserTicketPage = () => {
   return`
     <!-- ticket page -->
-       <div class="animate-fadeIn w-full px-5">    
+       <div class="animate-fadeIn w-full">    
             <div class="flex justify-between items-center">
                 <h2 class="font-bold dark:text-dark-text-primary text-light-text-primary">تیکت ها</h2>
                 <div class="flex items-center gap-3">
@@ -21,26 +21,188 @@ const UserTicketPage = () => {
                 </div>
             </div>
 
-            <div class="flex flex-col gap-1 mt-10 tickets-container">
-                <!--<div class="w-full flex justify-between items-center rounded-xl px-3 py-4 dark:bg-dark-section-bg bg-light-section-bg border dark:border-dark-card-border border-light-card-border cursor-pointer transition-colors duration-300 dark:hover:bg-dark-card-hover hover:bg-light-card-hover">
-                    <div class="flex items-center gap-7">
-                        <p class="flex text-xs gap-2 items-center dark:text-dark-text-primary text-light-text-primary">
-                            <span>موضوع:</span>
-                            <span>کار نکردن صفحه پرداخت</span>
-                        </p>
-                        <p class="flex text-xs gap-2 items-center dark:text-dark-text-primary text-light-text-primary">
-                            <span>تاریخ:</span>
-                            <span>14 تیر 1403</span>
-                        </p>
-                    </div>
-                    <div class="flex gap-2 items-center">
-                        <span class="text-xs bg-green-700/40 text-green-600 px-2 py-1 rounded-lg">ارسال شده</span>
-                        <button class="flex items-center justify-center rounded-lg px-0.5 py-1 cursor-pointer hover:scale-105 transition-transform duration-300">
-                            <i class="fa-solid fa-chevron-left text-[11px] dark:text-dark-text-primary text-light-text-primary"></i>
-                        </button>
-                    </div>
-                </div>-->
-            </div>
+    <div class="overflow-hidden rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg mt-10 ticket-page-table-wrapper">
+
+        <div class="overflow-x-auto">
+
+          <table class="w-full text-sm">
+
+            <thead>
+              <tr class="border-b dark:text-dark-text-primary text-light-text-primary dark:border-dark-card-border border-light-card-border">
+
+                <th class="text-right p-4 max-md:text-xs max-sm:hidden">شناسه</th>
+                <th class="text-right p-4 max-md:text-xs">عنوان</th>
+                <th class="text-right p-4 max-md:hidden">کاربر</th>
+                <th class="text-right p-4 max-md:text-xs">وضعیت</th>
+                <th class="text-right p-4 max-md:text-xs">تاریخ</th>
+                <th class="text-right p-4 max-md:text-xs">عملیات</th>
+
+              </tr>
+            </thead>
+
+            <tbody class="dark:text-dark-text-secondary text-light-text-secondary tickets-table-body">
+
+              <tr class="border-b dark:border-dark-card-border border-light-card-border">
+
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-40 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+              <td class="p-4 max-md:text-xs max-md:hidden">
+                <div class="animate-pulse w-20 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+              <td class="p-4 max-sm:hidden">
+                <div class="animate-pulse w-30 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-15 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-15 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-20 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+
+
+            </tr>
+              <tr class="border-b dark:border-dark-card-border border-light-card-border">
+
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-40 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+              <td class="p-4 max-md:text-xs max-md:hidden">
+                <div class="animate-pulse w-20 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+              <td class="p-4 max-sm:hidden">
+                <div class="animate-pulse w-30 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-15 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-15 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-20 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+
+              
+
+            </tr>
+              <tr class="border-b dark:border-dark-card-border border-light-card-border">
+
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-40 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+              <td class="p-4 max-md:text-xs max-md:hidden">
+                <div class="animate-pulse w-20 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+              <td class="p-4 max-sm:hidden">
+                <div class="animate-pulse w-30 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-15 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-15 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-20 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+
+             
+
+            </tr>
+              <tr class="border-b dark:border-dark-card-border border-light-card-border">
+
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-40 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+              <td class="p-4 max-md:text-xs max-md:hidden">
+                <div class="animate-pulse w-20 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+              <td class="p-4 max-sm:hidden">
+                <div class="animate-pulse w-30 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-15 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-15 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-20 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+
+              
+            </tr>
+              <tr class="border-b dark:border-dark-card-border border-light-card-border">
+
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-40 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+              <td class="p-4 max-md:text-xs max-md:hidden">
+                <div class="animate-pulse w-20 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+              <td class="p-4 max-sm:hidden">
+                <div class="animate-pulse w-30 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-15 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-15 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-20 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+
+              
+
+            </tr>
+              <tr class="border-b dark:border-dark-card-border border-light-card-border">
+
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-40 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+              <td class="p-4 max-md:text-xs max-md:hidden">
+                <div class="animate-pulse w-20 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+              <td class="p-4 max-sm:hidden">
+                <div class="animate-pulse w-30 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-15 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-15 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+
+              <td class="p-4 max-md:text-xs">
+                <div class="animate-pulse w-20 h-5 rounded bg-gray-300 dark:bg-gray-700"></div>
+              </td>
+
+             
+
+            </tr>
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
        </div>
     `;
 };

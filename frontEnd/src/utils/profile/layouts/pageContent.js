@@ -22,6 +22,7 @@ import allTicketsHandler from "../utils/admin/adminTitcketPage.js";
 // user
 import { userMainPageData } from "../utils/user/userMainPage.js";
 import userOrderHandler from "../utils/user/userOrderPage.js";
+import userTicketHandler from "../utils/user/userTicketPage.js";
 
 const changePageContent = (page) => {
   switch (page) {
@@ -61,6 +62,7 @@ const changePageContent = (page) => {
       break;
     case "userTickets":
       changePage(UserTicketPage());
+      userTicketHandler()
   }
 };
 const changePage = (content) => {

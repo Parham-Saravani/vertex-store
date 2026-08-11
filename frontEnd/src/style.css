@@ -294,6 +294,9 @@ html {
 .user-order-item:last-child {
   border : none;
 }
+tbody tr:last-child{
+  border: none;
+}
 
 /* fonts */
 @font-face {
