@@ -20,7 +20,8 @@ import allUsersHandler from "../utils/admin/adminUserPage.js";
 import allTicketsHandler from "../utils/admin/adminTitcketPage.js";
 
 // user
-import userMainPageData from "../utils/user/userMainPage.js";
+import { userMainPageData } from "../utils/user/userMainPage.js";
+import userOrderHandler from "../utils/user/userOrderPage.js";
 
 const changePageContent = (page) => {
   switch (page) {
@@ -53,6 +54,7 @@ const changePageContent = (page) => {
       break;
     case "userOrders":
       changePage(UserOrderPage());
+      userOrderHandler()
       break;
     case "userFavourites":
       changePage(UserFavouritePage());

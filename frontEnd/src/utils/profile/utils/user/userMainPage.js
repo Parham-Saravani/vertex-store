@@ -3,16 +3,17 @@ import changeStats from "../changeStats";
 import { apiRequestHandler } from "../../../http.js";
 import { takeUserToken } from "../../../cookie.js";
 
-const userMainPageData = () => {
+const userMainPageData = async () => {
   changeUserAccountDetail();
-  takeUserOrders();
+  const data = await takeUserOrders();
+  creteUserProducts(data);
 };
 const changeUserAccountDetail = () => {
   const data = getDataFromLocalStorage("userData");
   const { username, email, createdAt } = data;
   changeStats(
     ".user-join-date",
-    `<p class="text-[13px] dark:text-dark-text-secondary text-light-text-secondary">${findCreatedTime(createdAt)}</p>`,
+    `<p class="[direction:ltr] text-[13px] dark:text-dark-text-secondary text-light-text-secondary">${findCreatedTime(createdAt)}</p>`,
   );
   changeStats(
     ".user-username",
@@ -35,11 +36,10 @@ const findCreatedTime = (time) => {
   return calendar;
 };
 
-const takeUserOrders = async () => {
-  const token = takeUserToken()
+const takeUserOrders = async (className) => {
+  const token = takeUserToken();
   const data = await apiRequestHandler(`/api/orders/${token}`);
-  console.log(data);
-  creteUserProducts(data);
+  return data;
 };
 const creteUserProducts = (data) => {
   const userProductsContainer = document.querySelector(".user-orders");
@@ -49,7 +49,7 @@ const creteUserProducts = (data) => {
       userProductsContainer.insertAdjacentHTML(
         "afterbegin",
         `
-        <li class="flex border-b dark:border-dark-divider border-light-divider py-3 items-center justify-between">
+        <li class="user-order-item flex border-b dark:border-dark-divider border-light-divider py-3 items-center justify-between">
           <div class="flex gap-4 items-center">
               <img src="./public/images/Alienwarem16R2.png" class="size-14" alt="">
               <div>
@@ -77,10 +77,12 @@ const creteUserProducts = (data) => {
         `,
       );
     });
-  } 
-  else {
-    userProductsContainer.parentElement.classList.add('h-35!')
-    userProductsContainer.insertAdjacentHTML('afterbegin', `<div class="w-full text-center dark:text-dark-text-secondary text-light-text-secondary pt-7 text-sm">هیج سفارشی برای شما ثبت نشده است</div>`)
+  } else {
+    userProductsContainer.parentElement.classList.add("h-35!");
+    userProductsContainer.insertAdjacentHTML(
+      "afterbegin",
+      `<div class="w-full text-center dark:text-dark-text-secondary text-light-text-secondary pt-7 text-sm">هیج سفارشی برای شما ثبت نشده است</div>`,
+    );
   }
 };
-export default userMainPageData;
+export { userMainPageData, takeUserOrders };

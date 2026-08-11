@@ -1,9 +1,14 @@
 import changeStats from "./changeStats";
-
-const changeProfileImage = (username , userImage) => {
-  changeImageStyles(userImage, username);
+const changeHeaderData = (username, userImage, role) => {
+  changeHeaderUsernameAndRole(username , role)
+  changeImageStyles(username, userImage);
 };
-const changeImageStyles = (imageUrl, username) => {
+
+const changeHeaderUsernameAndRole = (username , role) => {
+  document.querySelectorAll(".profile-username").forEach(item=> item.textContent = username);
+  document.querySelectorAll(".profile-role").forEach(item=> item.textContent = role === "admin" ? 'Administrator' : 'User');
+}
+const changeImageStyles = (username , imageUrl) => {  
   const profileImage = document.querySelectorAll(".profile-image");
   const profileAvatar = document.querySelectorAll(".profile-avatar");
   if (imageUrl) {
@@ -15,4 +20,4 @@ const changeImageStyles = (imageUrl, username) => {
   }
 };
 
-export default changeProfileImage;
+export default changeHeaderData;

@@ -3,7 +3,7 @@ import { apiRequestHandler } from "../http";
 import changeHeaderContentHandler from "./layouts/headerLayout";
 import changeSidebarContentHandler from "./layouts/sidebarLayout";
 import { changePageContent } from "./layouts/pageContent";
-import changeProfileImage from "./utils/changeProfileImage.js";
+import changeHeaderData from "./utils/changeProfileImage.js";
 import sidebarHandler from "./sidebar.js";
 import { saveDataInLocalStorage } from "../localstorage.js";
 
@@ -18,9 +18,14 @@ const takeUserData = async () => {
       changeSidebarContentHandler(role);
       sidebarHandler();
       changePageContent(role === "admin" ? "adminDashboard" : "userDashboard");
-      changeProfileImage(username, imageUrl);
-      if (role === "user") {        
-        saveDataInLocalStorage('userData', {username,imageUrl,email,createdAt})
+      changeHeaderData(username, imageUrl, role);
+      if (role === "user") {
+        saveDataInLocalStorage("userData", {
+          username,
+          imageUrl,
+          email,
+          createdAt,
+        });
       }
     } else {
       throw new Error("dsfadfsf");

@@ -23,26 +23,161 @@ const UserOrderPage = () => {
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col gap-1 mt-10">
-                <!--<div class="w-full flex justify-between items-center rounded-xl px-3 py-4 dark:bg-dark-section-bg bg-light-section-bg border dark:border-dark-card-border border-light-card-border cursor-pointer transition-colors duration-300 dark:hover:bg-dark-card-hover hover:bg-light-card-hover">
-                    <div class="flex items-center gap-7">
-                        <p class="flex gap-1 text-xs items-center dark:text-dark-text-primary text-light-text-primary">
-                            <span>کد سفارش:</span>
-                            <span>#89034128</span>
-                        </p>
-                        <p class="flex text-xs gap-2 items-center dark:text-dark-text-primary text-light-text-primary">
-                            <span>تاریخ:</span>
-                            <span>14 تیر 1403</span>
-                        </p>
-                    </div>
-                    <div class="flex gap-2 items-center">
-                        <span class="text-xs bg-green-700/40 text-green-600 px-2 py-1 rounded-lg">ارسال شده</span>
-                        <button class="flex items-center justify-center rounded-lg px-0.5 py-1 cursor-pointer hover:scale-105 transition-transform duration-300">
-                            <i class="fa-solid fa-chevron-left text-[11px] dark:text-dark-text-primary text-light-text-primary"></i>
-                        </button>
-                    </div>
-                </div>->
+            <div class="rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg overflow-hidden mt-10 order-page-table-wrapper">
+                    <table class="w-full">
+                        <thead class="dark:text-dark-text-primary text-light-text-primary border-b dark:border-dark-card-border border-light-card-border">
+                            <tr>
+                                <th class="py-4 px-4 text-right max-lg:text-xs max-sm:text-xs">شناسه</th>
+                                <th class="py-4 px-4 text-right max-lg:text-xs max-sm:text-xs">محصولات</th>
+                                <th class="py-4 px-4 text-right max-lg:text-xs max-sm:text-xs">مجموع</th>
+                                <th class="py-4 px-4 text-right max-lg:text-xs max-sm:text-xs">وضیعت</th>
+                                <th class="py-4 px-4 text-right max-lg:text-xs max-sm:text-xs">تاریخ</th>
+                                <th class="py-4 px-4 text-right max-lg:text-xs max-sm:text-xs">عملیات</th>
+                            </tr>
+                        </thead>
+                        <tbody class="user-order-table-body">
+                            <tr class="border-b dark:border-dark-card-border border-light-card-border animate-pulse">
+                                <td class="px-4 py-4">
+                                    <div class="h-4 w-35 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
 
+                                <td class="px-4 py-4">
+                                    <div class="h-4 w-10 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4 max-sm:hidden">
+                                    <div class="h-4 w-25 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4 max-md:hidden max-sm:hidden">
+                                    <div class="h-4 w-16 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4 max-sm:hidden">
+                                    <div class="h-4 w-24 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4">
+                                <div class="flex gap-2">
+                                    <div class="size-10 rounded-xl bg-gray-300 dark:bg-gray-700"></div>
+                                    <div class="size-10 rounded-xl bg-gray-300 dark:bg-gray-700"></div>
+                                </div>
+                                </td>
+                            </tr>        
+                            <tr class="border-b dark:border-dark-card-border border-light-card-border animate-pulse">
+                                <td class="px-4 py-4">
+                                    <div class="h-4 w-35 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4">
+                                    <div class="h-4 w-10 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4 max-sm:hidden">
+                                    <div class="h-4 w-25 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4 max-md:hidden max-sm:hidden">
+                                    <div class="h-4 w-16 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4 max-sm:hidden">
+                                    <div class="h-4 w-24 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4">
+                                <div class="flex gap-2">
+                                    <div class="size-10 rounded-xl bg-gray-300 dark:bg-gray-700"></div>
+                                    <div class="size-10 rounded-xl bg-gray-300 dark:bg-gray-700"></div>
+                                </div>
+                                </td>
+                            </tr>        
+                            <tr class="border-b dark:border-dark-card-border border-light-card-border animate-pulse">
+                                <td class="px-4 py-4">
+                                    <div class="h-4 w-35 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4">
+                                    <div class="h-4 w-10 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4 max-sm:hidden">
+                                    <div class="h-4 w-25 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4 max-md:hidden max-sm:hidden">
+                                    <div class="h-4 w-16 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4 max-sm:hidden">
+                                    <div class="h-4 w-24 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4">
+                                <div class="flex gap-2">
+                                    <div class="size-10 rounded-xl bg-gray-300 dark:bg-gray-700"></div>
+                                    <div class="size-10 rounded-xl bg-gray-300 dark:bg-gray-700"></div>
+                                </div>
+                                </td>
+                            </tr>        
+                            <tr class="border-b dark:border-dark-card-border border-light-card-border animate-pulse">
+                                <td class="px-4 py-4">
+                                    <div class="h-4 w-35 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4">
+                                    <div class="h-4 w-10 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4 max-sm:hidden">
+                                    <div class="h-4 w-25 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4 max-md:hidden max-sm:hidden">
+                                    <div class="h-4 w-16 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4 max-sm:hidden">
+                                    <div class="h-4 w-24 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4">
+                                <div class="flex gap-2">
+                                    <div class="size-10 rounded-xl bg-gray-300 dark:bg-gray-700"></div>
+                                    <div class="size-10 rounded-xl bg-gray-300 dark:bg-gray-700"></div>
+                                </div>
+                                </td>
+                            </tr>        
+                            <tr class="border-b dark:border-dark-card-border border-light-card-border animate-pulse">
+                                <td class="px-4 py-4">
+                                    <div class="h-4 w-35 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4">
+                                    <div class="h-4 w-10 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4 max-sm:hidden">
+                                    <div class="h-4 w-25 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4 max-md:hidden max-sm:hidden">
+                                    <div class="h-4 w-16 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4 max-sm:hidden">
+                                    <div class="h-4 w-24 rounded bg-gray-300 dark:bg-gray-700"></div>
+                                </td>
+
+                                <td class="px-4 py-4">
+                                <div class="flex gap-2">
+                                    <div class="size-10 rounded-xl bg-gray-300 dark:bg-gray-700"></div>
+                                    <div class="size-10 rounded-xl bg-gray-300 dark:bg-gray-700"></div>
+                                </div>
+                                </td>
+                            </tr>        
+                        </tbody>
+                    </table>
             </div>
         </div>
     `;

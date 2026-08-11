@@ -100,7 +100,7 @@
   left: 50%;
 }
 
-.overlay-show{
+.overlay-show {
   opacity: 1;
   z-index: 200;
 }
@@ -290,6 +290,11 @@ html {
   @apply bg-red-600;
 }
 
+/* profile styles */
+.user-order-item:last-child {
+  border : none;
+}
+
 /* fonts */
 @font-face {
   font-family: "VazirMatn";
@@ -360,8 +365,8 @@ html {
 
 @theme {
   /* SVG Colors */
-  --color-svg-dark :#98a2b3;
-  --color-svg-light :#344054;
+  --color-svg-dark: #98a2b3;
+  --color-svg-light: #344054;
   /* BRAND COLORS */
 
   --color-brand-primary: #3b82f6;
@@ -486,7 +491,7 @@ html {
     width: 5rem;
   }
 }
-@media (max-width : 768px) {
+@media (max-width: 768px) {
   .menu-active::before {
     width: 0;
   }
