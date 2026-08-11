@@ -1,15 +1,16 @@
 import { apiRequestHandler } from "../../../http.js";
 import changeStats from "../../utils/changeStats.js";
 import findCreatedTime from "../setCreatedTime.js";
+import sortHandler from "../pageSort.js";
+
 const allOrdersHandler = async () => {
   const data = await apiRequestHandler("/api/dashboard/admin/orders");
-  console.log(data);
-
   const {
     stats: { completeOrders, deleteOrders, pendingOrders, totalOrders },
   } = data;
   createUsers(data.orders);
   changePageStats(completeOrders, deleteOrders, pendingOrders, totalOrders)
+  sortHandler()
 };
 const createUsers = (data) => {
   const ordersContainer = document.querySelector(".orders-table-body");

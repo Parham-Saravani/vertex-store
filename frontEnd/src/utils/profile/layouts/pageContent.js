@@ -12,12 +12,16 @@ import AdminTicketsPage from "./adminLayouts/ticketPage.js";
 import AdminSettingsPage from "./adminLayouts/settingPage.js";
 
 //! utilities
+// admin
 import changeMainPageData from "../utils/admin/adminMainPage.js";
 import takeAndCreateProducts from "../utils/admin/adminProducts.js";
 import allOrdersHandler from "../utils/admin/adminOrderPage.js";
 import allUsersHandler from "../utils/admin/adminUserPage.js";
-
 import allTicketsHandler from "../utils/admin/adminTitcketPage.js";
+
+// user
+import userMainPageData from "../utils/user/userMainPage.js";
+
 const changePageContent = (page) => {
   switch (page) {
     case "adminDashboard":
@@ -30,21 +34,22 @@ const changePageContent = (page) => {
       break;
     case "orders":
       changePage(AdminOrdersPage());
-      allOrdersHandler()
+      allOrdersHandler();
       break;
     case "users":
       changePage(AdminUsersPage());
-      allUsersHandler()
+      allUsersHandler();
       break;
     case "tickets":
       changePage(AdminTicketsPage());
-      allTicketsHandler()
+      allTicketsHandler();
       break;
     case "setting":
       changePage(AdminSettingsPage());
       break;
     case "userDashboard":
       changePage(UserProfilePage());
+      userMainPageData();
       break;
     case "userOrders":
       changePage(UserOrderPage());

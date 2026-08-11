@@ -23,14 +23,14 @@ const AdminOrdersPage = () => {
       <div class="rounded-xl p-5 border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg">
         <div class="flex items-center justify-between">
           <div>
-            <p class="text-sm max-md:text-xs dark:text-dark-text-secondary text-light-text-secondary">
+            <p class="max-xl:text-xs max-md:text-sm text-sm dark:text-dark-text-secondary text-light-text-secondary">
               کل سفارش‌ها
             </p>
 
             <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md all-orders"></div>
           </div>
 
-          <div class="size-14 max-sm:size-10 rounded-xl bg-brand-accent/10 flex items-center justify-center">
+          <div class="size-14 max-lg:size-11 max-md:size-14  rounded-xl bg-brand-accent/10 flex items-center justify-center">
             <i class="fa-solid fa-cart-shopping text-2xl text-brand-accent"></i>
           </div>
         </div>
@@ -39,14 +39,14 @@ const AdminOrdersPage = () => {
       <div class="rounded-xl p-5 border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg">
         <div class="flex items-center justify-between">
           <div>
-            <p class="text-sm max-md:text-xs dark:text-dark-text-secondary text-light-text-secondary">
+            <p class="max-xl:text-xs max-md:text-sm text-sm dark:text-dark-text-secondary text-light-text-secondary">
             حذف شده
             </p>
 
             <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md deleted-orders"></div>
           </div>
 
-          <div class="size-14 max-sm:size-10 rounded-xl bg-red-500/10 flex items-center justify-center">
+          <div class="size-14 max-lg:size-11 max-md:size-14 rounded-xl bg-red-500/10 flex items-center justify-center">
             <i class="fa-solid fa-trash text-2xl text-red-500"></i>
           </div>
         </div>
@@ -55,14 +55,14 @@ const AdminOrdersPage = () => {
       <div class="rounded-xl p-5 border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg">
         <div class="flex items-center justify-between">
           <div>
-            <p class="text-sm max-md:text-xs dark:text-dark-text-secondary text-light-text-secondary">
+            <p class="max-xl:text-xs max-md:text-sm text-sm dark:text-dark-text-secondary text-light-text-secondary">
             در انتظار پرداخت
             </p>
 
             <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md pending-orders"></div>
           </div>
 
-          <div class="size-14 max-sm:size-10 rounded-xl bg-yellow-500/10 flex items-center justify-center">
+          <div class="size-14 max-lg:size-11 max-md:size-14 rounded-xl bg-yellow-500/10 flex items-center justify-center">
             <i class="fa-solid fa-clock text-2xl text-yellow-500"></i>
           </div>
         </div>
@@ -71,14 +71,14 @@ const AdminOrdersPage = () => {
       <div class="rounded-xl p-5 border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg">
         <div class="flex items-center justify-between">
           <div>
-            <p class="text-sm max-md:text-xs dark:text-dark-text-secondary text-light-text-secondary">
+            <p class="max-xl:text-xs max-md:text-sm text-sm dark:text-dark-text-secondary text-light-text-secondary">
               تکمیل شده
             </p>
 
             <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md complete-orders"></div>
           </div>
 
-          <div class="size-14 max-sm:size-10 rounded-xl bg-green-500/10 flex items-center justify-center">
+          <div class="size-14 max-lg:size-11 max-md:size-14 rounded-xl bg-green-500/10 flex items-center justify-center">
             <i class="fa-solid fa-circle-check text-2xl text-green-500"></i>
           </div>
         </div>
@@ -89,26 +89,32 @@ const AdminOrdersPage = () => {
     <!-- Filters -->
     <div class="rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-4">
 
-      <div class="grid grid-cols-1 lg:grid-cols-4 gap-3">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 filters-container">
 
-        <div class="">
-          <input type="text" placeholder="جستجوی سفارش..." class="transition-colors duration-300 focus:border-dark-input-focus w-full h-12 rounded-xl border dark:border-dark-input-border border-light-input-border pr-3 text-sm dark:text-dark-text-secondary text-light-text-secondary bg-transparent outline-none"/>
+        <div class="relative w-full">
+              <button class="border dark:border-dark-input-border border-light-input-border dark:text-dark-text-primary text-light-text-primary px-3 py-4 rounded-xl flex items-center justify-between w-full cursor-pointer sort-btn">
+                <p class="text-xs max-md:text-[10px] sort-btn-text">همه</p>
+                <i class="fa-solid fa-chevron-down max-md:text-[10px]"></i>
+              </button>
+              <ul class="absolute hidden top-15 right-0 left-0 mx-auto z-10 rounded-md dark:bg-dark-card-hover bg-light-card-hover w-full sort-list">
+                <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-md px-2 py-2 cursor-pointer sort-items" data-sort="cheap">همه</li>
+                <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-md px-2 py-2 cursor-pointer sort-items" data-sort="expensive">در حال پردازش</li>
+                <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-md px-2 py-2 cursor-pointer sort-items" data-sort="newest">تکمیل شده</li>
+                <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-md px-2 py-2 cursor-pointer sort-items" data-sort="newest">لغو شده</li>
+              </ul>
         </div>
 
-        <select class="h-12 rounded-xl border dark:border-dark-input-border border-light-input-border px-3 text-sm dark:text-dark-text-primary text-light-text-primary bg-transparent">
-          <option>همه وضعیت‌ها</option>
-          <option>در انتظار پرداخت</option>
-          <option>در حال پردازش</option>
-          <option>ارسال شده</option>
-          <option>تکمیل شده</option>
-          <option>لغو شده</option>
-        </select>
-
-
-        <select class="h-12 rounded-xl border dark:border-dark-input-border border-light-input-border px-3 text-sm dark:text-dark-text-primary text-light-text-primary bg-transparent">
-          <option>جدیدترین</option>
-          <option>قدیمی‌ترین</option>
-        </select>
+        <div class="relative w-full">
+              <button class="border dark:border-dark-input-border border-light-input-border dark:text-dark-text-primary text-light-text-primary px-3 py-4 rounded-xl flex items-center justify-between w-full cursor-pointer sort-btn">
+                <p class="text-xs max-md:text-[10px] sort-btn-text">همه</p>
+                <i class="fa-solid fa-chevron-down max-md:text-[10px]"></i>
+              </button>
+              <ul class="absolute hidden top-15 right-0 left-0 mx-auto z-10 rounded-md dark:bg-dark-card-hover bg-light-card-hover w-full sort-list">
+                <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-md px-2 py-2 cursor-pointer sort-items" data-sort="cheap">همه</li>
+                <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-md px-2 py-2 cursor-pointer sort-items" data-sort="cheap">جدیدترین</li>
+                <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-md px-2 py-2 cursor-pointer sort-items" data-sort="cheap">قدیمی‌ترین</li>
+              </ul>
+        </div>
 
       </div>
 

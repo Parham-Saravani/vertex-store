@@ -1,15 +1,16 @@
 import { apiRequestHandler } from "../../../http.js";
 import changeStats from "../../utils/changeStats.js";
 import findCreatedTime from "../setCreatedTime.js";
+import sortHandler from "../pageSort.js";
+
 const allTicketsHandler = async () => {
   const data = await apiRequestHandler("/api/dashboard/admin/messages");
-  console.log(data);
-
   const {
     stats: { totalMessages, closedMessages, pendingMessages, openMessages },
   } = data;
   createUsers(data.messages);
   changePageStats(totalMessages, closedMessages, pendingMessages, openMessages)
+  sortHandler()
 };
 const createUsers = (data) => {
   const ordersContainer = document.querySelector(".tickets-table-body");

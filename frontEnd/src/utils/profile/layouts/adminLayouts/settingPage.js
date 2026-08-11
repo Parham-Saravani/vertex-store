@@ -28,43 +28,43 @@ const AdminSettingsPage = () => {
         </li>
 
         <li>
-          <button class="w-full text-right px-4 py-3 rounded-xl dark:text-dark-text-secondary text-light-text-secondary hover:bg-brand-accent/10 transition-all cursor-pointer">
+          <button class="w-full text-right px-4 py-3 rounded-xl dark:text-dark-text-secondary text-light-text-secondary hover:bg-brand-accent/10 transition-colors duration-300 cursor-pointer">
             لوگو و برندینگ
           </button>
         </li>
 
         <li>
-          <button class="w-full text-right px-4 py-3 rounded-xl dark:text-dark-text-secondary text-light-text-secondary hover:bg-brand-accent/10 transition-all cursor-pointer">
+          <button class="w-full text-right px-4 py-3 rounded-xl dark:text-dark-text-secondary text-light-text-secondary hover:bg-brand-accent/10 transition-colors duration-300 cursor-pointer">
             تماس با ما
           </button>
         </li>
 
         <li>
-          <button class="w-full text-right px-4 py-3 rounded-xl dark:text-dark-text-secondary text-light-text-secondary hover:bg-brand-accent/10 transition-all cursor-pointer">
+          <button class="w-full text-right px-4 py-3 rounded-xl dark:text-dark-text-secondary text-light-text-secondary hover:bg-brand-accent/10 transition-colors duration-300 cursor-pointer">
             پیامک
           </button>
         </li>
 
         <li>
-          <button class="w-full text-right px-4 py-3 rounded-xl dark:text-dark-text-secondary text-light-text-secondary hover:bg-brand-accent/10 transition-all cursor-pointer">
+          <button class="w-full text-right px-4 py-3 rounded-xl dark:text-dark-text-secondary text-light-text-secondary hover:bg-brand-accent/10 transition-colors duration-300 cursor-pointer">
             ایمیل
           </button>
         </li>
 
         <li>
-          <button class="w-full text-right px-4 py-3 rounded-xl dark:text-dark-text-secondary text-light-text-secondary hover:bg-brand-accent/10 transition-all cursor-pointer">
+          <button class="w-full text-right px-4 py-3 rounded-xl dark:text-dark-text-secondary text-light-text-secondary hover:bg-brand-accent/10 transition-colors duration-300 cursor-pointer">
             درگاه پرداخت
           </button>
         </li>
 
         <li>
-          <button class="w-full text-right px-4 py-3 rounded-xl dark:text-dark-text-secondary text-light-text-secondary hover:bg-brand-accent/10 transition-all cursor-pointer">
+          <button class="w-full text-right px-4 py-3 rounded-xl dark:text-dark-text-secondary text-light-text-secondary hover:bg-brand-accent/10 transition-colors duration-300 cursor-pointer">
             SEO
           </button>
         </li>
 
         <li>
-          <button class="w-full text-right px-4 py-3 rounded-xl dark:text-dark-text-secondary text-light-text-secondary hover:bg-brand-accent/10 transition-all cursor-pointer">
+          <button class="w-full text-right px-4 py-3 rounded-xl dark:text-dark-text-secondary text-light-text-secondary hover:bg-brand-accent/10 transition-colors duration-300 cursor-pointer">
             امنیت
           </button>
         </li>

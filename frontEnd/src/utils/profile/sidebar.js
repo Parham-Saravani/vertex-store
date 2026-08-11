@@ -28,6 +28,7 @@ const sidebarItemsHandler = (event) => {
     return;
   }
   if (userMenuItems) {
+    if(userMenuItems.classList.contains("profile-menu-active")) return;
     const {
       target,
       target: {
@@ -35,9 +36,7 @@ const sidebarItemsHandler = (event) => {
       },
     } = event;
     changePageContent(page);
-    document
-      .querySelectorAll(".user-menu-items")
-      .forEach((item) => item.classList.remove("profile-menu-active"));
+    document.querySelectorAll(".user-menu-items").forEach((item) => item.classList.remove("profile-menu-active"));
     target.classList.add("profile-menu-active");
   }
 };

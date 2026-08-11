@@ -29,9 +29,9 @@ const showOrHideBasket = (event) => {
     } else {
       isBasketOpen = false;
       document.documentElement.classList.remove("overflow-hidden");
-      basketBtn.classList.remove("z-30");
-      basketBackground.classList.add("hidden");
-      basketContent.classList.add("hidden");
+      basketBtn.forEach(item => item.classList.remove("z-30"))
+      basketBackground.forEach(item => item.classList.add("hidden"))
+      basketContent.forEach(item => item.classList.add("hidden"))
     }
   }
 };

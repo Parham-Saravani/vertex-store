@@ -37,10 +37,9 @@ const UserProfilePage = () => {
                         </div>
                     </div>
                     <!-- products and user detail cards -->
-                    <div class="grid grid-cols-2 gap-4 mt-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                         <!-- user detail -->
-                        <div
-                            class="w-full dark:bg-dark-section-bg bg-light-section-bg border dark:border-dark-card-border border-light-card-border rounded-xl">
+                        <div class="w-full max-h-60 dark:bg-dark-section-bg bg-light-section-bg border dark:border-dark-card-border border-light-card-border rounded-xl">
                             <h2 class="py-2.5 dark:text-dark-text-primary text-light-text-primary px-4 font-bold">
                                 اطلاعات حساب</h2>
                             <hr class="w-full dark:text-dark-divider text-light-divider bg-text-divider">
@@ -52,7 +51,7 @@ const UserProfilePage = () => {
                                         <h3
                                             class="text-[13px] dark:text-dark-text-primary text-light-text-primary font-normal">
                                             نام کاربری</h3>
-                                        <p class="text-[13px] dark:text-dark-text-secondary text-light-text-secondary user-username"></p>
+                                        <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md all-orders user-username"></div>
                                     </div>
                                 </li>
                                 <hr class="dark:text-dark-divider text-light-divider">
@@ -63,7 +62,7 @@ const UserProfilePage = () => {
                                         <h3
                                             class="text-[13px] dark:text-dark-text-primary text-light-text-primary font-normal">
                                             ایمیل</h3>
-                                        <p class="text-[13px] dark:text-dark-text-secondary text-light-text-secondary user-email"></p>
+                                        <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md user-email"></div>
                                     </div>
                                 </li>
                                 <hr class="dark:text-dark-divider text-light-divider">
@@ -74,95 +73,94 @@ const UserProfilePage = () => {
                                         <h3
                                             class="text-[13px] dark:text-dark-text-primary text-light-text-primary font-normal">
                                             تاریخ عضویت</h3>
+                                        <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md all-orders user-join-date"></div>
                                         <p class="[direction:ltr] text-[13px] dark:text-dark-text-secondary text-light-text-secondary user-join-date"></p>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                         <!-- user orders -->
-                        <div
-                            class="w-full dark:bg-dark-section-bg bg-light-section-bg border dark:border-dark-card-border border-light-card-border rounded-xl">
-                            <h2 class="py-2.5 dark:text-dark-text-primary text-light-text-primary px-4 font-bold">آخرین
+                        <div class="w-full dark:bg-dark-section-bg bg-light-section-bg border dark:border-dark-card-border border-light-card-border rounded-xl">
+                            <h2 class="py-2.5  dark:text-dark-text-primary text-light-text-primary px-4 font-bold">آخرین
                                 سفارش ها</h2>
                             <hr class="w-full dark:text-dark-divider text-light-divider bg-text-divider">
-                            <ul class="py-2 px-4">
+                            <ul class="py-2 px-4 overflow-y-scroll hide-scrollbar  max-h-115 user-orders">
                                 <li class="flex py-3 items-center justify-between">
                                     <div class="flex gap-4 items-center">
-                                        <img src="./public/images/Alienwarem16R2.png" class="size-14" alt="">
+                                        <div src="./public/images/Alienwarem16R2.png" class="size-14 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></div>
                                         <div>
-                                            <p class="text-xs dark:text-dark-text-primary text-light-text-primary">
-                                                <span>سفارش</span>
-                                                <span class="">44423#</span>
-                                            </p>
-                                            <p class="text-xs dark:text-dark-text-secondary text-light-text-secondary">2
-                                                محصول</p>
-                                            <p class="text-xs dark:text-dark-text-primary text-light-text-primary">
-                                                <span>4,453,000</span>
-                                                <span>تومان</span>
-                                            </p>
+                                            <p class="w-15 h-4 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></p>
+                                            <p class="mt-1 w-10 h-4 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></p>
+                                            <p class="mt-1 w-20 h-4 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></p>
                                         </div>
                                     </div>
                                     <div class="flex gap-3 items-center">
-                                        <p class="text-xs dark:text-dark-text-secondary text-light-text-secondary">16
-                                            تیر 1403</p>
-                                        <span class="cursor-pointer">
-                                            <i
-                                                class="fa-solid fa-chevron-left text-xs dark:text-dark-text-primary text-light-text-primary"></i>
-                                        </span>
+                                        <p class="w-20 h-4 rounded-md animate-pulse bg-gray-300 dark:bg-gray-700"></p>
+                                        <span class="bg-gray-300 dark:bg-gray-700 rounded-md size-4 animate-pulse"></span>
                                     </div>
                                 </li>
                                 <hr class="dark:text-dark-divider text-light-divider">
                                 <li class="flex py-3 items-center justify-between">
                                     <div class="flex gap-4 items-center">
-                                        <img src="./public/images/Alienwarem16R2.png" class="size-14" alt="">
+                                        <div src="./public/images/Alienwarem16R2.png" class="size-14 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></div>
                                         <div>
-                                            <p class="text-xs dark:text-dark-text-primary text-light-text-primary">
-                                                <span>سفارش</span>
-                                                <span class="">44423#</span>
-                                            </p>
-                                            <p class="text-xs dark:text-dark-text-secondary text-light-text-secondary">2
-                                                محصول</p>
-                                            <p class="text-xs dark:text-dark-text-primary text-light-text-primary">
-                                                <span>4,453,000</span>
-                                                <span>تومان</span>
-                                            </p>
+                                            <p class="w-15 h-4 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></p>
+                                            <p class="mt-1 w-10 h-4 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></p>
+                                            <p class="mt-1 w-20 h-4 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></p>
                                         </div>
                                     </div>
                                     <div class="flex gap-3 items-center">
-                                        <p class="text-xs dark:text-dark-text-secondary text-light-text-secondary">16
-                                            تیر 1403</p>
-                                        <span class="cursor-pointer">
-                                            <i
-                                                class="fa-solid fa-chevron-left text-xs dark:text-dark-text-primary text-light-text-primary"></i>
-                                        </span>
+                                        <p class="w-20 h-4 rounded-md animate-pulse bg-gray-300 dark:bg-gray-700"></p>
+                                        <span class="bg-gray-300 dark:bg-gray-700 rounded-md size-4 animate-pulse"></span>
                                     </div>
                                 </li>
                                 <hr class="dark:text-dark-divider text-light-divider">
                                 <li class="flex py-3 items-center justify-between">
                                     <div class="flex gap-4 items-center">
-                                        <img src="./public/images/Alienwarem16R2.png" class="size-14" alt="">
+                                        <div src="./public/images/Alienwarem16R2.png" class="size-14 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></div>
                                         <div>
-                                            <p class="text-xs dark:text-dark-text-primary text-light-text-primary">
-                                                <span>سفارش</span>
-                                                <span class="">44423#</span>
-                                            </p>
-                                            <p class="text-xs dark:text-dark-text-secondary text-light-text-secondary">2
-                                                محصول</p>
-                                            <p class="text-xs dark:text-dark-text-primary text-light-text-primary">
-                                                <span>4,453,000</span>
-                                                <span>تومان</span>
-                                            </p>
+                                            <p class="w-15 h-4 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></p>
+                                            <p class="mt-1 w-10 h-4 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></p>
+                                            <p class="mt-1 w-20 h-4 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></p>
                                         </div>
                                     </div>
                                     <div class="flex gap-3 items-center">
-                                        <p class="text-xs dark:text-dark-text-secondary text-light-text-secondary">16
-                                            تیر 1403</p>
-                                        <span class="cursor-pointer">
-                                            <i
-                                                class="fa-solid fa-chevron-left text-xs dark:text-dark-text-primary text-light-text-primary"></i>
-                                        </span>
+                                        <p class="w-20 h-4 rounded-md animate-pulse bg-gray-300 dark:bg-gray-700"></p>
+                                        <span class="bg-gray-300 dark:bg-gray-700 rounded-md size-4 animate-pulse"></span>
                                     </div>
                                 </li>
+                                <hr class="dark:text-dark-divider text-light-divider">
+                                <li class="flex py-3 items-center justify-between">
+                                    <div class="flex gap-4 items-center">
+                                        <div src="./public/images/Alienwarem16R2.png" class="size-14 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></div>
+                                        <div>
+                                            <p class="w-15 h-4 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></p>
+                                            <p class="mt-1 w-10 h-4 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></p>
+                                            <p class="mt-1 w-20 h-4 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="w-20 h-4 rounded-md animate-pulse bg-gray-300 dark:bg-gray-700"></p>
+                                        <span class="bg-gray-300 dark:bg-gray-700 rounded-md size-4 animate-pulse"></span>
+                                    </div>
+                                </li>
+                                <hr class="dark:text-dark-divider text-light-divider">
+                                <li class="flex py-3 items-center justify-between">
+                                    <div class="flex gap-4 items-center">
+                                        <div src="./public/images/Alienwarem16R2.png" class="size-14 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></div>
+                                        <div>
+                                            <p class="w-15 h-4 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></p>
+                                            <p class="mt-1 w-10 h-4 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></p>
+                                            <p class="mt-1 w-20 h-4 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md"></p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-3 items-center">
+                                        <p class="w-20 h-4 rounded-md animate-pulse bg-gray-300 dark:bg-gray-700"></p>
+                                        <span class="bg-gray-300 dark:bg-gray-700 rounded-md size-4 animate-pulse"></span>
+                                    </div>
+                                </li>
+                                
+                                <hr class="dark:text-dark-divider text-light-divider">
                             </ul>
                         </div>
                     </div>

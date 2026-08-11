@@ -1,5 +1,6 @@
 import { apiRequestHandler } from "../../../http.js";
 import { changePage } from "../../layouts/pageContent.js";
+import sortHandler from "../pageSort.js";
 
 let products = [];
 let totalPages = null;
@@ -13,6 +14,7 @@ const allProductsHandler = async () => {
   createProductItems();
   createPaginationButttons();
   paginationHandler();
+  sortHandler() 
 };
 const calculatePage = () => {
   totalPages = Math.ceil(products.length / totalProductsPerPage);

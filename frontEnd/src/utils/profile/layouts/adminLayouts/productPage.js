@@ -29,14 +29,14 @@ const AdminProductsPage = () => {
         <div class="flex items-center justify-between">
 
             <div>
-                <p class="max-md:text-xs text-sm dark:text-dark-text-secondary text-light-text-secondary">
+                <p class="max-xl:text-xs max-md:text-sm text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     کل محصولات
                 </p>
 
                 <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-products"></div>
             </div>
 
-            <div class="size-14 rounded-xl bg-brand-accent/10 flex items-center justify-center">
+            <div class="size-14 max-lg:size-11 max-md:size-14 rounded-xl bg-brand-accent/10 flex items-center justify-center">
                 <i class="fa-solid fa-box-open text-2xl text-brand-accent"></i>
             </div>
 
@@ -50,14 +50,14 @@ const AdminProductsPage = () => {
         <div class="flex items-center justify-between">
 
             <div>
-                <p class="max-md:text-xs text-sm dark:text-dark-text-secondary text-light-text-secondary">
+                <p class="max-xl:text-xs max-md:text-sm text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     محصولات فعال
                 </p>
 
                 <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md active-products"></div>
             </div>
 
-            <div class="size-14 rounded-xl bg-green-500/10 flex items-center justify-center">
+            <div class="size-14 max-lg:size-11 max-md:size-14 rounded-xl bg-green-500/10 flex items-center justify-center">
                 <i class="fa-solid fa-circle-check text-2xl text-green-500"></i>
             </div>
 
@@ -71,14 +71,14 @@ const AdminProductsPage = () => {
         <div class="flex items-center justify-between">
 
             <div>
-                <p class="max-md:text-xs text-sm dark:text-dark-text-secondary text-light-text-secondary">
+                <p class="max-xl:text-xs max-md:text-sm text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     ناموجود
                 </p>
 
                 <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md not-available-products"></div>
             </div>
 
-            <div class="size-14 rounded-xl bg-red-500/10 flex items-center justify-center">
+            <div class="size-14 max-lg:size-11 max-md:size-14 rounded-xl bg-red-500/10 flex items-center justify-center">
                 <i class="fa-solid fa-boxes-stacked text-2xl text-red-500"></i>
             </div>
 
@@ -92,14 +92,14 @@ const AdminProductsPage = () => {
         <div class="flex items-center justify-between">
 
             <div>
-                <p class="max-md:text-xs text-sm dark:text-dark-text-secondary text-light-text-secondary">
+                <p class="max-xl:text-xs max-md:text-sm text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     دسته‌بندی‌ها
                 </p>
 
                 <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md products-category"></div>
             </div>
 
-            <div class="size-14 rounded-xl bg-blue-500/10 flex items-center justify-center">
+            <div class="size-14 max-lg:size-11 max-md:size-14 rounded-xl bg-blue-500/10 flex items-center justify-center">
                 <i class="fa-solid fa-layer-group text-2xl text-blue-500"></i>
             </div>
 
@@ -110,27 +110,31 @@ const AdminProductsPage = () => {
 </div>
 
                     <!-- Filters -->
-                    <div
-                        class="rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-4">
+                    <div class="rounded-xl border dark:border-dark-card-border border-light-card-border dark:bg-dark-section-bg bg-light-section-bg p-4">
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+                        <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-3 gap-4 filters-container">
 
-                            <input type="text" placeholder="جستجو محصول..."
-                                class="transition-colors duration-300 focus:border-dark-input-focus w-full h-12 rounded-xl border dark:border-dark-input-border border-light-input-border pr-3 text-sm dark:text-dark-text-secondary text-light-text-secondary bg-transparent outline-none">
+                            <input type="text" placeholder="جستجو محصول..." class="transition-colors duration-300 focus:border-dark-input-focus w-full h-12 rounded-xl border dark:border-dark-input-border border-light-input-border pr-3 text-sm dark:text-dark-text-secondary text-light-text-secondary bg-transparent outline-none">
 
-                            <select
-                                class="h-12 text-xs dark:text-dark-text-secondary text-light-text-secondary rounded-xl border dark:border-dark-input-border border-light-input-border px-4 outline-none">
-                                <option>همه دسته بندی ها</option>
-                            </select>
+                            <div class="relative w-full">
+                                <button class="border dark:border-dark-input-border border-light-input-border dark:text-dark-text-primary text-light-text-primary px-3 py-4 rounded-xl flex items-center justify-between w-full cursor-pointer sort-btn">
+                                    <p class="text-xs max-md:text-[10px] sort-btn-text">همه دسته بندی ها</p>
+                                    <i class="fa-solid fa-chevron-down max-md:text-[10px]"></i>
+                                </button>
+                                <ul class="absolute hidden top-15 right-0 left-0 mx-auto z-10 rounded-md dark:bg-dark-card-hover bg-light-card-hover w-full sort-list">
+                                    <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-md px-2 py-2 cursor-pointer sort-items" data-sort="cheap">همه دسته بندی ها</li>
+                                </ul>
+                            </div>
 
-                            <select
-                                class="h-12 text-xs rounded-xl border dark:text-dark-text-secondary text-light-text-secondary dark:border-dark-input-border border-light-input-border px-4 outline-none">
-                                <option>همه برندها</option>
-                            </select>
-
-                            <button class="text-sm font-bold h-12 rounded-xl bg-brand-primary text-white cursor-pointer transition-transform duration-300 hover:-translate-y-0.5">
-                                اعمال فیلتر
-                            </button>
+                            <div class="relative w-full">
+                                <button class="border dark:border-dark-input-border border-light-input-border dark:text-dark-text-primary text-light-text-primary px-3 py-4 rounded-xl flex items-center justify-between w-full cursor-pointer sort-btn">
+                                    <p class="text-xs max-md:text-[10px] sort-btn-text">همه برندها</p>
+                                    <i class="fa-solid fa-chevron-down max-md:text-[10px]"></i>
+                                </button>
+                                <ul class="absolute hidden top-15 right-0 left-0 mx-auto z-10 rounded-md dark:bg-dark-card-hover bg-light-card-hover w-full sort-list">
+                                    <li class="text-[13px] dark:text-dark-text-primary text-light-text-primary transition-colors duration-300 hover:bg-brand-accent hover:text-dark-text-primary rounded-md px-2 py-2 cursor-pointer sort-items" data-sort="cheap">همه برندها</li>
+                                </ul>
+                            </div>                  
 
                         </div>
                     </div>

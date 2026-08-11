@@ -24,14 +24,14 @@ const AdminUsersPage = () => {
         <div class="flex items-center justify-between">
 
             <div>
-                <p class="max-md:text-xs text-sm dark:text-dark-text-secondary text-light-text-secondary">
+                <p class="max-xl:text-xs max-md:text-sm text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     کل کاربران
                 </p>
 
                 <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-users"></div>
             </div>
 
-            <div class="size-14 rounded-xl bg-brand-accent/10 flex items-center justify-center">
+            <div class="size-14  max-lg:size-11 max-md:size-14 rounded-xl bg-brand-accent/10 flex items-center justify-center">
                 <i class="fa-solid fa-users text-2xl text-brand-accent"></i>
             </div>
 
@@ -42,14 +42,14 @@ const AdminUsersPage = () => {
         <div class="flex items-center justify-between">
 
             <div>
-                <p class="max-md:text-xs text-sm dark:text-dark-text-secondary text-light-text-secondary">
+                <p class="max-xl:text-xs max-md:text-sm text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     کاربران حذف شده
                 </p>
 
                <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-deleted-users"></div>
             </div>
 
-            <div class="size-14 rounded-xl bg-red-500/10 flex items-center justify-center">
+            <div class="size-14  max-lg:size-11 max-md:size-14 rounded-xl bg-red-500/10 flex items-center justify-center">
                 <i class="fa-solid fa-trash text-2xl text-red-500"></i>
             </div>
 
@@ -60,14 +60,14 @@ const AdminUsersPage = () => {
         <div class="flex items-center justify-between">
 
             <div>
-                <p class="max-md:text-xs text-sm dark:text-dark-text-secondary text-light-text-secondary">
+                <p class="max-xl:text-xs max-md:text-sm text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     ادمین‌ها
                 </p>
 
                 <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-admins"></div>
             </div>
 
-            <div class="size-14 rounded-xl bg-brand-accent/10 flex items-center justify-center">
+            <div class="size-14  max-lg:size-11 max-md:size-14 rounded-xl bg-brand-accent/10 flex items-center justify-center">
                 <i class="fa-solid fa-user-shield text-2xl text-brand-accent"></i>
             </div>
 
@@ -78,14 +78,14 @@ const AdminUsersPage = () => {
         <div class="flex items-center justify-between">
 
             <div>
-                <p class="max-md:text-xs text-sm dark:text-dark-text-secondary text-light-text-secondary">
+                <p class="max-xl:text-xs max-md:text-sm text-sm dark:text-dark-text-secondary text-light-text-secondary">
                     کاربران جدید
                 </p>
 
                 <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-new-users"></div>
             </div>
 
-            <div class="size-14 rounded-xl bg-blue-500/10 flex items-center justify-center">
+            <div class="size-14  max-lg:size-11 max-md:size-14 rounded-xl bg-blue-500/10 flex items-center justify-center">
                 <i class="fa-solid fa-user-plus text-2xl text-blue-500"></i>
             </div>
 
@@ -99,10 +99,7 @@ const AdminUsersPage = () => {
 
     <div class="relative">
 
-      <input
-        type="text"
-        placeholder="جستجوی کاربر..."
-        class="w-full text-xs h-12 rounded-xl border dark:border-dark-input-border border-light-input-border px-12 outline-none dark:text-dark-text-primary text-light-text-primary">
+      <input type="text" placeholder="جستجوی کاربر..." class="w-full text-xs h-12 rounded-xl border dark:border-dark-input-border border-light-input-border px-12 outline-none dark:text-dark-text-primary text-light-text-primary">
 
       <i class="fa-solid fa-magnifying-glass absolute right-4 top-1/2 -translate-y-1/2 dark:text-dark-text-secondary text-light-text-secondary"></i>
 

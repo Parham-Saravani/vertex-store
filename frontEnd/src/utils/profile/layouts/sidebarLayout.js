@@ -2,7 +2,7 @@ const AdminSidebarContent = () => {
   return `
      <!-- overview -->
                 <div>
-                    <button class="flex items-center justify-between w-full dark:text-dark-text-primary  dark:hover:bg-dark-card-hover dark:hover:text-dark-text-primary text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-light-text-primary hover:bg-light-card-hover rounded-xl profile-menu-active menu-item">
+                    <button class="flex items-center justify-between w-full dark:text-dark-text-primary  dark:hover:bg-dark-card-hover dark:hover:text-dark-text-secondary hover:text-light-te text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-light-text-secondary hover:bg-light-card-hover rounded-xl profile-menu-active menu-item">
                         <div>
                             <i class="fa-solid fa-gauge-high"></i>
                             نمای کلی
@@ -11,7 +11,7 @@ const AdminSidebarContent = () => {
                     </button>
                     <div class="h-0 overflow-hidden transition-height duration-300 collapse-item">
                         <ul class="flex flex-col gap-1  items-end space-y-1 mt-2 pr-6 pl-2">
-                            <li class="w-full text-[13px] dark:text-dark-text-secondary text-light-text-setext-dark-text-secondary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-primary hover:text-light-text-primary font-bold rounded-xl user-menu-items dark:hover:bg-dark-card-hover hover:bg-light-card-hover submenu-item" data-page="adminDashboard">
+                            <li class="w-full text-[13px] dark:text-dark-text-secondary text-light-text-secondary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-primary hover:text-light-text-primary font-bold rounded-xl user-menu-items dark:hover:bg-dark-card-hover hover:bg-light-card-hover submenu-item" data-page="adminDashboard">
                                 <i class="fa-solid fa-user"></i>
                                 داشبورد
                             </li>
@@ -20,7 +20,7 @@ const AdminSidebarContent = () => {
                 </div>
                 <!-- store -->
                 <div>
-                    <button class="flex items-center justify-between w-full dark:text-dark-text-primary dark:hover:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-light-text-primary hover:bg-light-card-hover rounded-xl menu-item">
+                    <button class="flex items-center justify-between w-full dark:text-dark-text-primary dark:hover:text-dark-text-secondary hover:text-light-te dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-light-text-secondary hover:bg-light-card-hover rounded-xl menu-item">
                         <div>
                             <i class="fa-solid fa-store"></i>
                             فروشگاه
@@ -29,7 +29,7 @@ const AdminSidebarContent = () => {
                     </button>
                     <div class="h-0 overflow-hidden transition-height duration-300 collapse-item">
                         <ul class="flex flex-col gap-1  items-end space-y-1 mt-2 pr-6 pl-2">
-                            <li class="w-full text-[13px] dark:text-dark-text-secondary text-light-text-secotext-dark-text-secondary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-primary hover:text-light-text-primary font-bold rounded-xl user-menu-items dark:hover:bg-dark-card-hover hover:bg-light-card-hover submenu-item"  data-page="products">
+                            <li class="w-full text-[13px] dark:text-dark-text-secondary text-light-text-secondary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-primary hover:text-light-text-primary font-bold rounded-xl user-menu-items dark:hover:bg-dark-card-hover hover:bg-light-card-hover submenu-item"  data-page="products">
                                 <i class="fa-solid fa-box-open"></i>
                                 محصولات
                             </li>
@@ -38,7 +38,7 @@ const AdminSidebarContent = () => {
                 </div>
                 <!-- sale -->
                 <div>
-                    <button class="flex items-center justify-between w-full dark:hover:text-dark-text-primary dark:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-light-text-primary hover:bg-light-card-hover rounded-xl menu-item">
+                    <button class="flex items-center justify-between w-full dark:hover:text-dark-text-secondary hover:text-light-te dark:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-light-text-secondary hover:bg-light-card-hover rounded-xl menu-item">
                         <div>
                             <i class="fa-solid fa-sack-dollar"></i>
                             فروش
@@ -48,7 +48,7 @@ const AdminSidebarContent = () => {
                     <div class="h-0 overflow-hidden transition-height duration-300 collapse-item">
                         <ul class="flex flex-col gap-1  items-end space-y-1 mt-2 pr-6 pl-2">
 
-                            <li class="w-full text-[13px] dark:text-dark-text-secondary text-light-text-secotext-dark-text-secondary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-primary hover:text-light-text-primary font-bold rounded-xl user-menu-items dark:hover:bg-dark-card-hover hover:bg-light-card-hover submenu-item"  data-page="orders">
+                            <li class="w-full text-[13px] dark:text-dark-text-secondary text-light-text-secondary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-primary hover:text-light-text-primary font-bold rounded-xl user-menu-items dark:hover:bg-dark-card-hover hover:bg-light-card-hover submenu-item"  data-page="orders">
                                 <i class="fa-solid fa-bag-shopping"></i>
                                 سفارش ها
                             </li>
@@ -57,7 +57,7 @@ const AdminSidebarContent = () => {
                 </div>
                 <!-- users -->
                 <div>
-                    <button class="flex items-center justify-between w-full dark:hover:text-dark-text-primary dark:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300  hover:text-light-text-primary hover:bg-light-card-hover rounded-xl menu-item">
+                    <button class="flex items-center justify-between w-full dark:hover:text-dark-text-secondary hover:text-light-te dark:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300  hover:text-light-text-secondary hover:bg-light-card-hover rounded-xl menu-item">
                         <div>
                             <i class="fa-solid fa-users"></i>
                             کاربران
@@ -66,7 +66,7 @@ const AdminSidebarContent = () => {
                     </button>
                     <div class="h-0 overflow-hidden transition-height duration-300 collapse-item">
                         <ul class="flex flex-col gap-1  items-end space-y-1 mt-2 pr-6 pl-2">
-                            <li class="w-full text-[13px] dark:text-dark-text-secondary text-light-text-secotext-dark-text-secondary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-primary hover:text-light-text-primary font-bold rounded-xl user-menu-items dark:hover:bg-dark-card-hover hover:bg-light-card-hover submenu-item"  data-page="users">
+                            <li class="w-full text-[13px] dark:text-dark-text-secondary text-light-text-secondary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-primary hover:text-light-text-primary font-bold rounded-xl user-menu-items dark:hover:bg-dark-card-hover hover:bg-light-card-hover submenu-item"  data-page="users">
                                 <i class="fa-solid fa-users"></i>
                                 کاربران
                             </li>
@@ -75,7 +75,7 @@ const AdminSidebarContent = () => {
                 </div>
                 <!-- support -->
                 <div>
-                    <button class="flex items-center justify-between w-full dark:hover:text-dark-text-primary dark:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-light-text-primary hover:bg-light-card-hover rounded-xl menu-item">
+                    <button class="flex items-center justify-between w-full dark:hover:text-dark-text-secondary hover:text-light-te dark:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-light-text-secondary hover:bg-light-card-hover rounded-xl menu-item">
                         <div>
                             <i class="fa-solid fa-headset"></i>
                             پشتیبانی
@@ -84,7 +84,7 @@ const AdminSidebarContent = () => {
                     </button>
                     <div class="h-0 overflow-hidden transition-height duration-300 collapse-item">
                         <ul class="flex flex-col gap-1 items-end space-y-1 mt-2 pr-6 pl-2">
-                            <li class="w-full text-[13px] dark:text-dark-text-secondary text-light-text-secotext-dark-text-secondary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-primary hover:text-light-text-primary font-bold rounded-xl user-menu-items dark:hover:bg-dark-card-hover hover:bg-light-card-hover submenu-item"  data-page="tickets">
+                            <li class="w-full text-[13px] dark:text-dark-text-secondary text-light-text-secondary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-primary hover:text-light-text-primary font-bold rounded-xl user-menu-items dark:hover:bg-dark-card-hover hover:bg-light-card-hover submenu-item"  data-page="tickets">
                                 <i class="fa-solid fa-headset"></i>
                                 تیکت ها
                             </li>
@@ -93,7 +93,7 @@ const AdminSidebarContent = () => {
                 </div>
                 <!-- system -->
                 <div>
-                    <button class="flex items-center justify-between w-full dark:hover:text-dark-text-primary dark:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-light-text-primary hover:bg-light-card-hover rounded-xl menu-item">
+                    <button class="flex items-center justify-between w-full dark:hover:text-dark-text-secondary hover:text-light-te dark:text-dark-text-primary dark:hover:bg-dark-card-hover text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-light-text-secondary hover:bg-light-card-hover rounded-xl menu-item">
                         <div>
                             <i class="fa-solid fa-server"></i>
                             سیستم
@@ -113,23 +113,23 @@ const AdminSidebarContent = () => {
 };
 const UserSidebarContent = () => {
   return `
-    <ul class="flex flex-col gap-1">
-        <li class="dark:text-dark-text-primary text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-dark-text-primary hover:bg-brand-accent font-bold rounded-xl user-menu-items profile-menu-active"
+    <ul class="flex flex-col gap-2">
+        <li class="dark:text-dark-text-primary text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-secondary hover:text-light-text-secondary dark:hover:bg-dark-card-hover hover:bg-light-card-hover font-bold rounded-xl user-menu-items profile-menu-active"
             data-page="userDashboard">
             <i class="fa-solid fa-user"></i>
              پروفایل من
         </li>
-        <li class="dark:text-dark-text-primary text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-dark-text-primary hover:bg-brand-accent font-bold rounded-xl user-menu-items"
+        <li class="dark:text-dark-text-primary text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-secondary hover:text-light-text-secondary dark:hover:bg-dark-card-hover hover:bg-light-card-hover font-bold rounded-xl user-menu-items"
             data-page="userOrders">
             <i class="fa-solid fa-bag-shopping"></i>
              سفارش های من
         </li>
-        <li class="dark:text-dark-text-primary text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-dark-text-primary hover:bg-brand-accent font-bold rounded-xl user-menu-items"
+        <li class="dark:text-dark-text-primary text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-secondary hover:text-light-text-secondary dark:hover:bg-dark-card-hover hover:bg-light-card-hover font-bold rounded-xl user-menu-items"
             data-page="userFavourites">
             <i class="fa-solid fa-heart"></i>
              علاقه مندی ها
         </li>
-        <li class="dark:text-dark-text-primary text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 hover:text-dark-text-primary hover:bg-brand-accent font-bold rounded-xl user-menu-items"
+        <li class="dark:text-dark-text-primary text-light-text-primary py-3 px-2 cursor-pointer transition-colors duration-300 dark:hover:text-dark-text-secondary hover:text-light-text-secondary dark:hover:bg-dark-card-hover hover:bg-light-card-hover font-bold rounded-xl user-menu-items"
             data-page="userTickets">
             <i class="fa-solid fa-headset"></i>
              تیکت های من
