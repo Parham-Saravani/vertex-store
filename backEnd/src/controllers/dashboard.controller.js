@@ -2,7 +2,7 @@ import User from "../models/user.model.js";
 import Order from "../models/order.model.js";
 import Product from "../models/product.model.js";
 import Message from "../models/message.model.js";
-
+import jwt from "jsonwebtoken";
 const takeAndSendData = async (req, res) => {
   const usersCount = await User.countDocuments();
   const ordersCount = await Order.countDocuments();
@@ -55,6 +55,18 @@ const takeAllOrders = async (req, res) => {
   const deleteOrders = await Order.countDocuments({ status: "delete" });
   const pendingOrders = await Order.countDocuments({ status: "pending" });
   const completeOrders = await Order.countDocuments({ status: "complete" });
-  res.json({ stats: {totalOrders , deleteOrders , pendingOrders , completeOrders}, orders: allOrders });
+  res.json({
+    stats: { totalOrders, deleteOrders, pendingOrders, completeOrders },
+    orders: allOrders,
+  });
 };
-export { takeAndSendData, takeAllUsers, takeAllMessages , takeAllOrders};
+
+const takeUserData = async (req, res) => {
+  const token = req.params.token;
+  const data = jwt.verify(token, process.env.JWT_SECRET);
+  const { id: userID } = data;
+  const userTotalOrders = await Order.countDocuments({ userID: userID });
+  const userTotalTickets = await Message.countDocuments({ author: userID });
+  res.json({ stats: { userTotalOrders, userTotalTickets } });
+};
+export { takeAndSendData, takeAllUsers, takeAllMessages, takeAllOrders, takeUserData};

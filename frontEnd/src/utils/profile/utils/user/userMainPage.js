@@ -7,8 +7,9 @@ const userMainPageData = async () => {
   changeUserAccountDetail();
   const data = await takeUserOrders();
   creteUserProducts(data);
+  changeUserStats()
 };
-const changeUserAccountDetail = () => {
+const changeUserAccountDetail = async () => {
   const data = getDataFromLocalStorage("userData");
   const { username, email, createdAt } = data;
   changeStats(
@@ -24,7 +25,13 @@ const changeUserAccountDetail = () => {
     `<p class="text-[13px] dark:text-dark-text-secondary text-light-text-secondary">${email}</p>`,
   );
 };
-
+const changeUserStats = async () => {
+  const token = takeUserToken();
+  const data = await apiRequestHandler(`/api/dashboard/user/${token}`)  
+  changeStats('.total-orders', `<p class="dark:text-dark-text-secondary text-light-text-secondary text-xs">${data.stats.userTotalOrders} سفارش ها</p>`)
+  changeStats('.total-favourites', `<p class="dark:text-dark-text-secondary text-light-text-secondary text-xs">0 محصول</p>`)
+  changeStats('.total-ticket', `<p class="dark:text-dark-text-secondary text-light-text-secondary text-xs">${data.stats.userTotalTickets} تیکت</p>`)
+}
 
 const takeUserOrders = async (className) => {
   const token = takeUserToken();

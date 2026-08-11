@@ -8,10 +8,7 @@ const UserProfilePage = () => {
                             <div class="mt-15">
                                 <p class="dark:text-dark-text-primary text-light-text-primary font-bold">سفارش های من
                                 </p>
-                                <p class="dark:text-dark-text-secondary text-light-text-secondary text-xs">
-                                    <span>0</span>
-                                    <span>سفارش</span>
-                                </p>
+                                <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-orders"></div>
                             </div>
                         </div>
                         <div class="relative dark:bg-dark-section-bg bg-light-section-bg rounded-xl border dark:border-dark-input-border border-light-input-border p-5 h-40">
@@ -19,20 +16,14 @@ const UserProfilePage = () => {
                             <div class="mt-15">
                                 <p class="dark:text-dark-text-primary text-light-text-primary font-bold">علاقه مندی ها
                                 </p>
-                                <p class="dark:text-dark-text-secondary text-light-text-secondary text-xs">
-                                    <span>0</span>
-                                    <span>محصول</span>
-                                </p>
+                                <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-favourites"></div>
                             </div>
                         </div>
                         <div class="relative dark:bg-dark-section-bg bg-light-section-bg rounded-xl border dark:border-dark-input-border border-light-input-border p-5 h-40">
                             <i class="fa-solid fa-headset absolute right-2 top-4 text-5xl text-blue-500"></i>
                             <div class="mt-15">
                                 <p class="dark:text-dark-text-primary text-light-text-primary font-bold">تیکت های من</p>
-                                <p class="dark:text-dark-text-secondary text-light-text-secondary text-xs">
-                                    <span>0</span>
-                                    <span>تیکت</span>
-                                </p>
+                                <div class="max-lg:w-15 max-md:w-30 max-sm:w-20 w-30 h-7 mt-2 bg-gray-300 dark:bg-gray-700 animate-pulse rounded-md total-ticket"></div>
                             </div>
                         </div>
                     </div>
