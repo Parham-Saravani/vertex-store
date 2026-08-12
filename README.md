@@ -19,18 +19,11 @@ https://vertex-store-chi.vercel.app/
 
 ## 🚀 Tech Stack
 
-<p align="">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
-  <img src="https://img.shields.io/badge/Mongoose-880000?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" />
-</p>
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-v4-06B6D4?logo=tailwindcss&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-Build_Tool-646CFF?logo=vite&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-Backend-000000?logo=express&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-Runtime-5FA04E?logo=node.js&logoColor=white)
 
 ---
 
@@ -76,37 +69,21 @@ https://vertex-store-chi.vercel.app/
 ---
 
 ## 📸 Screenshots
-
-Create a folder named:
-
-```text
-screenshots/
-├── home-page.png
-├── products-page.png
-├── user-dashboard.png
-├── admin-dashboard.png
-├── product-filter.png
-└── mobile-view.png
-```
-
-Then add screenshots like:
-
-```md
 ## Home Page
 
-![Home Page](./screenshots/home-page.png)
+![Home Page](./Images/home.png)
 
 ## Products Page
 
-![Products Page](./screenshots/products-page.png)
+![Products Page](./Images/products.png)
 
 ## User Dashboard
 
-![User Dashboard](./screenshots/user-dashboard.png)
+![User Dashboard](./Images/user-dashboard.png)
 
 ## Admin Dashboard
 
-![Admin Dashboard](./screenshots/admin-dashboard.png)
+![Admin Dashboard](./Images/admin-dashboard.png)
 
 ## Product Filters
 
