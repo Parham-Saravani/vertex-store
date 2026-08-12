@@ -14,7 +14,7 @@ const HomePage = () => {
         <div class="relative rounded-2xl overflow-hidden max-lg:h-100 max-md:h-80 max-sm:h-55 h-130">
           <img src="${bannerImage}" class="object-cover w-full h-full" alt="header-banner" />
           <div
-            class="absolute max-lg:top-32 max-md:top-25 max-sm:top-13 top-45 left-0 max-sm:right-15 right-30 mx-auto max-sm:w-70 w-180">
+            class="absolute max-lg:top-32 max-md:top-25 max-sm:top-13 top-45 left-0 max-sm:right-15 right-30  mx-auto max-sm:w-70 w-180">
             <p class="text-dark-text-primary max-lg:text-4xl max-md:text-3xl max-sm:text-xl text-5xl font-bold">
               قدرت تکنولوژی را تجربه کن
             </p>

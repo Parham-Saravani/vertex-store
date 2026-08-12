@@ -58,14 +58,14 @@ const createProducts = () => {
         `
         <div class="group border dark:border-dark-card-border col-span-1 w-full border-light-card-border px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border product"data-id="${product._id}">
             <img src=${product.image} class="object-contain size-10 max-2xl:size-25 max-xl:size-32 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
-            <h2 class="dark:text-dark-text-primary w-40 text-[15px] max-2xl:text-[13px] max-xl:text-[12px] max-md:px-5 max-md:text-[11px] text-center">${product.title}</h2>
-            <p class="mt-2 [direction:ltr] flex items-center gap-1">
+            <h2 class="dark:text-dark-text-primary w-40 text-[15px] max-2xl:text-[13px] max-xl:text-[12px] max-lg:text-[11px] max-lg:w-30 max-sm:w-full max-lg:text-center text-center">${product.title}</h2>
+            <p class="mt-2 [direction:ltr] max-lg:text-[13px] flex items-center gap-1">
               <i class="fa-solid fa-star text-yellow-400 text-xs max-sm:text-[10px]"></i>
               <span class="dark:text-dark-text-primary text-light-text-primary text-xs max-sm:text-[10px]">${product.rating}</span>
               <span class="dark:text-dark-text-primary text-light-text-primary text-xs max-sm:text-[10px]">( ${product.reviewCount} )</span>
             </p>
             <div class="[direction:ltr] flex items-center mt-3 dark:text-dark-text-primary text-light-text-primary text-xs">
-              <p class="text-[17px] max-md:text-[13px] pr-1.5">${product.price.toLocaleString()}</p>
+              <p class="text-[17px] max-lg:text-[13px] pr-1.5">${product.price.toLocaleString()}</p>
               <p>تومان</p>
             </div>
         </div>
