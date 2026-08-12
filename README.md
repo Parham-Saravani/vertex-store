@@ -1,81 +1,128 @@
 # Vertex Store
 
-Vertex Store is a modern Full Stack E-Commerce platform developed using Vanilla JavaScript, Express.js and MongoDB.
+Vertex Store is a full-stack e-commerce application developed to practice real-world web development concepts.
 
-The project provides a responsive shopping experience with category filtering, product management, dark mode support, custom REST APIs and a scalable architecture for future development.
+The project includes a complete shopping experience with product browsing, filtering, searching, sorting, authentication, order management, user dashboard, and admin dashboard.
 
----
-
-## 🌐 Live Demo
-
-🔗 https://vertex-store-chi.vercel.app/
+The frontend is built using Vanilla JavaScript and Tailwind CSS, while the backend uses Express.js, MongoDB, and JWT Authentication.
 
 ---
 
-## Tech Stack
+## 🔗 Live Demo
+
+**Live Preview**
+
+https://vertex-store-chi.vercel.app/
+
+---
+
+## 🚀 Tech Stack
 
 ### Frontend
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge\&logo=html5\&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge\&logo=css3\&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge\&logo=javascript\&logoColor=black)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge\&logo=vite\&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge\&logo=tailwindcss\&logoColor=white)
-![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge\&logo=fontawesome\&logoColor=white)
+* HTML5
+* Tailwind CSS v4
+* Vanilla JavaScript (ES6+)
+* Chart.js
+* Font Awesome
+* Vite
 
 ### Backend
 
-![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge\&logo=nodedotjs\&logoColor=white)
-![ExpressJS](https://img.shields.io/badge/Express.js-000000?style=for-the-badge\&logo=express\&logoColor=white)
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* JWT Authentication
+* bcrypt.js
 
-### Database
+### Tools
 
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge\&logo=mongodb\&logoColor=white)
-![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=for-the-badge\&logo=mongoose\&logoColor=white)
+* Git & GitHub
+* Postman
+* Vercel
 
 ---
 
-## Features
+## 📸 Screenshots
 
-### Frontend
+### Home Page
 
+<img src="./Images/home.png" alt="Home Page">
+
+### Products Page
+
+<img src="./Images/products.png" alt="Products Page">
+
+### User Dashboard
+
+<img src="./Images/user-dashboard.png" alt="User Dashboard">
+
+### Admin Dashboard
+
+<img src="./Images/admin-dashboard.png" alt="Admin Dashboard">
+
+---
+
+## ✨ Features
+
+### 👤 User Features
+
+* User Registration & Login
+* JWT Authentication
+* User Dashboard
+* Profile Management
+* Product Search
+* Product Filtering
+* Product Sorting
+* Product Pagination
+* Shopping Cart
+* Order History
+* Favorite Products
+* Ticket System
 * Responsive Design
-* Modern User Interface
+* Dark / Light Theme
+* Skeleton Loading
+* Toast Notifications
+
+### 🛠️ Admin Features
+
+* Admin Dashboard
+* Product Management
+* Category Management
+* Brand Management
+* User Management
+* Order Management
+* Discount Code Management
+* Comment Management
+* Ticket Management
+* Dashboard Statistics
+* Sales Analytics
+* Product Analytics
+* Data Visualization with Chart.js
+
+### 🎨 User Experience
+
+* Responsive Layout
+* Skeleton Loaders
+* Toast Notification System
 * Dark / Light Mode
-* SPA-like Navigation
-* Reusable Components
-* Custom Product Cards
+* AOS Animations
+* Empty States
+* Loading States
 
-### Backend
+---
 
-* RESTful API Architecture
-* Product CRUD Operations
-* MongoDB Integration
-* Mongoose Models
-* Route & Controller Pattern
-* Modular Project Structure
+## 🔐 Demo Admin Account
 
-
-## API Endpoints
-
-### Products
-
-```http
-GET    /api/products
-POST   /api/products
-```
-### Messages
-
-```http
-POST   /api/messages
-```
-### Users
-
-```http
-GET    /api/users
+```txt
+Email:    vertex-store@gmail.com
+Password: admin12345678
 ```
 
-## Installation
+---
+
+## 📦 Installation
 
 ### Clone Repository
 
@@ -83,46 +130,38 @@ GET    /api/users
 git clone https://github.com/Parham-Saravani/vertex-store.git
 ```
 
-### FrontEnd
+### Frontend
 
 ```bash
-cd frontend
-
+cd frontEnd
 npm install
-
 npm run dev
 ```
 
-### BackEnd
+### Backend
 
 ```bash
-cd backend
-
+cd backEnd
 npm install
-
 npm run dev
 ```
 
 ---
 
-## Project Status
+## 🎯 Project Goals
 
-🚧 This project is currently under active development.
+This project was developed to gain practical experience in:
 
-The main architecture of the application has already been implemented, including:
+* REST API Development
+* Authentication & Authorization
+* MongoDB Database Design
+* Dashboard Development
+* Admin Panel Architecture
+* State Management using Vanilla JavaScript
+* Real-world E-Commerce Workflows
 
-- Frontend Development
-- REST API Development
-- Responsive Design
-- Dark Mode Support
+---
 
-The following features are currently being developed:
+## 📄 License
 
-- Authentication System (JWT)
-- Shopping Cart
-- Wishlist
-- Product Reviews
-- User Dashboard
-- Admin Dashboard
-
-Expected completion of the first stable version: **within the next few days**.
+This project is developed for educational purposes.

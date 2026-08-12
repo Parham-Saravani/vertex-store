@@ -15,32 +15,32 @@ const ProductsSkeletonLoader = () => {
               </div>
 
               <!-- products-->
-              <div class="[direction:ltr] my-3 grid grid-cols-5 max-xl:grid-cols-4 max-sm:grid-cols-2 products-container justify-items-center">
-                <div class=" max-2xl:w-48 max-xl:w-48 max-lg:w-33 max-md:w-37 max-sm:w-45 group border dark:border-dark-card-border  border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
+              <div class="[direction:ltr] gap-2 my-3 grid grid-cols-5 max-xl:grid-cols-4 max-sm:grid-cols-2 products-container justify-items-center">
+                <div class="col-span-1 w-full group border dark:border-dark-card-border  border-light-card-border px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
                       <div class="size-45 max-2xl:size-40 max-xl:size-36 max-lg:size-28 max-md:size-30 animate-pulse rounded-xl bg-gray-300 dark:bg-gray-700"></div>
                       <div class="mt-2 w-30 h-3 animate-pulse rounded-xl bg-gray-300 dark:bg-gray-700"></div>
                       <div class="mt-2 w-20 h-3 animate-pulse rounded-xl bg-gray-300 dark:bg-gray-700"></div>
                       <div class="mt-3 w-30 h-3 animate-pulse rounded-xl bg-gray-300 dark:bg-gray-700"></div>
                 </div>
-                <div class=" max-2xl:w-48 max-xl:w-48 max-lg:w-33 max-md:w-37 max-sm:w-45 group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
+                <div class="col-span-1 w-full group border dark:border-dark-card-border border-light-card-border px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
                       <div class="size-45 max-2xl:size-40 max-xl:size-36 max-lg:size-28 max-md:size-30 animate-pulse rounded-xl bg-gray-300 dark:bg-gray-700"></div>
                       <div class="mt-2 w-30 h-3 animate-pulse rounded-xl bg-gray-300 dark:bg-gray-700"></div>
                       <div class="mt-2 w-20 h-3 animate-pulse rounded-xl bg-gray-300 dark:bg-gray-700"></div>
                       <div class="mt-3 w-30 h-3 animate-pulse rounded-xl bg-gray-300 dark:bg-gray-700"></div>
                 </div>
-                <div class=" max-2xl:w-48 max-xl:w-48 max-lg:w-33 max-md:w-37 max-sm:w-45 group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
+                <div class="col-span-1 w-full group border dark:border-dark-card-border border-light-card-border px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
                       <div class="size-45 max-2xl:size-40 max-xl:size-36 max-lg:size-28 max-md:size-30 animate-pulse rounded-xl bg-gray-300 dark:bg-gray-700"></div>
                       <div class="mt-2 w-30 h-3 animate-pulse rounded-xl bg-gray-300 dark:bg-gray-700"></div>
                       <div class="mt-2 w-20 h-3 animate-pulse rounded-xl bg-gray-300 dark:bg-gray-700"></div>
                       <div class="mt-3 w-30 h-3 animate-pulse rounded-xl bg-gray-300 dark:bg-gray-700"></div>
                 </div>
-                <div class=" max-2xl:w-48 max-xl:w-48 max-lg:w-33 max-md:w-37 max-sm:w-45 group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
+                <div class="col-span-1 w-full group border dark:border-dark-card-border border-light-card-borderpx-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
                       <div class="size-45 max-2xl:size-40 max-xl:size-36 max-lg:size-28 max-md:size-30 animate-pulse rounded-xl bg-gray-300 dark:bg-gray-700"></div>
                       <div class="mt-2 w-30 h-3 animate-pulse rounded-xl bg-gray-300 dark:bg-gray-700"></div>
                       <div class="mt-2 w-20 h-3 animate-pulse rounded-xl bg-gray-300 dark:bg-gray-700"></div>
                       <div class="mt-3 w-30 h-3 animate-pulse rounded-xl bg-gray-300 dark:bg-gray-700"></div>
                 </div>
-                <div class=" max-2xl:w-48 max-xl:w-48 max-lg:w-33 max-md:w-37 max-sm:w-45 group border dark:border-dark-card-border border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
+                <div class="col-span-1 w-full group border dark:border-dark-card-border border-light-card-border px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border">
                       <div class="size-45 max-2xl:size-40 max-xl:size-36 max-lg:size-28 max-md:size-30 animate-pulse rounded-xl bg-gray-300 dark:bg-gray-700"></div>
                       <div class="mt-2 w-30 h-3 animate-pulse rounded-xl bg-gray-300 dark:bg-gray-700"></div>
                       <div class="mt-2 w-20 h-3 animate-pulse rounded-xl bg-gray-300 dark:bg-gray-700"></div>

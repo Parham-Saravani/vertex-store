@@ -467,6 +467,7 @@ tbody tr:last-child{
   --animate-fadeIn: fadeIn 500ms linear;
   --animate-fadeOut: fadeOut 800ms linear;
   --animate-loader: loader 1s infinite linear alternate;
+
 }
 
 @utility container {
