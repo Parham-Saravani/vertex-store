@@ -5,8 +5,9 @@ const mobileThemeToggleWrapper = document.querySelector(
 );
 const mobileThemeToggle = document.querySelector("#theme-toggle");
 
-const themeHandler = () => {
+const themeHandler = () => {  
   const isDarkMode = JSON.parse(localStorage.getItem("isDarkMode")) ?? true;
+  console.log(isDarkMode);
   if (isDarkMode) {
     darkTheme();
   } else {
@@ -30,7 +31,6 @@ const lightTheme = () => {
 };
 
 const addAndRemovingClasses = (isDarkMode, active, hidden) => {
-  if (!active || !hidden) return;
   if (isDarkMode) {
     document.documentElement.classList.add("dark");
   } else {
@@ -48,6 +48,6 @@ const saveThemeInLocalStorage = (status) => {
 };
 
 window.addEventListener("DOMContentLoaded", themeHandler);
-darkThemeBtn?.addEventListener("click", darkTheme);
-lightThemeBtn?.addEventListener("click", lightTheme);
-export { darkTheme, lightTheme, saveThemeInLocalStorage };
+darkThemeBtn.addEventListener("click", darkTheme);
+lightThemeBtn.addEventListener("click", lightTheme);
+export { darkTheme, lightTheme, saveThemeInLocalStorage, profileTheme };

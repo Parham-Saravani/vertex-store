@@ -40,13 +40,6 @@ const hideMobileMenu = () => {
   profileMenuOverlay.classList.remove("max-md:fixed");
   disableOrEnablePageScrollbar(false);
 };
-const changeTheme = () => {
-  if (document.documentElement.classList.contains("dark")) {
-    document.documentElement.classList.remove("dark");
-  } else {
-    document.documentElement.classList.add("dark");
-  }
-};
 
 const addOrRemoveActiveElementStyle = (element, status) => {
   if (status) {
@@ -78,4 +71,3 @@ const showOrHideMenuOverlay = (status) => {
 profileMobileMenuBtn.addEventListener("click", showMobileMenu);
 profileUserDataBtn.addEventListener("click", showUserData);
 profileMenuOverlay.addEventListener("click", hideMobileMenu);
-mobileMenuThemeBtn.addEventListener("click", changeTheme);
