@@ -28,6 +28,7 @@ https://vertex-store-chi.vercel.app/
 ![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?logo=mongodb&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-Authentication-000000?logo=jsonwebtokens&logoColor=white)
 ![AOS](https://img.shields.io/badge/AOS-Animations-FC4C02)
+![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?logo=chartdotjs&logoColor=white)
 
 ---
 
@@ -69,12 +70,12 @@ https://vertex-store-chi.vercel.app/
 
 * Admin Dashboard
 * Product Management
-* Product Pagination
 * User Management
 * Order Management
 * Message Management
 * Dashboard Statistics
-
+* Data Visualization with Chart.js
+* 
 ### 🎨 User Experience
 
 * Responsive Layout
@@ -82,33 +83,12 @@ https://vertex-store-chi.vercel.app/
 * Toast Notification System
 * Dark / Light Mode
 * AOS Animations
-* Swiper Sliders
-* SPA-like Navigation
 
 ---
+  
+## 🔐 Demo Admin Account
 
-## 🔐 Test Admin Account
-
-You can use the following account to test the Admin Dashboard:
-
-```text
-Email:
-vertex-store@gmail.com
-
-Password:
-admin12345678
+```txt
+Email:    vertex-store@gmail.com
+Password: admin12345678
 ```
-
----
-
-## 🎯 Learning Goals
-
-This project was created to improve skills in:
-
-* JavaScript
-* REST APIs
-* Authentication
-* MongoDB
-* Express.js
-* Frontend Architecture
-* Full-Stack Development Fundamentals
