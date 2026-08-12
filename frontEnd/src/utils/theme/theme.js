@@ -7,7 +7,6 @@ const mobileThemeToggle = document.querySelector("#theme-toggle");
 
 const themeHandler = () => {  
   const isDarkMode = JSON.parse(localStorage.getItem("isDarkMode")) ?? true;
-  console.log(isDarkMode);
   if (isDarkMode) {
     darkTheme();
   } else {
@@ -50,4 +49,4 @@ const saveThemeInLocalStorage = (status) => {
 window.addEventListener("DOMContentLoaded", themeHandler);
 darkThemeBtn.addEventListener("click", darkTheme);
 lightThemeBtn.addEventListener("click", lightTheme);
-export { darkTheme, lightTheme, saveThemeInLocalStorage, profileTheme };
+export { darkTheme, lightTheme, saveThemeInLocalStorage};

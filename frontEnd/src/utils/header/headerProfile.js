@@ -9,7 +9,7 @@ const profileUsername = document.querySelectorAll(".profile-username");
 const profileEmail = document.querySelectorAll(".profile-email");
 const logOutBtn = document.querySelector(".logout-btn");
 const mobileMenuUserData = document.querySelectorAll(".mobile-menu-user-data");
-
+const profileItems = document.querySelectorAll('.profile-items')
 let isProfileMenuOpen = false;
 
 const showOrHideProfile = () => {
@@ -61,4 +61,5 @@ profileBtn?.addEventListener("click", showOrHideProfile);
 profileBackground?.addEventListener("click", closeProfileContent);
 window.addEventListener("load", changeProfileContent);
 logOutBtn?.addEventListener("click", logoutFromAccount);
+profileItems.forEach(item => item.addEventListener('click', closeProfileContent))
 export { changeProfileContent, closeProfileContent };
