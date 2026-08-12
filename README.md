@@ -85,41 +85,6 @@ https://vertex-store-chi.vercel.app/
 
 ![Admin Dashboard](./Images/admin-dashboard.png)
 
-## Product Filters
-
-![Filters](./screenshots/product-filter.png)
-
-## Mobile Version
-
-![Mobile](./screenshots/mobile-view.png)
-```
-
----
-
-
-
-## 📂 Project Structure
-
-```bash
-vertex-store
-│
-├── frontEnd
-│   ├── public
-│   ├── src
-│   │   ├── assets
-│   │   ├── pages
-│   │   ├── utils
-│   │   └── main.js
-│   └── index.html
-│
-└── backEnd
-    ├── controllers
-    ├── models
-    ├── routes
-    ├── config
-    └── app.js
-```
-
 ---
 
 ## 🔐 Test Admin Account
@@ -141,38 +106,9 @@ admin12345678
 This project was created to improve skills in:
 
 * JavaScript
-* Git & GitHub
 * REST APIs
 * Authentication
 * MongoDB
 * Express.js
 * Frontend Architecture
 * Full-Stack Development Fundamentals
-
----
-
-## 🔮 Future Improvements
-
-* React Migration
-* Better Error Handling
-* Advanced Analytics
-* Wishlist System
-* Product Reviews
-* Advanced Search
-* Performance Optimizations
-
----
-
-## 👨‍💻 Author
-
-Parham Saravani
-
-GitHub:
-https://github.com/Parham-Saravani
-
-LinkedIn:
-https://www.linkedin.com/in/parham-saravani-63b56a374/
-
----
-
-⭐ If you like this project, consider giving it a star.
