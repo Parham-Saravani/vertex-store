@@ -1,5 +1,4 @@
-<h1 align="center">Vertex Store</h1>
-
+# Vertex Store
 
 Vertex Store is a full-stack e-commerce application developed to practice real-world web development concepts.
 
@@ -29,6 +28,21 @@ https://vertex-store-chi.vercel.app/
 ![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?logo=mongodb&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-Authentication-000000?logo=jsonwebtokens&logoColor=white)
 ![AOS](https://img.shields.io/badge/AOS-Animations-FC4C02)
+
+---
+
+## 📸 Screenshots
+## Home Page
+![Home Page](./Images/home.png)
+
+## Products Page
+![Products Page](./Images/products.png)
+
+## User Dashboard
+![User Dashboard](./Images/user-dashboard.png)
+
+## Admin Dashboard
+![Admin Dashboard](./Images/admin-dashboard.png)
 
 ---
 
@@ -70,25 +84,6 @@ https://vertex-store-chi.vercel.app/
 * AOS Animations
 * Swiper Sliders
 * SPA-like Navigation
-
----
-
-## 📸 Screenshots
-## Home Page
-
-![Home Page](./Images/home.png)
-
-## Products Page
-
-![Products Page](./Images/products.png)
-
-## User Dashboard
-
-![User Dashboard](./Images/user-dashboard.png)
-
-## Admin Dashboard
-
-![Admin Dashboard](./Images/admin-dashboard.png)
 
 ---
 
