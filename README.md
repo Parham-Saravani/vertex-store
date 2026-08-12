@@ -2,9 +2,9 @@
 
 Vertex Store is a full-stack e-commerce application developed to practice real-world web development concepts.
 
-The project includes a complete shopping experience with product browsing, filtering, searching, sorting, authentication, order management, user dashboard and admin dashboard.
+The project includes a complete shopping experience with product browsing, filtering, searching, sorting, authentication, order management, user dashboard, and admin dashboard.
 
-The frontend is built using Vanilla JavaScript and Tailwind CSS, while the backend uses Express.js, MongoDB and JWT Authentication.
+The frontend is built using Vanilla JavaScript and Tailwind CSS, while the backend uses Express.js, MongoDB, and JWT Authentication.
 
 ---
 
@@ -18,32 +18,49 @@ https://vertex-store-chi.vercel.app/
 
 ## 🚀 Tech Stack
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-v4-06B6D4?logo=tailwindcss&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
-![Vite](https://img.shields.io/badge/Vite-Build_Tool-646CFF?logo=vite&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-Runtime-5FA04E?logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-Backend-000000?logo=express&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?logo=mongodb&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-Authentication-000000?logo=jsonwebtokens&logoColor=white)
-![AOS](https://img.shields.io/badge/AOS-Animations-FC4C02)
-![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?logo=chartdotjs&logoColor=white)
+### Frontend
+
+* HTML5
+* Tailwind CSS v4
+* Vanilla JavaScript (ES6+)
+* Chart.js
+* Font Awesome
+* Vite
+
+### Backend
+
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* JWT Authentication
+* bcrypt.js
+
+### Tools
+
+* Git & GitHub
+* Postman
+* Vercel
 
 ---
 
 ## 📸 Screenshots
-## Home Page
-![Home Page](./Images/home.png)
 
-## Products Page
-![Products Page](./Images/products.png)
+### Home Page
 
-## User Dashboard
-![User Dashboard](./Images/user-dashboard.png)
+<img src="./Images/home.png" alt="Home Page">
 
-## Admin Dashboard
-![Admin Dashboard](./Images/admin-dashboard.png)
+### Products Page
+
+<img src="./Images/products.png" alt="Products Page">
+
+### User Dashboard
+
+<img src="./Images/user-dashboard.png" alt="User Dashboard">
+
+### Admin Dashboard
+
+<img src="./Images/admin-dashboard.png" alt="Admin Dashboard">
 
 ---
 
@@ -61,6 +78,8 @@ https://vertex-store-chi.vercel.app/
 * Product Pagination
 * Shopping Cart
 * Order History
+* Favorite Products
+* Ticket System
 * Responsive Design
 * Dark / Light Theme
 * Skeleton Loading
@@ -70,12 +89,18 @@ https://vertex-store-chi.vercel.app/
 
 * Admin Dashboard
 * Product Management
+* Category Management
+* Brand Management
 * User Management
 * Order Management
-* Message Management
+* Discount Code Management
+* Comment Management
+* Ticket Management
 * Dashboard Statistics
+* Sales Analytics
+* Product Analytics
 * Data Visualization with Chart.js
-* 
+
 ### 🎨 User Experience
 
 * Responsive Layout
@@ -83,12 +108,60 @@ https://vertex-store-chi.vercel.app/
 * Toast Notification System
 * Dark / Light Mode
 * AOS Animations
+* Empty States
+* Loading States
 
 ---
-  
+
 ## 🔐 Demo Admin Account
 
 ```txt
 Email:    vertex-store@gmail.com
 Password: admin12345678
 ```
+
+---
+
+## 📦 Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/Parham-Saravani/vertex-store.git
+```
+
+### Frontend
+
+```bash
+cd frontEnd
+npm install
+npm run dev
+```
+
+### Backend
+
+```bash
+cd backEnd
+npm install
+npm run dev
+```
+
+---
+
+## 🎯 Project Goals
+
+This project was developed to gain practical experience in:
+
+* REST API Development
+* Authentication & Authorization
+* MongoDB Database Design
+* Dashboard Development
+* Admin Panel Architecture
+* State Management using Vanilla JavaScript
+* Real-world E-Commerce Workflows
+
+---
+
+## 📄 License
+
+This project is developed for educational purposes.
