@@ -18,7 +18,7 @@ import takeAndCreateProducts from "../utils/admin/adminProducts.js";
 import allOrdersHandler from "../utils/admin/adminOrderPage.js";
 import allUsersHandler from "../utils/admin/adminUserPage.js";
 import allTicketsHandler from "../utils/admin/adminTitcketPage.js";
-
+import changePageTitleHandler from "../utils/pageTitle.js";
 // user
 import { userMainPageData } from "../utils/user/userMainPage.js";
 import userOrderHandler from "../utils/user/userOrderPage.js";
@@ -48,6 +48,7 @@ const changePageContent = (page) => {
       break;
     case "setting":
       changePage(AdminSettingsPage());
+      changePageTitleHandler()
       break;
     case "userDashboard":
       changePage(UserProfilePage());

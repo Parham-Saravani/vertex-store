@@ -56,7 +56,7 @@ const createProducts = () => {
       productsContainer.insertAdjacentHTML(
         "beforeend",
         `
-        <div class="group mt-3 border dark:border-dark-card-border max-2xl:w-48 max-xl:w-48 max-lg:w-33 max-md:w-37 max-sm:w-56 border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border product"data-id="${product._id}">
+        <div class="group mt-3 border dark:border-dark-card-border max-2xl:w-48 max-xl:w-48 max-lg:w-33 max-md:w-37 max-sm:w-45 border-light-card-border w-69.5 px-2 py-6 rounded-xl flex flex-col items-center cursor-pointer transition-normal duration-300 hover:-translate-y-1 hover:border-dark-card-hover-border product"data-id="${product._id}">
             <img src=${product.image} class="object-contain size-10 max-2xl:size-25 max-xl:size-32 mb-3 group-hover:scale-110 transition-transform duration-300" alt="">
             <h2 class="dark:text-dark-text-primary w-40 text-[15px] max-2xl:text-[13px] max-xl:text-[12px] max-md:px-5 max-md:text-[11px] text-center">${product.title}</h2>
             <p class="mt-2 [direction:ltr] flex items-center gap-1">

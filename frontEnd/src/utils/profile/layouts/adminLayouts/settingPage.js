@@ -92,7 +92,7 @@ const AdminSettingsPage = () => {
 
           <div>
             <label class="text-sm mb-2 block dark:text-dark-text-primary text-light-text-primary">عنوان سایت</label>
-            <input type="text" value="تجهیزات دیجیتال و گیمینگ | Vertex" class="outline-hidden focus:border-dark-input-focus dark:text-dark-text-secondary text-light-text-secondary w-full h-12 rounded-xl border dark:border-dark-input-border border-light-input-border px-4 bg-transparent transition-colors duration-300">
+            <input type="text" value="تجهیزات دیجیتال و گیمینگ | Vertex" class="outline-hidden focus:border-dark-input-focus dark:text-dark-text-secondary text-light-text-secondary w-full h-12 rounded-xl border dark:border-dark-input-border border-light-input-border px-4 bg-transparent transition-colors duration-300 document-title">
           </div>
 
         </div>
@@ -127,7 +127,7 @@ const AdminSettingsPage = () => {
       <!-- Save -->
       <div class="flex justify-end">
 
-        <button class="w-full px-6 py-3 rounded-xl bg-brand-accent text-white font-bold hover:bg-brand-accent/70 transition-colors duration-300 cursor-pointer">
+        <button class="w-full px-6 py-3 rounded-xl bg-brand-accent text-white font-bold hover:bg-brand-accent/70 transition-colors duration-300 cursor-pointer submit-settings">
           ذخیره تنظیمات
         </button>
 
