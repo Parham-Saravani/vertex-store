@@ -85,21 +85,11 @@ https://vertex-store-chi.vercel.app/
 * Skeleton Loading
 * Toast Notifications
 
-### 🛠️ Admin Features
+### 🛠️ Admin Features (Read-Only Demo Mode)
 
-* Admin Dashboard
-* Product Management
-* Category Management
-* Brand Management
-* User Management
-* Order Management
-* Discount Code Management
-* Comment Management
-* Ticket Management
-* Dashboard Statistics
-* Sales Analytics
-* Product Analytics
-* Data Visualization with Chart.js
+* **Admin Dashboard Overview:** Sales analytics & product data visualization with Chart.js.
+* **Management Panels:** UI layout & views for managing products, users, orders, comments, and support tickets.
+* **Analytics & Metrics:** Dashboard statistics and performance metrics.
 
 ### 🎨 User Experience
 
